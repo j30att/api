@@ -12,3 +12,113 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+menu.main {
+    position: fixed;
+    bottom: 0;
+    height: 44pt;
+    width: 100%;
+    display: flex;
+    padding: 0;
+    margin-bottom: 0;
+    background-color: #F8F8F8;
+    a {
+        font-size: 0;
+        height: 44pt;
+        width: 20%;
+
+    }
+    a.back {
+        background: url("/images/left-arrow.svg")  no-repeat center;
+        background-size: 25pt;
+    }
+    a.go {
+        background: url("/images/left-arrow.svg")  no-repeat center;
+        background-size: 25pt;
+        transform: scaleX(-1);
+    }
+    a.copy {
+        background: url("/images/copy.svg") no-repeat center;
+        background-size: 25pt;
+    }
+    a.read {
+        background: url("/images/open-book.svg") no-repeat center;
+        background-size: 25pt;
+    }
+    a.exit {
+        background: url("/images/out.svg") no-repeat center;
+        background-size: 25pt;
+    }
+}
+
+main {
+    .profile {
+        &-title {
+            text-align: center;
+            font-size: 16pt;
+            line-height: 20pt;
+            font-weight: bold;
+            margin: 20px auto;
+            position: relative;
+        }
+        &-close {
+            background: url("/images/cancel.svg") no-repeat center;
+            background-size: 22pt;
+            position: absolute;
+            left: 16pt;
+            width: 26px;
+            height: 26px;
+        }
+        &-photo {
+            margin: 20px auto;
+            width: 200px;
+            height: 200px;
+            border: 1px solid gray;
+            background-color: lightgrey;
+            border-radius: 4px;
+        }
+        &-name {
+            font-size: 20pt;
+        }
+        &-settings {
+            &-title {
+                text-transform: uppercase;
+                font-sise: 13pt !important;
+                color: gray;
+            }
+            &-block {
+                width: 100%;
+                padding-left: 15px;
+                a {
+                    display: inline-block;
+                    font-size: 16pt;
+                    padding: 15px 40px;
+                    width: 95%;
+                    border-bottom: 1px solid lightgray;
+                    background: url("/images/b_3@3x.png") no-repeat left;
+                    background-size: 25px;
+                    position: relative;
+                }
+                a:after {
+                    content:"";
+                    width: 25px;
+                    height: 25px;
+                    position: absolute;
+                    background: url("/images/left-arrow.svg")  no-repeat center;
+                    background-size: 25px;
+                    transform: scaleX(-1);
+                    z-index: 10;
+                    right: 5px;
+                    top: 20px;
+                }
+            }
+        }
+    }
+    button {
+        width: 90%;
+        height: 48pt;
+        margin: 20px auto;
+        font-size: 16pt !important;
+        font-weight: bold !important;
+    }
+}
