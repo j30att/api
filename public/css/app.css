@@ -10523,6 +10523,10 @@ menu.main a.exit {
   background-size: 25pt;
 }
 
+main {
+  margin-bottom: 44pt;
+}
+
 main .profile-title {
   text-align: center;
   font-size: 16pt;
@@ -10541,10 +10545,35 @@ main .profile-close {
   height: 26px;
 }
 
+main .profile-back {
+  background: url("/images/left-arrow.svg") no-repeat center;
+  background-size: 22pt;
+  position: absolute;
+  left: 16pt;
+  width: 26px;
+  height: 26px;
+}
+
+main .profile-save {
+  position: absolute;
+  right: 15px;
+  color: orange !important;
+  font-weight: normal;
+}
+
 main .profile-photo {
   margin: 20px auto;
   width: 200px;
   height: 200px;
+  border: 1px solid gray;
+  background-color: lightgrey;
+  border-radius: 4px;
+}
+
+main .profile-photo-small {
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
   border: 1px solid gray;
   background-color: lightgrey;
   border-radius: 4px;
@@ -10588,6 +10617,27 @@ main .profile-settings-block a:after {
   z-index: 10;
   right: 5px;
   top: 20px;
+}
+
+main .profile-field {
+  width: 100%;
+  margin: 10px 20px;
+}
+
+main .profile-field label {
+  display: block;
+  font-size: 13pt;
+  color: #949494;
+  margin: 0;
+}
+
+main .profile-field input[type="text"] {
+  display: block;
+  font-size: 16pt;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #f8fafc;
 }
 
 main button {
