@@ -21,3 +21,6 @@ Route::get('/profile/edit', function () {
 Route::get('/bids', function(){
     return view('bids.index');
 });
+Route::get('/bids/matched', function(){
+    return view('bids.parts.matched');
+});
