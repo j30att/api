@@ -10600,7 +10600,6 @@ main .profile-settings-block a {
   padding: 15px 40px;
   width: 95%;
   border-bottom: 1px solid lightgray;
-  background: url("/images/b_3@3x.png") no-repeat left;
   background-size: 25px;
   position: relative;
 }
@@ -10646,5 +10645,43 @@ main button {
   margin: 20px auto;
   font-size: 16pt !important;
   font-weight: bold !important;
+}
+
+/*images for <a>*/
+
+.profile-settings-acc-notification {
+  background: url("/images/b@3x_notification.png") no-repeat left;
+}
+
+.profile-settings-acc-privacy {
+  background: url("/images/b@3x_privacy.png") no-repeat left;
+}
+
+.profile-settings-acc-account {
+  background: url("/images/b@3x_acc.png") no-repeat left;
+}
+
+.profile-settings-acc-support {
+  background: url("/images/b@3x_support.png") no-repeat left;
+}
+
+.profile-settings-acc-tell {
+  background: url("/images/b@3x_tell.png") no-repeat left;
+}
+
+.profile-settings-acc-setting {
+  background: url("/images/b@3x_setting.png") no-repeat left;
+}
+
+/*profile btn*/
+
+.btn {
+  background-color: #007fed;
+  border: none;
+  border-radius: 10pt;
+  -webkit-border-radius: 10pt;
+  -moz-border-radius: 10pt;
+  -ms-border-radius: 10pt;
+  -o-border-radius: 10pt;
 }
 

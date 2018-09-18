@@ -17,3 +17,7 @@ Route::get('/profile', function () {
 Route::get('/profile/edit', function () {
     return view('profile.edit');
 });
+
+Route::get('/bids', function(){
+    return view('bids.index');
+});

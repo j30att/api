@@ -30,11 +30,12 @@ services:
 
     mysql:
         container_name: partypocker_mysql
-        image: mysql
+        image: mysql:5.7
         volumes:
             - ./etc/mysql:/etc/mysql/conf.d
             - ./storage/mysql:/var/lib/mysql
         ports:
             - "3306:3306"
+        command: mysqld --innodb-flush-method=littlesync --innodb-use-native-aio=OFF
         environment:
             - MYSQL_ALLOW_EMPTY_PASSWORD=1
