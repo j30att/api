@@ -14,4 +14,5 @@ class Bid extends Model
     protected $fillable=[
 
     ];
+
 }

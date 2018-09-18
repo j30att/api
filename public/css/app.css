@@ -10498,7 +10498,7 @@ menu.main a {
   width: 20%;
 }
 
-menu.main a.back {
+menu.main full_sc a.back {
   background: url("/images/left-arrow.svg") no-repeat center;
   background-size: 25pt;
 }
@@ -10916,6 +10916,10 @@ main button {
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
+}
+
+.full_sc .binds-item:last-child {
+  margin-bottom: 68px;
 }
 
 .active_status {

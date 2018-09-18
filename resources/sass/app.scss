@@ -27,7 +27,7 @@ menu.main {
         height: 44pt;
         width: 20%;
 
-    }
+    }full_sc
     a.back {
         background: url("/images/left-arrow.svg")  no-repeat center;
         background-size: 25pt;
@@ -371,6 +371,9 @@ main {
     -moz-border-radius: 0;
     -ms-border-radius: 0;
     -o-border-radius: 0;
+}
+.full_sc .binds-item:last-child{
+    margin-bottom: 68px;
 }
 .active_status{
     text-align: center;
