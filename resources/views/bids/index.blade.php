@@ -15,6 +15,7 @@
                     <div class="see_all">See All</div>
                 </div>
                 <div class="slider_container">
+
                 <div class="swipe-wr">
                 
                 @include('bids.parts.tabs')
@@ -30,7 +31,7 @@
                 
                 
             </div>
-        </div>
+
         </div>
         <div class="tabs-wr">
         <div class="tabs-wr__title">

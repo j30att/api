@@ -11198,3 +11198,13 @@ input[name="new_email"] {
   margin-bottom: 125pt;
 }
 
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-button {
+  width: 2px;
+  height: 2px;
+}
+
