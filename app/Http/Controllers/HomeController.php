@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
+use function Couchbase\defaultDecoder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -32,5 +34,10 @@ class HomeController extends Controller
     public function profile(){
         $user = Auth::user();
         return view('profile.view', compact('user'));
+    }
+    public function events(){
+        $events = Event::query()->get();
+
+        return view('events.index', compact('events'));
     }
 }

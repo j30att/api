@@ -61,6 +61,10 @@ Route::get('/signin', function(){
     return view('login.signin');
 })->name('signin');
 
+//events rout
+Route::get('/events', 'HomeController@events')->name('events');
+
+
 Route::get('/login/userproftest', 'ProfileController@showProfile');
 Route::post('/login/userproftest', 'ProfileController@editProfile');
 

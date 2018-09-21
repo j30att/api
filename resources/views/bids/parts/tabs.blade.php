@@ -36,7 +36,7 @@
                                 <span>Value</span>    
                                 £2,404.08</div>
                                 <div class="game_atrs__date_start">
-                                <span>Date of Start</span>    
+                                <span>Date of Start</span><br>
                                 1 Sep</div>
                             </div>
                         </div>
