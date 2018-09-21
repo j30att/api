@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/profile', function () {
-    return view('profile.view');
-});
+Route::get('/profile', 'HomeController@profile')->name('profile');
 Route::get('/profile/edit', function () {
     return view('profile.edit');
 });
@@ -24,11 +22,14 @@ Route::get('/bids', function(){
 Route::get('/bids/matched', function(){
     return view('bids.parts.matched');
 });
-Route::get('/login', function(){
+/*Route::get('/login', function(){
     return view('login.index');
-});
+})->name('login');*/
 Route::get('/login/personal-information', function(){
     return view('login.personal-inf');
+});
+Route::get('/login/register', function(){
+    return view('login.register');
 });
 Route::get('/login/account-information', function(){
     return view('login.account-inf');
@@ -36,9 +37,48 @@ Route::get('/login/account-information', function(){
 Route::get('/login/check-email', function(){
     return view('login.check-email');
 });
-Route::get('/login/data-privacy', function(){
+Route::get('/login/privacy', function(){
     return view('login.data-privacy');
-});
+})->name('terms');
+Route::get('/login/privacy-politic', function(){
+    return view('login.privacy');
+})->name('privacy');
+
 Route::get('/login/new-email', function(){
     return view('login.new-email');
 });
+Route::get('/signin', function(){
+    return view('login.signin');
+})->name('signin');
+
+Route::get('/login/userproftest', 'ProfileController@showProfile');
+Route::post('/login/userproftest', 'ProfileController@editProfile');
+
+//Route::post('login', 'AuthController@loginUser')->name('login');
+
+
+
+
+$this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
+
+
+$this->post('login', 'Auth\LoginController@login');
+$this->post('logout', 'Auth\LoginController@logout')->name('logout');
+// Registration Routes...
+$this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+$this->post('login/register', 'Auth\RegisterController@register');
+// Password Reset Routes...
+$this->get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
+$this->post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
+$this->get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
+$this->post('password/reset', 'Auth\ResetPasswordController@reset');
+
+
+
+
+
+
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+

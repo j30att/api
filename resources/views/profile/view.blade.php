@@ -1,15 +1,26 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="row">
+    <div class="row" ng-controller="ProfileController as PrCtrl">
         <div class="col-md-12 profile-title">
             <a class="profile-close"></a>
-            Your profile
+            Your profile {{$user->name}}
+
+
         </div>
+
         <div class="profile-photo"></div>
         <div class="col-md-12 text-center text-muted">Tap to replace photo</div>
         <div class="col-md-12 text-center font-weight-bold profile-name">Milton Jimenez</div>
-        
+        <a class="btn-logout" href="{{ route('logout') }}"
+          onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">
+            Logout
+        </a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            {{ csrf_field() }}
+        </form>
+
         <button class="btn btn-danger">Link Party Pocker account</button>
 
         <div class="col-md-12 profile-settings-title">Settings</div>
@@ -24,5 +35,6 @@
         </menu>
 
     </div>
+
 @endsection
 

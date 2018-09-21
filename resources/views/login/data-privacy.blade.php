@@ -6,9 +6,10 @@
     <div class="row">
         <div class="personal_inform col-md-12">
         <div class="personal_inform__title ">
+            <a href="{{route('signin')}}"><div class="goback"></div></a>
             Privacy
         </div>
-            <form action="#" class="form_personal_inf">
+
 
                 <div class="data-privacy">
                     <span>Data & Privacy</span>
@@ -26,12 +27,12 @@
 
                     </div>
                 </div>
-                <input type="submit" name="submit_confirm" value="Confirm" style="border-radius:10pt;">
+                <input id='termconfirm' type="submit" name="submit_confirm" value="Confirm" style="border-radius:10pt;">
 
 
-            </form>
+
             <div class="see_policy">
-                <a href="#">See Privacy policy</a>
+                <a href="{{route('privacy')}}">See Privacy policy</a>
             </div>
 
 

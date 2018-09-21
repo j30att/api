@@ -15,7 +15,18 @@ class CreateBidsTable extends Migration
     {
         Schema::create('bids', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->integer('subevent')->unsigned()->nullable();
+            //$table->foreign('subevent')->references('id')->on('sub_events')->onDelete('set null');
+
+            $table->integer('creator')->unsigned()->nullable();
+            $table->foreign('creator')->references('id')->on('users')->onDelete('set null');
+
+
+            $table->double('price_part');
+            $table->integer('percent');
             $table->timestamps();
+
         });
     }
 

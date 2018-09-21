@@ -1,22 +1,28 @@
-я
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
+let angular = require('angular');
 
-require('./bootstrap');
+import Controllers from './Controllers';
 
-window.Vue = require('vue');
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+//let uibootstrap = require('ui-bootstrap4');
+/*
+let datetimepicker = require('angularjs-datetime-picker');
+let ngDialog = require('ng-dialog');
+let ngSanitize = require('angular-sanitize');
+*/
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
-const app = new Vue({
-    el: '#app'
-});
+let app = angular.module('poker', [
+   /* //uibootstrap,
+    'angularjs-datetime-picker',
+    ngDialog,
+    ngSanitize,*/
+    Controllers
+]);
+
+app.config(['$interpolateProvider', ($interpolateProvider) => {
+    $interpolateProvider.startSymbol('{%');
+    $interpolateProvider.endSymbol('%}');
+}]);
+
+
+
