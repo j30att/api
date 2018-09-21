@@ -216,7 +216,8 @@ main {
 .tabs-wr{
     width: 100%;
 }
-.binds-item{
+.binds-item
+{
     background-color: rgb(231, 247, 228);
     border: 1px solid rgb(231, 247, 228);
     border-radius: 8pt;
@@ -660,3 +661,55 @@ input[name="new_email"]{
     left: 15px;
     top: 32px;
 }
+
+/*events */
+.event-item{
+    width: 250px;
+    margin-right: 12pt;
+    margin-bottom: 20pt;
+}
+.event-item__img{
+    width: 100%;
+    height: 124px;
+    margin-bottom: 10pt;
+    box-sizing: border-box;
+}
+.event-item__img img{
+    width: 100%;
+    height: auto;
+}
+.event-item__text{
+    font-family: 'OpenSans', sans-serif;
+    color: #000;
+    text-align: left;
+}
+.event-item__title{
+    font-weight: 700;
+    font-size: 16pt;
+    margin-bottom: 4pt;
+    text-transform: capitalize;
+}
+.event-item__summa,
+.event-item__date{
+    font-size: 13pt;
+    color: rgb(148, 148, 148);
+    margin-bottom: 4pt;
+}
+.tabs-wr__players{
+    width: 100%;
+}
+.tabs_players{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.tabs_players > div{
+    width: 50%;
+    text-align: center;
+    padding-bottom: 15px;
+}
+.events_player .binds-item{
+    border-bottom: 1px solid rgb(148, 148, 148);
+    background-color: #f8fafc;
+}
+
