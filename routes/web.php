@@ -10,7 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/')->middleware('auth');
+Route::get('/', function(){
+    return view('bids.index');
+})->middleware('auth');
 
 
 Route::group(['middleware' => 'auth','prefix' => 'profile'], function(){
