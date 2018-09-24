@@ -35,6 +35,9 @@ class HomeController extends Controller
         $user = Auth::user();
         return view('profile.view', compact('user'));
     }
+
+
+
     public function events(){
         $events = Event::query()->get();
 
@@ -46,4 +49,10 @@ class HomeController extends Controller
 
         return view('events.all-events', compact('eventList'));
     }
+
+    public function event()
+    {
+
+    }
+
 }

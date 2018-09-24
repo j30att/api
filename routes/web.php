@@ -64,7 +64,7 @@ Route::get('/signin', function(){
 //events rout
 Route::get('/events', 'HomeController@events')->name('events');
 
-Route::get('/all-events', 'HomeController@eventsList')->name('all-events');
+Route::get('/events/all', 'HomeController@eventsList')->name('all-events');
 
 Route::get('/single-events', function(){
     return view('events.single');
