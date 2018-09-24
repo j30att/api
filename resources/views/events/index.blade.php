@@ -12,7 +12,7 @@
             <div class="tabs-wr">
                 <div class="tabs-wr__title">
                     <div class="tabs-wr__title-name">Events</div>
-                    <div class="see_all">See All</div>
+                    <div class="see_all"><a href="{{'all-events'}}">See All</a></div>
                 </div>
                 <div class="slider_container">
 

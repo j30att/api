@@ -713,3 +713,118 @@ input[name="new_email"]{
     background-color: #f8fafc;
 }
 
+.selected_event{
+    position: relative;
+    width: 100%;
+    height: 140px;
+}
+.selected_event img{
+    width: 100%;
+    height: auto;
+}
+.open_event{
+    width: 38px;
+    height: 38px;
+    background: url(/images/open_event.png) no-repeat center;
+    background-size: 38px;
+    position: absolute;
+    top: 26px;
+    left: 85%;
+
+}
+.gb_white{
+    background: url(/images/left_arrow_white.png) no-repeat center;
+}
+.event_list-wr{
+     position: relative;
+     border-bottom: 1px solid #e5e5e5;
+     margin-bottom: 20px;
+ }
+.event_list-wr:first-child{
+    border-top: 1px solid #e5e5e5 !important;
+
+}
+.event_main-wr span{
+    color: #949494;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: block;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 20px;
+    width: 100%;
+}
+.see_more{
+    position: absolute;
+    width: 16px;
+    height: 30px;
+    background: url(/images/see_more.png) no-repeat center;
+    top: calc(50% - 8px);
+    left: calc(100% - 20px);
+}
+.selected_event_info{
+    position: relative;
+}
+.selected_event_info span{
+    display: block;
+    width: 100%;
+    text-align: right;
+    position: absolute;
+    top: 5px;
+}
+/*single event page*/
+.single__header{
+    width: 100%;
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 12pt;
+}
+.single__title{
+    font-size: 16pt;
+    font-weight: 600;
+}
+.single__date{
+    font-size: 13pt;
+    font-weight: 400;
+    color: #949494;
+}
+.subevents_all-wr{
+    overflow-y: hidden;
+}
+
+.subevents_all{
+    display: inline-flex;
+    font-size: 13pt;
+}
+.subevent_item{
+    color: #949494;
+    margin-bottom: 12pt;
+    margin-right: 25pt;
+    width: 100px;
+    text-align: center;
+    padding-bottom: 13pt;
+}
+.main_event{
+    border-bottom: 1px solid #000;
+    color: #000;
+}
+.main_event_info{
+    width: 100%;
+    background-color: #f6f6f6;
+    padding: 16pt 12pt;
+}
+.fund_info{
+    font-size: 13pt;
+    font-weight: 700;
+    margin-bottom: 4pt;
+}
+.date_info,
+.location_info{
+    color: #949494;
+}
+
+.single_page_players{
+    width: 100%;
+}
+.single_page_players_item .binds-item__game_info{
+    margin-top: 16px;
+}

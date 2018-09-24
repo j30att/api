@@ -8,7 +8,7 @@
         
         <div class="tabs-wr">
             <div class="active_status col-md-12">
-                    Bids
+                Bids
             </div>
         <div class="tabs-wr__title col-md-12">
                     <div class="tabs_item tabs_item__active">Matched</div>

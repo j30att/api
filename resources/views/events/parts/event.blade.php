@@ -6,7 +6,7 @@
                         <div class="event-item__text">
                             <div class="event-item__title">{{$event->title}}</div>
                             <div class="event-item__summa">£{{$event->fund}} GTD</div>
-                            <div class="event-item__date">{{$event->date_start}} - {{$event->date_end}}</div>
+                            <div class="event-item__date">{{$event->formatted_data}}</div>
                         </div>
 
                     </div>

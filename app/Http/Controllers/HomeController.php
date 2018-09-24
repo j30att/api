@@ -40,4 +40,10 @@ class HomeController extends Controller
 
         return view('events.index', compact('events'));
     }
+
+    public function eventsList(){
+        $eventList = Event::query()->get();
+
+        return view('events.all-events', compact('eventList'));
+    }
 }
