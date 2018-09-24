@@ -7,7 +7,7 @@
         <div class="single__header">
             <div class="single__title">Millions Russia</div>
             <div class="single__date">3 - 14 Aug, 2018</div>
-            <a href="{{'all-events'}}"><div class="goback"></div></a>
+            <a href="{{route('all-events')}}"><div class="goback"></div></a>
         </div>
         <div class="subevents_all-wr col-md-12">
             <div class="subevents_all">
