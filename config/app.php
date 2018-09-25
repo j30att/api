@@ -119,6 +119,9 @@ return [
     |
     */
 
+    'attachments_path'          => 'attachments',
+    'process_attachments_path'  => 'resizer',
+
     'providers' => [
 
         /*
