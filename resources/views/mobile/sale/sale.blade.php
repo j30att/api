@@ -16,7 +16,7 @@
             </a>
             <div class="tabs-wr__title sale_tabs__title">
                 <div class="tabs-wr__title-name">Active Sales</div>
-                <div class="see_all"><a href="#">See All</a></div>
+                <div class="see_all"><a href="{{route('sale-active')}}">See All</a></div>
             </div>
             <div class="active_sale-wr">
 
@@ -98,7 +98,7 @@
             </div>
             <div class="tabs-wr__title sale_tabs__title">
                 <div class="tabs-wr__title-name">Closed Sales</div>
-                <div class="see_all"><a href="#">See All</a></div>
+                <div class="see_all"><a href="{{route('sale-close')}}">See All</a></div>
             </div>
             <div class="active_sale-wr active_sale-wr_close">
 

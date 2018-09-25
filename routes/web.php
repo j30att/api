@@ -13,6 +13,9 @@
 
 Route::get('/', 'HomeController@index');
 Route::get('/signin', 'Auth\LoginController@showSignin')->name('signin');
+Route::get('/login/register', function(){
+    return view('login.register');
+});
 
 Route::group(['middleware' => 'auth','prefix' => 'profile'], function(){
     Route::get('/', 'HomeController@profile')->name('profile');
@@ -52,9 +55,7 @@ Route::get('/bids/matched', function(){
 Route::get('/login/personal-information', function(){
     return view('login.personal-inf');
 });
-Route::get('/login/register', function(){
-    return view('login.register');
-});
+
 Route::get('/login/account-information', function(){
     return view('login.account-inf');
 });

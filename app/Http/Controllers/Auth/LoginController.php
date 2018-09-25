@@ -47,4 +47,6 @@ class LoginController extends Controller
         $typeDevice = $request->get('typeDevice');
         return view($typeDevice.'.login.index');
     }
+
+
 }

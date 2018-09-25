@@ -31,7 +31,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/bids';
 
     /**
      * Create a new controller instance.
@@ -74,9 +74,9 @@ class RegisterController extends Controller
         ]);
     }
 
-    public function showRegistrationForm()
-    {
-        return view('login.register');
+    public function showRegistrationForm(Request $request)
+    {   $typeDevice = $request->get('typeDevice');
+        return view($typeDevice.'.login.register');
     }
 
 
