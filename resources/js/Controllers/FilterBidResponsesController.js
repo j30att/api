@@ -8,31 +8,34 @@ import {BID_RESPONSE_INDEX} from "../Constants"
 
 
 class FilterBidResponsesController {
-    constructor($window, $http) {
+    constructor($window, $http, $stateParams) {
         this.$window = $window;
         this.$http = $http;
         this.filter = BID_RESPONSE_MATCHED;
         this.bids = [];
-        this.showListFiltred();
+        this.$stateParams = $stateParams;
         this.menu = [
-            {status: BID_RESPONSE_MATCHED, name: 'Matched'},
-            {status: BID_RESPONSE_UNMATCHED, name: 'Unmatched'},
-            {status: BID_RESPONSE_SETTLED, name: 'Settled'},
-            {status: BID_RESPONSE_CANCELED, name: 'Canceled'}
-        ]
-
-    }
-
-    setFilter(status){
-        this.filter = status;
+            {status: BID_RESPONSE_MATCHED, name: 'matched'},
+            {status: BID_RESPONSE_UNMATCHED, name: 'unmatched'},
+            {status: BID_RESPONSE_SETTLED, name: 'settled'},
+            {status: BID_RESPONSE_CANCELED, name: 'canceled'}
+        ];
         this.showListFiltred();
+
     }
+
 
 
 
 
 
     showListFiltred() {
+        let self = this;
+        this.menu.forEach(function (value, key) {
+            console.log(value.name);
+            if (value.name === self.$stateParams.filter) self.filter = value.status;
+        });
+
         this.$http.get(BID_RESPONSE_INDEX, {
             params: {filter: this.filter}
         }).then(response => {
@@ -45,6 +48,6 @@ class FilterBidResponsesController {
 
 };
 
-FilterBidResponsesController.$inject = ['$window', '$http'];
+FilterBidResponsesController.$inject = ['$window', '$http', '$stateParams'];
 
 export {FilterBidResponsesController};

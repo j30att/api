@@ -1106,7 +1106,7 @@ var BID_RESPONSE_SETTLED = 3;
 var BID_RESPONSE_CANCELED = 4;
 
 var LOGIN_URL = '/login';
-var REGISTER_URL = '/login/register';
+var REGISTER_URL = '/register';
 var PROFILE_URL = '/login/userproftest';
 
 //**BIDS**//
@@ -46152,36 +46152,20 @@ var LoginController = function () {
     }
 
     _createClass(LoginController, [{
-        key: 'showLoginForm',
-        value: function showLoginForm() {
-
-            window.location.href = '/login/personal-information';
-        }
-    }, {
-        key: 'showRegisterForm',
-        value: function showRegisterForm() {
-
-            window.location.href = '/login/register';
-        }
-    }, {
         key: 'sendAuthData',
-        value: function sendAuthData() {
+        value: function sendAuthData(e) {
+            e.stopPropagation();
+            e.preventDefault();
             var data = {
                 email: this.userEmail,
                 password: this.userPassword
             };
 
             this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["i" /* LOGIN_URL */], data).then(function (response) {
-                if (response.status == 200) {
+                if (response.status === 200) {
                     window.location.href = '/';
                 }
             });
-        }
-    }, {
-        key: 'dataCheck',
-        value: function dataCheck() {
-            var email = this.userEmail;
-            var password = this.userPassword;
         }
     }]);
 
@@ -46218,13 +46202,14 @@ var RegisterController = function () {
         this.userPassword = '';
         this.passwordConfirmation = '';
         this.userAge = '';
-
-        console.log('hui2');
     }
 
     _createClass(RegisterController, [{
         key: 'sendRegisterForm',
-        value: function sendRegisterForm() {
+        value: function sendRegisterForm(e) {
+            e.stopPropagation();
+            e.preventDefault();
+
             var data = {
                 name: this.userName,
                 email: this.userEmail,
@@ -46234,13 +46219,10 @@ var RegisterController = function () {
             };
             this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["k" /* REGISTER_URL */], data).then(function (response) {
 
-                console.log(response.data.status);
-
-                if (response.data.status == 0) {
+                if (response.data.status === 0) {
                     console.log('валидация не прошла');
                 } else {
-                    // window.location.href = response.data.url;
-                    window.location.href = '/profile';
+                    window.location.href = '/';
                 }
             });
         }
@@ -46541,27 +46523,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
 var FilterBidResponsesController = function () {
-    function FilterBidResponsesController($window, $http) {
+    function FilterBidResponsesController($window, $http, $stateParams) {
         _classCallCheck(this, FilterBidResponsesController);
 
         this.$window = $window;
         this.$http = $http;
         this.filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["f" /* BID_RESPONSE_MATCHED */];
         this.bids = [];
+        this.$stateParams = $stateParams;
+        this.menu = [{ status: __WEBPACK_IMPORTED_MODULE_0__Constants__["f" /* BID_RESPONSE_MATCHED */], name: 'matched' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["h" /* BID_RESPONSE_UNMATCHED */], name: 'unmatched' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["g" /* BID_RESPONSE_SETTLED */], name: 'settled' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["d" /* BID_RESPONSE_CANCELED */], name: 'canceled' }];
         this.showListFiltred();
-        this.menu = [{ status: __WEBPACK_IMPORTED_MODULE_0__Constants__["f" /* BID_RESPONSE_MATCHED */], name: 'Matched' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["h" /* BID_RESPONSE_UNMATCHED */], name: 'Unmatched' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["g" /* BID_RESPONSE_SETTLED */], name: 'Settled' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["d" /* BID_RESPONSE_CANCELED */], name: 'Canceled' }];
     }
 
     _createClass(FilterBidResponsesController, [{
-        key: "setFilter",
-        value: function setFilter(status) {
-            this.filter = status;
-            this.showListFiltred();
-        }
-    }, {
         key: "showListFiltred",
         value: function showListFiltred() {
             var _this = this;
+
+            var self = this;
+            this.menu.forEach(function (value, key) {
+                console.log(value.name);
+                if (value.name === self.$stateParams.filter) self.filter = value.status;
+            });
 
             this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["e" /* BID_RESPONSE_INDEX */], {
                 params: { filter: this.filter }
@@ -46577,7 +46560,7 @@ var FilterBidResponsesController = function () {
 
 ;
 
-FilterBidResponsesController.$inject = ['$window', '$http'];
+FilterBidResponsesController.$inject = ['$window', '$http', '$stateParams'];
 
 
 
@@ -46601,7 +46584,47 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
 
     $stateProvider.state('index', {
         url: '/',
-        template: __webpack_require__(76)
+        template: __webpack_require__(76),
+        data: {
+            permissions: {
+                except: 'Auth',
+                redirectTo: function redirectTo() {
+                    return {
+                        state: 'events'
+                    };
+                }
+            }
+        }
+    }).state('terms-and-conditions', {
+        url: '/terms-and-conditions',
+        template: __webpack_require__(130)
+    }).state('privacy-policy', {
+        url: '/privacy-policy',
+        template: __webpack_require__(131)
+    }).state('auth', {
+        template: __webpack_require__(132),
+        data: {
+            permissions: {
+                except: 'Auth',
+                redirectTo: function redirectTo() {
+                    return {
+                        state: 'events'
+                    };
+                }
+            }
+        }
+    }).state('auth.login', {
+        //ng-controller="LoginController as LgCtrl"
+        url: '/login',
+        template: __webpack_require__(133),
+        controller: 'LoginController',
+        controllerAs: 'LgCtrl'
+    }).state('auth.registration', {
+        url: '/register',
+        template: __webpack_require__(134),
+        //ng-controller="RegisterController as RgCtrl"
+        controller: 'RegisterController',
+        controllerAs: 'RgCtrl'
     }).state('invest', {
         url: '/invest',
         template: __webpack_require__(77),
@@ -46609,9 +46632,14 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
         controllerAs: 'EvntsCtrl'
     }).state('bids', {
         url: '/bids',
-        template: __webpack_require__(77),
+        template: __webpack_require__(129),
         controller: 'BidResponsesController',
         controllerAs: 'BdsRspnsCtrl'
+    }).state('bids-filter', {
+        url: '/bids/{filter}',
+        template: __webpack_require__(135),
+        controller: 'FilterBidResponsesController',
+        controllerAs: 'FltrBdsRspnsCtrl'
     });
 
     $urlRouterProvider.otherwise(function ($injector, $location) {
@@ -46625,7 +46653,7 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
 /* 76 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"login_page-wr col-md-12\">\n        <div class=\"login_block\">\n            <div class=\"buy_stakes\">\n                Buy stakes in poker players in tournaments online and around the world\n            </div>\n            <div class=\"btn_block\">\n                <a href=\"\">\n                    <div class=\"login_btn login_in\">Log in</div>\n                </a>\n                <a href=\"\">\n                    <div class=\"login_btn login_registration\" >Register</div>\n                </a>\n            </div>\n            <a class=\"contine_without\" ui-sref=\"invest\">\n                Continue without registration\n            </a>\n        </div>\n    </div>\n</div>";
+module.exports = "<div class=\"row\">\n    <div class=\"login_page-wr col-md-12\">\n        <div class=\"login_block\">\n            <div class=\"buy_stakes\">\n                Buy stakes in poker players in tournaments online and around the world\n            </div>\n            <div class=\"btn_block\">\n                <a ui-sref=\"auth.login\">\n                    <div class=\"login_btn login_in\">Log in</div>\n                </a>\n                <a ui-sref=\"auth.registration\">\n                    <div class=\"login_btn login_registration\" >Register</div>\n                </a>\n            </div>\n            <a class=\"contine_without\" ui-sref=\"invest\">\n                Continue without registration\n            </a>\n        </div>\n    </div>\n</div>";
 
 /***/ }),
 /* 77 */
@@ -46751,7 +46779,7 @@ var BidsCarouselComponent = {
 /* 83 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.bids\">\n    <div class=\"tabs-wr__title\">\n        <div class=\"tabs-wr__title-name\">{%key%}</div>\n        <div class=\"see_all\">See All</div>\n    </div>\n    <div class=\"slider_container\">\n        <div class=\"swipe-wr\">\n            <bids class=\"bids_row\"\n                    bids=\"value\">\n            </bids>\n        </div>\n    </div>\n</div>\n";
+module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.bids\">\n    <div class=\"tabs-wr__title\">\n        <div class=\"tabs-wr__title-name\">{%key%}</div>\n        <a ui-sref=\"bids-filter({filter: key})\" class=\"see_all\">See All</a>\n    </div>\n    <div class=\"slider_container\">\n        <div class=\"swipe-wr\">\n            <bids class=\"bids_row\"\n                    bids=\"value\">\n            </bids>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
 /* 84 */
@@ -51820,7 +51848,7 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */].module('ui.router.state').p
 hack.$inject = ['$templateCache'];
 var menu_footer = __webpack_require__(128);
 function hack($templateCache) {
-    $templateCache.put('tpl /view/footer.template.html', menu_footer);
+    $templateCache.put('tpl/view/footer.template.html', menu_footer);
 }
 
 /***/ }),
@@ -51828,6 +51856,48 @@ function hack($templateCache) {
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"footer_binds\">\n    <a ui-sref=\"invest\">\n        <div class=\"footer_binds__item item_invest\">\n            <div class=\"footer_binds__img\"><img src=\"/images/g@3x_INVEST.png\" alt=\"\"></div>\n            invest\n        </div>\n    </a>\n    <a ui-sref=\"bids\">\n        <div class=\"footer_binds__item item_invest_bids\">\n            <div class=\"footer_binds__img\"><img src=\"/images/b@3x_BIDS.png\" alt=\"\"></div>\n            bids\n        </div>\n    </a>\n    <a href=\"\">\n        <div class=\"footer_binds__item item_invest_sale\">\n            <div class=\"footer_binds__img\"><img src=\"/images/g_2@3x_SALE.png\" alt=\"\"></div>\n            sale\n        </div>\n    </a>\n    <a href=\"\">\n        <div class=\"footer_binds__item item_invest_wallet\">\n            <div class=\"footer_binds__img\"><img src=\"/images/g_3@3x_WALLET.png\" alt=\"\"></div>\n            wallet\n        </div>\n    </a>\n</div>\n";
+
+/***/ }),
+/* 129 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n    <div class=\"col-md-12 binds\">\n        <div class=\"logo_img\">\n            LOGO\n            <img src=\"/\" alt=\"\">\n        </div>\n\n        <bids-carousel ng-if=\"BdsRspnsCtrl._opts.dataLoad\"\n                       bids=\"BdsRspnsCtrl.bids\"\n        >\n        </bids-carousel>\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n\n</div>";
+
+/***/ }),
+/* 130 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"auth.registration\" ><div class=\"goback\"></div></a>\n            Privacy\n        </div>\n\n\n        <div class=\"data-privacy\">\n            <span>Data & Privacy</span>\n            To esure your expirience is personal and relevant, we’re changing the type of advert you see and giving your more control over your data\n        </div>\n        <div class=\"check-box-wr\">\n            <div class=\"check-box__email\">\n                <input type=\"checkbox\" id=\"sms_new\" checked>\n                <label for=\"sms_new\">Yes, I’d like to hear about the latest poker news and promotions by Email</label>\n\n            </div>\n            <div class=\"check-box__email\">\n                <input type=\"checkbox\" id=\"email_new\" checked>\n                <label for=\"email_new\">Yes, I’d like to hear about the latest poker news and promotions by SMS</label>\n\n            </div>\n        </div>\n        <input id='termconfirm' type=\"submit\" name=\"submit_confirm\" value=\"Confirm\" style=\"border-radius:10pt;\">\n\n\n\n        <div class=\"see_policy\">\n            <a ui-sref=\"privacy-policy\">See Privacy policy</a>\n        </div>\n\n\n    </div>\n</div>";
+
+/***/ }),
+/* 131 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"auth.registration\"><div class=\"goback\"></div></a>\n            Home\n        </div>\n        <div>\n            What is Lorem Ipsum?\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.What is Lorem Ipsum?\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n        </div>\n        <div class=\"private_policy\">\n            By creating an account you agree to our\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\n        </div>\n    </div>\n</div>";
+
+/***/ }),
+/* 132 */
+/***/ (function(module, exports) {
+
+module.exports = "<div>\n    <ui-view></ui-view>\n</div>";
+
+/***/ }),
+/* 133 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\" >\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\n            Please Login\n        </div>\n        <form ng-submit=\"LgCtrl.sendAuthData($event)\" class=\"form_personal_inf\">\n\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"LgCtrl.userEmail\" required>\n\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"LgCtrl.userPassword\" required>\n\n            <button type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"LgCtrl.sendAuthData($event)\">Enter</button>\n        </form>\n\n    </div>\n</div>";
+
+/***/ }),
+/* 134 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\" >\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\n\n            Registration\n        </div>\n\n        <form ng-submit=\"RgCtrl.sendRegisterForm($event)\" class=\"form_personal_inf\">\n            <input type=\"text\"  placeholder=\"Your name\" ng-model=\"RgCtrl.userName\"  required>\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"RgCtrl.userEmail\" required>\n            <input type=\"text\"  placeholder=\"Your age\" ng-model=\"RgCtrl.userAge\" required>\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"RgCtrl.userPassword\" required>\n            <input type=\"password\"  placeholder=\"Confirm password\"  ng-model=\"RgCtrl.passwordConfirmation\" required>\n            <button type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"RgCtrl.sendRegisterForm($event)\">continue</button>\n        </form>\n        <div class=\"private_policy\">\n            By creating an account you agree to our\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\n        </div>\n    </div>\n</div>";
+
+/***/ }),
+/* 135 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\" ng-controller=\"FilterBidResponsesController as FltrBdsRspnsCtrl\">\n    <div class=\"binds binds_full_sc\">\n\n        <div class=\"tabs-wr\">\n            <div class=\"active_status col-md-12\">\n                Bids\n            </div>\n            <div class=\"tabs-wr__title col-md-12\">\n\n                <a ui-sref=\"bids-filter({filter: menuItem.name})\" ng-repeat=\"menuItem in FltrBdsRspnsCtrl.menu\" ng-bind=\"menuItem.name\" style=\"text-transform:capitalize\"></a>\n            </div>\n            <div class=\"slider_container slider_container__full\">\n                <div class=\"swipe-wr full_sc\">\n                    <bids class=\"bids_row__fullscreen\" bids=\"FltrBdsRspnsCtrl.bids\"></bids>\n                </div>\n            </div>\n        </div>\n\n\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n\n</div>";
 
 /***/ })
 /******/ ]);

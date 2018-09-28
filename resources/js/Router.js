@@ -67,11 +67,25 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                 controllerAs: 'RgCtrl'
             })
 
-        .state('events', {
-            url: '/events',
+        .state('invest', {
+            url: '/invest',
             template: require('./views/events/index.template.html'),
             controller: 'EventsController',
             controllerAs: 'EvntsCtrl',
+        })
+
+        .state('bids', {
+            url: '/bids',
+            template: require('./views/bids/index.template.html'),
+            controller: 'BidResponsesController',
+            controllerAs: 'BdsRspnsCtrl',
+        })
+
+        .state('bids-filter', {
+            url: '/bids/{filter}',
+            template: require('./views/bids/filter.template.html'),
+            controller: 'FilterBidResponsesController',
+            controllerAs: 'FltrBdsRspnsCtrl',
         })
 
     ;
