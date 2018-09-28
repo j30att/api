@@ -39,12 +39,13 @@ class LoginController extends Controller
     }
 
     public function showSignin(Request $request){
-        $typeDevice = $request->get('typeDevice');
+        $typeDevice = $request->get('_typeDevice');
         return view($typeDevice.'.login.signin');
     }
 
     public function showLoginForm(Request $request){
-        $typeDevice = $request->get('typeDevice');
+
+        $typeDevice = $request->get('_typeDevice');
         return view($typeDevice.'.login.index');
     }
 

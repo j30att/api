@@ -25,13 +25,13 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    {   $typeDevice = $request->get('typeDevice');
+    {   $typeDevice = $request->get('_typeDevice');
         return view($typeDevice.'.bids.index', compact('user'));
     }
 
     public function profile(Request $request){
         $user = Auth::user();
-        $typeDevice = $request->get('typeDevice');
+        $typeDevice = $request->get('_typeDevice');
         return view($typeDevice.'.profile.view', compact('user'));
     }
 

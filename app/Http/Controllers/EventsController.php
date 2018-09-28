@@ -18,7 +18,7 @@ class EventsController
         $events = Event::query()->get();
 
 
-        $typeDevice = $request->get('typeDevice');
+        $typeDevice = $request->get('_typeDevice');
 
         return view($typeDevice.'.events.index', compact('events'));
     }
@@ -26,7 +26,7 @@ class EventsController
     public function eventsList(Request $request){
         $events = Event::query()->get();
 
-        $typeDevice = $request->get('typeDevice');
+        $typeDevice = $request->get('_typeDevice');
         return view($typeDevice.'.events.all-events', compact('events'));
     }
 
@@ -34,7 +34,7 @@ class EventsController
     {
         $subevents = $event->subevents()->get();
 
-        $typeDevice = $request->get('typeDevice');
+        $typeDevice = $request->get('_typeDevice');
         return view($typeDevice.'.events.single', compact('subevents'));
     }
 

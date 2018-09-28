@@ -648,7 +648,7 @@ function _arraysEq(a1, a2) {
 var silenceUncaughtInPromise = function (promise) { return promise.catch(function (e) { return 0; }) && promise; };
 var silentRejection = function (error) { return silenceUncaughtInPromise(__WEBPACK_IMPORTED_MODULE_2__coreservices__["b" /* services */].$q.reject(error)); };
 //# sourceMappingURL=common.js.map
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(82)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(88)))
 
 /***/ }),
 /* 1 */
@@ -1249,7 +1249,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ParamTypes", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["d"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateParams", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["e"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ParamType", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["c"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__path_index__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__path_index__ = __webpack_require__(90);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PathNode", function() { return __WEBPACK_IMPORTED_MODULE_2__path_index__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PathUtils", function() { return __WEBPACK_IMPORTED_MODULE_2__path_index__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__resolve_index__ = __webpack_require__(36);
@@ -1267,7 +1267,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateRegistry", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["e"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateService", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["f"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TargetState", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["g"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__transition_index__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__transition_index__ = __webpack_require__(100);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionHookPhase", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["h"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionHookScope", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["i"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "HookBuilder", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["a"]; });
@@ -1281,7 +1281,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionEventType", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["f"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "defaultTransOpts", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["k"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionService", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["j"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__url_index__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__url_index__ = __webpack_require__(101);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRules", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["h"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlConfig", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["c"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlMatcher", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["d"]; });
@@ -1291,13 +1291,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRuleFactory", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["g"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BaseUrlRule", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlService", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["i"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__view_index__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__view_index__ = __webpack_require__(102);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ViewService", function() { return __WEBPACK_IMPORTED_MODULE_7__view_index__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__globals__ = __webpack_require__(48);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouterGlobals", function() { return __WEBPACK_IMPORTED_MODULE_8__globals__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__router__ = __webpack_require__(44);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__vanilla__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__vanilla__ = __webpack_require__(103);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "$q", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["b"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "$injector", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BaseLocationServices", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["c"]; });
@@ -1315,7 +1315,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "hashLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["k"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pushStateLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["p"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "memoryLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["n"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__interface__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__interface__ = __webpack_require__(106);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouterPluginBase", function() { return __WEBPACK_IMPORTED_MODULE_11__interface__["a"]; });
 /** @publicapi @module common */ /** */
 
@@ -1757,7 +1757,7 @@ var trace = new Trace();
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ng; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_angular__);
 /** @publicapi @module ng1 */ /** */
 
@@ -2505,6 +2505,14 @@ var TransitionHook = /** @class */ (function () {
 
 /***/ }),
 /* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(65);
+module.exports = angular;
+
+
+/***/ }),
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2682,7 +2690,7 @@ var PathUtils = /** @class */ (function () {
 //# sourceMappingURL=pathUtils.js.map
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2823,7 +2831,7 @@ var Resolvable = /** @class */ (function () {
 //# sourceMappingURL=resolvable.js.map
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2834,8 +2842,8 @@ var Resolvable = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_trace__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__interface__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__resolvable__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__path_pathUtils__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__resolvable__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__path_pathUtils__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_strings__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__common__ = __webpack_require__(3);
 /** @publicapi @module resolve */ /** */
@@ -3043,7 +3051,7 @@ var UIInjectorImpl = /** @class */ (function () {
 //# sourceMappingURL=resolveContext.js.map
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3590,7 +3598,7 @@ var UrlMatcher = /** @class */ (function () {
 //# sourceMappingURL=urlMatcher.js.map
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3637,14 +3645,6 @@ var BaseLocationServices = /** @class */ (function () {
 //# sourceMappingURL=baseLocationService.js.map
 
 /***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(65);
-module.exports = angular;
-
-
-/***/ }),
 /* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3654,10 +3654,10 @@ module.exports = angular;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__statebuilders_views__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__templateFactory__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__templateFactory__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__stateProvider__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__statebuilders_onEnterExitRetain__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__locationServices__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__statebuilders_onEnterExitRetain__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__locationServices__ = __webpack_require__(109);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__urlRouterProvider__ = __webpack_require__(62);
 /**
  * # Angular 1 types
@@ -3935,7 +3935,7 @@ var Queue = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__param__ = __webpack_require__(12);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__param__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__param__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paramTypes__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paramTypes__ = __webpack_require__(89);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_1__paramTypes__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stateParams__ = __webpack_require__(35);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_2__stateParams__["a"]; });
@@ -4353,21 +4353,21 @@ var StateObject = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interface__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transition__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hookRegistry__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hooks_coreResolvables__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hooks_redirectTo__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__hooks_onEnterExitRetain__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__hooks_resolve__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__hooks_views__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__hooks_updateGlobals__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__hooks_url__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hooks_coreResolvables__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hooks_redirectTo__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__hooks_onEnterExitRetain__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__hooks_resolve__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__hooks_views__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__hooks_updateGlobals__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__hooks_url__ = __webpack_require__(97);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__hooks_lazyLoad__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__transitionEventType__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__transitionHook__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__common_hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__hooks_ignoredTransition__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__hooks_invalidTransition__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__hooks_ignoredTransition__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__hooks_invalidTransition__ = __webpack_require__(99);
 /** @publicapi @module transition */ /** */
 
 
@@ -4641,10 +4641,10 @@ var TransitionService = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__transitionHook__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__hookRegistry__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__hookBuilder__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__path_pathUtils__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__path_pathUtils__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__params_param__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__resolve_resolvable__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__resolve_resolveContext__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__resolve_resolvable__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__resolve_resolveContext__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__rejectFactory__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__common__ = __webpack_require__(3);
 /** @publicapi @module transition */ /** */
@@ -5494,7 +5494,7 @@ function makeEvent(registry, transitionService, eventType) {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return UrlRuleFactory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BaseUrlRule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__urlMatcher__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__urlMatcher__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_hof__ = __webpack_require__(2);
@@ -5940,10 +5940,10 @@ var StateParams = /** @class */ (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interface__ = __webpack_require__(37);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_0__interface__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__resolvable__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__resolvable__ = __webpack_require__(17);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__resolvable__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_1__resolvable__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__resolveContext__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__resolveContext__ = __webpack_require__(18);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_2__resolveContext__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_2__resolveContext__["b"]; });
 /** @publicapi @module resolve */ /** */
@@ -5983,7 +5983,7 @@ var resolvePolicies = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_strings__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__resolve_resolvable__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__resolve_resolvable__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_coreservices__ = __webpack_require__(5);
 /** @publicapi @module state */ /** */
 
@@ -6615,14 +6615,14 @@ var StateRegistry = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_queue__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__path_pathUtils__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__path_pathUtils__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__path_pathNode__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__transition_transitionService__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__transition_rejectFactory__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__targetState__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__params_param__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__common_glob__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__resolve_resolveContext__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__resolve_resolveContext__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__hooks_lazyLoad__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__common_hof__ = __webpack_require__(2);
 /** @publicapi @module state */ /** */
@@ -7533,7 +7533,7 @@ var UIRouter = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ParamFactory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return UrlMatcherFactory; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__urlMatcher__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__urlMatcher__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__params__ = __webpack_require__(24);
 var __assign = (this && this.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -8404,7 +8404,7 @@ var UrlService = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UrlRules; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__state__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__urlMatcher__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__urlMatcher__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__urlRule__ = __webpack_require__(32);
 
@@ -9233,7 +9233,7 @@ var $injector = {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HashLocationService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__baseLocationService__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__baseLocationService__ = __webpack_require__(20);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -9276,7 +9276,7 @@ var HashLocationService = /** @class */ (function (_super) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MemoryLocationService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseLocationService__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseLocationService__ = __webpack_require__(20);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -9312,7 +9312,7 @@ var MemoryLocationService = /** @class */ (function (_super) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PushStateLocationService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseLocationService__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseLocationService__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common__ = __webpack_require__(3);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -9831,8 +9831,8 @@ var UrlRouterProvider = /** @class */ (function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(64);
-__webpack_require__(109);
-module.exports = __webpack_require__(110);
+__webpack_require__(115);
+module.exports = __webpack_require__(116);
 
 
 /***/ }),
@@ -9842,12 +9842,12 @@ module.exports = __webpack_require__(110);
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Router__ = __webpack_require__(74);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_bids_bids_controller__ = __webpack_require__(77);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components_bids_carousel_bids_carousel_controller__ = __webpack_require__(79);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Components_events_events_controller__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Components_events_carousel_events_carousel_controller__ = __webpack_require__(124);
-var angular = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Router__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Middlewares__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_permission__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_permission___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular_permission__);
+var angular = __webpack_require__(15);
 
 
 
@@ -9855,23 +9855,17 @@ var angular = __webpack_require__(20);
 
 
 
+var ngRouter = __webpack_require__(87).default;
 
-
-var ngRouter = __webpack_require__(81).default;
-
-var app = angular.module('poker', [ngRouter, __WEBPACK_IMPORTED_MODULE_0__Controllers__["a" /* default */]]);
+var app = angular.module('poker', [ngRouter, __WEBPACK_IMPORTED_MODULE_0__Controllers__["a" /* default */], __WEBPACK_IMPORTED_MODULE_3__Components__["a" /* default */], __WEBPACK_IMPORTED_MODULE_4_angular_permission__["permission"], __WEBPACK_IMPORTED_MODULE_4_angular_permission__["uiPermission"]]);
 
 app.config(['$interpolateProvider', function ($interpolateProvider) {
     $interpolateProvider.startSymbol('{%');
     $interpolateProvider.endSymbol('%}');
 }]);
 
-app.component('bids', __WEBPACK_IMPORTED_MODULE_2__Components_bids_bids_controller__["a" /* BidsComponent */]);
-app.component('bidsCarousel', __WEBPACK_IMPORTED_MODULE_3__Components_bids_carousel_bids_carousel_controller__["a" /* BidsCarouselComponent */]);
-app.component('events', __WEBPACK_IMPORTED_MODULE_4__Components_events_events_controller__["a" /* EventsComponent */]);
-app.component('eventsCarousel', __WEBPACK_IMPORTED_MODULE_5__Components_events_carousel_events_carousel_controller__["a" /* EventsCarouselComponent */]);
-
 app.config(__WEBPACK_IMPORTED_MODULE_1__Router__["a" /* default */]);
+app.run(__WEBPACK_IMPORTED_MODULE_2__Middlewares__["a" /* default */]);
 
 /***/ }),
 /* 65 */
@@ -46103,12 +46097,12 @@ $provide.value("$locale", {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers_LoginController__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Controllers_RegisterController__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Controllers_ProfileController__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Controllers_EventsController__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Controllers_EventsListController__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Controllers_FilterBidsController__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Controllers_BidResponsesController__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Controllers_FilterBidResponsesController__ = __webpack_require__(73);
-var angular = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Controllers_EventsController__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Controllers_EventsListController__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Controllers_FilterBidsController__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Controllers_BidResponsesController__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Controllers_FilterBidResponsesController__ = __webpack_require__(74);
+var angular = __webpack_require__(15);
 
 
 
@@ -46323,6 +46317,53 @@ ProfileController.$inject = ['$window', '$http'];
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventsController; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(4);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var EventsController = function () {
+    function EventsController($window, $http) {
+        _classCallCheck(this, EventsController);
+
+        this.$window = $window;
+        this.$http = $http;
+        this.events = [];
+        this._opts = { dataLoad: false };
+        this.showList();
+    }
+
+    _createClass(EventsController, [{
+        key: 'showList',
+        value: function showList() {
+            var _this = this;
+
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["c" /* BID_EVENTS_INDEX */]).then(function (response) {
+
+                _this.events = response.data.data;
+                _this._opts.dataLoad = true;
+                console.log(_this.events, 'console.log(this.events)');
+            });
+        }
+    }]);
+
+    return EventsController;
+}();
+
+;
+
+EventsController.$inject = ['$window', '$http'];
+
+
+
+/***/ }),
+/* 71 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventsListController; });
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -46373,7 +46414,7 @@ EventsListController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46425,7 +46466,7 @@ FilterBidsController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46479,7 +46520,7 @@ BidResponsesController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46538,7 +46579,7 @@ FilterBidResponsesController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46557,13 +46598,30 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
 
     $stateProvider.state('index', {
         url: '/',
-        template: __webpack_require__(75),
-        resource: 'dashboard'
-    }).state('ngbids', {
-        url: '/ngbids',
         template: __webpack_require__(76),
-        resource: 'ngbids'
-        //middleware: 'admin'
+        data: {
+            permissions: {
+                except: 'Auth',
+                redirectTo: function redirectTo() {
+                    return {
+                        state: 'dashboard'
+                    };
+                }
+            }
+        }
+    }).state('dashboard', {
+        url: '/dashboard',
+        template: __webpack_require__(127),
+        data: {
+            permissions: {
+                only: 'Auth',
+                redirectTo: function redirectTo() {
+                    return {
+                        state: 'index'
+                    };
+                }
+            }
+        }
     });
 
     $urlRouterProvider.otherwise(function ($injector, $location) {
@@ -46574,19 +46632,38 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
 }
 
 /***/ }),
-/* 75 */
-/***/ (function(module, exports) {
-
-module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Title</title>\n</head>\n<body>\n\n</body>\n</html>";
-
-/***/ }),
 /* 76 */
 /***/ (function(module, exports) {
 
-module.exports = "хуй";
+module.exports = "<div class=\"row\">\n    <div class=\"login_page-wr col-md-12\">\n        <div class=\"login_block\">\n            <div class=\"buy_stakes\">\n                Buy stakes in poker players in tournaments online and around the world\n            </div>\n            <div class=\"btn_block\">\n                <a href=\"\">\n                    <div class=\"login_btn login_in\">Log in</div>\n                </a>\n                <a href=\"\">\n                    <div class=\"login_btn login_registration\" >Register</div>\n                </a>\n            </div>\n            <div class=\"contine_without\">\n                Continue without registration\n            </div>\n        </div>\n    </div>\n</div>";
 
 /***/ }),
-/* 77 */
+/* 77 */,
+/* 78 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Components_bids_bids_controller__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Components_bids_carousel_bids_carousel_controller__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_events_events_controller__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components_events_carousel_events_carousel_controller__ = __webpack_require__(85);
+var angular = __webpack_require__(15);
+
+
+
+
+
+
+var module = angular.module('Components', []);
+module.component('bids', __WEBPACK_IMPORTED_MODULE_0__Components_bids_bids_controller__["a" /* BidsComponent */]);
+module.component('bidsCarousel', __WEBPACK_IMPORTED_MODULE_1__Components_bids_carousel_bids_carousel_controller__["a" /* BidsCarouselComponent */]);
+module.component('events', __WEBPACK_IMPORTED_MODULE_2__Components_events_events_controller__["a" /* EventsComponent */]);
+module.component('eventsCarousel', __WEBPACK_IMPORTED_MODULE_3__Components_events_carousel_events_carousel_controller__["a" /* EventsCarouselComponent */]);
+
+/* harmony default export */ __webpack_exports__["a"] = (module.name);
+
+/***/ }),
+/* 79 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46612,19 +46689,19 @@ var BidsComponent = {
     bindings: {
         bids: '<'
     },
-    template: __webpack_require__(78),
+    template: __webpack_require__(80),
     controller: Bids,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 78 */
+/* 80 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"binds-item\"\n         ng-class=\"{\n                    'binds-item__matched':      item.status === 1,\n                    'binds-item__unmatched':    item.status === 2,\n                    'binds-item__settled':      item.status === 3,\n                    'binds-item__canceled':     item.status === 4,\n                     }\"\n         ng-repeat=\"item in $ctrl.bids\">\n        <!--<div class=\"binds-item-wr\">-->\n        <!--</div>-->\n    <div class=\"binds-item__profile_info\">\n        <div class=\"profile__photo\">\n            <img src=\"/images/players.png\" alt=\"\">\n        </div>\n        <div class=\"profile_text\">\n            <div class=\"profile__name\" ng-bind=\"item.investor.name\">\n\n            </div>\n            <div class=\"profile__country\">\n                MILLIONS Russia, 1A\n            </div>\n\n        </div>\n\n    </div>\n    <div class=\"loop_counter\">\n        Second loop\n    </div>\n    <div class=\"binds-item__game_info\">\n        <div class=\"geme__text\">\n            <div class=\"by_in\">\n                Buy in £ <span>1,000,000</span>\n            </div>\n            <div class=\"gte\">\n                £ <span>1,000,000</span> GTE\n            </div>\n        </div>\n        <div class=\"game_atrs\">\n            <div class=\"game_atrs__markup\">\n                <span>Markup</span><br>\n                1.20\n            </div>\n            <div class=\"game_atrs__value\">\n                <span>Value</span><br>\n                £2,404.08\n            </div>\n            <div class=\"game_atrs__date_start\">\n                <span>Date of Start</span><br>\n                1 Sep\n            </div>\n        </div>\n    </div>\n    </div>\n";
 
 /***/ }),
-/* 79 */
+/* 81 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46652,19 +46729,121 @@ var BidsCarouselComponent = {
     bindings: {
         bids: '<'
     },
-    template: __webpack_require__(80),
+    template: __webpack_require__(82),
     controller: BidsCarousel,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 80 */
+/* 82 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.bids\">\n    <div class=\"tabs-wr__title\">\n        <div class=\"tabs-wr__title-name\">{%key%}</div>\n        <div class=\"see_all\">See All</div>\n    </div>\n    <div class=\"slider_container\">\n        <div class=\"swipe-wr\">\n            <bids class=\"bids_row\"\n                    bids=\"value\">\n            </bids>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
-/* 81 */
+/* 83 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventsComponent; });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Events = function () {
+    function Events() {
+        _classCallCheck(this, Events);
+
+        this.opened = [];
+    }
+
+    _createClass(Events, [{
+        key: '$onInit',
+        value: function $onInit() {}
+    }, {
+        key: 'openDetail',
+        value: function openDetail(event_id) {
+            var rInd = this.opened.indexOf(event_id);
+            if (rInd === -1) {
+                this.opened.push(event_id);
+            } else {
+                this.opened.splice(rInd, 1);
+            }
+        }
+    }, {
+        key: 'showDetail',
+        value: function showDetail(event_id) {
+            if (this.opened.indexOf(event_id) != -1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }]);
+
+    return Events;
+}();
+
+var EventsComponent = {
+    bindings: {
+        events: '<',
+        state: '<'
+    },
+    template: __webpack_require__(84),
+    controller: Events,
+    controllerAs: '$ctrl'
+};
+
+/***/ }),
+/* 84 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"event-item\" ng-if=\"$ctrl.state == 'row'\" ng-repeat=\"item in $ctrl.events\">\n    <div class=\"event-item-wr\">\n        <a href=\"\">\n            <div class=\"event-item__img\">\n                <img src=\"/images/event.png\" alt=\"\">\n            </div>\n        </a>\n        <div class=\"event-item__text\">\n            <a href=\"\">\n                <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\n            </a>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\n\n            <div class=\"event-item__date\" ng-bind=\"item.formated_data\"></div>\n        </div>\n\n    </div>\n</div>\n<!--\n\n<div class=\"see_info_event\" ng-if=\"$ctrl.showDetail()\">\n    <span><a href=\"\">See info</a></span>\n\n    <div class=\"event-item__title\">{{$event->title}}</div>\n    <div class=\"event-item__summa\">£{{$event->fund}} GTD</div>\n    <div class=\"event-item__date\">{{$event->formatted_data}}</div>\n\n\n    <div class=\"event_main-wr\">\n        <span>Events List</span>\n    </div>\n</div>\n-->\n\n{%$ctrl.state%}\n<div ng-if=\"$ctrl.state == 'list'\" ng-repeat=\"item in $ctrl.events\">\n\n    <div class=\"selected_event\" ng-if=\"EvntsLstCtrl.showDetail(item.id)\">\n        <img src=\"/images/select_event_bg.png\" alt=\"\">\n    </div>\n    <div class=\"selected_event_info event_item col-md-12\">\n\n        <div class=\"event_list-wr\" ng-click=\"EvntsLstCtrl.openDetail(item.id)\">\n\n\n            <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\n            <div class=\"event-item__date\" ng-bind=\"item.formated_data\"></div>\n        </div>\n        <a href=\"\">\n            <div class=\"see_more\"></div>\n        </a>\n\n    </div>\n\n</div>\n";
+
+/***/ }),
+/* 85 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventsCarouselComponent; });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var EventsCarousel = function () {
+    function EventsCarousel() {
+        _classCallCheck(this, EventsCarousel);
+
+        console.log(this.events);
+        console.log(this.state);
+    }
+
+    _createClass(EventsCarousel, [{
+        key: '$onInit',
+        value: function $onInit() {}
+    }]);
+
+    return EventsCarousel;
+}();
+
+var EventsCarouselComponent = {
+    bindings: {
+        events: '<',
+        state: '<'
+    },
+    template: __webpack_require__(86),
+    controller: EventsCarousel,
+    controllerAs: '$ctrl'
+};
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"slider_container\">\n    <div class=\"swipe-wr\">\n       <events events=\"$ctrl.events\" state=\"$ctrl.state\"></events>\n    </div>\n</div>";
+
+/***/ }),
+/* 87 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46680,12 +46859,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateProvider", function() { return __WEBPACK_IMPORTED_MODULE_2__stateProvider__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__urlRouterProvider__ = __webpack_require__(62);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRouterProvider", function() { return __WEBPACK_IMPORTED_MODULE_3__urlRouterProvider__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__injectables__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__injectables__ = __webpack_require__(110);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__injectables___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__injectables__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_stateDirectives__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__stateFilters__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_viewDirective__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__viewScroll__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_stateDirectives__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__stateFilters__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_viewDirective__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__viewScroll__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__uirouter_core__ = __webpack_require__(6);
 /* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "core", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRules", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlRules"]; });
@@ -46865,7 +47044,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 82 */
+/* 88 */
 /***/ (function(module, exports) {
 
 var g;
@@ -46892,7 +47071,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 83 */
+/* 89 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47064,13 +47243,13 @@ initDefaultTypes();
 //# sourceMappingURL=paramTypes.js.map
 
 /***/ }),
-/* 84 */
+/* 90 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pathNode__ = __webpack_require__(26);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__pathNode__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pathUtils__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pathUtils__ = __webpack_require__(16);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__pathUtils__["a"]; });
 /** @internalapi @module path */ /** */
 
@@ -47078,7 +47257,7 @@ initDefaultTypes();
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 85 */
+/* 91 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47126,7 +47305,7 @@ var treeChangesCleanup = function (trans) {
 //# sourceMappingURL=coreResolvables.js.map
 
 /***/ }),
-/* 86 */
+/* 92 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47171,7 +47350,7 @@ var registerRedirectToHook = function (transitionService) {
 //# sourceMappingURL=redirectTo.js.map
 
 /***/ }),
-/* 87 */
+/* 93 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47235,7 +47414,7 @@ var registerOnEnterHook = function (transitionService) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 88 */
+/* 94 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47244,7 +47423,7 @@ var registerOnEnterHook = function (transitionService) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return registerLazyResolveState; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return registerResolveRemaining; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__resolve_resolveContext__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__resolve_resolveContext__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_hof__ = __webpack_require__(2);
 /** @internalapi @module hooks */ /** */
 
@@ -47303,7 +47482,7 @@ var registerResolveRemaining = function (transitionService) {
 //# sourceMappingURL=resolve.js.map
 
 /***/ }),
-/* 89 */
+/* 95 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47358,7 +47537,7 @@ var registerActivateViews = function (transitionService) {
 //# sourceMappingURL=views.js.map
 
 /***/ }),
-/* 90 */
+/* 96 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47399,7 +47578,7 @@ var registerUpdateGlobalState = function (transitionService) {
 //# sourceMappingURL=updateGlobals.js.map
 
 /***/ }),
-/* 91 */
+/* 97 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47429,7 +47608,7 @@ var registerUpdateUrl = function (transitionService) {
 //# sourceMappingURL=url.js.map
 
 /***/ }),
-/* 92 */
+/* 98 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47467,7 +47646,7 @@ var registerIgnoredTransitionHook = function (transitionService) {
 //# sourceMappingURL=ignoredTransition.js.map
 
 /***/ }),
-/* 93 */
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47491,7 +47670,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=invalidTransition.js.map
 
 /***/ }),
-/* 94 */
+/* 100 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47539,11 +47718,11 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 95 */
+/* 101 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__urlMatcher__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__urlMatcher__ = __webpack_require__(19);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_0__urlMatcher__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__urlMatcherFactory__ = __webpack_require__(45);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__urlMatcherFactory__["a"]; });
@@ -47569,7 +47748,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 96 */
+/* 102 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47579,11 +47758,11 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 97 */
+/* 103 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vanilla_index__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vanilla_index__ = __webpack_require__(104);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["c"]; });
@@ -47606,7 +47785,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=vanilla.js.map
 
 /***/ }),
-/* 98 */
+/* 104 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47614,7 +47793,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__q__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__injector__ = __webpack_require__(55);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__injector__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__baseLocationService__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__baseLocationService__ = __webpack_require__(20);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_2__baseLocationService__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hashLocationService__ = __webpack_require__(56);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_3__hashLocationService__["a"]; });
@@ -47632,7 +47811,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "l", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["c"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "m", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["d"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "o", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["e"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__plugins__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__plugins__ = __webpack_require__(105);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "n", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "p", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["c"]; });
@@ -47650,7 +47829,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 99 */
+/* 105 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47691,7 +47870,7 @@ var memoryLocationPlugin = Object(__WEBPACK_IMPORTED_MODULE_2__utils__["d" /* lo
 //# sourceMappingURL=plugins.js.map
 
 /***/ }),
-/* 100 */
+/* 106 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47715,7 +47894,7 @@ var UIRouterPluginBase = /** @class */ (function () {
 //# sourceMappingURL=interface.js.map
 
 /***/ }),
-/* 101 */
+/* 107 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47926,7 +48105,7 @@ var scopeBindings = function (bindingsObj) {
 //# sourceMappingURL=templateFactory.js.map
 
 /***/ }),
-/* 102 */
+/* 108 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47961,7 +48140,7 @@ var getStateHookBuilder = function (hookName) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 103 */
+/* 109 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48047,7 +48226,7 @@ var Ng1LocationServices = /** @class */ (function () {
 //# sourceMappingURL=locationServices.js.map
 
 /***/ }),
-/* 104 */
+/* 110 */
 /***/ (function(module, exports) {
 
 /**
@@ -48366,7 +48545,7 @@ var $urlMatcherFactoryProvider;
 //# sourceMappingURL=injectables.js.map
 
 /***/ }),
-/* 105 */
+/* 111 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49003,7 +49182,7 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */]
 //# sourceMappingURL=stateDirectives.js.map
 
 /***/ }),
-/* 106 */
+/* 112 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49055,7 +49234,7 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */]
 //# sourceMappingURL=stateFilters.js.map
 
 /***/ }),
-/* 107 */
+/* 113 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49492,7 +49671,7 @@ __WEBPACK_IMPORTED_MODULE_1__angular__["a" /* ng */].module('ui.router.state').d
 //# sourceMappingURL=viewDirective.js.map
 
 /***/ }),
-/* 108 */
+/* 114 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49524,176 +49703,2125 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */].module('ui.router.state').p
 //# sourceMappingURL=viewScroll.js.map
 
 /***/ }),
-/* 109 */
+/* 115 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 110 */
+/* 116 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 111 */,
-/* 112 */,
-/* 113 */,
-/* 114 */,
-/* 115 */,
-/* 116 */,
 /* 117 */,
 /* 118 */,
 /* 119 */,
 /* 120 */,
 /* 121 */,
 /* 122 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventsComponent; });
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+/**
+ * angular-permission
+ * Fully featured role and permission based access control for your angular applications
+ * @version v6.0.0 - 2018-01-20
+ * @link https://github.com/Narzerus/angular-permission
+ * @author Rafael Vidaurre <narzerus@gmail.com> (http://www.rafaelvidaurre.com), Blazej Krysiak <blazej.krysiak@gmail.com>
+ * @license MIT License, http://www.opensource.org/licenses/MIT
+ */
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+(function () {
+  'use strict';
 
-var Events = function () {
-    function Events() {
-        _classCallCheck(this, Events);
+  var permission = __webpack_require__(123),
+    ngPermission = __webpack_require__(124),
+    uiPermission = __webpack_require__(125);
 
-        this.opened = [];
-    }
+  module.exports = {
+    permission: permission,
+    ngPermission: ngPermission,
+    uiPermission: uiPermission
+  };
+})();
 
-    _createClass(Events, [{
-        key: '$onInit',
-        value: function $onInit() {}
-    }, {
-        key: 'openDetail',
-        value: function openDetail(event_id) {
-            var rInd = this.opened.indexOf(event_id);
-            if (rInd === -1) {
-                this.opened.push(event_id);
-            } else {
-                this.opened.splice(rInd, 1);
-            }
-        }
-    }, {
-        key: 'showDetail',
-        value: function showDetail(event_id) {
-            if (this.opened.indexOf(event_id) != -1) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-    }]);
-
-    return Events;
-}();
-
-var EventsComponent = {
-    bindings: {
-        events: '<',
-        state: '<'
-    },
-    template: __webpack_require__(123),
-    controller: Events,
-    controllerAs: '$ctrl'
-};
 
 /***/ }),
 /* 123 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"event-item\" ng-if=\"$ctrl.state == 'row'\" ng-repeat=\"item in $ctrl.events\">\n    <div class=\"event-item-wr\">\n        <a href=\"\">\n            <div class=\"event-item__img\">\n                <img src=\"/images/event.png\" alt=\"\">\n            </div>\n        </a>\n        <div class=\"event-item__text\">\n            <a href=\"\">\n                <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\n            </a>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\n\n            <div class=\"event-item__date\" ng-bind=\"item.formated_data\"></div>\n        </div>\n\n    </div>\n</div>\n<!--\n\n<div class=\"see_info_event\" ng-if=\"$ctrl.showDetail()\">\n    <span><a href=\"\">See info</a></span>\n\n    <div class=\"event-item__title\">{{$event->title}}</div>\n    <div class=\"event-item__summa\">£{{$event->fund}} GTD</div>\n    <div class=\"event-item__date\">{{$event->formatted_data}}</div>\n\n\n    <div class=\"event_main-wr\">\n        <span>Events List</span>\n    </div>\n</div>\n-->\n\n{%$ctrl.state%}\n<div ng-if=\"$ctrl.state == 'list'\" ng-repeat=\"item in $ctrl.events\">\n\n    <div class=\"selected_event\" ng-if=\"EvntsLstCtrl.showDetail(item.id)\">\n        <img src=\"/images/select_event_bg.png\" alt=\"\">\n    </div>\n    <div class=\"selected_event_info event_item col-md-12\">\n\n        <div class=\"event_list-wr\" ng-click=\"EvntsLstCtrl.openDetail(item.id)\">\n\n\n            <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\n            <div class=\"event-item__date\" ng-bind=\"item.formated_data\"></div>\n        </div>\n        <a href=\"\">\n            <div class=\"see_more\"></div>\n        </a>\n\n    </div>\n\n</div>\n";
+/**
+ * angular-permission
+ * Fully featured role and permission based access control for your angular applications
+ * @version v6.0.0 - 2018-01-20
+ * @link https://github.com/Narzerus/angular-permission
+ * @author Rafael Vidaurre <narzerus@gmail.com> (http://www.rafaelvidaurre.com), Blazej Krysiak <blazej.krysiak@gmail.com>
+ * @license MIT License, http://www.opensource.org/licenses/MIT
+ */
+
+(function (window, angular, undefined) {
+  'use strict';
+
+  /**
+   * @namespace permission
+   */
+
+  $q.$inject = ['$delegate'];
+  PermPermission.$inject = ['$q', '$injector', 'PermTransitionProperties'];
+  PermRole.$inject = ['$q', '$injector', 'PermPermissionStore', 'PermTransitionProperties'];
+  PermPermissionStore.$inject = ['PermPermission'];
+  PermRoleStore.$inject = ['PermRole'];
+  PermissionDirective.$inject = ['$log', '$injector', 'PermPermissionMap', 'PermPermissionStrategies'];
+  PermAuthorization.$inject = ['$q'];
+  PermPermissionMap.$inject = ['$q', '$log', '$injector', '$permission', 'PermTransitionProperties', 'PermRoleStore', 'PermPermissionStore'];
+  var permission = angular.module('permission', []);
+
+  /* istanbul ignore if  */
+  if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.exports === exports) {
+    module.exports = permission.name;
+  }
+
+  /**
+   * Permission module configuration provider
+   *
+   * @name permission.permissionProvider
+   */
+  function $permission() {
+    'ngInject';
+
+    var defaultOnAuthorizedMethod = 'showElement';
+    var defaultOnUnauthorizedMethod = 'hideElement';
+    var suppressUndefinedPermissionWarning = false;
+
+    /**
+     * Methods allowing to alter default directive onAuthorized behaviour in permission directive
+     * @methodOf permission.permissionProvider
+     *
+     * @param onAuthorizedMethod {String} One of permission.PermPermissionStrategies method names
+     */
+    this.setDefaultOnAuthorizedMethod = function (onAuthorizedMethod) { // jshint ignore:line
+      defaultOnAuthorizedMethod = onAuthorizedMethod;
+    };
+
+    /**
+     * Methods allowing to alter default directive onUnauthorized behaviour in permission directive
+     * @methodOf permission.permissionProvider
+     *
+     * @param onUnauthorizedMethod {String} One of permission.PermPermissionStrategies method names
+     */
+    this.setDefaultOnUnauthorizedMethod = function (onUnauthorizedMethod) { // jshint ignore:line
+      defaultOnUnauthorizedMethod = onUnauthorizedMethod;
+    };
+
+
+    /**
+     * When set to true hides permission warning for undefined roles and permissions
+     * @methodOf permission.permissionProvider
+     *
+     * @param value {Boolean}
+     */
+    this.suppressUndefinedPermissionWarning = function (value) { // jshint ignore:line
+      suppressUndefinedPermissionWarning = value;
+    };
+
+
+    this.$get = function () { // jshint ignore:line
+      return {
+        defaultOnAuthorizedMethod: defaultOnAuthorizedMethod,
+        defaultOnUnauthorizedMethod: defaultOnUnauthorizedMethod,
+        suppressUndefinedPermissionWarning: suppressUndefinedPermissionWarning
+      };
+    };
+  }
+
+  angular
+    .module('permission')
+    .provider('$permission', $permission);
+
+  /**
+   * Extends $q implementation by A+ *any* method
+   * @name permission.$q
+   *
+   * @extends {angular.$q}
+   *
+   * @param $delegate {Object} Parent instance being extended
+   */
+  function $q($delegate) {
+    'ngInject';
+
+    $delegate.any = any;
+
+    /**
+     * Implementation of missing $q `any` method that wits for first resolution of provided promise set
+     * @methodOf permission.$q
+     *
+     * @param promises {Array|promise} Single or set of promises
+     *
+     * @returns {Promise} Returns a single promise that will be rejected with an array/hash of values,
+     *  each value corresponding to the promise at the same index/key in the `promises` array/hash.
+     *  If any of the promises is resolved, this resulting promise will be returned
+     *  with the same resolution value.
+     */
+    function any(promises) {
+      var deferred = $delegate.defer(),
+        counter = 0,
+        results = angular.isArray(promises) ? [] : {};
+
+      angular.forEach(promises, function (promise, key) {
+        counter++;
+        $delegate
+          .when(promise)
+          .then(function (value) {
+            deferred.resolve(value);
+          })
+          .catch(function (reason) {
+            results[key] = reason;
+            if (!(--counter)) {
+              deferred.reject(reason);
+            }
+          });
+      });
+
+      if (counter === 0) {
+        deferred.reject(results);
+      }
+
+      return deferred.promise;
+    }
+
+    return $delegate;
+  }
+
+  angular
+    .module('permission')
+    .decorator('$q', $q);
+
+
+  /**
+   * Pre-defined available configurable behaviours of directive `permission`
+   * @name permission.PermPermissionStrategies
+   * @readonly
+   *
+   * @example
+   * <div permission
+   *      permission-except="'MANAGER'"
+   *      permission-on-authorized="PermPermissionStrategies.renderContent"
+   *      permission-on-unauthorized="PermPermissionStrategies.removeContent">
+   * </div>
+   *
+   * @property enableElement {Function}
+   * @property disableElement {Function}
+   * @property showElement {Function}
+   * @property hideElement {Function}
+   */
+  var PermPermissionStrategies = {
+    enableElement: function ($element) {
+      $element.removeAttr('disabled');
+    },
+    disableElement: function ($element) {
+      $element.attr('disabled', 'disabled');
+    },
+    showElement: function ($element) {
+      $element.removeClass('ng-hide');
+    },
+    hideElement: function ($element) {
+      $element.addClass('ng-hide');
+    }
+  };
+
+  angular
+    .module('permission')
+    .value('PermPermissionStrategies', PermPermissionStrategies)
+    .value('PermissionStrategies', PermPermissionStrategies);
+
+
+  /**
+   * Helper object used for storing ui-router/ng-route transition parameters
+   * @name permission.PermTransitionProperties
+   *
+   * @type {Object.<String,Object>}
+   *
+   * Transition properties for ui-router:
+   * @property toState {Object} Target state object [ui-router]
+   * @property toParams {Object} Target state params [ui-router]
+   * @property fromState {Object} Source state object [ui-router]
+   * @property fromParams {Object} Source state params [ui-router]
+   * @property options {Object} Transition options [ui-router]
+   *
+   * Transition properties for ng-route:
+   * @property current {Object} Current state properties [ng-route]
+   * @property next {Object} Next state properties [ng-route]
+   */
+  var PermTransitionProperties = {};
+
+  angular
+    .module('permission')
+    .value('PermTransitionProperties', PermTransitionProperties);
+
+  /**
+   * Interface responsible for managing and emitting events dependent on router implementation
+   * @name permission.PermTransitionEvents
+   */
+  function PermTransitionEvents() {
+    'ngInject';
+
+    this.broadcastPermissionStartEvent = function () {
+      throw new Error('Method broadcastPermissionStartEvent in PermTransitionEvents interface must be implemented');
+    };
+
+    this.broadcastPermissionAcceptedEvent = function () {
+      throw new Error('Method broadcastPermissionAcceptedEvent in PermTransitionEvents interface must be implemented');
+    };
+
+    this.broadcastPermissionDeniedEvent = function () {
+      throw new Error('Method broadcastPermissionDeniedEvent in PermTransitionEvents interface must be implemented');
+    };
+  }
+
+  angular
+    .module('permission')
+    .service('PermTransitionEvents', PermTransitionEvents);
+
+
+  /**
+   * PermPermission definition factory
+   * @function
+   *
+   * @param $q {Object} Angular promise implementation
+   * @param $injector {Object} Dependency injection instance
+   * @param PermTransitionProperties {permission.PermTransitionProperties} Helper storing ui-router transition parameters
+   *
+   * @return {Permission}
+   */
+  function PermPermission($q, $injector, PermTransitionProperties) {
+    'ngInject';
+
+    /**
+     * PermPermission definition object constructor
+     * @constructor Permission
+     *
+     * @param permissionName {String} Name repressing permission
+     * @param validationFunction {Function} Function used to check if permission is valid
+     */
+    function Permission(permissionName, validationFunction) {
+      validateConstructor(permissionName, validationFunction);
+
+      this.permissionName = permissionName;
+      this.validationFunction = annotateValidationFunction(validationFunction);
+    }
+
+    /**
+     * Checks if permission is still valid
+     * @methodOf permission.Permission
+     *
+     * @returns {Promise}
+     */
+    Permission.prototype.validatePermission = function () {
+      var validationLocals = {
+        permissionName: this.permissionName,
+        transitionProperties: PermTransitionProperties
+      };
+      var validationResult = $injector.invoke(this.validationFunction, null, validationLocals);
+
+      if (!angular.isFunction(validationResult.then)) {
+        validationResult = wrapInPromise(validationResult, this.permissionName);
+      }
+
+      return validationResult;
+    };
+
+    /**
+     * Converts a value into a promise, if the value is truthy it resolves it, otherwise it rejects it
+     * @methodOf permission.Permission
+     * @private
+     *
+     * @param result {Boolean} Function to be wrapped into promise
+     * @param permissionName {String} Returned value in promise
+     *
+     * @return {Promise}
+     */
+    function wrapInPromise(result, permissionName) {
+      if (result) {
+        return $q.resolve(permissionName);
+      }
+
+      return $q.reject(permissionName);
+    }
+
+    /**
+     * Checks if provided permission has accepted parameter types
+     * @methodOf permission.Permission
+     * @private
+     *
+     * @throws {TypeError}
+     *
+     * @param permissionName {String} Name repressing permission
+     * @param validationFunction {Function} Function used to check if permission is valid
+     */
+    function validateConstructor(permissionName, validationFunction) {
+      if (!angular.isString(permissionName)) {
+        throw new TypeError('Parameter "permissionName" name must be String');
+      }
+      if (!angular.isFunction(validationFunction) && !angular.isArray(validationFunction)) {
+        throw new TypeError('Parameter "validationFunction" must be Function or an injectable Function using explicit annotation');
+      }
+    }
+
+    /**
+     * Ensures the validation is injectable using explicit annotation.
+     * Wraps a non-injectable function for backwards compatibility
+     * @methodOf permission.Permission
+     * @private
+     *
+     * @param validationFunction {Function} Function to wrap with injectable if needed
+     *
+     * @return {Function} Explicitly injectable function
+     */
+    function annotateValidationFunction(validationFunction) {
+      if (!angular.isArray(validationFunction.$inject || validationFunction)) {
+        // The function is not explicitly annotated, so assume using old-style parameters
+        // and manually prepare for injection using our known old API parameters
+        validationFunction = ['permissionName', 'transitionProperties', validationFunction];
+      }
+
+      return validationFunction;
+    }
+
+    return Permission;
+  }
+
+  angular
+    .module('permission')
+    .factory('PermPermission', PermPermission);
+
+  /**
+   * Role definition factory
+   * @function
+   *
+   * @param $q {Object} Angular promise implementation
+   * @param $injector {Object} Dependency injection instance
+   * @param PermPermissionStore {permission.PermPermissionStore} Permission definition storage
+   * @param PermTransitionProperties {permission.PermTransitionProperties} Helper storing ui-router transition parameters
+   *
+   * @return {Role}
+   */
+  function PermRole($q, $injector, PermPermissionStore, PermTransitionProperties) {
+    'ngInject';
+
+    /**
+     * Role definition constructor
+     * @constructor Role
+     *
+     * @param roleName {String} Name representing role
+     * @param validationFunction {Function|Array<String>} Optional function used to validate if permissions are still
+     *   valid or list of permission names representing role
+     */
+    function Role(roleName, validationFunction) {
+      validateConstructor(roleName, validationFunction);
+
+      this.roleName = roleName;
+      this.validationFunction = annotateValidationFunction(validationFunction);
+    }
+
+    /**
+     * Checks if role is still valid
+     * @methodOf permission.Role
+     *
+     * @returns {Promise} $q.promise object
+     */
+    Role.prototype.validateRole = function () {
+      var validationLocals = {
+        roleName: this.roleName,
+        transitionProperties: PermTransitionProperties
+      };
+      var validationResult = $injector.invoke(this.validationFunction, null, validationLocals);
+
+      if (!angular.isFunction(validationResult.then)) {
+        validationResult = wrapInPromise(validationResult, this.roleName);
+      }
+
+      return validationResult;
+    };
+
+    /**
+     * Converts a value into a promise, if the value is truthy it resolves it, otherwise it rejects it
+     * @methodOf permission.Role
+     * @private
+     *
+     * @param result {Boolean} Function to be wrapped into promise
+     * @param [roleName] {String} Returned value in promise
+     *
+     * @return {Promise}
+     */
+    function wrapInPromise(result, roleName) {
+      if (result) {
+        return $q.resolve(roleName);
+      }
+
+      return $q.reject(roleName);
+    }
+
+    /**
+     * Checks if provided permission has accepted parameter types
+     * @methodOf permission.Role
+     * @private
+     *
+     * @throws {TypeError}
+     *
+     * @param roleName {String} Name representing role
+     * @param validationFunction {Function|Array<String>} Optional function used to validate if permissions are still
+     *   valid or list of permission names representing role
+     */
+    function validateConstructor(roleName, validationFunction) {
+      if (!angular.isString(roleName)) {
+        throw new TypeError('Parameter "roleName" name must be String');
+      }
+
+      if (!angular.isArray(validationFunction) && !angular.isFunction(validationFunction)) {
+        throw new TypeError('Parameter "validationFunction" must be array or function');
+      }
+    }
+
+
+    /**
+     * Ensures the validation is injectable using explicit annotation.
+     * Wraps a non-injectable function for backwards compatibility
+     * @methodOf permission.Role
+     * @private
+     *
+     * @param validationFunction {Function|Array} Function to wrap with injectable if needed
+     *
+     * @return {Function} Explicitly injectable function
+     */
+    function annotateValidationFunction(validationFunction) {
+      // Test if the validation function is just an array of permission names
+      if (angular.isArray(validationFunction) && !angular.isFunction(validationFunction[validationFunction.length - 1])) {
+        validationFunction = preparePermissionEvaluation(validationFunction);
+      } else if (!angular.isArray(validationFunction.$inject || validationFunction)) {
+        // The function is not explicitly annotated, so assume using old-style parameters
+        // and manually prepare for injection using our known old API parameters
+        validationFunction = ['roleName', 'transitionProperties', validationFunction];
+      }
+
+      return validationFunction;
+    }
+
+    /**
+     * Creates an injectable function that evaluates a set of permissions in place of a role validation function
+     * @methodOf permission.Role
+     * @private
+     *
+     * @param permissions {Array<String>} List of permissions to evaluate
+     *
+     * @return {Function}
+     */
+    function preparePermissionEvaluation(permissions) {
+      return function () {
+        var promises = permissions.map(function (permissionName) {
+          if (PermPermissionStore.hasPermissionDefinition(permissionName)) {
+            var permission = PermPermissionStore.getPermissionDefinition(permissionName);
+
+            return permission.validatePermission();
+          }
+
+          return $q.reject(permissionName);
+        });
+
+        return $q.all(promises);
+      };
+    }
+
+    return Role;
+  }
+
+  angular
+    .module('permission')
+    .factory('PermRole', PermRole);
+
+  /**
+   * Permission definition storage
+   * @name permission.PermPermissionStore
+   *
+   * @param PermPermission {permission.PermPermission|Function}
+   */
+  function PermPermissionStore(PermPermission) {
+    'ngInject';
+
+    /**
+     * @property permissionStore
+     *
+     * @type {Object}
+     */
+    var permissionStore = {};
+
+    this.definePermission = definePermission;
+    this.defineManyPermissions = defineManyPermissions;
+    this.removePermissionDefinition = removePermissionDefinition;
+    this.hasPermissionDefinition = hasPermissionDefinition;
+    this.getPermissionDefinition = getPermissionDefinition;
+    this.getStore = getStore;
+    this.clearStore = clearStore;
+
+    /**
+     * Allows to define permission on application configuration
+     * @methodOf permission.PermPermissionStore
+     *
+     * @param permissionName {String} Name of defined permission
+     * @param validationFunction {Function} Function used to validate if permission is valid
+     */
+    function definePermission(permissionName, validationFunction) {
+      permissionStore[permissionName] = new PermPermission(permissionName, validationFunction);
+    }
+
+    /**
+     * Allows to define set of permissionNames with shared validation function on application configuration
+     * @methodOf permission.PermPermissionStore
+     * @throws {TypeError}
+     *
+     * @param permissionNames {Array<Number>} Set of permission names
+     * @param validationFunction {Function} Function used to validate if permission is valid
+     */
+    function defineManyPermissions(permissionNames, validationFunction) {
+      if (!angular.isArray(permissionNames)) {
+        throw new TypeError('Parameter "permissionNames" name must be Array');
+      }
+
+      angular.forEach(permissionNames, function (permissionName) {
+        definePermission(permissionName, validationFunction);
+      });
+    }
+
+    /**
+     * Deletes permission
+     * @methodOf permission.PermPermissionStore
+     *
+     * @param permissionName {String} Name of defined permission
+     */
+    function removePermissionDefinition(permissionName) {
+      delete permissionStore[permissionName];
+    }
+
+    /**
+     * Checks if permission exists
+     * @methodOf permission.PermPermissionStore
+     *
+     * @param permissionName {String} Name of defined permission
+     * @returns {Boolean}
+     */
+    function hasPermissionDefinition(permissionName) {
+      return angular.isDefined(permissionStore[permissionName]);
+    }
+
+    /**
+     * Returns permission by it's name
+     * @methodOf permission.PermPermissionStore
+     *
+     * @returns {permission.Permission} Permissions definition object
+     */
+    function getPermissionDefinition(permissionName) {
+      return permissionStore[permissionName];
+    }
+
+    /**
+     * Returns all permissions
+     * @methodOf permission.PermPermissionStore
+     *
+     * @returns {Object} Permissions collection
+     */
+    function getStore() {
+      return permissionStore;
+    }
+
+    /**
+     * Removes all permissions
+     * @methodOf permission.PermPermissionStore
+     */
+    function clearStore() {
+      permissionStore = {};
+    }
+  }
+
+  angular
+    .module('permission')
+    .service('PermPermissionStore', PermPermissionStore);
+
+
+  /**
+   * Role definition storage
+   * @name permission.PermRoleStore
+   *
+   * @param PermRole {permission.PermRole} Role definition constructor
+   */
+  function PermRoleStore(PermRole) {
+    'ngInject';
+
+    var roleStore = {};
+
+    this.defineRole = defineRole;
+    this.defineManyRoles = defineManyRoles;
+    this.getRoleDefinition = getRoleDefinition;
+    this.hasRoleDefinition = hasRoleDefinition;
+    this.removeRoleDefinition = removeRoleDefinition;
+    this.getStore = getStore;
+    this.clearStore = clearStore;
+
+    /**
+     * Allows to add single role definition to the store by providing it's name and validation function
+     * @methodOf permission.PermRoleStore
+     *
+     * @param roleName {String} Name of defined role
+     * @param [validationFunction] {Function|Array<String>} Function used to validate if role is valid or set of
+     *   permission names that has to be owned to have a role
+     */
+    function defineRole(roleName, validationFunction) {
+      roleStore[roleName] = new PermRole(roleName, validationFunction);
+    }
+
+    /**
+     * Allows to define set of roleNames with shared validation function
+     * @methodOf permission.PermPermissionStore
+     * @throws {TypeError}
+     *
+     * @param roleMap {String, Function|Array<String>} Map of roles with matching validators
+     */
+    function defineManyRoles(roleMap) {
+      if (!angular.isObject(roleMap)) {
+        throw new TypeError('Parameter "roleNames" name must be object');
+      }
+
+      angular.forEach(roleMap, function (validationFunction, roleName) {
+        defineRole(roleName, validationFunction);
+      });
+    }
+
+    /**
+     * Deletes role from store
+     * @method permission.PermRoleStore
+     *
+     * @param roleName {String} Name of defined permission
+     */
+    function removeRoleDefinition(roleName) {
+      delete roleStore[roleName];
+    }
+
+    /**
+     * Checks if role is defined in store
+     * @method permission.PermRoleStore
+     *
+     * @param roleName {String} Name of role
+     * @returns {Boolean}
+     */
+    function hasRoleDefinition(roleName) {
+      return angular.isDefined(roleStore[roleName]);
+    }
+
+    /**
+     * Returns role definition object by it's name
+     * @method permission.PermRoleStore
+     *
+     * @returns {permission.PermRole} PermRole definition object
+     */
+    function getRoleDefinition(roleName) {
+      return roleStore[roleName];
+    }
+
+    /**
+     * Returns all role definitions
+     * @method permission.PermRoleStore
+     *
+     * @returns {Object} Defined roles collection
+     */
+    function getStore() {
+      return roleStore;
+    }
+
+    /**
+     * Removes all role definitions
+     * @method permission.PermRoleStore
+     */
+    function clearStore() {
+      roleStore = {};
+    }
+  }
+
+  angular
+    .module('permission')
+    .service('PermRoleStore', PermRoleStore);
+
+  /**
+   * Handles authorization based on provided permissions/roles.
+   * @name permission.permissionDirective
+   *
+   * Directive accepts single or combined attributes `permission-only` and `permission-except` that checks on
+   * DOM rendering if permissions/roles are met. Attributes can be passed either as String, Array or variable from
+   * parent scope. Directive also will watch for changes if applied and automatically update the view.
+   *
+   * @example
+   * <div permission
+   *      permission-only="'USER'">
+   * </div>
+   * <div permission
+   *      permission-only="['USER','ADMIN']"
+   *      permission-except="'MANAGER'">
+   * </div>
+   * <div permission permission-sref="'app.login'"></div>
+   *
+   * By default directive will show/hide elements if provided permissions matches.
+   * You can override this behaviour by passing `permission-on-authorized` and `permission-on-unauthorized`
+   *   attributes that will pass to your function `$element` as argument that you can freely manipulate your DOM
+   *   behaviour.
+   *
+   * Important! Function should be as references - `vm.disableElement` not `vm.disableElement()` to be able to
+   *   accept passed $element reference from inside of permissionDirective
+   *
+   * @example
+   * <div permission
+   *      permission-only="['USER','ADMIN']"
+   *      permission-on-authorized="PermPermissionStrategies.disableElement"
+   *      permission-on-unauthorized="PermPermissionStrategies.enableElement">
+   * </div>
+   *
+   * @param $log {Object} Logging service
+   * @param $injector {Object} Injector instance object
+   * @param PermPermissionMap {permission.permPermissionMap|Function} Map of state access rights
+   * @param PermPermissionStrategies {permission.permPermissionStrategies} Set of pre-defined directive behaviours
+   *
+   * @returns {{
+   *   restrict: string,
+   *   bindToController: {
+   *     sref: string
+   *     only: string,
+   *     except: string,
+   *     onAuthorized: function,
+   *     onUnauthorized: function
+   *   },
+   *   controllerAs: string,
+   *   controller: controller
+   * }} Directive instance
+   */
+  function PermissionDirective($log, $injector, PermPermissionMap, PermPermissionStrategies) {
+    'ngInject';
+
+    return {
+      restrict: 'A',
+      bindToController: {
+        sref: '=?permissionSref',
+        only: '=?permissionOnly',
+        except: '=?permissionExcept',
+        onAuthorized: '&?permissionOnAuthorized',
+        onUnauthorized: '&?permissionOnUnauthorized'
+      },
+      controllerAs: 'permission',
+      controller: ['$scope', '$element', '$permission', function ($scope, $element, $permission) {
+        var permission = this;
+
+        $scope.$watchGroup(['permission.only', 'permission.except', 'sref'],
+          function () {
+            try {
+              if (isSrefStateDefined()) {
+                var PermStateAuthorization = $injector.get('PermStateAuthorization');
+
+                PermStateAuthorization
+                  .authorizeByStateName(permission.sref)
+                  .then(function () {
+                    onAuthorizedAccess();
+                  })
+                  .catch(function () {
+                    onUnauthorizedAccess();
+                  });
+              } else {
+                var PermAuthorization = $injector.get('PermAuthorization');
+                var permissionMap = new PermPermissionMap({
+                  only: permission.only,
+                  except: permission.except
+                });
+
+                PermAuthorization
+                  .authorizeByPermissionMap(permissionMap)
+                  .then(function () {
+                    onAuthorizedAccess();
+                  })
+                  .catch(function () {
+                    onUnauthorizedAccess();
+                  });
+              }
+            } catch (e) {
+              onUnauthorizedAccess();
+              $log.error(e.message);
+            }
+          });
+
+        /**
+         * Returns true when permissions should be checked based on state name
+         * @private
+         *
+         * @returns {boolean}
+         */
+        function isSrefStateDefined() {
+          return $injector.has('$state') && permission.sref;
+        }
+
+        /**
+         * Calls `onAuthorized` function if provided or show element
+         * @private
+         */
+        function onAuthorizedAccess() {
+          if (angular.isFunction(permission.onAuthorized)) {
+            permission.onAuthorized()($element);
+          } else {
+            var onAuthorizedMethodName = $permission.defaultOnAuthorizedMethod;
+            PermPermissionStrategies[onAuthorizedMethodName]($element);
+          }
+        }
+
+        /**
+         * Calls `onUnauthorized` function if provided or hide element
+         * @private
+         */
+        function onUnauthorizedAccess() {
+          if (angular.isFunction(permission.onUnauthorized)) {
+            permission.onUnauthorized()($element);
+          } else {
+            var onUnauthorizedMethodName = $permission.defaultOnUnauthorizedMethod;
+            PermPermissionStrategies[onUnauthorizedMethodName]($element);
+          }
+        }
+      }]
+    };
+  }
+
+  angular
+    .module('permission')
+    .directive('permission', PermissionDirective);
+
+
+  /**
+   * Service responsible for handling view based authorization
+   * @name permission.PermAuthorization
+   *
+   * @param $q {Object} Angular promise implementation
+   */
+  function PermAuthorization($q) {
+    'ngInject';
+
+    this.authorizeByPermissionMap = authorizeByPermissionMap;
+
+    /**
+     * Handles authorization based on provided permissions map
+     * @methodOf permission.PermAuthorization
+     *
+     * @param map {permission.PermissionMap} Map of permission names
+     *
+     * @returns {promise} $q.promise object
+     */
+    function authorizeByPermissionMap(map) {
+      var deferred = $q.defer();
+
+      resolveExceptPrivilegeMap(deferred, map);
+
+      return deferred.promise;
+    }
+
+    /**
+     * Resolves flat set of "except" privileges
+     * @methodOf permission.PermAuthorization
+     * @private
+     *
+     * @param deferred {Object} Promise defer
+     * @param map {permission.PermissionMap} Access rights map
+     *
+     */
+    function resolveExceptPrivilegeMap(deferred, map) {
+      var exceptPromises = map.resolvePropertyValidity(map.except);
+
+      $q.any(exceptPromises)
+        .then(function (rejectedPermissions) {
+          deferred.reject(rejectedPermissions);
+        })
+        .catch(function () {
+          resolveOnlyPermissionMap(deferred, map);
+        });
+    }
+
+    /**
+     * Resolves flat set of "only" privileges
+     * @methodOf permission.PermAuthorization
+     * @private
+     *
+     * @param deferred {Object} Promise defer
+     * @param map {permission.PermissionMap} Access rights map
+     */
+    function resolveOnlyPermissionMap(deferred, map) {
+      if (!map.only.length) {
+        deferred.resolve();
+        return;
+      }
+
+      var onlyPromises = map.resolvePropertyValidity(map.only);
+      $q.any(onlyPromises)
+        .then(function (resolvedPermissions) {
+          deferred.resolve(resolvedPermissions);
+        })
+        .catch(function (rejectedPermission) {
+          deferred.reject(rejectedPermission);
+        });
+    }
+  }
+
+  angular
+    .module('permission')
+    .service('PermAuthorization', PermAuthorization);
+
+
+  /**
+   * Access rights map factory
+   * @name permission.PermPermissionMap
+   *
+   * @param $q {Object} Angular promise implementation
+   * @param $log {Object} Angular logging utility
+   * @param $injector {Object} Dependency injection instance
+   * @param $permission {Object} Permission module configuration object
+   * @param PermTransitionProperties {permission.PermTransitionProperties} Helper storing ui-router transition parameters
+   * @param PermRoleStore {permission.PermRoleStore} Role definition storage
+   * @param PermPermissionStore {permission.PermPermissionStore} Permission definition storage
+   *
+   * @return {permission.PermissionMap}
+   */
+  function PermPermissionMap($q, $log, $injector, $permission, PermTransitionProperties, PermRoleStore, PermPermissionStore) {
+    'ngInject';
+
+    /**
+     * Constructs map object instructing authorization service how to handle authorizing
+     * @constructor permission.PermissionMap
+     *
+     * @param [permissionMap] {Object} Map of permissions provided to authorization service
+     * @param [permissionMap.only] {String|Array|Function} List of exclusive access right names allowed for
+     *   authorization
+     * @param [permissionMap.except] {String|Array|Function} List of exclusive access right names denied for
+     *   authorization
+     * @param [permissionMap.redirectTo] {String|Function|Object|promise} Handling redirection when rejected
+     *   authorization
+     */
+    function PermissionMap(permissionMap) {
+      // Suppress not defined object errors
+      permissionMap = permissionMap || {};
+
+      this.only = normalizeOnlyAndExceptProperty(permissionMap.only);
+      this.except = normalizeOnlyAndExceptProperty(permissionMap.except);
+      this.redirectTo = normalizeRedirectToProperty(permissionMap.redirectTo);
+    }
+
+    /**
+     * Redirects to fallback states when permissions fail
+     * @methodOf permission.PermissionMap
+     *
+     * @param [rejectedPermissionName] {String} Permission name
+     *
+     * @return {Promise}
+     */
+    PermissionMap.prototype.resolveRedirectState = function (rejectedPermissionName) {
+
+      // If redirectTo definition is not found stay where you are
+      if (!angular.isDefined(this.redirectTo)) {
+        return $q.reject();
+      }
+
+      var redirectState = this.redirectTo[rejectedPermissionName] || this.redirectTo['default'];
+
+      return resolveRedirectState(redirectState, rejectedPermissionName);
+    };
+
+    /**
+     * Resolves weather permissions set for "only" or "except" property are valid
+     * @methodOf permission.PermissionMap
+     *
+     * @param property {Array} "only" or "except" map property
+     *
+     * @return {Array<Promise>}
+     */
+    PermissionMap.prototype.resolvePropertyValidity = function (property) {
+
+      return property.map(function (privilegeName) {
+        if (PermRoleStore.hasRoleDefinition(privilegeName)) {
+          var role = PermRoleStore.getRoleDefinition(privilegeName);
+          return role.validateRole();
+        }
+
+        if (PermPermissionStore.hasPermissionDefinition(privilegeName)) {
+          var permission = PermPermissionStore.getPermissionDefinition(privilegeName);
+          return permission.validatePermission();
+        }
+
+        if (!$permission.suppressUndefinedPermissionWarning) {
+          $log.warn('Permission or role ' + privilegeName + ' was not defined.');
+        }
+        return $q.reject(privilegeName);
+      });
+    };
+
+    /**
+     * Handles function based redirection for rejected permissions
+     * @methodOf permission.PermissionMap
+     *
+     * @throws {TypeError}
+     *
+     * @param redirectFunction {Function} Redirection function
+     * @param rejectedPermissionName {String} Rejected permission
+     *
+     * @return {Promise}
+     */
+    function resolveRedirectState(redirectFunction, rejectedPermissionName) {
+      return $q
+        .when($injector.invoke(redirectFunction, null, {
+          rejectedPermission: rejectedPermissionName,
+          transitionProperties: PermTransitionProperties
+        }))
+        .then(function (redirectState) {
+          if (angular.isString(redirectState)) {
+            return {
+              state: redirectState
+            };
+          }
+
+          if (angular.isObject(redirectState)) {
+            return redirectState;
+          }
+
+          return $q.reject();
+        });
+    }
+
+    /**
+     * Handles extraction of permission map "only" and "except" properties and converts them into array objects
+     * @methodOf permission.PermissionMap
+     * @private
+     *
+     * @param property {String|Array|Function} PermPermission map property "only" or "except"
+     *
+     * @returns {Array<String>} Array of permission "only" or "except" names
+     */
+    function normalizeOnlyAndExceptProperty(property) {
+      if (angular.isString(property)) {
+        return [property];
+      }
+
+      if (angular.isArray(property)) {
+        return property;
+      }
+
+      if (angular.isFunction(property)) {
+        return property.call(null, PermTransitionProperties);
+      }
+
+      return [];
+    }
+
+    /**
+     * Convert user provided input into key value dictionary with permission/role name as a key and injectable resolver
+     * function as a value
+     * @methodOf permission.PermissionMap
+     * @private
+     *
+     * @param redirectTo {String|Function|Array|Object} PermPermission map property "redirectTo"
+     *
+     * @returns {Object<String, Object>} Redirection dictionary object
+     */
+    function normalizeRedirectToProperty(redirectTo) {
+      if (!angular.isDefined(redirectTo)) {
+        return;
+      }
+
+      if (isInjectable(redirectTo) || angular.isFunction(redirectTo)) {
+        return normalizeFunctionRedirectionRule(redirectTo);
+      }
+
+      if (angular.isObject(redirectTo)) {
+        if (isObjectSingleRedirectionRule(redirectTo)) {
+          return normalizeObjectSingleRedirectionRule(redirectTo);
+        }
+
+        return normalizeObjectMultipleRedirectionRule(redirectTo);
+      }
+
+      if (angular.isString(redirectTo)) {
+        return normalizeStringRedirectionRule(redirectTo);
+      }
+
+      throw new ReferenceError('Property "redirectTo" must be String, Function, Array or Object');
+    }
+
+    /**
+     * Convert string redirection rule into single-element redirection dictionary
+     * @methodOf permission.PermissionMap
+     * @private
+     *
+     * @param redirectTo {String} PermPermission map property "redirectTo"
+     *
+     * @returns {Object<String, Object>} Redirection dictionary object
+     */
+    function normalizeStringRedirectionRule(redirectTo) {
+      var redirectionMap = {};
+
+      redirectionMap.default = function () {
+        return {
+          state: redirectTo
+        };
+      };
+      redirectionMap.default.$inject = ['rejectedPermission', 'transitionProperties'];
+
+      return redirectionMap;
+    }
+
+    /**
+     * Checks if redirection object is single rule type
+     * @methodOf permission.PermissionMap
+     * @private
+     *
+     * @param redirectTo {Object} PermPermission map property "redirectTo"
+     *
+     * @returns {boolean}
+     */
+    function isObjectSingleRedirectionRule(redirectTo) {
+      return angular.isDefined(redirectTo.state);
+    }
+
+    /**
+     * Convert single redirection rule object into single-element redirection dictionary
+     * @methodOf permission.PermissionMap
+     * @private
+     *
+     * @param redirectTo {Object} PermPermission map property "redirectTo"
+     *
+     * @returns {Object<String, Object>} Redirection dictionary object
+     */
+    function normalizeObjectSingleRedirectionRule(redirectTo) {
+      var redirectionMap = {};
+
+      redirectionMap.default = function () {
+        return redirectTo;
+      };
+
+      return redirectionMap;
+    }
+
+    /**
+     * Convert multiple redirection rule object into redirection dictionary
+     * @methodOf permission.PermissionMap
+     * @private
+     *
+     * @param redirectTo {Object} PermPermission map property "redirectTo"
+     *
+     * @returns {Object<String, Object>} Redirection dictionary object
+     */
+    function normalizeObjectMultipleRedirectionRule(redirectTo) {
+      var redirectionMap = {};
+
+      angular.forEach(redirectTo, function (redirection, permission) {
+        if (isInjectable(redirection)) {
+          redirectionMap[permission] = redirection;
+        } else {
+          if (angular.isFunction(redirection)) {
+            redirectionMap[permission] = redirection;
+            redirectionMap[permission].$inject = [];
+          }
+        }
+
+        if (angular.isObject(redirection)) {
+          redirectionMap[permission] = function () {
+            return redirection;
+          };
+          redirectionMap[permission].$inject = [];
+        }
+
+        if (angular.isString(redirection)) {
+          redirectionMap[permission] = function () {
+            return {
+              state: redirection
+            };
+          };
+          redirectionMap[permission].$inject = [];
+        }
+      });
+
+      return redirectionMap;
+    }
+
+    /**
+     * Checks if property is injectable
+     * @methodOf permission.PermissionMap
+     * @private
+     *
+     * @param property {Array|Object}
+     *
+     * @returns {boolean}
+     */
+    function isInjectable(property) {
+      return angular.isArray(property) || (angular.isFunction(property) && angular.isArray(property.$inject));
+    }
+
+    /**
+     * Convert function redirection rule into redirection dictionary
+     * @methodOf permission.PermissionMap
+     * @private
+     *
+     * @param redirectTo {Function} PermPermission map property "redirectTo"
+     *
+     * @returns {Object<String, Object>} Redirection dictionary object
+     */
+    function normalizeFunctionRedirectionRule(redirectTo) {
+      var redirectionMap = {};
+
+      redirectionMap.default = redirectTo;
+
+      if (!angular.isDefined(redirectTo.$inject)) {
+        redirectionMap.default.$inject = ['rejectedPermission', 'transitionProperties'];
+      }
+
+      return redirectionMap;
+    }
+
+    return PermissionMap;
+  }
+
+  angular
+    .module('permission')
+    .factory('PermPermissionMap', PermPermissionMap);
+
+}(window, window.angular));
+
 
 /***/ }),
 /* 124 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventsCarouselComponent; });
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+/**
+ * angular-permission-ng
+ * Extension module of angular-permission for access control within angular-route
+ * @version v6.0.0 - 2018-01-20
+ * @link https://github.com/Narzerus/angular-permission
+ * @author Rafael Vidaurre <narzerus@gmail.com> (http://www.rafaelvidaurre.com), Blazej Krysiak <blazej.krysiak@gmail.com>
+ * @license MIT License, http://www.opensource.org/licenses/MIT
+ */
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+(function (window, angular, undefined) {
+  'use strict';
 
-var EventsCarousel = function () {
-    function EventsCarousel() {
-        _classCallCheck(this, EventsCarousel);
+  /**
+   * @namespace permission.ng
+   */
 
-        console.log(this.events);
-        console.log(this.state);
+  /**
+   * @param $rootScope {Object}
+   * @param $location {Object}
+   * @param PermTransitionProperties {permission.PermTransitionProperties}
+   * @param PermTransitionEvents {permission.ng.PermTransitionEvents}
+   * @param PermAuthorization {permission.PermAuthorization}
+   * @param PermPermissionMap {permission.PermPermissionMap|Function}
+   */
+  run.$inject = ['$rootScope', '$location', 'PermTransitionProperties', 'PermTransitionEvents', 'PermAuthorization', 'PermPermissionMap'];
+  PermTransitionEvents.$inject = ['$delegate', '$rootScope', 'PermTransitionProperties', 'PermTransitionEventNames'];
+
+  function run($rootScope, $location, PermTransitionProperties, PermTransitionEvents, PermAuthorization, PermPermissionMap) {
+    'ngInject';
+
+    /**
+     * State transition interceptor
+     */
+    $rootScope.$on('$routeChangeStart', function (event, next, current) {
+      setTransitionProperties();
+
+      if (areSetRoutePermissions() && !PermTransitionEvents.areEventsDefaultPrevented()) {
+
+        PermTransitionEvents.broadcastPermissionStartEvent();
+
+        next.$$route.resolve = next.$$route.resolve || {};
+        next.$$route.resolve.$$permission = permissionResolver;
+      }
+
+      /**
+       * Checks if route has set permissions restrictions
+       * @method
+       * @private
+       *
+       * @returns {boolean}
+       */
+      function areSetRoutePermissions() {
+        try {
+          return !!next.$$route.data.permissions;
+        } catch (e) {
+          return false;
+        }
+      }
+
+      /**
+       * Updates values of `PermTransitionProperties` holder object
+       * @method
+       * @private
+       */
+      function setTransitionProperties() {
+        PermTransitionProperties.next = next;
+        PermTransitionProperties.current = current;
+      }
+
+      function permissionResolver() {
+        var PermissionMap = new PermPermissionMap({
+          only: next.$$route.data.permissions.only,
+          except: next.$$route.data.permissions.except,
+          redirectTo: next.$$route.data.permissions.redirectTo
+        });
+
+        var authorizationResult = PermAuthorization.authorizeByPermissionMap(PermissionMap);
+
+        authorizationResult
+          .then(function () {
+            handleAuthorizedState();
+          })
+          .catch(function (rejectedPermission) {
+            handleUnauthorizedState(rejectedPermission, PermissionMap);
+          });
+
+        return authorizationResult;
+      }
+
+      /**
+       * Handles redirection for authorized access
+       * @method
+       * @private
+       */
+      function handleAuthorizedState() {
+        PermTransitionEvents.broadcastPermissionAcceptedEvent();
+      }
+
+      /**
+       * Handles redirection for unauthorized access
+       * @method
+       * @private
+       *
+       * @param rejectedPermission {String} Rejected access right
+       * @param permissionMap {permission.PermPermissionMap} State permission map
+       */
+      function handleUnauthorizedState(rejectedPermission, permissionMap) {
+        PermTransitionEvents.broadcastPermissionDeniedEvent();
+
+        permissionMap
+          .resolveRedirectState(rejectedPermission)
+          .then(function (redirect) {
+            $location.path(redirect.state).replace();
+          });
+      }
+    });
+  }
+
+  var ngPermission = angular
+    .module('permission.ng', ['permission', 'ngRoute'])
+    .run(run);
+
+  if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.exports === exports) {
+    module.exports = ngPermission.name;
+  }
+
+  /**
+   * Service responsible for managing and emitting events
+   * @name permission.ng.PermTransitionEvents
+   *
+   * @extends {permission.PermTransitionEvents}
+   *
+   * @param $delegate {Object} Parent instance being extended
+   * @param $rootScope {Object} Top-level angular scope
+   * @param PermTransitionProperties {permission.PermTransitionProperties} Helper storing transition parameters
+   * @param PermTransitionEventNames {permission.ng.PermTransitionEventNames} Constant storing event names
+   */
+  function PermTransitionEvents($delegate, $rootScope, PermTransitionProperties, PermTransitionEventNames) {
+    'ngInject';
+
+    $delegate.areEventsDefaultPrevented = areEventsDefaultPrevented;
+    $delegate.broadcastPermissionStartEvent = broadcastPermissionStartEvent;
+    $delegate.broadcastPermissionAcceptedEvent = broadcastPermissionAcceptedEvent;
+    $delegate.broadcastPermissionDeniedEvent = broadcastPermissionDeniedEvent;
+
+    /**
+     * Checks if state events are not prevented by default
+     * @methodOf permission.ng.PermTransitionEvents
+     *
+     * @returns {boolean}
+     */
+    function areEventsDefaultPrevented() {
+      return isRouteChangePermissionStartDefaultPrevented();
     }
 
-    _createClass(EventsCarousel, [{
-        key: '$onInit',
-        value: function $onInit() {}
-    }]);
+    /**
+     * Broadcasts "$routeChangePermissionStart" event from $rootScope
+     * @methodOf permission.ng.PermTransitionEvents
+     */
+    function broadcastPermissionStartEvent() {
+      $rootScope.$broadcast(PermTransitionEventNames.permissionStart, PermTransitionProperties.next);
+    }
 
-    return EventsCarousel;
-}();
+    /**
+     * Broadcasts "$routeChangePermissionAccepted" event from $rootScope
+     * @methodOf permission.ng.PermTransitionEvents
+     */
+    function broadcastPermissionAcceptedEvent() {
+      $rootScope.$broadcast(PermTransitionEventNames.permissionAccepted, PermTransitionProperties.next);
+    }
 
-var EventsCarouselComponent = {
-    bindings: {
-        events: '<',
-        state: '<'
-    },
-    template: __webpack_require__(125),
-    controller: EventsCarousel,
-    controllerAs: '$ctrl'
-};
+    /**
+     * Broadcasts "$routeChangePermissionDenied" event from $rootScope
+     * @methodOf permission.ng.PermTransitionEvents
+     */
+    function broadcastPermissionDeniedEvent() {
+      $rootScope.$broadcast(PermTransitionEventNames.permissionDenied, PermTransitionProperties.next);
+    }
+
+    /**
+     * Checks if event $routeChangePermissionStart hasn't been disabled by default
+     * @methodOf permission.ng.PermTransitionEvents
+     * @private
+     *
+     * @returns {boolean}
+     */
+    function isRouteChangePermissionStartDefaultPrevented() {
+      return $rootScope.$broadcast(PermTransitionEventNames.permissionStart, PermTransitionProperties.next).defaultPrevented;
+    }
+
+    return $delegate;
+  }
+
+  angular
+    .module('permission.ng')
+    .decorator('PermTransitionEvents', PermTransitionEvents);
+
+  /**
+   * Constant storing event names for ng-route
+   * @name permission.ng.PermTransitionEventNames
+   *
+   * @type {Object.<String,Object>}
+   *
+   * @property permissionStart {String} Event name called when started checking for permissions
+   * @property permissionAccepted {String} Event name called when authorized
+   * @property permissionDenied {String} Event name called when unauthorized
+   */
+  var PermTransitionEventNames = {
+    permissionStart: '$routeChangePermissionStart',
+    permissionAccepted: '$routeChangePermissionAccepted',
+    permissionDenied: '$routeChangePermissionDenied'
+  };
+
+  angular
+    .module('permission.ng')
+    .value('PermTransitionEventNames', PermTransitionEventNames);
+
+}(window, window.angular));
+
 
 /***/ }),
 /* 125 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"slider_container\">\n    <div class=\"swipe-wr\">\n       <events events=\"$ctrl.events\" state=\"$ctrl.state\"></events>\n    </div>\n</div>";
+/**
+ * angular-permission-ui
+ * Extension module of angular-permission for access control within ui-router
+ * @version v6.0.0 - 2018-01-20
+ * @link https://github.com/Narzerus/angular-permission
+ * @author Rafael Vidaurre <narzerus@gmail.com> (http://www.rafaelvidaurre.com), Blazej Krysiak <blazej.krysiak@gmail.com>
+ * @license MIT License, http://www.opensource.org/licenses/MIT
+ */
+
+(function (window, angular, undefined) {
+  'use strict';
+
+  /**
+   * @namespace permission.ui
+   */
+
+  /**
+   * @param $stateProvider {Object}
+   */
+  config.$inject = ['$stateProvider'];
+  run.$inject = ['$injector', '$rootScope', '$state', 'PermTransitionProperties', 'PermTransitionEvents', 'PermStateAuthorization', 'PermStatePermissionMap'];
+  PermTransitionEvents.$inject = ['$delegate', '$rootScope', 'PermTransitionProperties', 'PermTransitionEventNames'];
+  PermStateAuthorization.$inject = ['$q', '$state', 'PermStatePermissionMap'];
+  PermStatePermissionMap.$inject = ['PermPermissionMap'];
+
+  function config($stateProvider) {
+    'ngInject';
+
+    $stateProvider.decorator('$delegate', function ($delegate) {
+
+      /**
+       * Property containing full state object definition
+       *
+       * This decorator is required to access full state object instead of just it's configuration
+       * Can be removed when implemented https://github.com/angular-ui/ui-router/issues/13.
+       *
+       * @returns {Object}
+       */
+      $delegate.self.$$permissionState = function () {
+        return $delegate;
+      };
+
+      return $delegate;
+    });
+  }
+
+  /**
+   * @param $injector {Object}
+   * @param $rootScope {Object}
+   * @param $state {Object}
+   * @param PermTransitionProperties {permission.PermTransitionProperties}
+   * @param PermTransitionEvents {permission.ui.PermTransitionEvents}
+   * @param PermStateAuthorization {permission.ui.PermStateAuthorization}
+   * @param PermStatePermissionMap {permission.ui.PermStatePermissionMap}
+   */
+  function run($injector, $rootScope, $state, PermTransitionProperties, PermTransitionEvents, PermStateAuthorization, PermStatePermissionMap) {
+    'ngInject';
+
+    // For ui-router 1.x use $transitions web hook
+    if ($injector.has('$transitions')) {
+      var $transitions = $injector.get('$transitions');
+      $transitions.onBefore({}, handleOnBeforeWebHook);
+      // For ui-router 0.x use old-style eventing
+    } else {
+      $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams, options) {
+        handleStateChangeStartEvent(event, toState, toParams, fromState, fromParams, options);
+      });
+    }
+
+    /**
+     * State transition web hook
+     * @param transition {Object}
+     */
+    function handleOnBeforeWebHook(transition) {
+      setTransitionProperties(transition);
+      var statePermissionMap = new PermStatePermissionMap(PermTransitionProperties.toState);
+
+      return PermStateAuthorization
+        .authorizeByPermissionMap(statePermissionMap)
+        .catch(function (rejectedPermission) {
+          return statePermissionMap
+            .resolveRedirectState(rejectedPermission)
+            .then(function (redirect) {
+              return transition.router.stateService.target(redirect.state, redirect.params, redirect.options);
+            });
+        });
+
+      /**
+       * Updates values of `PermTransitionProperties` holder object
+       * @method
+       * @private
+       */
+      function setTransitionProperties(transition) {
+        PermTransitionProperties.toState = transition.to();
+        PermTransitionProperties.toParams = transition.params('to');
+        PermTransitionProperties.fromState = transition.from();
+        PermTransitionProperties.fromParams = transition.params('from');
+        PermTransitionProperties.options = transition.options();
+      }
+    }
+
+    /**
+     * State transition event interceptor
+     */
+    function handleStateChangeStartEvent(event, toState, toParams, fromState, fromParams, options) {
+      if (!isAuthorizationFinished()) {
+        setStateAuthorizationStatus(true);
+        setTransitionProperties();
+
+        if (!PermTransitionEvents.areEventsDefaultPrevented()) {
+          PermTransitionEvents.broadcastPermissionStartEvent();
+
+          event.preventDefault();
+          var statePermissionMap = new PermStatePermissionMap(PermTransitionProperties.toState);
+
+          PermStateAuthorization
+            .authorizeByPermissionMap(statePermissionMap)
+            .then(function () {
+              handleAuthorizedState();
+            })
+            .catch(function (rejectedPermission) {
+              handleUnauthorizedState(rejectedPermission, statePermissionMap);
+            })
+            .finally(function () {
+              setStateAuthorizationStatus(false);
+            });
+        } else {
+          setStateAuthorizationStatus(false);
+        }
+      }
+
+
+      /**
+       * Updates values of `PermTransitionProperties` holder object
+       * @method
+       * @private
+       */
+      function setTransitionProperties() {
+        PermTransitionProperties.toState = toState;
+        PermTransitionProperties.toParams = toParams;
+        PermTransitionProperties.fromState = fromState;
+        PermTransitionProperties.fromParams = fromParams;
+        PermTransitionProperties.options = options;
+      }
+
+      /**
+       * Sets internal state `$$finishedAuthorization` variable to prevent looping
+       * @method
+       * @private
+       *
+       * @param status {boolean} When true authorization has been already preceded
+       */
+      function setStateAuthorizationStatus(status) {
+        angular.extend(toState, {
+          '$$isAuthorizationFinished': status
+        });
+      }
+
+      /**
+       * Checks if state has been already checked for authorization
+       * @method
+       * @private
+       *
+       * @returns {boolean}
+       */
+      function isAuthorizationFinished() {
+        return toState.$$isAuthorizationFinished;
+      }
+
+      /**
+       * Handles redirection for authorized access
+       * @method
+       * @private
+       */
+      function handleAuthorizedState() {
+        PermTransitionEvents.broadcastPermissionAcceptedEvent();
+
+        // Overwrite notify option to broadcast it later
+        var transitionOptions = angular.extend({}, PermTransitionProperties.options, {
+          notify: false,
+          location: true
+        });
+
+        $state
+          .go(PermTransitionProperties.toState.name, PermTransitionProperties.toParams, transitionOptions)
+          .then(function () {
+            PermTransitionEvents.broadcastStateChangeSuccessEvent();
+          });
+      }
+
+      /**
+       * Handles redirection for unauthorized access
+       * @method
+       * @private
+       *
+       * @param rejectedPermission {String} Rejected access right
+       * @param statePermissionMap {permission.ui.PermPermissionMap} State permission map
+       */
+      function handleUnauthorizedState(rejectedPermission, statePermissionMap) {
+        PermTransitionEvents.broadcastPermissionDeniedEvent();
+
+        statePermissionMap
+          .resolveRedirectState(rejectedPermission)
+          .then(function (redirect) {
+            $state.go(redirect.state, redirect.params, redirect.options);
+          });
+      }
+    }
+  }
+
+  var uiPermission = angular
+    .module('permission.ui', ['permission', 'ui.router'])
+    .config(config)
+    .run(run);
+
+  if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.exports === exports) {
+    module.exports = uiPermission.name;
+  }
+
+
+  /**
+   * Service responsible for managing and emitting events
+   * @name permission.ui.PermTransitionEvents
+   *
+   * @extends permission.PermTransitionEvents
+   *
+   * @param $delegate {Object} Parent instance being extended
+   * @param $rootScope {Object} Top-level angular scope
+   * @param PermTransitionProperties {permission.PermTransitionProperties} Helper storing transition parameters
+   * @param PermTransitionEventNames {permission.ui.PermTransitionEventNames} Constant storing event names
+   */
+  function PermTransitionEvents($delegate, $rootScope, PermTransitionProperties, PermTransitionEventNames) {
+    'ngInject';
+
+    $delegate.areEventsDefaultPrevented = areEventsDefaultPrevented;
+    $delegate.broadcastStateChangeSuccessEvent = broadcastStateChangeSuccessEvent;
+    $delegate.broadcastPermissionStartEvent = broadcastPermissionStartEvent;
+    $delegate.broadcastPermissionAcceptedEvent = broadcastPermissionAcceptedEvent;
+    $delegate.broadcastPermissionDeniedEvent = broadcastPermissionDeniedEvent;
+
+    /**
+     * Checks if state events are not prevented by default
+     * @methodOf permission.ui.PermTransitionEvents
+     *
+     * @returns {boolean}
+     */
+    function areEventsDefaultPrevented() {
+      return isStateChangePermissionStartDefaultPrevented() || isStateChangeStartDefaultPrevented();
+    }
+
+    /**
+     * Broadcasts "$stateChangePermissionStart" event from $rootScope
+     * @methodOf permission.ui.PermTransitionEvents
+     */
+    function broadcastPermissionStartEvent() {
+      $rootScope.$broadcast(PermTransitionEventNames.permissionStart,
+        PermTransitionProperties.toState, PermTransitionProperties.toParams,
+        PermTransitionProperties.options);
+    }
+
+    /**
+     * Broadcasts "$stateChangePermissionAccepted" event from $rootScope
+     * @methodOf permission.ui.PermTransitionEvents
+     */
+    function broadcastPermissionAcceptedEvent() {
+      $rootScope.$broadcast(PermTransitionEventNames.permissionAccepted,
+        PermTransitionProperties.toState, PermTransitionProperties.toParams,
+        PermTransitionProperties.options);
+    }
+
+    /**
+     * Broadcasts "$tateChangePermissionDenied" event from $rootScope
+     * @methodOf permission.ui.PermTransitionEvents
+     */
+    function broadcastPermissionDeniedEvent() {
+      $rootScope.$broadcast(PermTransitionEventNames.permissionDenies,
+        PermTransitionProperties.toState, PermTransitionProperties.toParams,
+        PermTransitionProperties.options);
+    }
+
+    /**
+     * Broadcasts "$stateChangeSuccess" event from $rootScope
+     * @methodOf permission.ui.PermTransitionEvents
+     */
+    function broadcastStateChangeSuccessEvent() {
+      $rootScope.$broadcast('$stateChangeSuccess',
+        PermTransitionProperties.toState, PermTransitionProperties.toParams,
+        PermTransitionProperties.fromState, PermTransitionProperties.fromParams);
+    }
+
+    /**
+     * Checks if event $stateChangePermissionStart hasn't been disabled by default
+     * @methodOf permission.ui.PermTransitionEvents
+     * @private
+     *
+     * @returns {boolean}
+     */
+    function isStateChangePermissionStartDefaultPrevented() {
+      return $rootScope.$broadcast(PermTransitionEventNames.permissionStart,
+        PermTransitionProperties.toState, PermTransitionProperties.toParams,
+        PermTransitionProperties.options).defaultPrevented;
+    }
+
+    /**
+     * Checks if event $stateChangeStart hasn't been disabled by default
+     * @methodOf permission.ui.PermTransitionEvents
+     * @private
+     *
+     * @returns {boolean}
+     */
+    function isStateChangeStartDefaultPrevented() {
+      return $rootScope.$broadcast('$stateChangeStart',
+        PermTransitionProperties.toState, PermTransitionProperties.toParams,
+        PermTransitionProperties.fromState, PermTransitionProperties.fromParams,
+        PermTransitionProperties.options).defaultPrevented;
+    }
+
+    return $delegate;
+  }
+
+  angular
+    .module('permission.ui')
+    .decorator('PermTransitionEvents', PermTransitionEvents);
+
+  /**
+   * Constant storing event names for ng-route
+   * @name permission.ui.PermTransitionEventNames
+   *
+   * @type {Object.<String,Object>}
+   *
+   * @property permissionStart {String} Event name called when started checking for permissions
+   * @property permissionAccepted {String} Event name called when authorized
+   * @property permissionDenies {String} Event name called when unauthorized
+   */
+  var PermTransitionEventNames = {
+    permissionStart: '$stateChangePermissionStart',
+    permissionAccepted: '$stateChangePermissionAccepted',
+    permissionDenies: '$stateChangePermissionDenied'
+  };
+
+  angular
+    .module('permission.ui')
+    .value('PermTransitionEventNames', PermTransitionEventNames);
+
+
+  /**
+   * Service responsible for handling inheritance-enabled state-based authorization in ui-router
+   * @extends permission.PermPermissionMap
+   * @name permission.ui.PermStateAuthorization
+   *
+   * @param $q {Object} Angular promise implementation
+   * @param $state {Object} State object
+   * @param PermStatePermissionMap {permission.ui.PermStatePermissionMap|Function} Angular promise implementation
+   */
+  function PermStateAuthorization($q, $state, PermStatePermissionMap) {
+    'ngInject';
+
+    this.authorizeByPermissionMap = authorizeByPermissionMap;
+    this.authorizeByStateName = authorizeByStateName;
+
+    /**
+     * Handles authorization based on provided state permission map
+     * @methodOf permission.ui.PermStateAuthorization
+     *
+     * @param statePermissionMap
+     *
+     * @return {promise}
+     */
+    function authorizeByPermissionMap(statePermissionMap) {
+      return authorizeStatePermissionMap(statePermissionMap);
+    }
+
+    /**
+     * Authorizes uses by provided state name
+     * @methodOf permission.ui.PermStateAuthorization
+     *
+     * @param stateName {String}
+     * @returns {promise}
+     */
+    function authorizeByStateName(stateName) {
+      var srefState = $state.get(stateName);
+      var permissionMap = new PermStatePermissionMap(srefState);
+
+      return authorizeByPermissionMap(permissionMap);
+    }
+
+    /**
+     * Checks authorization for complex state inheritance
+     * @methodOf permission.ui.PermStateAuthorization
+     * @private
+     *
+     * @param map {permission.ui.StatePermissionMap} State access rights map
+     *
+     * @returns {promise} $q.promise object
+     */
+    function authorizeStatePermissionMap(map) {
+      var deferred = $q.defer();
+
+      resolveExceptStatePermissionMap(deferred, map);
+
+      return deferred.promise;
+    }
+
+    /**
+     * Resolves compensated set of "except" privileges
+     * @methodOf permission.ui.PermStateAuthorization
+     * @private
+     *
+     * @param deferred {Object} Promise defer
+     * @param map {permission.ui.StatePermissionMap} State access rights map
+     */
+    function resolveExceptStatePermissionMap(deferred, map) {
+      var exceptPromises = resolveStatePermissionMap(map.except, map);
+
+      // Reverse the promises, so if any "except" privileges are not met, the promise rejects
+      $q.all(reversePromises(exceptPromises))
+        .then(function () {
+          resolveOnlyStatePermissionMap(deferred, map);
+        })
+        .catch(function (rejectedPermissions) {
+
+          if (!angular.isArray(rejectedPermissions)) {
+            rejectedPermissions = [rejectedPermissions];
+          }
+
+          deferred.reject(rejectedPermissions[0]);
+        });
+    }
+
+    /**
+     * Resolves compensated set of "only" privileges
+     * @methodOf permission.ui.PermStateAuthorization
+     * @private
+     *
+     * @param deferred {Object} Promise defer
+     * @param map {permission.ui.StatePermissionMap} State access rights map
+     */
+    function resolveOnlyStatePermissionMap(deferred, map) {
+      if (!map.only.length) {
+        deferred.resolve();
+        return;
+      }
+
+      var onlyPromises = resolveStatePermissionMap(map.only, map);
+
+      $q.all(onlyPromises)
+        .then(function (resolvedPermissions) {
+          deferred.resolve(resolvedPermissions);
+        })
+        .catch(function (rejectedPermission) {
+          deferred.reject(rejectedPermission);
+        });
+    }
+
+    /**
+     * Performs iteration over list of privileges looking for matches
+     * @methodOf permission.ui.PermStateAuthorization
+     * @private
+     *
+     * @param privilegesNames {Array} Array of sets of access rights
+     * @param map {permission.ui.StatePermissionMap} State access rights map
+     *
+     * @returns {Array<Promise>} Promise collection
+     */
+    function resolveStatePermissionMap(privilegesNames, map) {
+      if (!privilegesNames.length) {
+        return [$q.reject()];
+      }
+
+      return privilegesNames.map(function (statePrivileges) {
+        var resolvedStatePrivileges = map.resolvePropertyValidity(statePrivileges);
+        return $q.any(resolvedStatePrivileges)
+          .then(function (resolvedPermissions) {
+            if (angular.isArray(resolvedPermissions)) {
+              return resolvedPermissions[0];
+            }
+            return resolvedPermissions;
+          });
+      });
+    }
+
+    /**
+     * Creates an Array of Promises that resolve when rejected, and reject when resolved
+     * @methodOf permission.ui.PermStateAuthorization
+     * @private
+     *
+     * @param promises {Array} Array of promises
+     *
+     * @returns {Array<Promise>} Promise collection
+     */
+    function reversePromises(promises) {
+      return promises.map(function (promise) {
+        var d = $q.defer();
+        promise.then(d.reject, d.resolve);
+        return d.promise;
+      });
+    }
+  }
+
+  angular
+    .module('permission')
+    .service('PermStateAuthorization', PermStateAuthorization);
+
+  /**
+   * State Access rights map factory
+   * @function
+   * @name permission.ui.PermStatePermissionMap
+   *
+   * @param PermPermissionMap {permission.PermPermissionMap|Function}
+   *
+   * @return {permission.ui.PermStatePermissionMap}
+   */
+  function PermStatePermissionMap(PermPermissionMap) {
+    'ngInject';
+
+    StatePermissionMap.prototype = new PermPermissionMap();
+
+    /**
+     * Constructs map instructing authorization service how to handle authorizing
+     * @constructor permission.ui.PermStatePermissionMap
+     * @extends permission.PermPermissionMap
+     */
+    function StatePermissionMap(state) {
+      var toStateObject = state.$$permissionState();
+      var toStatePath = toStateObject.path;
+
+      angular.forEach(toStatePath, function (state) {
+        if (areSetStatePermissions(state)) {
+          var permissionMap = new PermPermissionMap(state.data.permissions);
+          this.extendPermissionMap(permissionMap);
+        }
+      }, this);
+    }
+
+    /**
+     * Extends permission map by pushing to it state's permissions
+     * @methodOf permission.ui.StatePermissionMap
+     *
+     * @param permissionMap {permission.PermPermissionMap} Compensated permission map
+     */
+    StatePermissionMap.prototype.extendPermissionMap = function (permissionMap) {
+      if (permissionMap.only.length) {
+        this.only = this.only.concat([permissionMap.only]);
+      }
+      if (permissionMap.except.length) {
+        this.except = this.except.concat([permissionMap.except]);
+      }
+
+      if (angular.isDefined(permissionMap.redirectTo)) {
+        this.redirectTo = angular.extend({}, this.redirectTo, permissionMap.redirectTo);
+      }
+    };
+
+
+    /**
+     * Checks if state has set permissions
+     * We check for hasOwnProperty, because ui-router lets the `data` property inherit from its parent
+     * @methodOf permission.ui.StatePermissionMap
+     * @private
+     *
+     * @returns {boolean}
+     */
+    function areSetStatePermissions(state) {
+      try {
+        return Object.prototype.hasOwnProperty.call(state.data, 'permissions');
+      } catch (e) {
+        return false;
+      }
+    }
+
+    return StatePermissionMap;
+  }
+
+  angular
+    .module('permission.ui')
+    .factory('PermStatePermissionMap', PermStatePermissionMap);
+
+}(window, window.angular));
+
 
 /***/ }),
 /* 126 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventsController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(4);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+/* harmony export (immutable) */ __webpack_exports__["a"] = middlewares;
+middlewares.$inject = ['PermRoleStore'];
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function middlewares(PermRoleStore) {
+    PermRoleStore.defineRole('Auth', function () {
+        return window.__user !== null;
+    });
 
+    PermRoleStore.defineRole('Guest', function () {
+        return window.__user === null;
+    });
+}
 
+/***/ }),
+/* 127 */
+/***/ (function(module, exports) {
 
-var EventsController = function () {
-    function EventsController($window, $http) {
-        _classCallCheck(this, EventsController);
-
-        this.$window = $window;
-        this.$http = $http;
-        this.events = [];
-        this._opts = { dataLoad: false };
-        this.showList();
-    }
-
-    _createClass(EventsController, [{
-        key: 'showList',
-        value: function showList() {
-            var _this = this;
-
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["c" /* BID_EVENTS_INDEX */]).then(function (response) {
-
-                _this.events = response.data.data;
-                _this._opts.dataLoad = true;
-                console.log(_this.events, 'console.log(this.events)');
-            });
-        }
-    }]);
-
-    return EventsController;
-}();
-
-;
-
-EventsController.$inject = ['$window', '$http'];
-
-
+module.exports = "<div class=\"row\">\n    <div class=\"login_page-wr col-md-12\">\n        <div class=\"login_block\">\n            <div class=\"buy_stakes\">\n                Buy stakes in poker players in tournaments online and around the world\n            </div>\n            <div class=\"btn_block\">\n                <a href=\"\">\n                    <div class=\"login_btn login_in\">Log in</div>\n                </a>\n                <a href=\"\">\n                    <div class=\"login_btn login_registration\" >Register</div>\n                </a>\n            </div>\n            <div class=\"contine_without\">\n                Continue without registration!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n            </div>\n        </div>\n    </div>\n</div>";
 
 /***/ })
 /******/ ]);

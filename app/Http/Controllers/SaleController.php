@@ -14,19 +14,19 @@ use Illuminate\Http\Request;
 class SaleController
 {
     public function index(Request $request){
-        $typeDevice = $request->get('typeDevice');
+        $typeDevice = $request->get('_typeDevice');
         return view($typeDevice.'.sale.sale');
     }
     public function newSale(Request $request){
-        $typeDevice = $request->get('typeDevice');
+        $typeDevice = $request->get('_typeDevice');
         return view($typeDevice.'.sale.new-sale');
     }
     public function activeSale(Request $request){
-        $typeDevice = $request->get('typeDevice');
+        $typeDevice = $request->get('_typeDevice');
         return view($typeDevice.'.sale.sale-active');
     }
     public function closeSale(Request $request){
-        $typeDevice = $request->get('typeDevice');
+        $typeDevice = $request->get('_typeDevice');
         return view($typeDevice.'.sale.sale-close');
     }
 }

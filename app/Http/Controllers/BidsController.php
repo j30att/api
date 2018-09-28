@@ -19,13 +19,13 @@ class BidsController
 {
     public function index(Request $request){
 
-        $typeDevice = $request->get('typeDevice');
+        $typeDevice = $request->get('_typeDevice');
 
         return view($typeDevice.'.bids.index');
     }
 
     public function filter(Request $request){
-        $typeDevice = $request->get('typeDevice');
+        $typeDevice = $request->get('_typeDevice');
 
         return view($typeDevice.'.bids.filter');
     }

@@ -18,7 +18,7 @@ class ProfileController
 {
     public function showProfile(Request $request){
         $user = Auth::user();
-        $typeDevice = $request->get('typeDevice');
+        $typeDevice = $request->get('_typeDevice');
         return view($typeDevice.'.login.userproftest', compact('user'));
     }
 

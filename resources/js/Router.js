@@ -18,14 +18,31 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
     $stateProvider
         .state('index', {
             url: '/',
-            template: require('./views/dashboard/dashboard.template.html'),
-            resource: 'dashboard'
+            template: require('./views/main.template.html'),
+            data: {
+                permissions: {
+                    except: 'Auth',
+                    redirectTo: () => {
+                        return {
+                            state: 'dashboard'
+                        }
+                    }
+                }
+            }
         })
-        .state('ngbids', {
-                url: '/ngbids',
-                template: require('./views/bids/index.template.html'),
-                resource: 'ngbids',
-                //middleware: 'admin'
+        .state('dashboard', {
+            url: '/dashboard',
+            template: require('./views/dashboard.template.html'),
+            data: {
+                permissions: {
+                    only: 'Auth',
+                    redirectTo: () => {
+                        return {
+                            state: 'index'
+                        }
+                    }
+                }
+            }
         })
 
     ;

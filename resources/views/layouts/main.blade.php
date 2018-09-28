@@ -7,14 +7,13 @@
         <link href="{{ asset('/css/'.$_typeDevice.'/app.css') }}" rel="stylesheet">
         <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
         <title>landing</title>
+        <script>
+            window.__user = {!! json_encode(\Illuminate\Support\Facades\Auth::user()) !!};
+        </script>
     </head>
     <body>
         <div class="flex-center position-ref full-height container">
             <ui-view></ui-view>
-
-            <main>
-                @yield('content')
-            </main>
         </div>
     </body>
 </html>
