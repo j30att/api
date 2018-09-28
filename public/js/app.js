@@ -46149,20 +46149,10 @@ var LoginController = function () {
     }
 
     _createClass(LoginController, [{
-        key: 'showLoginForm',
-        value: function showLoginForm() {
-
-            window.location.href = '/login/personal-information';
-        }
-    }, {
-        key: 'showRegisterForm',
-        value: function showRegisterForm() {
-
-            window.location.href = '/login/register';
-        }
-    }, {
         key: 'sendAuthData',
-        value: function sendAuthData() {
+        value: function sendAuthData(e) {
+            e.stopPropagation();
+            e.preventDefault();
             var data = {
                 email: this.userEmail,
                 password: this.userPassword
@@ -46173,12 +46163,6 @@ var LoginController = function () {
                     window.location.href = '/';
                 }
             });
-        }
-    }, {
-        key: 'dataCheck',
-        value: function dataCheck() {
-            var email = this.userEmail;
-            var password = this.userPassword;
         }
     }]);
 
@@ -46598,7 +46582,35 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
 
     $stateProvider.state('index', {
         url: '/',
-        template: __webpack_require__(76)
+        template: __webpack_require__(76),
+        data: {
+            permissions: {
+                except: 'Auth',
+                redirectTo: function redirectTo() {
+                    return {
+                        state: 'events'
+                    };
+                }
+            }
+        }
+    }).state('auth', {
+        template: __webpack_require__(128),
+        data: {
+            permissions: {
+                except: 'Auth',
+                redirectTo: function redirectTo() {
+                    return {
+                        state: 'events'
+                    };
+                }
+            }
+        }
+    }).state('auth.login', {
+        //ng-controller="LoginController as LgCtrl"
+        url: '/login',
+        template: __webpack_require__(129),
+        controller: 'LoginController',
+        controllerAs: 'LgCtrl'
     }).state('events', {
         url: '/events',
         template: __webpack_require__(127),
@@ -46617,7 +46629,7 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
 /* 76 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"login_page-wr col-md-12\">\n        <div class=\"login_block\">\n            <div class=\"buy_stakes\">\n                Buy stakes in poker players in tournaments online and around the world\n            </div>\n            <div class=\"btn_block\">\n                <a href=\"\">\n                    <div class=\"login_btn login_in\">Log in</div>\n                </a>\n                <a href=\"\">\n                    <div class=\"login_btn login_registration\" >Register</div>\n                </a>\n            </div>\n            <a class=\"contine_without\" ui-sref=\"events\">\n                Continue without registration\n            </a>\n        </div>\n    </div>\n</div>";
+module.exports = "<div class=\"row\">\n    <div class=\"login_page-wr col-md-12\">\n        <div class=\"login_block\">\n            <div class=\"buy_stakes\">\n                Buy stakes in poker players in tournaments online and around the world\n            </div>\n            <div class=\"btn_block\">\n                <a ui-sref=\"auth.login\">\n                    <div class=\"login_btn login_in\">Log in</div>\n                </a>\n                <a href=\"\">\n                    <div class=\"login_btn login_registration\" >Register</div>\n                </a>\n            </div>\n            <a class=\"contine_without\" ui-sref=\"events\">\n                Continue without registration\n            </a>\n        </div>\n    </div>\n</div>";
 
 /***/ }),
 /* 77 */,
@@ -51803,6 +51815,18 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */].module('ui.router.state').p
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\" >\n    <div class=\"col-md-12 binds\">\n        <div class=\"logo_img\">\n            LOGO\n            <img src=\"/\" alt=\"\">\n        </div>\n        <div class=\"tabs-wr\">\n            <div class=\"tabs-wr__title\">\n                <div class=\"tabs-wr__title-name\">Events</div>\n                <div class=\"see_all\"><a href=\"\">See All</a></div>\n            </div>\n\n\n            <events-carousel  ng-if=\"EvntsCtrl._opts.dataLoad\"\n                              events=\"EvntsCtrl.events\" state=\"'row'\">\n            </events-carousel>\n\n\n            <div class=\"tabs-wr__title\">\n                <div class=\"tabs-wr__title-name\">Players</div>\n                <div class=\"see_all\">See All</div>\n            </div>\n            <div class=\"tabs-wr__players\">\n                <div class=\"tabs_players\">\n                    <div class=\"tabs_players__closing tabs_item__active\">Closing</div>\n                    <div class=\"tabs_players__lower\">Lowest markup</div>\n                </div>\n            </div>\n            <div class=\"swipe-wr full_sc events_player\">\n\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n\n\n\n            </div>\n\n\n\n            @include($_typeDevice.'.partial.footer-binds')\n\n        </div>\n\n    </div>\n</div>";
+
+/***/ }),
+/* 128 */
+/***/ (function(module, exports) {
+
+module.exports = "<div>\n    <ui-view></ui-view>\n</div>";
+
+/***/ }),
+/* 129 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\" >\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\n            Please Login\n        </div>\n        <form ng-submit=\"LgCtrl.sendAuthData($event)\" class=\"form_personal_inf\">\n\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"LgCtrl.userEmail\" required>\n\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"LgCtrl.userPassword\" required>\n\n            <button type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"LgCtrl.sendAuthData($event)\">Enter</button>\n        </form>\n\n    </div>\n</div>";
 
 /***/ })
 /******/ ]);

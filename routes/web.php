@@ -11,9 +11,15 @@
 |
 */
 
-Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('login', 'Auth\LoginController@login');
-Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+Route::group(['middleware' => 'guest'], function(){
+    Route::post('login', 'Auth\LoginController@login');
+});
+
+Route::group(['middleware' => 'auth'], function(){
+    Route::any('logout', 'Auth\LoginController@logout')->name('logout');
+});
+
+//Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 // Registration Routes...
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('login/register', 'Auth\RegisterController@register');

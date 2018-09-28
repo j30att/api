@@ -8,16 +8,9 @@ class LoginController {
 
     }
 
-    showLoginForm(){
-
-        window.location.href = '/login/personal-information';
-    }
-    showRegisterForm(){
-
-        window.location.href = '/login/register';
-    }
-
-    sendAuthData(){
+    sendAuthData(e){
+        e.stopPropagation();
+        e.preventDefault();
         let data = {
             email : this.userEmail,
             password : this.userPassword
@@ -30,12 +23,6 @@ class LoginController {
         })
 
     }
-
-    dataCheck(){
-        let email = this.userEmail;
-        let password = this.userPassword;
-    }
-
 
 };
 

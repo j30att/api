@@ -19,7 +19,39 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('index', {
             url: '/',
             template: require('./views/main.template.html'),
+            data: {
+                permissions: {
+                    except: 'Auth',
+                    redirectTo: () => {
+                        return {
+                            state: 'events'
+                        }
+                    }
+                }
+            }
         })
+
+        .state('auth',{
+            template: require('./views/auth/base.template.html'),
+            data: {
+                permissions: {
+                    except: 'Auth',
+                    redirectTo: () => {
+                        return {
+                            state: 'events'
+                        }
+                    }
+                }
+            }
+        })
+            .state('auth.login', {
+                //ng-controller="LoginController as LgCtrl"
+                url: '/login',
+                template: require('./views/auth/login.template.html'),
+                controller: 'LoginController',
+                controllerAs: 'LgCtrl'
+            })
+
         .state('events', {
             url: '/events',
             template: require('./views/events/index.template.html'),
