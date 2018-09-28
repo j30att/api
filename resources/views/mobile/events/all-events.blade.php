@@ -13,11 +13,11 @@
                 </div>
             </div>
             <div class="all_events-wr">
-                <events ng-if="EvntsCtrl._opts.dataLoad"
-                        events="EvntsCtrl.events" state="list">
-                {{--@foreach($events as $event)
-                    @include($_typeDevice.'.events.parts.event-list', ['event' => $event])
-                @endforeach--}}
+
+                <events class="events_list" ng-if="EvntsCtrl._opts.dataLoad"
+                        events="EvntsCtrl.events" state="'list'">
+                </events>
+
             </div>
         </div>
         @include($_typeDevice.'.partial.footer-binds')

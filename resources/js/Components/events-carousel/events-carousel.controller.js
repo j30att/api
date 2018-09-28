@@ -1,8 +1,6 @@
 class EventsCarousel {
 
     constructor() {
-        console.log(this.events);
-        console.log(this.state);
     }
 
     $onInit() {
