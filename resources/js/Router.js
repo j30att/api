@@ -19,19 +19,61 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('index', {
             url: '/',
             template: require('./views/main.template.html'),
+            data: {
+                permissions: {
+                    except: 'Auth',
+                    redirectTo: () => {
+                        return {
+                            state: 'events'
+                        }
+                    }
+                }
+            }
         })
-        .state('invest', {
-            url: '/invest',
+        .state('terms-and-conditions', {
+            url: '/terms-and-conditions',
+            template: require('./views/static/terms.template.html')
+        })
+        .state('privacy-policy', {
+            url: '/privacy-policy',
+            template: require('./views/static/privacy.template.html')
+        })
+
+        .state('auth',{
+            template: require('./views/auth/base.template.html'),
+            data: {
+                permissions: {
+                    except: 'Auth',
+                    redirectTo: () => {
+                        return {
+                            state: 'events'
+                        }
+                    }
+                }
+            }
+        })
+            .state('auth.login', {
+                //ng-controller="LoginController as LgCtrl"
+                url: '/login',
+                template: require('./views/auth/login.template.html'),
+                controller: 'LoginController',
+                controllerAs: 'LgCtrl'
+            })
+            .state('auth.registration', {
+                url: '/register',
+                template: require('./views/auth/registration.template.html'),
+                //ng-controller="RegisterController as RgCtrl"
+                controller: 'RegisterController',
+                controllerAs: 'RgCtrl'
+            })
+
+        .state('events', {
+            url: '/events',
             template: require('./views/events/index.template.html'),
             controller: 'EventsController',
             controllerAs: 'EvntsCtrl',
         })
-        .state('bids', {
-            url: '/bids',
-            template: require('./views/events/index.template.html'),
-            controller: 'BidResponsesController',
-            controllerAs: 'BdsRspnsCtrl',
-        })
+
     ;
 
 
