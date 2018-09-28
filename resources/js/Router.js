@@ -30,7 +30,6 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                 }
             }
         })
-
         .state('terms-and-conditions', {
             url: '/terms-and-conditions',
             template: require('./views/static/terms.template.html')
