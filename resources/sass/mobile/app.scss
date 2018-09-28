@@ -518,12 +518,23 @@ a .login_in,
     color: #fff;
 }
 .contine_without{
+    color: #fff;
     width: 100%;
     text-align: center;
     font-size: 16pt;
     font-weight: 700;
     cursor: pointer;
 }
+a.contine_without{
+    margin-left: 25px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    font-size: 16pt;
+    font-weight: 700;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 320px){
     .login_btn{
         width: 140px !important;

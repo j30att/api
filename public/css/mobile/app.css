@@ -11062,6 +11062,17 @@ a .login_in,
 }
 
 .contine_without {
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  font-size: 16pt;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+a.contine_without {
+  margin-left: 25px;
+  color: #fff;
   width: 100%;
   text-align: center;
   font-size: 16pt;

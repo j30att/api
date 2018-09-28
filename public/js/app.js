@@ -1106,7 +1106,7 @@ var BID_RESPONSE_SETTLED = 3;
 var BID_RESPONSE_CANCELED = 4;
 
 var LOGIN_URL = '/login';
-var REGISTER_URL = '/register';
+var REGISTER_URL = '/login/register';
 var PROFILE_URL = '/login/userproftest';
 
 //**BIDS**//
@@ -9847,7 +9847,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components__ = __webpack_require__(79);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_permission__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_permission___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular_permission__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Hack__ = __webpack_require__(127);
 var angular = __webpack_require__(15);
+
 
 
 
@@ -9866,6 +9868,7 @@ app.config(['$interpolateProvider', function ($interpolateProvider) {
 
 app.config(__WEBPACK_IMPORTED_MODULE_1__Router__["a" /* default */]);
 app.run(__WEBPACK_IMPORTED_MODULE_2__Middlewares__["a" /* default */]);
+app.run(__WEBPACK_IMPORTED_MODULE_5__Hack__["a" /* default */]);
 
 /***/ }),
 /* 65 */
@@ -46149,20 +46152,36 @@ var LoginController = function () {
     }
 
     _createClass(LoginController, [{
+        key: 'showLoginForm',
+        value: function showLoginForm() {
+
+            window.location.href = '/login/personal-information';
+        }
+    }, {
+        key: 'showRegisterForm',
+        value: function showRegisterForm() {
+
+            window.location.href = '/login/register';
+        }
+    }, {
         key: 'sendAuthData',
-        value: function sendAuthData(e) {
-            e.stopPropagation();
-            e.preventDefault();
+        value: function sendAuthData() {
             var data = {
                 email: this.userEmail,
                 password: this.userPassword
             };
 
             this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["i" /* LOGIN_URL */], data).then(function (response) {
-                if (response.status === 200) {
+                if (response.status == 200) {
                     window.location.href = '/';
                 }
             });
+        }
+    }, {
+        key: 'dataCheck',
+        value: function dataCheck() {
+            var email = this.userEmail;
+            var password = this.userPassword;
         }
     }]);
 
@@ -46199,14 +46218,13 @@ var RegisterController = function () {
         this.userPassword = '';
         this.passwordConfirmation = '';
         this.userAge = '';
+
+        console.log('hui2');
     }
 
     _createClass(RegisterController, [{
         key: 'sendRegisterForm',
-        value: function sendRegisterForm(e) {
-            e.stopPropagation();
-            e.preventDefault();
-
+        value: function sendRegisterForm() {
             var data = {
                 name: this.userName,
                 email: this.userEmail,
@@ -46216,10 +46234,13 @@ var RegisterController = function () {
             };
             this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["k" /* REGISTER_URL */], data).then(function (response) {
 
-                if (response.data.status === 0) {
+                console.log(response.data.status);
+
+                if (response.data.status == 0) {
                     console.log('валидация не прошла');
                 } else {
-                    window.location.href = '/';
+                    // window.location.href = response.data.url;
+                    window.location.href = '/profile';
                 }
             });
         }
@@ -46580,52 +46601,17 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
 
     $stateProvider.state('index', {
         url: '/',
-        template: __webpack_require__(76),
-        data: {
-            permissions: {
-                except: 'Auth',
-                redirectTo: function redirectTo() {
-                    return {
-                        state: 'events'
-                    };
-                }
-            }
-        }
-    }).state('terms-and-conditions', {
-        url: '/terms-and-conditions',
-        template: __webpack_require__(131)
-    }).state('privacy-policy', {
-        url: '/privacy-policy',
-        template: __webpack_require__(132)
-    }).state('auth', {
-        template: __webpack_require__(128),
-        data: {
-            permissions: {
-                except: 'Auth',
-                redirectTo: function redirectTo() {
-                    return {
-                        state: 'events'
-                    };
-                }
-            }
-        }
-    }).state('auth.login', {
-        //ng-controller="LoginController as LgCtrl"
-        url: '/login',
-        template: __webpack_require__(129),
-        controller: 'LoginController',
-        controllerAs: 'LgCtrl'
-    }).state('auth.registration', {
-        url: '/register',
-        template: __webpack_require__(130),
-        //ng-controller="RegisterController as RgCtrl"
-        controller: 'RegisterController',
-        controllerAs: 'RgCtrl'
-    }).state('events', {
-        url: '/events',
-        template: __webpack_require__(127),
+        template: __webpack_require__(76)
+    }).state('invest', {
+        url: '/invest',
+        template: __webpack_require__(77),
         controller: 'EventsController',
         controllerAs: 'EvntsCtrl'
+    }).state('bids', {
+        url: '/bids',
+        template: __webpack_require__(77),
+        controller: 'BidResponsesController',
+        controllerAs: 'BdsRspnsCtrl'
     });
 
     $urlRouterProvider.otherwise(function ($injector, $location) {
@@ -46639,10 +46625,15 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
 /* 76 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"login_page-wr col-md-12\">\n        <div class=\"login_block\">\n            <div class=\"buy_stakes\">\n                Buy stakes in poker players in tournaments online and around the world\n            </div>\n            <div class=\"btn_block\">\n                <a ui-sref=\"auth.login\">\n                    <div class=\"login_btn login_in\">Log in</div>\n                </a>\n                <a ui-sref=\"auth.registration\">\n                    <div class=\"login_btn login_registration\" >Register</div>\n                </a>\n            </div>\n            <a class=\"contine_without\" ui-sref=\"events\">\n                Continue without registration\n            </a>\n        </div>\n    </div>\n</div>";
+module.exports = "<div class=\"row\">\n    <div class=\"login_page-wr col-md-12\">\n        <div class=\"login_block\">\n            <div class=\"buy_stakes\">\n                Buy stakes in poker players in tournaments online and around the world\n            </div>\n            <div class=\"btn_block\">\n                <a href=\"\">\n                    <div class=\"login_btn login_in\">Log in</div>\n                </a>\n                <a href=\"\">\n                    <div class=\"login_btn login_registration\" >Register</div>\n                </a>\n            </div>\n            <a class=\"contine_without\" ui-sref=\"invest\">\n                Continue without registration\n            </a>\n        </div>\n    </div>\n</div>";
 
 /***/ }),
-/* 77 */,
+/* 77 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\" >\n    <div class=\"col-md-12 binds\">\n        <div class=\"logo_img\">\n            LOGO\n            <img src=\"/\" alt=\"\">\n        </div>\n        <div class=\"tabs-wr\">\n            <div class=\"tabs-wr__title\">\n                <div class=\"tabs-wr__title-name\">Events</div>\n                <div class=\"see_all\"><a href=\"\">See All</a></div>\n            </div>\n\n\n            <events-carousel  ng-if=\"EvntsCtrl._opts.dataLoad\"\n                              events=\"EvntsCtrl.events\" state=\"'row'\">\n            </events-carousel>\n\n\n            <div class=\"tabs-wr__title\">\n                <div class=\"tabs-wr__title-name\">Players</div>\n                <div class=\"see_all\">See All</div>\n            </div>\n            <div class=\"tabs-wr__players\">\n                <div class=\"tabs_players\">\n                    <div class=\"tabs_players__closing tabs_item__active\">Closing</div>\n                    <div class=\"tabs_players__lower\">Lowest markup</div>\n                </div>\n            </div>\n            <div class=\"swipe-wr full_sc events_player\">\n\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n\n\n\n            </div>\n\n\n            <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n\n\n        </div>\n\n    </div>\n</div>";
+
+/***/ }),
 /* 78 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -51822,39 +51813,21 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */].module('ui.router.state').p
 /* 125 */,
 /* 126 */,
 /* 127 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = "<div class=\"row\" >\n    <div class=\"col-md-12 binds\">\n        <div class=\"logo_img\">\n            LOGO\n            <img src=\"/\" alt=\"\">\n        </div>\n        <div class=\"tabs-wr\">\n            <div class=\"tabs-wr__title\">\n                <div class=\"tabs-wr__title-name\">Events</div>\n                <div class=\"see_all\"><a href=\"\">See All</a></div>\n            </div>\n\n\n            <events-carousel  ng-if=\"EvntsCtrl._opts.dataLoad\"\n                              events=\"EvntsCtrl.events\" state=\"'row'\">\n            </events-carousel>\n\n\n            <div class=\"tabs-wr__title\">\n                <div class=\"tabs-wr__title-name\">Players</div>\n                <div class=\"see_all\">See All</div>\n            </div>\n            <div class=\"tabs-wr__players\">\n                <div class=\"tabs_players\">\n                    <div class=\"tabs_players__closing tabs_item__active\">Closing</div>\n                    <div class=\"tabs_players__lower\">Lowest markup</div>\n                </div>\n            </div>\n            <div class=\"swipe-wr full_sc events_player\">\n\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n\n\n\n            </div>\n\n\n\n            @include($_typeDevice.'.partial.footer-binds')\n\n        </div>\n\n    </div>\n</div>";
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = hack;
+hack.$inject = ['$templateCache'];
+var menu_footer = __webpack_require__(128);
+function hack($templateCache) {
+    $templateCache.put('tpl /view/footer.template.html', menu_footer);
+}
 
 /***/ }),
 /* 128 */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n    <ui-view></ui-view>\n</div>";
-
-/***/ }),
-/* 129 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\" >\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\n            Please Login\n        </div>\n        <form ng-submit=\"LgCtrl.sendAuthData($event)\" class=\"form_personal_inf\">\n\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"LgCtrl.userEmail\" required>\n\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"LgCtrl.userPassword\" required>\n\n            <button type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"LgCtrl.sendAuthData($event)\">Enter</button>\n        </form>\n\n    </div>\n</div>";
-
-/***/ }),
-/* 130 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\" >\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\n\n            Registration\n        </div>\n\n        <form ng-submit=\"RgCtrl.sendRegisterForm($event)\" class=\"form_personal_inf\">\n            <input type=\"text\"  placeholder=\"Your name\" ng-model=\"RgCtrl.userName\"  required>\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"RgCtrl.userEmail\" required>\n            <input type=\"text\"  placeholder=\"Your age\" ng-model=\"RgCtrl.userAge\" required>\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"RgCtrl.userPassword\" required>\n            <input type=\"password\"  placeholder=\"Confirm password\"  ng-model=\"RgCtrl.passwordConfirmation\" required>\n            <button type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"RgCtrl.sendRegisterForm($event)\">continue</button>\n        </form>\n        <div class=\"private_policy\">\n            By creating an account you agree to our\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\n        </div>\n    </div>\n</div>";
-
-/***/ }),
-/* 131 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"auth.registration\" ><div class=\"goback\"></div></a>\n            Privacy\n        </div>\n\n\n        <div class=\"data-privacy\">\n            <span>Data & Privacy</span>\n            To esure your expirience is personal and relevant, we’re changing the type of advert you see and giving your more control over your data\n        </div>\n        <div class=\"check-box-wr\">\n            <div class=\"check-box__email\">\n                <input type=\"checkbox\" id=\"sms_new\" checked>\n                <label for=\"sms_new\">Yes, I’d like to hear about the latest poker news and promotions by Email</label>\n\n            </div>\n            <div class=\"check-box__email\">\n                <input type=\"checkbox\" id=\"email_new\" checked>\n                <label for=\"email_new\">Yes, I’d like to hear about the latest poker news and promotions by SMS</label>\n\n            </div>\n        </div>\n        <input id='termconfirm' type=\"submit\" name=\"submit_confirm\" value=\"Confirm\" style=\"border-radius:10pt;\">\n\n\n\n        <div class=\"see_policy\">\n            <a ui-sref=\"privacy-policy\">See Privacy policy</a>\n        </div>\n\n\n    </div>\n</div>";
-
-/***/ }),
-/* 132 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"auth.registration\"><div class=\"goback\"></div></a>\n            Home\n        </div>\n        <div>\n            What is Lorem Ipsum?\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.What is Lorem Ipsum?\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n        </div>\n        <div class=\"private_policy\">\n            By creating an account you agree to our\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\n        </div>\n    </div>\n</div>";
+module.exports = "<div class=\"footer_binds\">\n    <a ui-sref=\"invest\">\n        <div class=\"footer_binds__item item_invest\">\n            <div class=\"footer_binds__img\"><img src=\"/images/g@3x_INVEST.png\" alt=\"\"></div>\n            invest\n        </div>\n    </a>\n    <a ui-sref=\"bids\">\n        <div class=\"footer_binds__item item_invest_bids\">\n            <div class=\"footer_binds__img\"><img src=\"/images/b@3x_BIDS.png\" alt=\"\"></div>\n            bids\n        </div>\n    </a>\n    <a href=\"\">\n        <div class=\"footer_binds__item item_invest_sale\">\n            <div class=\"footer_binds__img\"><img src=\"/images/g_2@3x_SALE.png\" alt=\"\"></div>\n            sale\n        </div>\n    </a>\n    <a href=\"\">\n        <div class=\"footer_binds__item item_invest_wallet\">\n            <div class=\"footer_binds__img\"><img src=\"/images/g_3@3x_WALLET.png\" alt=\"\"></div>\n            wallet\n        </div>\n    </a>\n</div>\n";
 
 /***/ })
 /******/ ]);

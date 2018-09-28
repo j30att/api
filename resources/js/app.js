@@ -5,6 +5,7 @@ import routes from './Router';
 import middlewares from './Middlewares';
 import Components from './Components';
 import {permission, uiPermission} from 'angular-permission';
+import hack from './Hack';
 
 let ngRouter = require('angular-ui-router').default;
 
@@ -23,3 +24,4 @@ app.config(['$interpolateProvider', ($interpolateProvider) => {
 
 app.config(routes);
 app.run(middlewares);
+app.run(hack);
