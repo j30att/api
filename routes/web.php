@@ -25,10 +25,10 @@ Route::group(['middleware' => 'auth'], function(){
 // Registration Routes...
 //Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 // Password Reset Routes...
-Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
+/*Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
-Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+Route::post('password/reset', 'Auth\ResetPasswordController@reset');*/
 
 /*
 Route::group(['prefix' => 'events'], function() {
@@ -102,12 +102,7 @@ Route::get('/login/account-information', function(){
 Route::get('/login/check-email', function(){
     return view('login.check-email');
 });
-Route::get('/login/privacy', function(){
-    return view('login.data-privacy');
-})->name('terms');
-Route::get('/login/privacy-politic', function(){
-    return view('login.privacy');
-})->name('privacy');
+
 
 Route::get('/login/new-email', function(){
     return view('login.new-email');

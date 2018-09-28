@@ -46591,6 +46591,12 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
                 }
             }
         }
+    }).state('terms-and-conditions', {
+        url: '/terms-and-conditions',
+        template: __webpack_require__(131)
+    }).state('privacy-policy', {
+        url: '/privacy-policy',
+        template: __webpack_require__(132)
     }).state('auth', {
         template: __webpack_require__(128),
         data: {
@@ -51836,7 +51842,19 @@ module.exports = "<div class=\"row\" >\n    <div class=\"personal_inform col-md-
 /* 130 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\" >\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\n\n            Registration\n        </div>\n\n        <form ng-submit=\"RgCtrl.sendRegisterForm($event)\" class=\"form_personal_inf\">\n            <input type=\"text\"  placeholder=\"Your name\" ng-model=\"RgCtrl.userName\"  required>\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"RgCtrl.userEmail\" required>\n            <input type=\"text\"  placeholder=\"Your age\" ng-model=\"RgCtrl.userAge\" required>\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"RgCtrl.userPassword\" required>\n            <input type=\"password\"  placeholder=\"Confirm password\"  ng-model=\"RgCtrl.passwordConfirmation\" required>\n            <button type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"RgCtrl.sendRegisterForm($event)\">continue</button>\n        </form>\n        <div class=\"private_policy\">\n            By creating an account you agree to our\n            <a href=\"{{route('terms')}}\">Terms & Conditions</a> and  <a href=\"{{route('privacy')}}\">Privacy Policy</a>\n        </div>\n    </div>\n</div>";
+module.exports = "<div class=\"row\" >\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\n\n            Registration\n        </div>\n\n        <form ng-submit=\"RgCtrl.sendRegisterForm($event)\" class=\"form_personal_inf\">\n            <input type=\"text\"  placeholder=\"Your name\" ng-model=\"RgCtrl.userName\"  required>\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"RgCtrl.userEmail\" required>\n            <input type=\"text\"  placeholder=\"Your age\" ng-model=\"RgCtrl.userAge\" required>\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"RgCtrl.userPassword\" required>\n            <input type=\"password\"  placeholder=\"Confirm password\"  ng-model=\"RgCtrl.passwordConfirmation\" required>\n            <button type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"RgCtrl.sendRegisterForm($event)\">continue</button>\n        </form>\n        <div class=\"private_policy\">\n            By creating an account you agree to our\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\n        </div>\n    </div>\n</div>";
+
+/***/ }),
+/* 131 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"auth.registration\" ><div class=\"goback\"></div></a>\n            Privacy\n        </div>\n\n\n        <div class=\"data-privacy\">\n            <span>Data & Privacy</span>\n            To esure your expirience is personal and relevant, we’re changing the type of advert you see and giving your more control over your data\n        </div>\n        <div class=\"check-box-wr\">\n            <div class=\"check-box__email\">\n                <input type=\"checkbox\" id=\"sms_new\" checked>\n                <label for=\"sms_new\">Yes, I’d like to hear about the latest poker news and promotions by Email</label>\n\n            </div>\n            <div class=\"check-box__email\">\n                <input type=\"checkbox\" id=\"email_new\" checked>\n                <label for=\"email_new\">Yes, I’d like to hear about the latest poker news and promotions by SMS</label>\n\n            </div>\n        </div>\n        <input id='termconfirm' type=\"submit\" name=\"submit_confirm\" value=\"Confirm\" style=\"border-radius:10pt;\">\n\n\n\n        <div class=\"see_policy\">\n            <a ui-sref=\"privacy-policy\">See Privacy policy</a>\n        </div>\n\n\n    </div>\n</div>";
+
+/***/ }),
+/* 132 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"auth.registration\"><div class=\"goback\"></div></a>\n            Home\n        </div>\n        <div>\n            What is Lorem Ipsum?\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.What is Lorem Ipsum?\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n        </div>\n        <div class=\"private_policy\">\n            By creating an account you agree to our\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\n        </div>\n    </div>\n</div>";
 
 /***/ })
 /******/ ]);

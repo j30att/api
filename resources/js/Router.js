@@ -31,6 +31,15 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             }
         })
 
+        .state('terms-and-conditions', {
+            url: '/terms-and-conditions',
+            template: require('./views/static/terms.template.html')
+        })
+        .state('privacy-policy', {
+            url: '/privacy-policy',
+            template: require('./views/static/privacy.template.html')
+        })
+
         .state('auth',{
             template: require('./views/auth/base.template.html'),
             data: {
