@@ -13,8 +13,11 @@
                 </div>
             </div>
             <div class="all_events-wr">
+
                 <events ng-if="EvntsCtrl._opts.dataLoad"
-                        events="EvntsCtrl.events" state="list">
+                        events="EvntsCtrl.events" state="'list'">
+                </events>
+
                 {{--@foreach($events as $event)
                     @include($_typeDevice.'.events.parts.event-list', ['event' => $event])
                 @endforeach--}}

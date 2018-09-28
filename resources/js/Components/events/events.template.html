@@ -16,31 +16,16 @@
 
     </div>
 </div>
-<!--
-
-<div class="see_info_event" ng-if="$ctrl.showDetail()">
-    <span><a href="">See info</a></span>
-
-    <div class="event-item__title">{{$event->title}}</div>
-    <div class="event-item__summa">£{{$event->fund}} GTD</div>
-    <div class="event-item__date">{{$event->formatted_data}}</div>
 
 
-    <div class="event_main-wr">
-        <span>Events List</span>
-    </div>
-</div>
--->
-
-{%$ctrl.state%}
 <div ng-if="$ctrl.state == 'list'" ng-repeat="item in $ctrl.events">
 
-    <div class="selected_event" ng-if="EvntsLstCtrl.showDetail(item.id)">
+    <div class="selected_event" ng-if="$ctrl.showDetail(item.id)">
         <img src="/images/select_event_bg.png" alt="">
     </div>
     <div class="selected_event_info event_item col-md-12">
 
-        <div class="event_list-wr" ng-click="EvntsLstCtrl.openDetail(item.id)">
+        <div class="event_list-wr" ng-click="$ctrl.openDetail(item.id)">
 
 
             <div class="event-item__title" ng-bind="item.title"></div>

@@ -17,7 +17,9 @@
 
 
                 <events-carousel ng-if="EvntsCtrl._opts.dataLoad"
-                        events="EvntsCtrl.events" state="row"></events-carousel>
+                        events="EvntsCtrl.events" state="'row'">
+
+                </events-carousel>
 
                 <div class="tabs-wr__title">
                     <div class="tabs-wr__title-name">Players</div>

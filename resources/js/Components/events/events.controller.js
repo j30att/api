@@ -2,6 +2,7 @@ class Events {
 
     constructor() {
         this.opened = [] ;
+        console.log(this.events);
     }
 
     $onInit() {
@@ -9,6 +10,7 @@ class Events {
     }
 
     openDetail (event_id){
+        console.log(event_id);
         let rInd = this.opened.indexOf(event_id);
         if (rInd === -1){
             this.opened.push(event_id);

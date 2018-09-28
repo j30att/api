@@ -49561,6 +49561,7 @@ var Events = function () {
         _classCallCheck(this, Events);
 
         this.opened = [];
+        console.log(this.events);
     }
 
     _createClass(Events, [{
@@ -49569,6 +49570,7 @@ var Events = function () {
     }, {
         key: 'openDetail',
         value: function openDetail(event_id) {
+            console.log(event_id);
             var rInd = this.opened.indexOf(event_id);
             if (rInd === -1) {
                 this.opened.push(event_id);
@@ -49604,7 +49606,7 @@ var EventsComponent = {
 /* 123 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"event-item\" ng-if=\"$ctrl.state == 'row'\" ng-repeat=\"item in $ctrl.events\">\n    <div class=\"event-item-wr\">\n        <a href=\"\">\n            <div class=\"event-item__img\">\n                <img src=\"/images/event.png\" alt=\"\">\n            </div>\n        </a>\n        <div class=\"event-item__text\">\n            <a href=\"\">\n                <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\n            </a>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\n\n            <div class=\"event-item__date\" ng-bind=\"item.formated_data\"></div>\n        </div>\n\n    </div>\n</div>\n<!--\n\n<div class=\"see_info_event\" ng-if=\"$ctrl.showDetail()\">\n    <span><a href=\"\">See info</a></span>\n\n    <div class=\"event-item__title\">{{$event->title}}</div>\n    <div class=\"event-item__summa\">£{{$event->fund}} GTD</div>\n    <div class=\"event-item__date\">{{$event->formatted_data}}</div>\n\n\n    <div class=\"event_main-wr\">\n        <span>Events List</span>\n    </div>\n</div>\n-->\n\n{%$ctrl.state%}\n<div ng-if=\"$ctrl.state == 'list'\" ng-repeat=\"item in $ctrl.events\">\n\n    <div class=\"selected_event\" ng-if=\"EvntsLstCtrl.showDetail(item.id)\">\n        <img src=\"/images/select_event_bg.png\" alt=\"\">\n    </div>\n    <div class=\"selected_event_info event_item col-md-12\">\n\n        <div class=\"event_list-wr\" ng-click=\"EvntsLstCtrl.openDetail(item.id)\">\n\n\n            <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\n            <div class=\"event-item__date\" ng-bind=\"item.formated_data\"></div>\n        </div>\n        <a href=\"\">\n            <div class=\"see_more\"></div>\n        </a>\n\n    </div>\n\n</div>\n";
+module.exports = "<div class=\"event-item\" ng-if=\"$ctrl.state == 'row'\" ng-repeat=\"item in $ctrl.events\">\n    <div class=\"event-item-wr\">\n        <a href=\"\">\n            <div class=\"event-item__img\">\n                <img src=\"/images/event.png\" alt=\"\">\n            </div>\n        </a>\n        <div class=\"event-item__text\">\n            <a href=\"\">\n                <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\n            </a>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\n\n            <div class=\"event-item__date\" ng-bind=\"item.formated_data\"></div>\n        </div>\n\n    </div>\n</div>\n\n\n<div ng-if=\"$ctrl.state == 'list'\" ng-repeat=\"item in $ctrl.events\">\n\n    <div class=\"selected_event\" ng-if=\"$ctrl.showDetail(item.id)\">\n        <img src=\"/images/select_event_bg.png\" alt=\"\">\n    </div>\n    <div class=\"selected_event_info event_item col-md-12\">\n\n        <div class=\"event_list-wr\" ng-click=\"$ctrl.openDetail(item.id)\">\n\n\n            <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\n            <div class=\"event-item__date\" ng-bind=\"item.formated_data\"></div>\n        </div>\n        <a href=\"\">\n            <div class=\"see_more\"></div>\n        </a>\n\n    </div>\n\n</div>\n";
 
 /***/ }),
 /* 124 */
@@ -49619,9 +49621,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var EventsCarousel = function () {
     function EventsCarousel() {
         _classCallCheck(this, EventsCarousel);
-
-        console.log(this.events);
-        console.log(this.state);
     }
 
     _createClass(EventsCarousel, [{
