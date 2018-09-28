@@ -345,6 +345,15 @@ main {
 .binds-item__game_info{
     padding-left: 16px;
 }
+
+.events_carousel{
+    display: inline-flex;
+}
+.events_list{
+
+}
+
+
 .geme__text{
     display: flex;
     color: rgb(148, 148, 148);
@@ -362,6 +371,7 @@ main {
     justify-content: space-between;
     margin-bottom: 16pt;
 }
+
 
 .game_atrs div span
 {
@@ -469,7 +479,7 @@ main {
 .login_block{
     margin-top: 100%;
 }
-.selected_event_info:last-child{
+.event_item_rpt:last-child{
     margin-bottom: 100px;
 }
 .buy_stakes{

@@ -10857,6 +10857,12 @@ main button {
   padding-left: 16px;
 }
 
+.events_carousel {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
 .geme__text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11011,7 +11017,7 @@ main button {
   margin-top: 100%;
 }
 
-.selected_event_info:last-child {
+.event_item_rpt:last-child {
   margin-bottom: 100px;
 }
 

@@ -18,7 +18,7 @@
 </div>
 
 
-<div ng-if="$ctrl.state == 'list'" ng-repeat="item in $ctrl.events">
+<div class="event_item_rpt" ng-if="$ctrl.state == 'list'" ng-repeat="item in $ctrl.events">
 
     <div class="selected_event" ng-if="$ctrl.showDetail(item.id)">
         <img src="/images/select_event_bg.png" alt="">
