@@ -21,6 +21,12 @@ Route::group(['middleware' => 'auth'], function(){
     Route::any('logout', 'Auth\LoginController@logout')->name('logout');
 });
 
+
+Route::get('desktop/all', function (){
+    return view('desktop.bids.index');
+});
+
+
 //Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 // Registration Routes...
 //Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
