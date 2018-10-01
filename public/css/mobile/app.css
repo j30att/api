@@ -10502,10 +10502,6 @@ a:visited {
   color: black;
 }
 
-.sale_active {
-  background-color: green;
-}
-
 .sale_canceled {
   background-color: red;
 }
@@ -10760,6 +10756,10 @@ main button {
   width: 100%;
 }
 
+.tabs-wr:last-child {
+  margin-bottom: 100px;
+}
+
 .tabs-wr__title-name {
   text-transform: capitalize;
 }
@@ -10821,7 +10821,8 @@ main button {
   margin-bottom: 10pt;
 }
 
-.tabs-wr__title .see_all a {
+.tabs-wr__title .see_all a,
+.tabs-wr__title a {
   color: #007fed;
 }
 
@@ -11448,6 +11449,11 @@ input[name="new_email"] {
 .events_player .binds-item {
   border-bottom: 1px solid #949494;
   background-color: #f8fafc;
+  width: 100%;
+}
+
+.events_player > sales {
+  width: 100%;
 }
 
 .selected_event {
@@ -11778,6 +11784,21 @@ input[name="new_email"] {
   border-radius: 16px;
   margin-right: 12pt;
   padding: 16px 0 16px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sale_active {
+  background-color: #fff9e8;
+}
+
+.sale_canceled {
+  background-color: #f6f6f6;
 }
 
 .as__item__title {

@@ -806,7 +806,6 @@ a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  display: none;
 }
 
 .place_a_bit_content-wr {
@@ -945,11 +944,50 @@ a {
   width: auto;
 }
 
+.matched_bids > div > input {
+  background-color: #e7f7e4;
+}
+
+.edit_status {
+  position: relative;
+}
+
+.revocation_bid,
+.conf_bid,
+.del_bid {
+  position: absolute;
+  width: 24px !important;
+  height: 24px;
+  top: 33px;
+  cursor: pointer;
+}
+
+.revocation_bid {
+  left: 78%;
+  background: url("/images/checked.svg") no-repeat center;
+  background-size: 80%;
+}
+
+.conf_bid {
+  left: 86%;
+  background: url("/images/cross-out.svg") no-repeat center;
+  background-size: 80%;
+}
+
+.del_bid {
+  left: 96%;
+  background: url("/images/desk/trash_cart.png") no-repeat center;
+}
+
 .you_bids span {
   display: block;
   font-size: 12px;
   color: #949494;
   margin-bottom: 10px;
+}
+
+.place_a_bit_content .edit_status input {
+  background-color: #fff2ec;
 }
 
 .you_bids > div {
@@ -1012,5 +1050,208 @@ a {
           transform: rotate(90deg);
   top: 50%;
   left: calc(50% - 8px);
+}
+
+/*modal window reaped elements*/
+
+.full_sc-wr {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.right_side_content-wr {
+  width: 500px;
+  height: 100%;
+  background-color: #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 24px 40px 0 40px;
+  position: relative;
+}
+
+.right_side_content {
+  width: 100%;
+  height: 100%;
+}
+
+.right_side_content__title {
+  width: 100%;
+  position: relative;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.right_side_content__close {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 7px);
+  font-weight: 200;
+  background: url("/images/desk/players_img/profile_close.png") no-repeat center;
+}
+
+.right_side_content__footer {
+  width: 100%;
+  height: 70px;
+  border-top: 1px solid black;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+/**/
+
+.buyin_span {
+  font-size: 12px;
+}
+
+.bids_status > span {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.4);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.bids_status > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.bids_status > div input {
+  width: 100px;
+  height: 40px;
+  padding-left: 12px;
+  background-color: #edf8fd;
+  outline: none;
+  border-radius: 4px;
+  border: none;
+  margin-right: 4px;
+}
+
+.bids_status > div input:nth-child(3) {
+  width: auto-40px();
+}
+
+.bids_status > div ::-webkit-input-placeholder {
+  color: #000;
+}
+
+.confirm_bids {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #edf8fd;
+}
+
+.confirm_bids_accept {
+  background-color: #e7f7e5;
+  position: relative;
+}
+
+.confirm_bids_accept::after {
+  content: '\2714';
+  position: absolute;
+  color: #000;
+  top: 7px;
+  left: 14px;
+}
+
+.right_side_content__footer_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.pay_remaining {
+  width: 209px;
+  height: 38px;
+  border-radius: 6px;
+  background-color: #f6f6f6;
+  line-height: 38px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+  text-align: center;
+  margin-right: 16px;
+  margin-left: 24px;
+}
+
+.cansel_sale {
+  cursor: pointer;
+  color: #050505;
+  opacity: 0.6;
+}
+
+.accept-wr {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+.change_share {
+  position: absolute;
+  top: calc(50% - 105px);
+  right: 50px;
+  display: none;
+}
+
+.accept_bid {
+  position: absolute;
+  top: calc(50% - 105px);
+  right: 50px;
+}
+
+.accept_changed_input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.accept_changed_input ::-webkit-input-placeholder {
+  color: #000;
+}
+
+.accept_changed_input input {
+  width: 99px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #edf8fd;
+  margin-right: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 12px;
+  border: none;
+  outline: none;
 }
 

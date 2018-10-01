@@ -16,6 +16,9 @@
 
     {{--place a bit modal window--}}
     @include($_typeDevice.'.bids.place_a_bit.index')
+    {{--my-sale modal window--}}
+    {{--@include($_typeDevice.'.sales.my-sale')--}}
+
 
 
 

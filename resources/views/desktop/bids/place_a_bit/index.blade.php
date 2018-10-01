@@ -36,6 +36,25 @@
                     <input type="text" placeholder="$443">
                 </div>
             </div>
+            <div class="highest_bids matched_bids">
+                <span>MATCHED BID</span>
+                <div>
+                    <input type="text" placeholder="1.20">
+                    <input type="text" placeholder="1.53%">
+                    <input type="text" placeholder="$1,182.22">
+                </div>
+            </div>
+            <div class="highest_bids matched_bids edit_status">
+                <span>MATCHED BID</span>
+                <div>
+                    <input type="text" placeholder="1.20">
+                    <input type="text" placeholder="1.53%">
+                    <input type="text" placeholder="$1,182.22">
+                </div>
+                <div class="revocation_bid"></div>
+                <div class="conf_bid"></div>
+                <div class="del_bid"></div>
+            </div>
             <div class="you_bids">
                 <span>YOUR BID</span>
                 <div>
@@ -54,6 +73,7 @@
                     <div class="add_new"></div>
                 </div>
             </div>
+
 
         </div>
     </div>
