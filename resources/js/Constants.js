@@ -19,7 +19,7 @@ export const BID_RESPONSE_INDEX = '/api/bidResponse';
 
 //**EVENTS**//
 export const EVENTS_INDEX = '/api/events';
-
+export const EVENT_SINGLE = '/api/events/';
 
 //**SALE**//
 

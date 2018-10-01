@@ -10502,6 +10502,14 @@ a:visited {
   color: black;
 }
 
+.sale_active {
+  background-color: green;
+}
+
+.sale_canceled {
+  background-color: red;
+}
+
 .button {
   height: 48px;
   line-height: 48px;

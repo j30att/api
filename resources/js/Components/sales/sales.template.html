@@ -1,4 +1,9 @@
+
 <div class="as__item-wr as__item-wr-active"
+     ng-class="{
+     'sale_active': item.status === 1,
+     'sale_canceled': item.status === 2,
+     }"
      ng-if="$ctrl.state === 'list'"
      ng-repeat="item in $ctrl.sales">
 
