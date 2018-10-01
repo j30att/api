@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.static')
 
 @section('content')
     <div class="deskwr">
@@ -13,6 +13,9 @@
 
         </div>
     </div>
+
+    {{--place a bit modal window--}}
+    @include($_typeDevice.'.bids.place_a_bit.index')
 
 
 
