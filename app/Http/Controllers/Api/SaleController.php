@@ -18,8 +18,9 @@ class SaleController extends Controller
     public function index(Request $request)
     {
         $user = Auth::user();
-        $filter = $request->get('filter');
+        $filter = $request->all();
 
+        $filter += ['user_id'=>$user->id];
 
         if ($user != null){
             if ($filter == null){
@@ -33,7 +34,11 @@ class SaleController extends Controller
                     ]
                 ]);
             } else {
-                $sale = Sale::query()->where(['status'=> $filter, 'user_id'=>$user->id])->get();
+                $sale = Sale::query()
+                    ->where($filter)
+                    ->with('creator')
+                    ->with('subevent')
+                    ->get();
                 return SaleResource::collection($sale);
             }
 

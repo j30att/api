@@ -1,4 +1,4 @@
-import {EVENTS_INDEX} from "../Constants"
+import {EVENTS_INDEX, SALE_CLOSED, SALE_INDEX} from "../Constants"
 
 
 class InvestController {
@@ -7,6 +7,7 @@ class InvestController {
         this.$http = $http;
         this.events =[];
         this._opts = {dataLoad: false};
+        this.filter=SALE_CLOSED;
         this.showList();
         this.getSales();
 
@@ -22,6 +23,12 @@ class InvestController {
     }
 
     getSales(){
+        this.$http.get(SALE_INDEX, {params: {status: this.filter}})
+        .then(response => {
+            this.sales = response.data.data;
+            this._opts.dataLoad = true;
+            console.log(this.events, 'console.log(this.events)');
+        });
 
     }
 

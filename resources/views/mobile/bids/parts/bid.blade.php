@@ -1,12 +1,4 @@
-<div class="binds-item"
-     ng-class="{
-     'binds-item__matched':bidsResponse.status === 1,
-     'binds-item__unmatched':bidsResponse.status === 2,
-     'binds-item__settled':bidsResponse.status === 3,
-     'binds-item__canceled':bidsResponse.status === 4,
-      }"
-     ng-repeat="bidsResponse in FltrBdsRspnsCtrl.bids">
-
+<div class="binds-item">
     <div class="binds-item-wr">
         <div class="binds-item__profile_info">
             <div class="profile__photo">
