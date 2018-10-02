@@ -5,18 +5,22 @@ class ProfileController {
         this.user = window.user;
         this.$window = $window;
         this.$http = $http;
-
+        this.opened = false;
 
 
 
         console.log(this.user);
     }
 
-    // changeProfile(){
-    //     //console.log(this.userName.value(););
-    //     console.log('change value');
-    //
-    // };
+    showProfile(){
+
+        this.opened = !this.opened;
+        console.log(this.opened);
+    };
+
+
+
+
     changeProfile(){
         let data ={
             name:this.user.name,
@@ -25,16 +29,8 @@ class ProfileController {
         };
         this.$http.post(PROFILE_URL, data).then(function (response) {
 
-            // console.log(response.data.status);
             console.log(response.data);
-
-            // if (response.data.status == 0){
-            //     console.log('валидация не прошла')
-            // } else {
-            //     window.location.href = response.data.url;
-            // }
-
-        })
+      })
     };
 }
 

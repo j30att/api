@@ -1,3 +1,8 @@
+.your_profile_wr_display{
+    display: block;
+}
+
+
 a{
     text-decoration: none;
 }
@@ -152,6 +157,7 @@ a{
     margin-left: 230px;
     padding-left: 86px;
     padding-top: 32px;
+    width: calc(100% - 230px);
 }
 
 /*bids content*/
@@ -1028,4 +1034,54 @@ background: url("/images/b@3x_tell.png") no-repeat left;
     padding-left: 12px;
     border: none;
     outline: none;
+}
+/*event detail*/
+.event_details-wr{
+    width: 100%;
+    display: flex;
+}
+.main_event_list-wr{
+    width: calc(100% - 423px);
+    height: 100vh;
+    background-color: #f6f6f6;
+    padding: 32px 60px 0 32px;
+    box-sizing: border-box;
+    margin-top: -32px;
+}
+.main_event_list_title{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+.main_event_list_status{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #999999;
+    font-size: 15px;
+    margin-bottom: 32px;
+}
+.main_event_gdt{
+    display: flex;
+}
+.main_event_gdt > div:first-child{
+    position: relative;
+    margin-right: 21px;
+}
+.main_event_gdt > div:first-child::after{
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: #999999;
+    top: 5px;
+    right: -10px;
+}
+.main_event_table .t_from_img{
+    margin-left: 0;
+}
+.event_details{
+    width: 422px;
+    margin-right: 32px;
+    outline: 1px solid black;
 }

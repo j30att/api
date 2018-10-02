@@ -1,35 +1,134 @@
-<div class="row">
-    <div class="single__header">
-        <div class="single__title" ng-bind="EventCtrl.event.title"></div>
-        <div class="single__date" ng-bind="EventCtrl.event.date"></div>
-        <a ui-sref="invest">
-            <div class="goback"></div>
-        </a>
-    </div>
-    <div class="subevents_all-wr col-md-12">
-        <div class="subevents_all">
-
-            <div ng-repeat="item in EventCtrl.event.subevents" >
-                <div class="main_event subevent_item"
-                     ng-bind="item.title" ng-click="EventCtrl.clickTab(item.id)">
-                </div>
-                <div ng-if="EventCtrl.showTab(item.id)" >
-
-                    <div class="main_event_info">
-                        <div class="fund_info">
-                            Buy in £1,000,000 • £500,000 GTE
-                        </div>
-                        <div class="date_info" ng-bind="EventCtrl.event.date">
-                        </div>
-                        <div class="location_info">
-                            Casino Sochi, Sochi, Russia
-                        </div>
-                    </div>
-                    <sales sales="item.sales" state="'invest'"></sales>
-                </div>
+<div class="deskwr">
+    <div ng-include="'tpl/view/footer.template.html'"></div>
+    <div class="main_content">
+        <div class="event_details-wr">
+        <div class="event_details">
+            <div class="back_to">
+                <div class="back_btn"></div>
+                Back to Events
             </div>
+            <div class="event_img"><img src="/images/desk/event_pic_1.png" alt=""></div>
+            <div class="event_title">WSOP International Circuit - Rotterdam</div>
+            <div class="event_date">Jul 20 – Aug 10</div>
+            <div class="event_gtd">£1,000,000 GTD</div>
+            <a class="event_see_info">£1,000,000 GTD</a>
+            <div class="event_list_title">EVENTS LIST</div>
 
         </div>
-        <span ng-include="'tpl/view/footer.template.html'"></span>
+        <div class="main_event_list-wr">
+            <div class="main_event_list">
+                <div class="main_event_list_title">Main event</div>
+                <div class="main_event_list_status">
+                    <div class="main_event_gdt">
+                        <div>£1,000,000</div>
+                        <div>£5,000,000 GTD</div></div>
+                    <div class="main_event_date">Jul 20 – Aug 10</div>
+                </div>
+                <table class="main_event_table table_events_list">
+                    <thead class="table_events_head">
+                    <td>FROM</td>
+                    <td>Markup</td>
+                    <td>share</td>
+                    <td>Time</td>
+                    </thead>
+                    <tbody class="table_events_body">
+                    <tr>
+                        <td class="t_from t_from_event">
+                            <div class="t_from_img"><img src="/images/desk/players_img/profile_img_1.png"
+                                                         alt="profile photo">
+                            </div>
+                            <span>Austin Vargas</span></td>
+                        <td class="t_markup">1.22</td>
+                        <td class="t_share">20%</td>
+                        <td class="t_time">< 24 hours</td>
+                    </tr>
+                    <tr>
+                        <td class="t_from t_from_event">
+                            <div class="t_from_img"><img src="/images/desk/players_img/profile_img_1.png"
+                                                         alt="profile photo">
+                            </div>
+                            <span>Austin Vargas</span></td>
+                        <td class="t_markup">1.22</td>
+                        <td class="t_share">20%</td>
+                        <td class="t_time">< 24 hours</td>
+                    </tr>
+                    <tr>
+                        <td class="t_from t_from_event">
+                            <div class="t_from_img"><img src="/images/desk/players_img/profile_img_1.png"
+                                                         alt="profile photo">
+                            </div>
+                            <span>Austin Vargas</span></td>
+                        <td class="t_markup">1.22</td>
+                        <td class="t_share">20%</td>
+                        <td class="t_time">< 24 hours</td>
+                    </tr>
+                    <tr>
+                        <td class="t_from t_from_event">
+                            <div class="t_from_img"><img src="/images/desk/players_img/profile_img_1.png"
+                                                         alt="profile photo">
+                            </div>
+                            <span>Austin Vargas</span></td>
+                        <td class="t_markup">1.22</td>
+                        <td class="t_share">20%</td>
+                        <td class="t_time">< 24 hours</td>
+                    </tr>
+                    <tr>
+                        <td class="t_from t_from_event">
+                            <div class="t_from_img"><img src="/images/desk/players_img/profile_img_1.png"
+                                                         alt="profile photo">
+                            </div>
+                            <span>Austin Vargas</span></td>
+                        <td class="t_markup">1.22</td>
+                        <td class="t_share">20%</td>
+                        <td class="t_time">< 24 hours</td>
+                    </tr>
+                    <tr>
+                        <td class="t_from t_from_event">
+                            <div class="t_from_img"><img src="/images/desk/players_img/profile_img_1.png"
+                                                         alt="profile photo">
+                            </div>
+                            <span>Austin Vargas</span></td>
+                        <td class="t_markup">1.22</td>
+                        <td class="t_share">20%</td>
+                        <td class="t_time">< 24 hours</td>
+                    </tr>
+                    <tr>
+                        <td class="t_from t_from_event">
+                            <div class="t_from_img"><img src="/images/desk/players_img/profile_img_1.png"
+                                                         alt="profile photo">
+                            </div>
+                            <span>Austin Vargas</span></td>
+                        <td class="t_markup">1.22</td>
+                        <td class="t_share">20%</td>
+                        <td class="t_time">< 24 hours</td>
+                    </tr>
+                    <tr>
+                        <td class="t_from t_from_event">
+                            <div class="t_from_img"><img src="/images/desk/players_img/profile_img_1.png"
+                                                         alt="profile photo">
+                            </div>
+                            <span>Austin Vargas</span></td>
+                        <td class="t_markup">1.22</td>
+                        <td class="t_share">20%</td>
+                        <td class="t_time">< 24 hours</td>
+                    </tr>
+                    <tr>
+                        <td class="t_from t_from_event">
+                            <div class="t_from_img"><img src="/images/desk/players_img/profile_img_1.png"
+                                                         alt="profile photo">
+                            </div>
+                            <span>Austin Vargas</span></td>
+                        <td class="t_markup">1.22</td>
+                        <td class="t_share">20%</td>
+                        <td class="t_time">< 24 hours</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        </div>
+        </div>
+
     </div>
 </div>

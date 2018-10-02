@@ -72,6 +72,10 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             /*controller: 'EventsListController',
             controllerAs: 'EvntsLstCtrl',*/
         })
+        .state('event-detail', {
+            url:'/event/detail',
+            template: require('./views/events/single.template.html')
+        })
         .state('sale',{
             url: '/sales',
             template: require('./views/sale/index.template.html'),
@@ -83,63 +87,62 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             template: require('./views/bids/index.template.html')
         })
 
-        /*.state('invest', {
+        .state('invest', {
             url: '/invest',
             template: require('./views/invest/index.template.html'),
-            controller: 'InvestController',
-            controllerAs: 'InvstCtrl',
-        })
-        .state('events', {
-            url: '/events',
-            template: require('./views/events/index.template.html'),
-            controller: 'EventsListController',
-            controllerAs: 'EvntsLstCtrl',
-        })
-            .state('event',{
-                url: '/event/{id}',
-                template: require('./views/events/single.template.html'),
-                controller: 'EventController',
-                controllerAs: 'EventCtrl',
-            })
-
-        .state('bids', {
-            url: '/bids',
-            template: require('./views/bids/index.template.html'),
-            controller: 'BidResponsesController',
-            controllerAs: 'BdsRspnsCtrl',
         })
 
-            .state('bids-filter', {
-                url: '/bids/{filter}',
-                template: require('./views/bids/filter.template.html'),
-                controller: 'FilterBidResponsesController',
-                controllerAs: 'FltrBdsRspnsCtrl',
-            })
+    /*.state('events', {
+        url: '/events',
+        template: require('./views/events/index.template.html'),
+        controller: 'EventsListController',
+        controllerAs: 'EvntsLstCtrl',
+    })
+        .state('event',{
+            url: '/event/{id}',
+            template: require('./views/events/single.template.html'),
+            controller: 'EventController',
+            controllerAs: 'EventCtrl',
+        })
 
-        .state('sale',{
-            url: '/sale',
-            template: require('./views/sale/index.template.html'),
+    .state('bids', {
+        url: '/bids',
+        template: require('./views/bids/index.template.html'),
+        controller: 'BidResponsesController',
+        controllerAs: 'BdsRspnsCtrl',
+    })
+
+        .state('bids-filter', {
+            url: '/bids/{filter}',
+            template: require('./views/bids/filter.template.html'),
+            controller: 'FilterBidResponsesController',
+            controllerAs: 'FltrBdsRspnsCtrl',
+        })
+
+    .state('sale',{
+        url: '/sale',
+        template: require('./views/sale/index.template.html'),
+        controller: 'SaleController',
+        controllerAs: 'SaleCtrl',
+    })
+        .state('sale-create', {
+            url: '/sale/create',
+            template: require('./views/sale/form.template.html'),
+            controller: 'SaleFormController',
+            controllerAs: 'SaleFrmCtrl',
+        })
+        .state('sale-filter', {
+            url: '/sales/{filter}',
+            template: require('./views/sale/filter.template.html'),
             controller: 'SaleController',
             controllerAs: 'SaleCtrl',
         })
-            .state('sale-create', {
-                url: '/sale/create',
-                template: require('./views/sale/form.template.html'),
-                controller: 'SaleFormController',
-                controllerAs: 'SaleFrmCtrl',
-            })
-            .state('sale-filter', {
-                url: '/sales/{filter}',
-                template: require('./views/sale/filter.template.html'),
-                controller: 'SaleController',
-                controllerAs: 'SaleCtrl',
-            })
-            .state('sale-edit',{
-                url:'/sale/{id}',
-                template: require('./views/sale/form.template.html'),
-                controller: 'SaleFormController',
-                controllerAs: 'SaleFrmCtrl',
-            })
+        .state('sale-edit',{
+            url:'/sale/{id}',
+            template: require('./views/sale/form.template.html'),
+            controller: 'SaleFormController',
+            controllerAs: 'SaleFrmCtrl',
+        })
 */
     ;
 

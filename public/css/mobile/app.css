@@ -10487,6 +10487,7 @@ button:focus {
 
 body {
   background-color: #fff;
+  font-family: 'OpenSans', sans-serif;
 }
 
 a:hover {
