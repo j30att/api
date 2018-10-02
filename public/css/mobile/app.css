@@ -10821,6 +10821,14 @@ main button {
   margin-bottom: 10pt;
 }
 
+.tabs-wr .tabs-wr__title > a {
+  color: #949494;
+}
+
+.tabs-wr .tabs-wr__title .tabs_item__active {
+  color: #000;
+}
+
 .tabs-wr__title .see_all a,
 .tabs-wr__title a {
   color: #007fed;

@@ -263,6 +263,7 @@ main {
 .tabs-wr__title-name{
     text-transform: capitalize;
 }
+
 .binds-item
 {
 
@@ -316,6 +317,15 @@ main {
     justify-content: space-between;
     margin-bottom: 10pt;
 }
+.tabs-wr .tabs-wr__title > a{
+    color: $warmGrey;
+}
+.tabs-wr .tabs-wr__title .tabs_item__active{
+     color: #000;
+ }
+
+
+
 .tabs-wr__title .see_all a,
 .tabs-wr__title a{
    color: #007fed;
