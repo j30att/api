@@ -6,19 +6,24 @@
             <div class="goback"></div>
         </a>
     </div>
-    <div class="subevents_all-wr col-md-12">
+
+    <div class="subevents_all-wr">
+
         <div class="subevents_all">
+            <div class="subevent_item_title-wr">
+                <div class="subevent_item_title_carusel">
+                    <div ng-repeat="item in EventCtrl.event.subevents">
+                        <div class="subevent_item"
+                             ng-bind="item.title"
+                             ng-click="EventCtrl.getSale(item.id)"
+                             ng-class="{'main_event': EventCtrl.opened == item.id}"
+                        >
+                        </div>
+                    </div>
+                </div>
+            </div>
            <div class="event_detail">
-               <div class="d-flex">
-                   <div ng-repeat="item in EventCtrl.event.subevents">
-                       <div class="subevent_item"
-                            ng-bind="item.title"
-                            ng-click="EventCtrl.getSale(item.id)"
-                            ng-class="{'main_event': EventCtrl.opened == item.id}"
->
-                       </div>
-                   </div>
-               </div>
+
 
                <div>
                    <div class="main_event_info">

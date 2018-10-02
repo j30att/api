@@ -27,6 +27,14 @@ class Events {
         }
 
     }
+    hideArrow(event_id){
+        if (this.opened.indexOf(event_id) != -1){
+            return false;
+        } else {
+            return true;
+        }
+
+    }
 
 }
 
