@@ -199,11 +199,14 @@ a{
 .bids_content_canceled .bids_table_body tr{
     background-color: #edebf6;
 }
-.bids_content_matched{
+.bids_content_matched .bids_table_body tr{
     background-color: #e7f7e4;
 }
-.bids_content_settled{
+.bids_content_settled .bids_table_body tr{
     background-color: #edf8fd;
+}
+.bids_content_matched .bids_table_body .t_time{
+    text-align: left;
 }
 .t_outcome_minus{
     color: #ff334c;
@@ -623,6 +626,7 @@ background: url("/images/b@3x_tell.png") no-repeat left;
 .t_time{
     text-align: right;
 }
+
 
 .table_events_list tr,
 .t_from_event{

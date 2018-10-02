@@ -264,12 +264,16 @@ a {
   background-color: #edebf6;
 }
 
-.bids_content_matched {
+.bids_content_matched .bids_table_body tr {
   background-color: #e7f7e4;
 }
 
-.bids_content_settled {
+.bids_content_settled .bids_table_body tr {
   background-color: #edf8fd;
+}
+
+.bids_content_matched .bids_table_body .t_time {
+  text-align: left;
 }
 
 .t_outcome_minus {
