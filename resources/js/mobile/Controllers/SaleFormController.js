@@ -54,11 +54,13 @@ class SaleFormController {
     }
     fillSale(){
                 let self = this;
+                console.log(this.subevents, 'this.subevents');
         angular.forEach(this.subevents, function (value, key) {
             if (value.id == self.sale.sub_event_id){
-                self.buy_in = value.buy_in;
+                self.buy_in = value.event.buy_in;
             }
-        })
+        });
+
     }
 
 
