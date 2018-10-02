@@ -12340,3 +12340,257 @@ input:checked + label::after {
   position: relative;
 }
 
+/*manegSales*/
+
+.my_sale-wr {
+  width: 100%;
+  height: 100%;
+  font-family: 'OpenSans', sans-serif;
+}
+
+.my_sale_title {
+  width: 100%;
+  position: relative;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.my_sale_close {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: calc(50% - 7px);
+  font-weight: 200;
+  background: url("/images/desk/players_img/profile_close.png") no-repeat center;
+}
+
+.my_sale__event {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.buyin_span {
+  font-size: 13px;
+}
+
+.gte_and_by {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 13px;
+  color: #949494;
+  margin-bottom: 16px;
+}
+
+.profile_status__buyin {
+  position: relative;
+  margin-right: 21px;
+}
+
+.profile_status__buyin::after {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: #949494;
+  position: absolute;
+  top: 7px;
+  right: -11px;
+}
+
+.my_sale_table {
+  border-collapse: separate;
+  margin-bottom: 24px;
+}
+
+.my_sale_table span {
+  font-size: 13px;
+  color: #949494;
+}
+
+.my_sale_table td {
+  padding-right: 10px;
+}
+
+.my_sale_table input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.my_sale_table input::-webkit-input-placeholder {
+  color: #000 !important;
+}
+
+.my_sale_markup input {
+  width: 72px;
+}
+
+.my_sale_share input {
+  width: 72px;
+}
+
+.my_sale_value {
+  width: 100px;
+}
+
+.my_sale_attention {
+  width: 100%;
+  text-align: center;
+  color: #fc4c02;
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+
+.increase_btn {
+  margin-bottom: 50px;
+}
+
+/**/
+
+.buyin_span {
+  font-size: 12px;
+}
+
+.bids_status > span {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.4);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.bids_status > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.bids_status > div input {
+  width: 100px;
+  height: 40px;
+  padding-left: 12px;
+  background-color: #edf8fd;
+  outline: none;
+  border-radius: 4px;
+  border: none;
+  margin-right: 4px;
+}
+
+.bids_status > div input:nth-child(3) {
+  width: auto-40px();
+}
+
+.bids_status > div ::-webkit-input-placeholder {
+  color: #000;
+}
+
+.confirm_bids {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #edf8fd;
+}
+
+.confirm_bids_accept {
+  background-color: #e7f7e5;
+  position: relative;
+}
+
+.confirm_bids_accept::after {
+  content: '\2714';
+  position: absolute;
+  color: #000;
+  top: 7px;
+  left: 14px;
+}
+
+.right_side_content__footer_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.pay_remaining {
+  width: 209px;
+  height: 38px;
+  border-radius: 6px;
+  background-color: #f6f6f6;
+  line-height: 38px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+  text-align: center;
+  margin-right: 16px;
+  margin-left: 24px;
+}
+
+.cansel_sale {
+  cursor: pointer;
+  color: #050505;
+  opacity: 0.6;
+}
+
+.accept-wr {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+.change_share {
+  position: absolute;
+  top: calc(50% - 105px);
+  right: 50px;
+  display: none;
+}
+
+.accept_bid {
+  position: absolute;
+  top: calc(50% - 105px);
+  right: 50px;
+}
+
+.accept_changed_input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.accept_changed_input ::-webkit-input-placeholder {
+  color: #000;
+}
+
+.accept_changed_input input {
+  width: 99px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #edf8fd;
+  margin-right: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 12px;
+  border: none;
+  outline: none;
+}
+
