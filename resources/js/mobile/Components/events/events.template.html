@@ -1,21 +1,20 @@
-<div class="event-item" ng-if="$ctrl.state == 'row'" ng-repeat="item in $ctrl.events">
-    <div class="event-item-wr">
+<div class="event_card__row" ng-if="$ctrl.state == 'row'" ng-repeat="item in $ctrl.events">
+
 
         <a ui-sref="event({id:item.id})">
-            <div class="event-item__img">
+            <div class="event_card__row_img">
                 <img src="/images/event.png" alt="">
             </div>
         </a>
-        <div class="event-item__text">
-            <a href="">
-                <div class="event-item__title" ng-bind="item.title"></div>
+        <div class="event_card__row_info">
+            <a class="event_card__row_title" href="" ng-bind="item.title">
             </a>
-            <div class="event-item__summa">£ {%item.fund%} GTD</div>
+            <div class="event_card__row_fund">£{%item.fund%} GTD</div>
 
-            <div class="event-item__date" ng-bind="item.date"></div>
+            <div class="event_card__row_date" ng-bind="item.date"></div>
         </div>
 
-    </div>
+
 </div>
 
 

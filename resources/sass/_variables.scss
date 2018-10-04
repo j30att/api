@@ -3,9 +3,16 @@
 $body-bg: #f8fafc;
 
 // Typography
-$font-family-sans-serif: "Nunito", sans-serif;
+
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+
+//font weight
+$fontSemiBold: 600;
+$fontRegular: 400;
+$fontLight: 300;
+
+
 
 // Colors
 $blue: #3490dc;
@@ -20,4 +27,7 @@ $teal: #4dc0b5;
 $cyan: #6cb2eb;
 $ceruleanBlue: rgb(0,127,237);
 $warmGrey: rgb(148,148,148);
+$linksColorBlue : rgb(0,127,237);
 $plus: rgb(26,208,59);
+
+

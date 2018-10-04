@@ -1,13 +1,11 @@
-
 <div class="as__item-wr as__item-wr-active"
-
      ng-if="$ctrl.state === 'list'"
      ng-repeat="item in $ctrl.sales"
      ng-class="{
      'sale_active': item.status === 1,
      'sale_canceled': item.status === 2,
      }"
-     >
+>
 
     <div class="as__item__text">
         <div class="as__item__title" ng-bind="item.event.title"></div>
@@ -15,7 +13,8 @@
         <div class="loop_counter loop_counter_sale" ng-bind="item.sub_event_id">
             Second loop
         </div>
-        <div class="as__item__by">Buy in $<span ng-bind="item.event.buy_in"></span> + $<span ng-bind="item.subevent.buy_in"></span></div>
+        <div class="as__item__by">Buy in $<span ng-bind="item.event.buy_in"></span> + $<span
+            ng-bind="item.subevent.buy_in"></span></div>
     </div>
     <div class="as__item__tags as__item__tags-active">
         <div class="tags_closes">
@@ -52,7 +51,8 @@
      ng-repeat="item in $ctrl.sales">
     <div class="as__item__text">
         <div class="as__item__title" ng-bind="item.event.title"></div>
-        <div class="as__item__by">Buy in $<span ng-bind="item.event.buy_in"></span> + $<span ng-bind="item.subevent.buy_in"></span></div>
+        <div class="as__item__by">Buy in $<span ng-bind="item.event.buy_in"></span> + $<span
+            ng-bind="item.subevent.buy_in"></span></div>
     </div>
     <div class="as__item__tags">
         <div class="tags_closes">
@@ -60,8 +60,7 @@
             73 days
         </div>
         <div class="tags_markup">
-            <span>Markup</span><br>
-            <span ng-bind="item.markup"></span>
+            <span>Markup</span><br><span ng-bind="item.markup"></span>
         </div>
         <div class="tags_share">
             <span>Share sold</span><br>
@@ -75,61 +74,49 @@
 
 </div>
 
+<!--INVEST-->
 
-<div class="binds-item"
+<div class="sale_card__list"
+     ng-class="{'sale_card__list-last_child': $ctrl.sales.length == key+1}"
      ng-click="$ctrl.click(key)"
      ng-if="$ctrl.state === 'invest'"
-     ng-repeat=" (key, item) in $ctrl.sales"
-     ng-class="{
-     'sale_active': item.status === 1,
-     'sale_canceled': item.status === 2,
-     }"
->
-    <div class="binds-item-wr">
-        <div class="binds-item__profile_info">
-            <div class="profile__photo">
-                <img src="/images/players.png" alt="">
-            </div>
-            <div class="profile_text">
-                <div class="profile__name" ng-bind="item.creator.name">
+     ng-repeat=" (key, item) in $ctrl.sales">
 
-                </div>
-                <div class="profile__country">
-                    MILLIONS Russia, 1A
-                </div>
-
-            </div>
-
+    <div class="sale_card__list_profile_info">
+        <div class="sale_card__list_profile__photo">
+            <img src="/images/players.png" alt="">
         </div>
-        <div class="loop_counter" ng-bind="item.subevent.title">
+        <div class="profile_text">
+            <div class="sale_card__profile_name" ng-bind="item.creator.name">
 
+            </div>
+            <div class="sale_card__event" ng-bind="item.event.title">
+
+            </div>
         </div>
-        <div class="binds-item__game_info">
-            <div class="geme__text">
-                <div class="by_in">
-                    Buy in £ <span ng-bind="item.subevent.buy_in"></span>
-                </div>
-                <div class="gte">
-                    £ <span ng-bind="item.subevent.fund"></span> GTE
-                </div>
-            </div>
-            <div class="game_atrs">
-                <div class="game_atrs__markup">
-                    <span>Markup</span><br>
-                    <span ng-bind="item.markup"></span>
-                </div>
-                <div class="game_atrs__value">
-                    <span>Value</span><br>
-                    £<span ng-bind="item.amount"></span>
-                </div>
-                <div class="game_atrs__date_start">
-                    <span>Date of Start</span><br>
 
-                    <span ng-bind="item.subevent.date"></span>
-                </div>
-            </div>
+    </div>
+    <div class="sale_card__subevent" ng-bind="item.subevent.title">
+
+    </div>
+
+
+    <div class="game_atrs sale_card_list_atr">
+        <div class="sale_card_list_atr_item">
+            <span>Markup</span><br>
+            <span class="sale_card_list_atr_value" ng-bind="item.markup"></span>
+        </div>
+        <div class="sale_card_list_atr_item">
+            <span>Value</span><br>
+            <span class="sale_card_list_atr_value">£</span>
+            <span class="sale_card_list_atr_value" ng-bind="item.amount"></span>
+        </div>
+        <div class="sale_card_list_atr_item">
+            <span>Date of Start</span><br>
+
+            <span class="sale_card_list_atr_value" ng-bind="item.subevent.date"></span>
         </div>
     </div>
 </div>
 
-<sale-modal sale ="$ctrl.item" show="$ctrl.show"></sale-modal>
+<sale-modal sale="$ctrl.item" show="$ctrl.show"></sale-modal>

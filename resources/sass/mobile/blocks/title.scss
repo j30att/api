@@ -1,0 +1,16 @@
+.blocks_header_title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.blocks_header_title_name{
+    color: $warmGrey;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.blocks_header_link{
+    color: $linksColorBlue;
+}

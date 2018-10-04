@@ -1,0 +1,23 @@
+.tabs_row{
+
+}
+.tabs_list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+    font-size: 13px;
+}
+.tabs_item{
+    width: 50%;
+    text-align: center;
+    padding-bottom: 15px;
+    color: $warmGrey;
+    height: 41px;
+    line-height: 41px;
+}
+.tabs_item__active{
+    color: #000;
+}
+
+
