@@ -8,9 +8,10 @@ import {permission, uiPermission} from 'angular-permission';
 import hack from './Hack';
 
 let ngRouter = require('angular-ui-router').default;
+let ngDialog = require('ng-dialog');
 
 let app = angular.module('poker', [
-
+    ngDialog,
     ngRouter,
     Controllers,
     Components,

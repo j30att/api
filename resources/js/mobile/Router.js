@@ -102,7 +102,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             .state('bids-filter', {
                 url: '/bids/{filter}',
                 template: require('./views/bids/filter.template.html'),
-                controller: 'BidsController',
+                controller: 'BidsFilterController',
                 controllerAs: 'BidsCtrl',
             })
 
@@ -168,7 +168,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                         }
                     }
                 },
-                controller: 'SaleController',
+                controller: 'SaleFilterController',
                 controllerAs: 'SaleCtrl',
             })
             .state('sale-edit',{

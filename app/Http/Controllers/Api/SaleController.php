@@ -16,58 +16,40 @@ class SaleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+
+    public function mySales(Request $request)
     {
         $user = Auth::user();
+        if ($request->get('user_id') != $user->id) App::abort(401);
+        $saleActive = Sale::query()->where(['status' => Sale::SALE_ACTIVE, 'user_id' => $user->id])->get();
+        $saleCanceled = Sale::query()->where(['status' => Sale::SALE_CLOSED, 'user_id' => $user->id])->get();
+        return response()->json([
+            'data' => [
+                'active' => SaleResource::collection($saleActive),
+                'closed' => SaleResource::collection($saleCanceled)
+            ]
+        ]);
+
+    }
+
+    public function myFilterSales(Request $request)
+    {
+        $user = Auth::user();
+        if ($request->get('user_id') != $user->id) App::abort(401);
         $filter = $request->all();
-        $sale = null;
+        $sale = Sale::query()
+            ->where($filter)
+            ->with('creator')
+            ->with('subevent')
+            ->with('event')
+            ->get();
 
-
-
-
-        if (array_key_exists('user_id', $filter)) {
-            if ($filter['user_id'] != $user->id) {
-                App::abort(403);
-            }
-        }
-
-
-        if (array_key_exists('page', $filter)) {
-            if (array_key_exists('status', $filter)) {
-                unset($filter['page']);
-                $sale = Sale::query()
-                    ->where($filter)
-                    ->with('creator')
-                    ->with('subevent')
-                    ->with('event')
-                    ->get();
-
-
-            }else{
-                if ($filter['page'] == 'sales') {
-                    $saleActive = Sale::query()->where(['status' => Sale::SALE_ACTIVE, 'user_id' => $user->id])->get();
-                    $saleCanceled = Sale::query()->where(['status' => Sale::SALE_CLOSED, 'user_id' => $user->id])->get();
-
-                    return response()->json([
-                        'data' => [
-                            'active' => SaleResource::collection($saleActive),
-                            'canceled' => SaleResource::collection($saleCanceled)
-                        ]
-                    ]);
-                }
-            }
-        } else{
-            $sale = Sale::query()
-                ->where($filter)
-                ->with('creator')
-                ->with('subevent')
-                ->with('event')
-                ->get();
-        }
         return SaleResource::collection($sale);
+    }
 
-
-
+    public function index(Request $request)
+    {
+        dd('тут ничего нету');
     }
 
     /**
@@ -108,8 +90,8 @@ class SaleController extends Controller
     public function show($id)
     {
         $user = Auth::user();
-        $sale = Sale::query()->where('id', $id)->with(['bids'=> function ($query){
-            $query->where('status',1);
+        $sale = Sale::query()->where('id', $id)->with(['bids' => function ($query) {
+            $query->where('status', 1);
 
         }])->first();
         return new SaleResource($sale);
@@ -149,4 +131,8 @@ class SaleController extends Controller
     {
         //
     }
+
+
+
+
 }

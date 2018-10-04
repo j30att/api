@@ -1,12 +1,16 @@
 class SalesCarousel {
 
-    constructor() {
+    constructor(ngDialog) {
+        this.ngDialog = ngDialog
+        console.log(ngDialog);
     }
 
     $onInit() {
     }
 
 }
+
+
 
 export const SalesCarouselComponent = {
     bindings: {

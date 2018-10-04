@@ -1,5 +1,6 @@
 
 <div class="as__item-wr as__item-wr-active"
+
      ng-if="$ctrl.state === 'list'"
      ng-repeat="item in $ctrl.sales"
      ng-class="{
@@ -42,7 +43,7 @@
 
 
 <div class="as__item-wr active_sale"
-     ng-click="$ctrl.click()"
+
      ng-if="$ctrl.state === 'row'"
      ng-class="{
      'sale_active': item.status === 1,
@@ -76,8 +77,9 @@
 
 
 <div class="binds-item"
+     ng-click="$ctrl.click(key)"
      ng-if="$ctrl.state === 'invest'"
-     ng-repeat="item in $ctrl.sales"
+     ng-repeat=" (key, item) in $ctrl.sales"
      ng-class="{
      'sale_active': item.status === 1,
      'sale_canceled': item.status === 2,
@@ -129,3 +131,5 @@
         </div>
     </div>
 </div>
+
+<sale-modal sale ="$ctrl.item" show="$ctrl.show"></sale-modal>

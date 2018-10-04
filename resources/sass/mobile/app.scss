@@ -14,6 +14,18 @@ button:focus {
     outline: none;
 }
 
+.modal_wrapper{
+    position:fixed;
+    top: 0;
+    left: 0;
+    /*z-index: 10000;*/
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+}
+.modal_wrapper > div{
+    margin: auto;
+}
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);

@@ -24,5 +24,22 @@ Route::group([/*'middleware' => 'auth'*/], function(){
     Route::apiResource('subevents', 'Api\SubEventController');
 
 
+
+
 });
 
+Route::group(['middleware' => 'auth'], function (){
+
+    Route::post('/sales/my',        'Api\SaleController@mySales');
+    Route::post('/sales/my/active', 'Api\SaleController@myFilterSales');
+    Route::post('/sales/my/closed', 'Api\SaleController@myFilterSales');
+
+    Route::post('/bids/my',             'Api\BidController@myBids');
+    Route::post('/bids/my/matched',     'Api\BidController@myFilterBids');
+    Route::post('/bids/my/unmatched',   'Api\BidController@myFilterBids');
+    Route::post('/bids/my/settled',     'Api\BidController@myFilterBids');
+    Route::post('/bids/my/canceled',    'Api\BidController@myFilterBids');
+
+
+
+});

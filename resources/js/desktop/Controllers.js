@@ -13,9 +13,11 @@ import {BidsController} from "./Controllers/BidsController";
 ////////////////////////////////////////////////////////
 import {SaleController} from "./Controllers/SaleController"
 import {SaleFormController} from "./Controllers/SaleFormController"
+import {SaleFilterController} from "./Controllers/SaleFilterController"
 import {InvestController} from "./Controllers/InvestController";
 import {EventController} from "./Controllers/EventController";
 import {EventsListController} from "./Controllers/EventsListController";
+
 
 
 
@@ -27,13 +29,13 @@ module.controller('ProfileController', ProfileController);
 module.controller('EventsListController', EventsListController);
 module.controller('FilterBidsController', FilterBidsController);
 module.controller('BidResponsesController', BidResponsesController);
-module.controller('FilterBidResponsesController', FilterBidResponsesController);
 
 module.controller('BidsController', BidsController);
 
 /////////////////////////////////////////////////////////////
 module.controller('SaleController', SaleController);
 module.controller('SaleFormController', SaleFormController);
+module.controller('SaleFilterController', SaleFilterController);
 module.controller('InvestController', InvestController);
 module.controller('EventController', EventController);
 module.controller('EventsListController', EventsListController);

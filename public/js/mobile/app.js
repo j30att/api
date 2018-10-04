@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 100);
+/******/ 	return __webpack_require__(__webpack_require__.s = 99);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -117,7 +117,7 @@
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return silentRejection; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__coreservices__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__coreservices__ = __webpack_require__(5);
 /**
  * Random utility functions used in the UI-Router code
  *
@@ -1007,7 +1007,7 @@ function pattern(struct) {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_42", function() { return __WEBPACK_IMPORTED_MODULE_0__common__["S"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_43", function() { return __WEBPACK_IMPORTED_MODULE_0__common__["T"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_45", function() { return __WEBPACK_IMPORTED_MODULE_0__common__["U"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__coreservices__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__coreservices__ = __webpack_require__(5);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_6", function() { return __WEBPACK_IMPORTED_MODULE_1__coreservices__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_28", function() { return __WEBPACK_IMPORTED_MODULE_1__coreservices__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__glob__ = __webpack_require__(23);
@@ -1077,7 +1077,8 @@ function pattern(struct) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 4 */
+/* 4 */,
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1097,7 +1098,7 @@ var services = {
 //# sourceMappingURL=coreservices.js.map
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1291,7 +1292,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 6 */,
 /* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1457,23 +1457,30 @@ function joinNeighborsR(acc, x) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return SALE_ACTIVE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return SALE_CLOSED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return SALE_MARKUP; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return BID_MATCHED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return BID_UNMATCHED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return BID_SETTLED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return BID_CANCELED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return LOGIN_URL; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return REGISTER_URL; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return PROFILE_URL; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BIDS_INDEX; });
-/* unused harmony export BID_RESPONSE_INDEX */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return EVENTS_INDEX; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return SALE_ACTIVE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return SALE_CLOSED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return SALE_MARKUP; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return BID_MATCHED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return BID_UNMATCHED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return BID_SETTLED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return BID_CANCELED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return LOGIN_URL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return REGISTER_URL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return PROFILE_URL; });
+/* unused harmony export BIDS_INDEX */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BIDS_MY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return BIDS_MY_MATCHED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return BIDS_MY_UNMATCHED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return BIDS_MY_SETTLED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return BIDS_MY_CANCELED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return EVENTS_INDEX; });
 /* unused harmony export EVENT_SINGLE */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return SALE_INDEX; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return SALE_CREATE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return SUBEVENTS_INDEX; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return SALE_MY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return SALE_MY_ACTIVE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return SALE_MY_CLOSED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return SALE_INDEX; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return SALE_CREATE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return SUBEVENTS_INDEX; });
 var SALE_ACTIVE = 1;
 var SALE_CLOSED = 2;
 var SALE_MARKUP = 3;
@@ -1489,14 +1496,22 @@ var PROFILE_URL = '/login/userproftest';
 
 //**BIDS**//
 var BIDS_INDEX = '/api/bids';
-
-var BID_RESPONSE_INDEX = '/api/bidResponse';
+var BIDS_MY = '/api/bids/my';
+var BIDS_MY_MATCHED = '/api/bids/my/matched';
+var BIDS_MY_UNMATCHED = '/api/bids/my/unmatched';
+var BIDS_MY_SETTLED = '/api/bids/my/settled';
+var BIDS_MY_CANCELED = '/api/bids/my/canceled';
 
 //**EVENTS**//
 var EVENTS_INDEX = '/api/events';
 var EVENT_SINGLE = '/api/events/';
 
 //**SALE**//
+
+var SALE_MY = '/api/sales/my';
+var SALE_MY_ACTIVE = '/api/sales/my/active';
+var SALE_MY_CLOSED = '/api/sales/my/closed';
+
 var SALE_INDEX = '/api/sale';
 var SALE_CREATE = '/api/sale';
 
@@ -1767,7 +1782,7 @@ var trace = new Trace();
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ng; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_angular__);
 /** @publicapi @module ng1 */ /** */
 
@@ -1928,6 +1943,14 @@ var TransitionHookScope;
 
 /***/ }),
 /* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(64);
+module.exports = angular;
+
+
+/***/ }),
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1936,7 +1959,7 @@ var TransitionHookScope;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_hof__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_predicates__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__paramType__ = __webpack_require__(26);
 /** @publicapi @module params */ /** */
 
@@ -2147,7 +2170,7 @@ var Param = /** @class */ (function () {
 //# sourceMappingURL=param.js.map
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2299,7 +2322,7 @@ var TargetState = /** @class */ (function () {
 //# sourceMappingURL=targetState.js.map
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2310,9 +2333,9 @@ var TargetState = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_hof__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_trace__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_coreservices__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_coreservices__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__rejectFactory__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__state_targetState__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__state_targetState__ = __webpack_require__(15);
 /** @publicapi @module transition */ /** */
 
 
@@ -2514,14 +2537,6 @@ var TransitionHook = /** @class */ (function () {
 //# sourceMappingURL=transitionHook.js.map
 
 /***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(64);
-module.exports = angular;
-
-
-/***/ }),
 /* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2529,7 +2544,7 @@ module.exports = angular;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PathUtils; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__state_targetState__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__state_targetState__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pathNode__ = __webpack_require__(27);
 /** @internalapi @module path */ /** */
 
@@ -2707,7 +2722,7 @@ var PathUtils = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return defaultResolvePolicy; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Resolvable; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_trace__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_strings__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_predicates__ = __webpack_require__(1);
@@ -2850,7 +2865,7 @@ var Resolvable = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_hof__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_trace__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__interface__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__resolvable__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__path_pathUtils__ = __webpack_require__(17);
@@ -3069,7 +3084,7 @@ var UIInjectorImpl = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_hof__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_predicates__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__params_param__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__params_param__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_strings__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common__ = __webpack_require__(3);
 /** @publicapi @module url */ /** */
@@ -3662,7 +3677,7 @@ var BaseLocationServices = /** @class */ (function () {
 /* harmony export (immutable) */ __webpack_exports__["b"] = watchDigests;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getLocals; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__statebuilders_views__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__templateFactory__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__stateProvider__ = __webpack_require__(62);
@@ -3942,7 +3957,7 @@ var Queue = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__param__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__param__ = __webpack_require__(14);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__param__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__param__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paramTypes__ = __webpack_require__(71);
@@ -4123,7 +4138,7 @@ function ArrayType(type, mode) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PathNode; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__params_param__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__params_param__ = __webpack_require__(14);
 /** @internalapi @module path */ /** */
 
 
@@ -4220,7 +4235,7 @@ var PathNode = /** @class */ (function () {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_4__stateRegistry__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__stateService__ = __webpack_require__(43);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_5__stateService__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__targetState__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__targetState__ = __webpack_require__(15);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_6__targetState__["a"]; });
 
 
@@ -4372,7 +4387,7 @@ var StateObject = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__hooks_url__ = __webpack_require__(79);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__hooks_lazyLoad__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__transitionEventType__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__transitionHook__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__transitionHook__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__common_hof__ = __webpack_require__(2);
@@ -4642,17 +4657,17 @@ var TransitionService = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Transition; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_trace__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_strings__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_hof__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__interface__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__transitionHook__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__transitionHook__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__hookRegistry__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__hookBuilder__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__path_pathUtils__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__params_param__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__params_param__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__resolve_resolvable__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__resolve_resolveContext__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__rejectFactory__ = __webpack_require__(11);
@@ -5784,7 +5799,7 @@ function locationPluginFactory(name, isHtml5, serviceClass, configurationClass) 
 /* harmony export (immutable) */ __webpack_exports__["b"] = getNg1ViewConfigFactory;
 /* harmony export (immutable) */ __webpack_exports__["c"] = ng1ViewsBuilder;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Ng1ViewConfig; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
 
 /** @internalapi */
 function getNg1ViewConfigFactory() {
@@ -5994,7 +6009,7 @@ var resolvePolicies = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_strings__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_hof__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__resolve_resolvable__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_coreservices__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_coreservices__ = __webpack_require__(5);
 /** @publicapi @module state */ /** */
 
 
@@ -6624,13 +6639,13 @@ var StateRegistry = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_queue__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__path_pathUtils__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__path_pathNode__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__transition_transitionService__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__transition_rejectFactory__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__targetState__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__params_param__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__targetState__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__params_param__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__common_glob__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__resolve_resolveContext__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__hooks_lazyLoad__ = __webpack_require__(53);
@@ -7209,7 +7224,7 @@ var StateService = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interface__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__transitionHook__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__transitionHook__ = __webpack_require__(16);
 /** @publicapi @module transition */ /** */
 
 
@@ -8939,7 +8954,7 @@ var UrlConfig = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return registerLazyLoadHook; });
 /* harmony export (immutable) */ __webpack_exports__["a"] = lazyLoadState;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_coreservices__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_coreservices__ = __webpack_require__(5);
 
 /**
  * A [[TransitionHookFn]] that performs lazy loading
@@ -9042,7 +9057,7 @@ function lazyLoadState(transition, state) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TransitionEventType; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__transitionHook__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__transitionHook__ = __webpack_require__(16);
 
 /**
  * This class defines a type of hook, such as `onBefore` or `onEnter`.
@@ -9492,7 +9507,7 @@ var BrowserLocationConfig = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StateProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
 /** @publicapi @module ng1 */ /** */
 
 /**
@@ -9638,7 +9653,7 @@ var StateProvider = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UrlRouterProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
 /** @publicapi @module url */ /** */
 
 
@@ -48161,7 +48176,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__stateFilters__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_viewDirective__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__viewScroll__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__uirouter_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__uirouter_core__ = __webpack_require__(6);
 /* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "core", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRules", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlRules"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlConfig", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlConfig"]; });
@@ -48375,7 +48390,7 @@ module.exports = g;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__paramType__ = __webpack_require__(26);
 /** @publicapi @module params */ /** */
 
@@ -48607,8 +48622,8 @@ var treeChangesCleanup = function (trans) {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerRedirectToHook; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_predicates__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__state_targetState__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__state_targetState__ = __webpack_require__(15);
 /** @internalapi @module hooks */ /** */
 
 
@@ -48785,7 +48800,7 @@ var registerResolveRemaining = function (transitionService) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return registerLoadEnteringViews; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerActivateViews; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(5);
 /** @internalapi @module hooks */ /** */
 
 
@@ -48984,7 +48999,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_3__rejectFactory__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__transition__ = __webpack_require__(31);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_4__transition__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__transitionHook__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__transitionHook__ = __webpack_require__(16);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_5__transitionHook__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__transitionEventType__ = __webpack_require__(54);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_6__transitionEventType__["a"]; });
@@ -49141,7 +49156,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__memoryLocationConfig__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__injector__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__q__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__common_coreservices__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__common_coreservices__ = __webpack_require__(5);
 /** @internalapi @module vanilla */ /** */
 
 
@@ -49196,7 +49211,7 @@ var UIRouterPluginBase = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplateFactory; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(6);
 /** @publicapi @module view */ /** */
 
 
@@ -49406,7 +49421,7 @@ var scopeBindings = function (bindingsObj) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getStateHookBuilder; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services__ = __webpack_require__(22);
 /** @publicapi @module ng1 */ /** */
 
@@ -49441,7 +49456,7 @@ var getStateHookBuilder = function (hookName) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Ng1LocationServices; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
 /** @publicapi @module ng1 */ /** */
 
 
@@ -49846,7 +49861,7 @@ var $urlMatcherFactoryProvider;
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(6);
 /**
  * # Angular 1 Directives
  *
@@ -50535,7 +50550,7 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */]
 
 "use strict";
 /* unused harmony export uiView */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__statebuilders_views__ = __webpack_require__(35);
@@ -51002,65 +51017,32 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */].module('ui.router.state').p
 /* 97 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"sale col-md-12\">\r\n        <div class=\"sale__title\">\r\n            Create new sale\r\n            <a ui-sref=\"sale\">\r\n                <div class=\"goback goback_sale\"></div>\r\n            </a>\r\n        </div>\r\n        <div class=\"events_and_by\">\r\n            <div class=\"events_and_by__title\">\r\n                Event and buy-in\r\n            </div>\r\n\r\n            <label>Event</label>\r\n            <select ng-if=\"SaleFrmCtrl._opts.load === false\">\r\n                <option ng-bind=\"'Choose an event'\"></option>\r\n            </select>\r\n            <select  ng-model=\"SaleFrmCtrl.sale.event_id\"\r\n                     ng-if=\"SaleFrmCtrl._opts.load === true\"\r\n                     ng-change=\"SaleFrmCtrl.getSubevents()\">\r\n                <option ng-repeat=\"item in SaleFrmCtrl.events\"\r\n                        ng-bind=\"item.title\"\r\n                        ng-value=\"{%item.id%}\"></option>\r\n            </select>\r\n\r\n\r\n            <label>Flight</label>\r\n\r\n            <select name=\"flight\" ng-if=\"SaleFrmCtrl.sale.event_id == null\">\r\n                <option selected>Choose an flight\r\n                </option>\r\n            </select>\r\n\r\n\r\n            <select ng-model=\"SaleFrmCtrl.sale.sub_event_id\"\r\n                    ng-if=\"SaleFrmCtrl.sale.event_id != null\"\r\n\r\n                    ng-change=\"SaleFrmCtrl.fillSale()\">\r\n                <option ng-repeat=\"item in SaleFrmCtrl.subevents\"\r\n                        ng-bind=\"item.title\"\r\n                        ng-value=\"{%item.id%}\">\r\n\r\n                </option>\r\n            </select>\r\n\r\n            <label>Buy-in</label>\r\n            <input type=\"text\" ng-model=\"SaleFrmCtrl.buy_in\" placeholder=\"Will be display after selection of flight\">\r\n            <div class=\"offer\">\r\n                <div class=\"offer__title\">Offer</div>\r\n                <div class=\"offer-wr\">\r\n                    <div>\r\n                        <label>Share</label>\r\n                        <input ng-model=\"SaleFrmCtrl.sale.share\" type=\"number\" placeholder=\"0\">\r\n                    </div>\r\n                    <div>\r\n                        <label>Markup</label>\r\n                        <input ng-model=\"SaleFrmCtrl.sale.markup\" type=\"number\" placeholder=\"1.0\">\r\n                    </div>\r\n                    <div>\r\n                        <label>Amount $</label>\r\n                        <input ng-model=\"SaleFrmCtrl.sale.amount\" type=\"number\" placeholder=\"0\">\r\n                    </div>\r\n                </div>\r\n\r\n\r\n                <div ng-if=\"SaleFrmCtrl._opts.update !=true \" class=\"creact_sale\" ng-click=\"SaleFrmCtrl.createSale()\">\r\n                    Create a Sale\r\n                </div>\r\n                <div ng-if=\"SaleFrmCtrl._opts.update == true \" class=\"creact_sale\" ng-click=\"SaleFrmCtrl.updateSale()\">\r\n                    Update a Sale\r\n                </div>\r\n\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+module.exports = "<div class=\"row\">\n    <div class=\"sale col-md-12\">\n        <div class=\"sale__title\">\n            Create new sale\n            <a ui-sref=\"sale\">\n                <div class=\"goback goback_sale\"></div>\n            </a>\n        </div>\n        <div class=\"events_and_by\">\n            <div class=\"events_and_by__title\">\n                Event and buy-in\n            </div>\n\n            <label>Event</label>\n            <select ng-if=\"SaleFrmCtrl._opts.load === false\">\n                <option ng-bind=\"'Choose an event'\"></option>\n            </select>\n            <select  ng-model=\"SaleFrmCtrl.sale.event_id\"\n                     ng-if=\"SaleFrmCtrl._opts.load === true\"\n                     ng-change=\"SaleFrmCtrl.getSubevents()\">\n                <option ng-repeat=\"item in SaleFrmCtrl.events\"\n                        ng-bind=\"item.title\"\n                        ng-value=\"{%item.id%}\"></option>\n            </select>\n\n\n            <label>Flight</label>\n\n            <select name=\"flight\" ng-if=\"SaleFrmCtrl.sale.event_id == null\">\n                <option selected>Choose an flight\n                </option>\n            </select>\n\n\n            <select ng-model=\"SaleFrmCtrl.sale.sub_event_id\"\n                    ng-if=\"SaleFrmCtrl.sale.event_id != null\"\n\n                    ng-change=\"SaleFrmCtrl.fillSale()\">\n                <option ng-repeat=\"item in SaleFrmCtrl.subevents\"\n                        ng-bind=\"item.title\"\n                        ng-value=\"{%item.id%}\">\n\n                </option>\n            </select>\n\n            <label>Buy-in</label>\n            <input type=\"text\" ng-model=\"SaleFrmCtrl.buy_in\" placeholder=\"Will be display after selection of flight\">\n            <div class=\"offer\">\n                <div class=\"offer__title\">Offer</div>\n                <div class=\"offer-wr\">\n                    <div>\n                        <label>Share</label>\n                        <input ng-model=\"SaleFrmCtrl.sale.share\" type=\"number\" placeholder=\"0\">\n                    </div>\n                    <div>\n                        <label>Markup</label>\n                        <input ng-model=\"SaleFrmCtrl.sale.markup\" type=\"number\" placeholder=\"1.0\">\n                    </div>\n                    <div>\n                        <label>Amount $</label>\n                        <input ng-model=\"SaleFrmCtrl.sale.amount\" type=\"number\" placeholder=\"0\">\n                    </div>\n                </div>\n\n\n                <div ng-if=\"SaleFrmCtrl._opts.update !=true \" class=\"creact_sale\" ng-click=\"SaleFrmCtrl.createSale()\">\n                    Create a Sale\n                </div>\n                <div ng-if=\"SaleFrmCtrl._opts.update == true \" class=\"creact_sale\" ng-click=\"SaleFrmCtrl.updateSale()\">\n                    Update a Sale\n                </div>\n\n            </div>\n\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
-/* 98 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SalesCarouselComponent; });
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var SalesCarousel = function () {
-    function SalesCarousel() {
-        _classCallCheck(this, SalesCarousel);
-    }
-
-    _createClass(SalesCarousel, [{
-        key: '$onInit',
-        value: function $onInit() {}
-    }]);
-
-    return SalesCarousel;
-}();
-
-var SalesCarouselComponent = {
-    bindings: {
-        sales: '<',
-        state: '<'
-    },
-    template: __webpack_require__(134),
-    controller: SalesCarousel,
-    controllerAs: '$ctrl'
-};
-
-/***/ }),
-/* 99 */,
-/* 100 */
+/* 98 */,
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(101);
-__webpack_require__(147);
-module.exports = __webpack_require__(148);
+__webpack_require__(100);
+__webpack_require__(152);
+module.exports = __webpack_require__(153);
 
 
 /***/ }),
-/* 101 */
+/* 100 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Router__ = __webpack_require__(115);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Middlewares__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components__ = __webpack_require__(133);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_permission__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_permission___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular_permission__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Hack__ = __webpack_require__(145);
-var angular = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Hack__ = __webpack_require__(148);
+var angular = __webpack_require__(13);
 
 
 
@@ -51070,8 +51052,9 @@ var angular = __webpack_require__(16);
 
 
 var ngRouter = __webpack_require__(69).default;
+var ngDialog = __webpack_require__(151);
 
-var app = angular.module('poker', [ngRouter, __WEBPACK_IMPORTED_MODULE_0__Controllers__["a" /* default */], __WEBPACK_IMPORTED_MODULE_3__Components__["a" /* default */], __WEBPACK_IMPORTED_MODULE_4_angular_permission__["permission"], __WEBPACK_IMPORTED_MODULE_4_angular_permission__["uiPermission"]]);
+var app = angular.module('poker', [ngDialog, ngRouter, __WEBPACK_IMPORTED_MODULE_0__Controllers__["a" /* default */], __WEBPACK_IMPORTED_MODULE_3__Components__["a" /* default */], __WEBPACK_IMPORTED_MODULE_4_angular_permission__["permission"], __WEBPACK_IMPORTED_MODULE_4_angular_permission__["uiPermission"]]);
 
 app.config(['$interpolateProvider', function ($interpolateProvider) {
     $interpolateProvider.startSymbol('{%');
@@ -51083,24 +51066,24 @@ app.run(__WEBPACK_IMPORTED_MODULE_2__Middlewares__["a" /* default */]);
 app.run(__WEBPACK_IMPORTED_MODULE_5__Hack__["a" /* default */]);
 
 /***/ }),
-/* 102 */
+/* 101 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers_LoginController__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Controllers_RegisterController__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Controllers_ProfileController__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Controllers_FilterBidsController__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Controllers_BidsController__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Controllers_SaleController__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Controllers_SaleAllController__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Controllers_SaleManageController__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Controllers_SaleFormController__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Controllers_InvestController__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Controllers_EventController__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Controllers_EventsListController__ = __webpack_require__(114);
-var angular = __webpack_require__(16);
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers_LoginController__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Controllers_RegisterController__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Controllers_ProfileController__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Controllers_BidsController__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Controllers_BidsFilterController__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Controllers_SaleController__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Controllers_SaleAllController__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Controllers_SaleFilterController__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Controllers_SaleManageController__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Controllers_SaleFormController__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Controllers_InvestController__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Controllers_EventController__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Controllers_EventsListController__ = __webpack_require__(114);
+var angular = __webpack_require__(13);
 
 
 
@@ -51116,29 +51099,34 @@ var angular = __webpack_require__(16);
 
 
 
+
+
+
 var module = angular.module('Controllers', []);
 
 module.controller('LoginController', __WEBPACK_IMPORTED_MODULE_0__Controllers_LoginController__["a" /* LoginController */]);
 module.controller('RegisterController', __WEBPACK_IMPORTED_MODULE_1__Controllers_RegisterController__["a" /* RegisterController */]);
 module.controller('ProfileController', __WEBPACK_IMPORTED_MODULE_2__Controllers_ProfileController__["a" /* ProfileController */]);
-module.controller('EventsListController', __WEBPACK_IMPORTED_MODULE_11__Controllers_EventsListController__["a" /* EventsListController */]);
-module.controller('FilterBidsController', __WEBPACK_IMPORTED_MODULE_3__Controllers_FilterBidsController__["a" /* FilterBidsController */]);
+module.controller('EventsListController', __WEBPACK_IMPORTED_MODULE_12__Controllers_EventsListController__["a" /* EventsListController */]);
 
 /////////////////////////////////////////////////////////////
-module.controller('SaleController', __WEBPACK_IMPORTED_MODULE_5__Controllers_SaleController__["a" /* SaleController */]);
-module.controller('SaleAllController', __WEBPACK_IMPORTED_MODULE_6__Controllers_SaleAllController__["a" /* SaleAllController */]);
-module.controller('SaleFormController', __WEBPACK_IMPORTED_MODULE_8__Controllers_SaleFormController__["a" /* SaleFormController */]);
-module.controller('SaleManageController', __WEBPACK_IMPORTED_MODULE_7__Controllers_SaleManageController__["a" /* SaleManageController */]);
 
-module.controller('InvestController', __WEBPACK_IMPORTED_MODULE_9__Controllers_InvestController__["a" /* InvestController */]);
-module.controller('EventController', __WEBPACK_IMPORTED_MODULE_10__Controllers_EventController__["a" /* EventController */]);
-module.controller('EventsListController', __WEBPACK_IMPORTED_MODULE_11__Controllers_EventsListController__["a" /* EventsListController */]);
-module.controller('BidsController', __WEBPACK_IMPORTED_MODULE_4__Controllers_BidsController__["a" /* BidsController */]);
+module.controller('SaleController', __WEBPACK_IMPORTED_MODULE_5__Controllers_SaleController__["a" /* SaleController */]);
+module.controller('SaleFilterController', __WEBPACK_IMPORTED_MODULE_7__Controllers_SaleFilterController__["a" /* SaleFilterController */]);
+module.controller('SaleAllController', __WEBPACK_IMPORTED_MODULE_6__Controllers_SaleAllController__["a" /* SaleAllController */]);
+module.controller('SaleFormController', __WEBPACK_IMPORTED_MODULE_9__Controllers_SaleFormController__["a" /* SaleFormController */]);
+module.controller('SaleManageController', __WEBPACK_IMPORTED_MODULE_8__Controllers_SaleManageController__["a" /* SaleManageController */]);
+
+module.controller('InvestController', __WEBPACK_IMPORTED_MODULE_10__Controllers_InvestController__["a" /* InvestController */]);
+module.controller('EventController', __WEBPACK_IMPORTED_MODULE_11__Controllers_EventController__["a" /* EventController */]);
+module.controller('EventsListController', __WEBPACK_IMPORTED_MODULE_12__Controllers_EventsListController__["a" /* EventsListController */]);
+module.controller('BidsController', __WEBPACK_IMPORTED_MODULE_3__Controllers_BidsController__["a" /* BidsController */]);
+module.controller('BidsFilterController', __WEBPACK_IMPORTED_MODULE_4__Controllers_BidsFilterController__["a" /* BidsFilterController */]);
 
 /* harmony default export */ __webpack_exports__["a"] = (module.name);
 
 /***/ }),
-/* 103 */
+/* 102 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51169,7 +51157,7 @@ var LoginController = function () {
                 password: this.userPassword
             };
 
-            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["g" /* LOGIN_URL */], data).then(function (response) {
+            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["k" /* LOGIN_URL */], data).then(function (response) {
                 if (response.status === 200) {
                     window.location.href = '/';
                 }
@@ -51187,7 +51175,7 @@ LoginController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 104 */
+/* 103 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51225,7 +51213,7 @@ var RegisterController = function () {
                 password_confirmation: this.passwordConfirmation,
                 age: this.userAge
             };
-            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["i" /* REGISTER_URL */], data).then(function (response) {
+            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["m" /* REGISTER_URL */], data).then(function (response) {
 
                 if (response.status === 200) {
                     window.location.href = '/';
@@ -51246,7 +51234,7 @@ RegisterController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 105 */
+/* 104 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51284,7 +51272,7 @@ var ProfileController = function () {
                 age: this.user.age,
                 id: this.user.id
             };
-            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["h" /* PROFILE_URL */], data).then(function (response) {
+            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["l" /* PROFILE_URL */], data).then(function (response) {
 
                 // console.log(response.data.status);
                 console.log(response.data);
@@ -51306,57 +51294,7 @@ ProfileController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 106 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilterBidsController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(8);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-
-
-
-
-
-var FilterBidsController = function () {
-    function FilterBidsController($window, $http) {
-        _classCallCheck(this, FilterBidsController);
-
-        this.$window = $window;
-        this.$http = $http;
-        this.filter = BIDS_MATCHED;
-        this.bids = [];
-        this.showListFiltred();
-    }
-
-    _createClass(FilterBidsController, [{
-        key: "showListFiltred",
-        value: function showListFiltred() {
-            var _this = this;
-
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["a" /* BIDS_INDEX */], {
-                params: { filter: this.filter }
-            }).then(function (response) {
-                console.log(response.data.data);
-                _this.bids = response.data.data;
-            });
-        }
-    }]);
-
-    return FilterBidsController;
-}();
-
-;
-
-FilterBidsController.$inject = ['$window', '$http'];
-
-
-
-/***/ }),
-/* 107 */
+/* 105 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51371,43 +51309,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
 var BidsController = function () {
-    function BidsController($window, $http, $stateParams) {
+    function BidsController($http) {
         _classCallCheck(this, BidsController);
 
-        this.$window = $window;
         this.$http = $http;
-        this.$stateParams = $stateParams;
         this.user = window.__user;
-        this.filter = null;
-
-        this.params = {};
         this.bids = [];
         this._opts = { dataLoad: false };
-        this.menu = [{ status: __WEBPACK_IMPORTED_MODULE_0__Constants__["c" /* BID_MATCHED */], name: 'matched' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["e" /* BID_UNMATCHED */], name: 'unmatched' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["d" /* BID_SETTLED */], name: 'settled' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["b" /* BID_CANCELED */], name: 'canceled' }];
-        this.showList();
+        this.menu = [{ status: __WEBPACK_IMPORTED_MODULE_0__Constants__["g" /* BID_MATCHED */], name: 'matched' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["i" /* BID_UNMATCHED */], name: 'unmatched' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["h" /* BID_SETTLED */], name: 'settled' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["f" /* BID_CANCELED */], name: 'canceled' }];
+        this.getList();
     }
 
     _createClass(BidsController, [{
-        key: "showList",
-        value: function showList() {
+        key: "getList",
+        value: function getList() {
             var _this = this;
 
-            self = this;
-            this.menu.forEach(function (value, key) {
-                if (value.name == self.$stateParams.filter) self.filter = value.status;
-            });
-
-            if (this.filter != null) {
-                this.params.status = this.filter;
-            }
-
-            if (this.user != null) {
-                this.params.user_id = this.user.id;
-            }
-
-            console.log(this.params);
-
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["a" /* BIDS_INDEX */], { params: this.params }).then(function (response) {
+            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["a" /* BIDS_MY */], { user_id: this.user.id }).then(function (response) {
                 _this.bids = response.data.data;
                 _this._opts.dataLoad = true;
             });
@@ -51419,12 +51337,80 @@ var BidsController = function () {
 
 ;
 
-BidsController.$inject = ['$window', '$http', '$stateParams'];
+BidsController.$inject = ['$http'];
 
 
 
 /***/ }),
-/* 108 */
+/* 106 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BidsFilterController; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(8);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+
+var BidsFilterController = function () {
+    function BidsFilterController($http, $stateParams) {
+        _classCallCheck(this, BidsFilterController);
+
+        this.$http = $http;
+        this.$stateParams = $stateParams;
+        this.bids = [];
+        this.user = window.__user;
+        this.menu = [{ status: __WEBPACK_IMPORTED_MODULE_0__Constants__["g" /* BID_MATCHED */], name: 'matched' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["i" /* BID_UNMATCHED */], name: 'unmatched' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["h" /* BID_SETTLED */], name: 'settled' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["f" /* BID_CANCELED */], name: 'canceled' }];
+        this._opts = { dataLoad: false };
+        this.getList();
+    }
+
+    _createClass(BidsFilterController, [{
+        key: "getList",
+        value: function getList() {
+            var _this = this;
+
+            var url = null;
+            var filter = null;
+
+            if (this.$stateParams.filter === 'matched') {
+                url = __WEBPACK_IMPORTED_MODULE_0__Constants__["c" /* BIDS_MY_MATCHED */];
+                filter = 1;
+            }
+            if (this.$stateParams.filter === 'unmatched') {
+                url = __WEBPACK_IMPORTED_MODULE_0__Constants__["e" /* BIDS_MY_UNMATCHED */];
+                filter = 2;
+            }
+            if (this.$stateParams.filter === 'settled') {
+                url = __WEBPACK_IMPORTED_MODULE_0__Constants__["d" /* BIDS_MY_SETTLED */];
+                filter = 3;
+            }
+            if (this.$stateParams.filter === 'canceled') {
+                url = __WEBPACK_IMPORTED_MODULE_0__Constants__["b" /* BIDS_MY_CANCELED */];
+                filter = 4;
+            }
+
+            this.$http.post(url, { status: filter, user_id: this.user.id }).then(function (response) {
+                _this.bids = response.data.data;
+                _this._opts.dataLoad = true;
+            });
+        }
+    }]);
+
+    return BidsFilterController;
+}();
+
+;
+
+BidsFilterController.$inject = ['$http', '$stateParams'];
+
+
+
+/***/ }),
+/* 107 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51436,22 +51422,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
 
-
-
 var SaleController = function () {
-    function SaleController($window, $http, $stateParams) {
+    function SaleController($http) {
         _classCallCheck(this, SaleController);
 
-        this.$window = $window;
         this.$http = $http;
         this.user = window.__user;
         this.sales = null;
         this._opts = { dataLoad: false };
-        this.filter = null;
-        this.params = { page: 'sales' };
-        this.menu = [{ status: __WEBPACK_IMPORTED_MODULE_0__Constants__["j" /* SALE_ACTIVE */], name: 'active' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["k" /* SALE_CLOSED */], name: 'closed' }];
-        this.$stateParams = $stateParams;
-
         this.showList();
     }
 
@@ -51460,19 +51438,7 @@ var SaleController = function () {
         value: function showList() {
             var _this = this;
 
-            self = this;
-            this.menu.forEach(function (value, key) {
-                if (value.name == self.$stateParams.filter) self.filter = value.status;
-            });
-
-            if (this.filter != null) {
-                this.params.status = this.filter;
-            }
-            if (this.user != null) {
-                this.params.user_id = this.user.id;
-            }
-
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["m" /* SALE_INDEX */], { params: this.params }).then(function (response) {
+            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["s" /* SALE_MY */], { user_id: this.user.id }).then(function (response) {
                 _this.sales = response.data.data;
                 _this._opts.dataLoad = true;
             });
@@ -51484,12 +51450,12 @@ var SaleController = function () {
 
 ;
 
-SaleController.$inject = ['$window', '$http', '$stateParams'];
+SaleController.$inject = ['$http'];
 
 
 
 /***/ }),
-/* 109 */
+/* 108 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51509,7 +51475,7 @@ var SaleAllController = function () {
         this.$http = $http;
         this.events = [];
         this._opts = { dataLoad: false };
-        this.filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["k" /* SALE_CLOSED */];
+        this.filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["o" /* SALE_CLOSED */];
 
         this.getSales();
         console.log('hui');
@@ -51519,10 +51485,10 @@ var SaleAllController = function () {
         key: 'setFilter',
         value: function setFilter(param) {
             if (param == 'closed') {
-                this.filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["k" /* SALE_CLOSED */];this.getSales();
+                this.filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["o" /* SALE_CLOSED */];this.getSales();
             }
             if (param == 'markup') {
-                this.filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["n" /* SALE_MARKUP */];this.getSales();
+                this.filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["r" /* SALE_MARKUP */];this.getSales();
             }
         }
     }, {
@@ -51530,7 +51496,7 @@ var SaleAllController = function () {
         value: function getSales() {
             var _this = this;
 
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["m" /* SALE_INDEX */], { params: { status: this.filter } }).then(function (response) {
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["q" /* SALE_INDEX */], { params: { status: this.filter } }).then(function (response) {
                 _this.sales = response.data.data;
                 _this._opts.dataLoad = true;
                 return true;
@@ -51544,6 +51510,66 @@ var SaleAllController = function () {
 ;
 
 SaleAllController.$inject = ['$window', '$http'];
+
+
+
+/***/ }),
+/* 109 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleFilterController; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(8);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+
+
+
+var SaleFilterController = function () {
+    function SaleFilterController($http, $stateParams) {
+        _classCallCheck(this, SaleFilterController);
+
+        this.$http = $http;
+        this.sales = null;
+        this.user = window.__user;
+        this.menu = [{ status: __WEBPACK_IMPORTED_MODULE_0__Constants__["n" /* SALE_ACTIVE */], name: 'active' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["o" /* SALE_CLOSED */], name: 'closed' }];
+        this.$stateParams = $stateParams;
+        this._opts = { dataLoad: false };
+        this.getList();
+    }
+
+    _createClass(SaleFilterController, [{
+        key: "getList",
+        value: function getList() {
+            var _this = this;
+
+            var url = null;
+            var filter = null;
+            if (this.$stateParams.filter === 'active') {
+                url = __WEBPACK_IMPORTED_MODULE_0__Constants__["t" /* SALE_MY_ACTIVE */];
+                filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["n" /* SALE_ACTIVE */];
+            }
+            if (this.$stateParams.filter === 'closed') {
+                url = __WEBPACK_IMPORTED_MODULE_0__Constants__["u" /* SALE_MY_CLOSED */];
+                filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["o" /* SALE_CLOSED */];
+            }
+            this.$http.post(url, { status: filter, user_id: this.user.id }).then(function (response) {
+                _this.sales = response.data.data;
+                _this._opts.dataLoad = true;
+            });
+        }
+    }]);
+
+    return SaleFilterController;
+}();
+
+;
+
+SaleFilterController.$inject = ['$http', '$stateParams'];
 
 
 
@@ -51593,7 +51619,7 @@ var SaleManageController = function () {
                   this._opts.load = true;
                   this.fillSale()
               });
-        }
+       }
       fillSale(){
           let self = this;
           console.log(this.subevents, 'this.subevents');
@@ -51602,7 +51628,7 @@ var SaleManageController = function () {
                   self.buy_in = value.event.buy_in;
               }
           });
-        }
+       }
     */
 
     _createClass(SaleManageController, [{
@@ -51610,7 +51636,7 @@ var SaleManageController = function () {
         value: function getSale() {
             var _this = this;
 
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["m" /* SALE_INDEX */] + '/' + this.$stateParams.id).then(function (response) {
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["q" /* SALE_INDEX */] + '/' + this.$stateParams.id).then(function (response) {
                 _this.sale = response.data.data;
                 console.log(_this.sale);
             });
@@ -51625,7 +51651,7 @@ var SaleManageController = function () {
                   });
               console.log(this.sale, 'sale');
           }
-            updateSale(){
+           updateSale(){
               let data = this.sale;
               console.log(SALE_CREATE+'/'+this.sale.id);
               this.$http.put(SALE_CREATE+'/'+this.sale.id, data)
@@ -51704,7 +51730,7 @@ var SaleFormController = function () {
         value: function getEvents() {
             var _this = this;
 
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["f" /* EVENTS_INDEX */]).then(function (response) {
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["j" /* EVENTS_INDEX */]).then(function (response) {
                 _this.events = response.data.data;
                 _this._opts.load = true;
             });
@@ -51714,7 +51740,7 @@ var SaleFormController = function () {
         value: function getSubevents() {
             var _this2 = this;
 
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["o" /* SUBEVENTS_INDEX */], { params: { event_id: this.sale.event_id } }).then(function (response) {
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["v" /* SUBEVENTS_INDEX */], { params: { event_id: this.sale.event_id } }).then(function (response) {
                 _this2.buy_in = null;
                 _this2.subevents = response.data.data;
                 _this2._opts.load = true;
@@ -51737,7 +51763,7 @@ var SaleFormController = function () {
         value: function getSale() {
             var _this3 = this;
 
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["m" /* SALE_INDEX */] + '/' + this.$stateParams.id).then(function (response) {
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["q" /* SALE_INDEX */] + '/' + this.$stateParams.id).then(function (response) {
                 _this3.sale = response.data.data;
                 if (_this3._opts.update) _this3.getSubevents();
             });
@@ -51746,7 +51772,7 @@ var SaleFormController = function () {
         key: "createSale",
         value: function createSale() {
             var data = this.sale;
-            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["l" /* SALE_CREATE */], data).then(function (response) {
+            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["p" /* SALE_CREATE */], data).then(function (response) {
                 if (response.status === 200) window.location.href = '/sales';
                 console.log(response);
             });
@@ -51756,8 +51782,8 @@ var SaleFormController = function () {
         key: "updateSale",
         value: function updateSale() {
             var data = this.sale;
-            console.log(__WEBPACK_IMPORTED_MODULE_0__Constants__["l" /* SALE_CREATE */] + '/' + this.sale.id);
-            this.$http.put(__WEBPACK_IMPORTED_MODULE_0__Constants__["l" /* SALE_CREATE */] + '/' + this.sale.id, data).then(function (response) {
+            console.log(__WEBPACK_IMPORTED_MODULE_0__Constants__["p" /* SALE_CREATE */] + '/' + this.sale.id);
+            this.$http.put(__WEBPACK_IMPORTED_MODULE_0__Constants__["p" /* SALE_CREATE */] + '/' + this.sale.id, data).then(function (response) {
                 console.log(response);
                 if (response.status == 200) window.location.href = '/sale';
                 console.log(response);
@@ -51796,7 +51822,7 @@ var InvestController = function () {
         this.$http = $http;
         this.events = [];
         this._opts = { dataLoad: false };
-        this.filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["k" /* SALE_CLOSED */];
+        this.filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["o" /* SALE_CLOSED */];
         this.showList();
         this.getSales();
     }
@@ -51805,10 +51831,10 @@ var InvestController = function () {
         key: 'setFilter',
         value: function setFilter(param) {
             if (param == 'closed') {
-                this.filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["k" /* SALE_CLOSED */];this.getSales();
+                this.filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["o" /* SALE_CLOSED */];this.getSales();
             }
             if (param == 'markup') {
-                this.filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["n" /* SALE_MARKUP */];this.getSales();
+                this.filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["r" /* SALE_MARKUP */];this.getSales();
             }
         }
     }, {
@@ -51816,7 +51842,7 @@ var InvestController = function () {
         value: function showList() {
             var _this = this;
 
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["f" /* EVENTS_INDEX */]).then(function (response) {
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["j" /* EVENTS_INDEX */]).then(function (response) {
                 _this.events = response.data.data;
                 _this._opts.dataLoad = true;
                 console.log(_this.events, 'console.log(this.events)');
@@ -51827,7 +51853,7 @@ var InvestController = function () {
         value: function getSales() {
             var _this2 = this;
 
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["m" /* SALE_INDEX */], { params: { status: this.filter } }).then(function (response) {
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["q" /* SALE_INDEX */], { params: { status: this.filter } }).then(function (response) {
                 _this2.sales = response.data.data;
                 _this2._opts.dataLoad = true;
                 return true;
@@ -51876,7 +51902,7 @@ var EventController = function () {
         value: function showList() {
             var _this = this;
 
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["f" /* EVENTS_INDEX */] + '/' + this.$stateParams.id).then(function (response) {
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["j" /* EVENTS_INDEX */] + '/' + this.$stateParams.id).then(function (response) {
                 _this.event = response.data.data;
                 _this.getSale(_this.event.subevents[0].id);
                 _this._opts.dataLoad = true;
@@ -51888,7 +51914,7 @@ var EventController = function () {
             var _this2 = this;
 
             this.opened = id;
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["m" /* SALE_INDEX */], { params: { sub_event_id: id } }).then(function (response) {
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["q" /* SALE_INDEX */], { params: { sub_event_id: id } }).then(function (response) {
                 _this2.sales = response.data.data;
                 _this2._opts.dataLoad = true;
             });
@@ -51933,7 +51959,7 @@ var EventsListController = function () {
         value: function showList() {
             var _this = this;
 
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["f" /* EVENTS_INDEX */]).then(function (response) {
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["j" /* EVENTS_INDEX */]).then(function (response) {
 
                 _this.events = response.data.data;
                 _this._opts.dataLoad = true;
@@ -52040,7 +52066,7 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
     }).state('bids-filter', {
         url: '/bids/{filter}',
         template: __webpack_require__(127),
-        controller: 'BidsController',
+        controller: 'BidsFilterController',
         controllerAs: 'BidsCtrl'
     }).state('sale', {
         url: '/sales',
@@ -52101,7 +52127,7 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
                 }
             }
         },
-        controller: 'SaleController',
+        controller: 'SaleFilterController',
         controllerAs: 'SaleCtrl'
     }).state('sale-edit', {
         url: '/sale/{id}',
@@ -52134,73 +52160,73 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
 /* 116 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"login_page-wr col-md-12\">\r\n        <div class=\"login_block\">\r\n            <div class=\"buy_stakes\">\r\n                Buy stakes in poker players in tournaments online and around the world\r\n            </div>\r\n            <div class=\"btn_block\">\r\n                <a ui-sref=\"auth.login\">\r\n                    <div class=\"login_btn login_in\">Log in</div>\r\n                </a>\r\n                <a ui-sref=\"auth.registration\">\r\n                    <div class=\"login_btn login_registration\" >Register</div>\r\n                </a>\r\n            </div>\r\n            <div class=\"contine_without_wr\">\r\n                <a class=\"contine_without\" ui-sref=\"invest\">\r\n                    Continue without registration\r\n                </a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+module.exports = "<div class=\"row\">\n    <div class=\"login_page-wr col-md-12\">\n        <div class=\"login_block\">\n            <div class=\"buy_stakes\">\n                Buy stakes in poker players in tournaments online and around the world\n            </div>\n            <div class=\"btn_block\">\n                <a ui-sref=\"auth.login\">\n                    <div class=\"login_btn login_in\">Log in</div>\n                </a>\n                <a ui-sref=\"auth.registration\">\n                    <div class=\"login_btn login_registration\" >Register</div>\n                </a>\n            </div>\n            <div class=\"contine_without_wr\">\n                <a class=\"contine_without\" ui-sref=\"invest\">\n                    Continue without registration\n                </a>\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
 /* 117 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"personal_inform col-md-12\">\r\n        <div class=\"personal_inform__title \">\r\n            <a ui-sref=\"auth.registration\" ><div class=\"goback\"></div></a>\r\n            Privacy\r\n        </div>\r\n\r\n\r\n        <div class=\"data-privacy\">\r\n            <span>Data & Privacy</span>\r\n            To esure your expirience is personal and relevant, we’re changing the type of advert you see and giving your more control over your data\r\n        </div>\r\n        <div class=\"check-box-wr\">\r\n            <div class=\"check-box__email\">\r\n                <input type=\"checkbox\" id=\"sms_new\" checked>\r\n                <label for=\"sms_new\">Yes, I’d like to hear about the latest poker news and promotions by Email</label>\r\n\r\n            </div>\r\n            <div class=\"check-box__email\">\r\n                <input type=\"checkbox\" id=\"email_new\" checked>\r\n                <label for=\"email_new\">Yes, I’d like to hear about the latest poker news and promotions by SMS</label>\r\n\r\n            </div>\r\n        </div>\r\n        <input id='termconfirm' type=\"submit\" name=\"submit_confirm\" value=\"Confirm\" style=\"border-radius:10pt;\">\r\n\r\n\r\n\r\n        <div class=\"see_policy\">\r\n            <a ui-sref=\"privacy-policy\">See Privacy policy</a>\r\n        </div>\r\n\r\n\r\n    </div>\r\n</div>";
+module.exports = "<div class=\"row\">\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"auth.registration\" ><div class=\"goback\"></div></a>\n            Privacy\n        </div>\n\n\n        <div class=\"data-privacy\">\n            <span>Data & Privacy</span>\n            To esure your expirience is personal and relevant, we’re changing the type of advert you see and giving your more control over your data\n        </div>\n        <div class=\"check-box-wr\">\n            <div class=\"check-box__email\">\n                <input type=\"checkbox\" id=\"sms_new\" checked>\n                <label for=\"sms_new\">Yes, I’d like to hear about the latest poker news and promotions by Email</label>\n\n            </div>\n            <div class=\"check-box__email\">\n                <input type=\"checkbox\" id=\"email_new\" checked>\n                <label for=\"email_new\">Yes, I’d like to hear about the latest poker news and promotions by SMS</label>\n\n            </div>\n        </div>\n        <input id='termconfirm' type=\"submit\" name=\"submit_confirm\" value=\"Confirm\" style=\"border-radius:10pt;\">\n\n\n\n        <div class=\"see_policy\">\n            <a ui-sref=\"privacy-policy\">See Privacy policy</a>\n        </div>\n\n\n    </div>\n</div>";
 
 /***/ }),
 /* 118 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"personal_inform col-md-12\">\r\n        <div class=\"personal_inform__title \">\r\n            <a ui-sref=\"auth.registration\"><div class=\"goback\"></div></a>\r\n            Home\r\n        </div>\r\n        <div>\r\n            What is Lorem Ipsum?\r\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.What is Lorem Ipsum?\r\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n        </div>\r\n        <div class=\"private_policy\">\r\n            By creating an account you agree to our\r\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\r\n        </div>\r\n    </div>\r\n</div>";
+module.exports = "<div class=\"row\">\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"auth.registration\"><div class=\"goback\"></div></a>\n            Home\n        </div>\n        <div>\n            What is Lorem Ipsum?\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.What is Lorem Ipsum?\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n        </div>\n        <div class=\"private_policy\">\n            By creating an account you agree to our\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\n        </div>\n    </div>\n</div>";
 
 /***/ }),
 /* 119 */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n    <ui-view></ui-view>\r\n</div>";
+module.exports = "<div>\n    <ui-view></ui-view>\n</div>";
 
 /***/ }),
 /* 120 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\" >\r\n    <div class=\"personal_inform col-md-12\">\r\n        <div class=\"personal_inform__title \">\r\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\r\n            Please Login\r\n        </div>\r\n        <form ng-submit=\"LgCtrl.sendAuthData($event)\" class=\"form_personal_inf\">\r\n\r\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"LgCtrl.userEmail\" required>\r\n\r\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"LgCtrl.userPassword\" required>\r\n\r\n            <button class=\"button\" type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"LgCtrl.sendAuthData($event)\">Enter</button>\r\n        </form>\r\n\r\n    </div>\r\n</div>\r\n";
+module.exports = "<div class=\"row\" >\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\n            Please Login\n        </div>\n        <form ng-submit=\"LgCtrl.sendAuthData($event)\" class=\"form_personal_inf\">\n\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"LgCtrl.userEmail\" required>\n\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"LgCtrl.userPassword\" required>\n\n            <button class=\"button\" type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"LgCtrl.sendAuthData($event)\">Enter</button>\n        </form>\n\n    </div>\n</div>\n";
 
 /***/ }),
 /* 121 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\" >\r\n    <div class=\"personal_inform col-md-12\">\r\n        <div class=\"personal_inform__title \">\r\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\r\n\r\n            Registration\r\n        </div>\r\n\r\n        <form ng-submit=\"RgCtrl.sendRegisterForm($event)\" class=\"form_personal_inf\">\r\n            <input type=\"text\"  placeholder=\"Your name\" ng-model=\"RgCtrl.userName\"  required>\r\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"RgCtrl.userEmail\" required>\r\n            <input type=\"text\"  placeholder=\"Your age\" ng-model=\"RgCtrl.userAge\" required>\r\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"RgCtrl.userPassword\" required>\r\n            <input type=\"password\"  placeholder=\"Confirm password\"  ng-model=\"RgCtrl.passwordConfirmation\" required>\r\n            <button class=\"button\" type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"RgCtrl.sendRegisterForm($event)\">continue</button>\r\n        </form>\r\n        <div class=\"private_policy\">\r\n            By creating an account you agree to our\r\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+module.exports = "<div class=\"row\" >\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\n\n            Registration\n        </div>\n\n        <form ng-submit=\"RgCtrl.sendRegisterForm($event)\" class=\"form_personal_inf\">\n            <input type=\"text\"  placeholder=\"Your name\" ng-model=\"RgCtrl.userName\"  required>\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"RgCtrl.userEmail\" required>\n            <input type=\"text\"  placeholder=\"Your age\" ng-model=\"RgCtrl.userAge\" required>\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"RgCtrl.userPassword\" required>\n            <input type=\"password\"  placeholder=\"Confirm password\"  ng-model=\"RgCtrl.passwordConfirmation\" required>\n            <button class=\"button\" type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"RgCtrl.sendRegisterForm($event)\">continue</button>\n        </form>\n        <div class=\"private_policy\">\n            By creating an account you agree to our\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
 /* 122 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\" >\r\n    <div class=\"col-md-12 binds\">\r\n        <div class=\"logo_img\">\r\n            LOGO\r\n            <img src=\"/\" alt=\"\">\r\n        </div>\r\n        <div class=\"tabs-wr\">\r\n            <div class=\"tabs-wr__title\">\r\n                <div class=\"tabs-wr__title-name\">Events</div>\r\n                <div class=\"see_all\"><a ui-sref=\"events\">See All</a></div>\r\n            </div>\r\n\r\n\r\n            <events-carousel  ng-if=\"InvstCtrl._opts.dataLoad\"\r\n                              events=\"InvstCtrl.events\" state=\"'row'\">\r\n            </events-carousel>\r\n\r\n\r\n            <div class=\"tabs-wr__title\">\r\n                <div class=\"tabs-wr__title-name\">Players</div>\r\n                <a ui-sref=\"sale-all\"><div class=\"see_all\">See All</div></a>\r\n            </div>\r\n            <div class=\"tabs-wr__players\">\r\n                <div class=\"tabs_players\">\r\n                    <div class=\"tabs_players__closing\" ng-class=\"{'tabs_item__active': InvstCtrl.filter == 2}\" ng-click=\"InvstCtrl.setFilter('closed')\">Closing</div>\r\n                    <div class=\"tabs_players__lower\" ng-class=\"{'tabs_item__active': InvstCtrl.filter == 3}\" ng-click=\"InvstCtrl.setFilter('markup')\" >Lowest markup</div>\r\n                </div>\r\n            </div>\r\n            <div class=\"swipe-wr full_sc events_player\">\r\n                <sales sales=\"InvstCtrl.sales\" state=\"'invest'\"></sales>\r\n            </div>\r\n            <span ng-include=\"'tpl/view/footer.template.html'\"></span>\r\n        </div>\r\n    </div>\r\n</div>";
+module.exports = "<div class=\"row\" >\n    <div class=\"col-md-12 binds\">\n        <div class=\"logo_img\">\n            LOGO\n            <img src=\"/\" alt=\"\">\n        </div>\n        <div class=\"tabs-wr\">\n            <div class=\"tabs-wr__title\">\n                <div class=\"tabs-wr__title-name\">Events</div>\n                <div class=\"see_all\"><a ui-sref=\"events\">See All</a></div>\n            </div>\n\n\n            <events-carousel  ng-if=\"InvstCtrl._opts.dataLoad\"\n                              events=\"InvstCtrl.events\" state=\"'row'\">\n            </events-carousel>\n\n\n            <div class=\"tabs-wr__title\">\n                <div class=\"tabs-wr__title-name\">Players</div>\n                <a ui-sref=\"sale-all\"><div class=\"see_all\">See All</div></a>\n            </div>\n            <div class=\"tabs-wr__players\">\n                <div class=\"tabs_players\">\n                    <div class=\"tabs_players__closing\" ng-class=\"{'tabs_item__active': InvstCtrl.filter == 2}\" ng-click=\"InvstCtrl.setFilter('closed')\">Closing</div>\n                    <div class=\"tabs_players__lower\" ng-class=\"{'tabs_item__active': InvstCtrl.filter == 3}\" ng-click=\"InvstCtrl.setFilter('markup')\" >Lowest markup</div>\n                </div>\n            </div>\n            <div class=\"swipe-wr full_sc events_player\">\n                <sales sales=\"InvstCtrl.sales\" state=\"'invest'\"></sales>\n            </div>\n            <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n        </div>\n    </div>\n</div>";
 
 /***/ }),
 /* 123 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n\r\n    <div class=\"sale__title col-md-12\">\r\n        Sales\r\n        <a ui-sref=\"invest\"><div class=\"goback goback_sale\"></div></a>\r\n    </div>\r\n    <div class=\"tabs-wr__players\">\r\n        <div class=\"tabs_players\">\r\n            <div class=\"tabs_players__closing\" ng-class=\"{'tabs_item__active': SaleAllCtrl.filter == 2}\" ng-click=\"SaleAllCtrl.setFilter('closed')\">Closing</div>\r\n            <div class=\"tabs_players__lower\" ng-class=\"{'tabs_item__active': SaleAllCtrl.filter == 3}\" ng-click=\"SaleAllCtrl.setFilter('markup')\" >Lowest markup</div>\r\n        </div>\r\n    </div>\r\n    <div class=\"swipe-wr full_sc events_player\">\r\n        <sales sales=\"SaleAllCtrl.sales\" state=\"'invest'\"></sales>\r\n    </div>\r\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\r\n\r\n</div>";
+module.exports = "<div class=\"row\">\n\n    <div class=\"sale__title col-md-12\">\n        Sales\n        <a ui-sref=\"invest\"><div class=\"goback goback_sale\"></div></a>\n    </div>\n    <div class=\"tabs-wr__players\">\n        <div class=\"tabs_players\">\n            <div class=\"tabs_players__closing\" ng-class=\"{'tabs_item__active': SaleAllCtrl.filter == 2}\" ng-click=\"SaleAllCtrl.setFilter('closed')\">Closing</div>\n            <div class=\"tabs_players__lower\" ng-class=\"{'tabs_item__active': SaleAllCtrl.filter == 3}\" ng-click=\"SaleAllCtrl.setFilter('markup')\" >Lowest markup</div>\n        </div>\n    </div>\n    <div class=\"swipe-wr full_sc events_player\">\n        <sales sales=\"SaleAllCtrl.sales\" state=\"'invest'\"></sales>\n    </div>\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n\n</div>";
 
 /***/ }),
 /* 124 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"binds event-list-main-wr\">\r\n        <div class=\"col-md-12\">\r\n            <div class=\"logo_img\">\r\n                LOGO\r\n                <img src=\"/\" alt=\"\">\r\n            </div>\r\n        </div>\r\n        <div class=\"all_events-wr\">\r\n\r\n\r\n            <events class=\"events_list\" ng-if=\"EvntsLstCtrl._opts.dataLoad\"\r\n                    events=\"EvntsLstCtrl.events\" state=\"'list'\">\r\n            </events>\r\n\r\n        </div>\r\n    </div>\r\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\r\n\r\n</div>";
+module.exports = "<div class=\"row\">\n    <div class=\"binds event-list-main-wr\">\n        <div class=\"col-md-12\">\n            <div class=\"logo_img\">\n                LOGO\n                <img src=\"/\" alt=\"\">\n            </div>\n        </div>\n        <div class=\"all_events-wr\">\n\n\n            <events class=\"events_list\" ng-if=\"EvntsLstCtrl._opts.dataLoad\"\n                    events=\"EvntsLstCtrl.events\" state=\"'list'\">\n            </events>\n\n        </div>\n    </div>\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n\n</div>";
 
 /***/ }),
 /* 125 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"single__header\">\r\n        <div class=\"single__title\" ng-bind=\"EventCtrl.event.title\"></div>\r\n        <div class=\"single__date\" ng-bind=\"EventCtrl.event.date\"></div>\r\n        <a ui-sref=\"invest\">\r\n            <div class=\"goback\"></div>\r\n        </a>\r\n    </div>\r\n\r\n    <div class=\"subevents_all-wr\">\r\n\r\n        <div class=\"subevents_all\">\r\n            <div class=\"subevent_item_title-wr\">\r\n                <div class=\"subevent_item_title_carusel\">\r\n                    <div ng-repeat=\"item in EventCtrl.event.subevents\">\r\n                        <div class=\"subevent_item\"\r\n                             ng-bind=\"item.title\"\r\n                             ng-click=\"EventCtrl.getSale(item.id)\"\r\n                             ng-class=\"{'main_event': EventCtrl.opened == item.id}\"\r\n                        >\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n           <div class=\"event_detail\">\r\n\r\n\r\n               <div>\r\n                   <div class=\"main_event_info\">\r\n                       <div class=\"fund_info\">\r\n                           Buy in £1,000,000 • £500,000 GTE\r\n                       </div>\r\n                       <div class=\"date_info\" ng-bind=\"EventCtrl.event.date\">\r\n                       </div>\r\n                       <div class=\"location_info\">\r\n                           Casino Sochi, Sochi, Russia\r\n                       </div>\r\n                   </div>\r\n                   <sales sales=\"EventCtrl.sales\" state=\"'invest'\"></sales>\r\n               </div>\r\n           </div>\r\n\r\n        </div>\r\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\r\n    </div>\r\n</div>\r\n";
+module.exports = "<div class=\"row\">\n    <div class=\"single__header\">\n        <div class=\"single__title\" ng-bind=\"EventCtrl.event.title\"></div>\n        <div class=\"single__date\" ng-bind=\"EventCtrl.event.date\"></div>\n        <a ui-sref=\"invest\">\n            <div class=\"goback\"></div>\n        </a>\n    </div>\n\n    <div class=\"subevents_all-wr\">\n\n        <div class=\"subevents_all\">\n            <div class=\"subevent_item_title-wr\">\n                <div class=\"subevent_item_title_carusel\">\n                    <div ng-repeat=\"item in EventCtrl.event.subevents\">\n                        <div class=\"subevent_item\"\n                             ng-bind=\"item.title\"\n                             ng-click=\"EventCtrl.getSale(item.id)\"\n                             ng-class=\"{'main_event': EventCtrl.opened == item.id}\"\n                        >\n                        </div>\n                    </div>\n                </div>\n            </div>\n           <div class=\"event_detail\">\n\n\n               <div>\n                   <div class=\"main_event_info\">\n                       <div class=\"fund_info\">\n                           Buy in £1,000,000 • £500,000 GTE\n                       </div>\n                       <div class=\"date_info\" ng-bind=\"EventCtrl.event.date\">\n                       </div>\n                       <div class=\"location_info\">\n                           Casino Sochi, Sochi, Russia\n                       </div>\n                   </div>\n                   <sales sales=\"EventCtrl.sales\" state=\"'invest'\"></sales>\n               </div>\n           </div>\n\n        </div>\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n</div>\n";
 
 /***/ }),
 /* 126 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"col-md-12 binds\">\r\n        <div class=\"logo_img\">\r\n            LOGO\r\n            <img src=\"/\" alt=\"\">\r\n        </div>\r\n\r\n        <bids-carousel ng-if=\"BidsCtrl._opts.dataLoad\"\r\n                       bids=\"BidsCtrl.bids\"\r\n        >\r\n        </bids-carousel>\r\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\r\n    </div>\r\n\r\n</div>";
+module.exports = "<div class=\"row\">\n    <div class=\"col-md-12 binds\">\n        <div class=\"logo_img\">\n            LOGO\n            <img src=\"/\" alt=\"\">\n        </div>\n\n        <bids-carousel ng-if=\"BidsCtrl._opts.dataLoad\"\n                       bids=\"BidsCtrl.bids\"\n        >\n        </bids-carousel>\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n\n</div>";
 
 /***/ }),
 /* 127 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"binds binds_full_sc\">\r\n\r\n        <div class=\"tabs-wr\">\r\n            <div class=\"active_status col-md-12\">\r\n                Bids\r\n            </div>\r\n            <div class=\"tabs-wr__title col-md-12\">\r\n\r\n                <a ui-sref=\"bids-filter({filter: menuItem.name})\"\r\n                   ng-repeat=\"menuItem in BidsCtrl.menu\"\r\n                   ng-bind=\"menuItem.name\" style=\"text-transform:capitalize\"\r\n                   ng-class=\"{'tabs_item__active':BidsCtrl.$stateParams.filter === menuItem.name}\"\r\n                ></a>\r\n            </div>\r\n            <div class=\"slider_container slider_container__full\">\r\n                <div class=\"swipe-wr full_sc\">\r\n                    <bids class=\"bids_row__fullscreen\" bids=\"BidsCtrl.bids\"></bids>\r\n                </div>\r\n            </div>\r\n        </div>\r\n\r\n\r\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\r\n    </div>\r\n\r\n</div>";
+module.exports = "<div class=\"row\">\n    <div class=\"binds binds_full_sc\">\n\n        <div class=\"tabs-wr\">\n            <div class=\"active_status col-md-12\">\n                Bids\n            </div>\n            <div class=\"tabs-wr__title col-md-12\">\n\n                <a ui-sref=\"bids-filter({filter: menuItem.name})\"\n                   ng-repeat=\"menuItem in BidsCtrl.menu\"\n                   ng-bind=\"menuItem.name\" style=\"text-transform:capitalize\"\n                   ng-class=\"{'tabs_item__active':BidsCtrl.$stateParams.filter === menuItem.name}\"\n                ></a>\n            </div>\n            <div class=\"slider_container slider_container__full\">\n                <div class=\"swipe-wr full_sc\">\n                    <bids class=\"bids_row__fullscreen\" bids=\"BidsCtrl.bids\"></bids>\n                </div>\n            </div>\n        </div>\n\n\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n\n</div>";
 
 /***/ }),
 /* 128 */
@@ -52212,13 +52238,13 @@ module.exports = "<div class=\"row\">\n    <div class=\"sale_main-wr col-md-12\"
 /* 129 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"right_side_content my_sale-wr\">\r\n    <div class=\"my_sale_title\">\r\n        My sale\r\n        <div class=\"my_sale_close\"></div>\r\n    </div>\r\n    <div class=\"profile_status\">\r\n        <div>\r\n            <div>\r\n                <div class=\"my_sale__event\" ng-bind=\"SaleMngCtrl.sale.event.title\"></div>\r\n                <span class=\"buyin_span\">Buy in $<span ng-bind=\"SaleMngCtrl.sale.event.buy_in\"></span> + $<span ng-bind=\"SaleMngCtrl.sale.subevent.buy_in\"></span>\r\n            </div>\r\n            <div class=\"gte_and_by\">\r\n                <div class=\"profile_status__buyin\">£1,000</div>\r\n                <div class=\"profile_status__gte\">£500,000 GTE</div>\r\n            </div>\r\n        </div>\r\n\r\n        <table class=\"my_sale_table\">\r\n            <tr>\r\n                <td><span>Closes in</span><br>73 days</td>\r\n                <td><span>Share sold</span><br>5%</td>\r\n                <td><span>Amount raised</span><br>$<span ng-bind=\"SaleMngCtrl.sale.amount\"></span></td>\r\n            </tr>\r\n            <tr>\r\n                <td class=\"my_sale_markup\"><span>Markup</span><br><input type=\"text\" placeholder=\"1.00\" ng-model=\"SaleMngCtrl.sale.markup\"></td>\r\n                <td class=\"my_sale_share\"><span>Share</span><br><input type=\"text\" placeholder=\"1.38%\" ng-model=\"SaleMngCtrl.sale.share\"></td>\r\n                <td class=\"my_sale_value\"><span>Value</span><br><input type=\"text\" placeholder=\"$1938\" ng-model=\"SaleMngCtrl.sale.value\"></td>\r\n            </tr>\r\n        </table>\r\n    </div>\r\n    <div class=\"unmatched_bids bids_status\">\r\n        <span>UNMATCHED BIDS</span>\r\n\r\n        <div ng-repeat=\"bid in SaleMngCtrl.sale.bids\">\r\n            <input type=\"text\" placeholder=\"1.09\" ng-model=\"bid.markup\">\r\n            <input type=\"text\" placeholder=\"0.38%\" ng-model=\"bid.share\">\r\n            <input type=\"text\" placeholder=\"$443\" ng-model=\"bid.amount\">\r\n            <div class=\"confirm_bids confirm_bids_accept\"></div>\r\n        </div>\r\n\r\n    </div>\r\n    <hr>\r\n    <div class=\"my_sale_attention\">\r\n        Your sale is almost finished, top-up your sale if you want sell more\r\n    </div>\r\n    <div class=\"increase_btn button\">\r\n        Increase your share\r\n    </div>\r\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\r\n</div>\r\n\r\n\r\n\r\n";
+module.exports = "<div class=\"right_side_content my_sale-wr\">\n    <div class=\"my_sale_title\">\n        My sale\n        <div class=\"my_sale_close\"></div>\n    </div>\n    <div class=\"profile_status\">\n        <div>\n            <div>\n                <div class=\"my_sale__event\" ng-bind=\"SaleMngCtrl.sale.event.title\"></div>\n                <span class=\"buyin_span\">Buy in $<span ng-bind=\"SaleMngCtrl.sale.event.buy_in\"></span> + $<span ng-bind=\"SaleMngCtrl.sale.subevent.buy_in\"></span>\n            </div>\n            <div class=\"gte_and_by\">\n                <div class=\"profile_status__buyin\">£1,000</div>\n                <div class=\"profile_status__gte\">£500,000 GTE</div>\n            </div>\n        </div>\n\n        <table class=\"my_sale_table\">\n            <tr>\n                <td><span>Closes in</span><br>73 days</td>\n                <td><span>Share sold</span><br>5%</td>\n                <td><span>Amount raised</span><br>$<span ng-bind=\"SaleMngCtrl.sale.amount\"></span></td>\n            </tr>\n            <tr>\n                <td class=\"my_sale_markup\"><span>Markup</span><br><input type=\"text\" placeholder=\"1.00\" ng-model=\"SaleMngCtrl.sale.markup\"></td>\n                <td class=\"my_sale_share\"><span>Share</span><br><input type=\"text\" placeholder=\"1.38%\" ng-model=\"SaleMngCtrl.sale.share\"></td>\n                <td class=\"my_sale_value\"><span>Value</span><br><input type=\"text\" placeholder=\"$1938\" ng-model=\"SaleMngCtrl.sale.value\"></td>\n            </tr>\n        </table>\n    </div>\n    <div class=\"unmatched_bids bids_status\">\n        <span>UNMATCHED BIDS</span>\n\n        <div ng-repeat=\"bid in SaleMngCtrl.sale.bids\">\n            <input type=\"text\" placeholder=\"1.09\" ng-model=\"bid.markup\">\n            <input type=\"text\" placeholder=\"0.38%\" ng-model=\"bid.share\">\n            <input type=\"text\" placeholder=\"$443\" ng-model=\"bid.amount\">\n            <div class=\"confirm_bids confirm_bids_accept\"></div>\n        </div>\n\n    </div>\n    <hr>\n    <div class=\"my_sale_attention\">\n        Your sale is almost finished, top-up your sale if you want sell more\n    </div>\n    <div class=\"increase_btn button\">\n        Increase your share\n    </div>\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n</div>\n\n\n\n";
 
 /***/ }),
 /* 130 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n\r\n    <div class=\"sale__title col-md-12\">\r\n        Sales\r\n        <a ui-sref=\"sale\"><div class=\"goback goback_sale\"></div></a>\r\n    </div>\r\n    <div class=\"sales_tabs\">\r\n        <a ui-sref=\"sale-filter({filter: menuItem.name})\"\r\n           ng-repeat=\"menuItem in SaleCtrl.menu\"\r\n           ng-bind=\"menuItem.name\" style=\"text-transform:capitalize\"\r\n           ng-class=\"{'tabs_item__active':SaleCtrl.$stateParams.filter === menuItem.name}\"\r\n        ></a>\r\n    </div>\r\n\r\n    <sales sales=\"SaleCtrl.sales\" state=\"'list'\" ></sales>\r\n\r\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\r\n\r\n</div>";
+module.exports = "<div class=\"row\">\n\n    <div class=\"sale__title col-md-12\">\n        Sales\n        <a ui-sref=\"sale\"><div class=\"goback goback_sale\"></div></a>\n    </div>\n    <div class=\"sales_tabs\">\n        <a ui-sref=\"sale-filter({filter: menuItem.name})\"\n           ng-repeat=\"menuItem in SaleCtrl.menu\"\n           ng-bind=\"menuItem.name\" style=\"text-transform:capitalize\"\n           ng-class=\"{'tabs_item__active':SaleCtrl.$stateParams.filter === menuItem.name}\"\n        ></a>\n    </div>\n\n    <sales sales=\"SaleCtrl.sales\" state=\"'list'\" ></sales>\n\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n\n</div>";
 
 /***/ }),
 /* 131 */
@@ -52249,15 +52275,16 @@ function middlewares(PermRoleStore) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Components_sales_carousel_sales_carousel_controller__ = __webpack_require__(98);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Components_bids_bids_controller__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_bids_carousel_bids_carousel_controller__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components_events_events_controller__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Components_events_carousel_events_carousel_controller__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Components_sales_sales_controller__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Components_bids_bids_controller__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Components_bids_carousel_bids_carousel_controller__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_events_events_controller__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components_events_carousel_events_carousel_controller__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Components_sales_sales_controller__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Components_sales_carousel_sales_carousel_controller__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Components_sale_modal_sale_modal_controller__ = __webpack_require__(146);
 
+var angular = __webpack_require__(13);
 
-var angular = __webpack_require__(16);
 
 
 
@@ -52267,23 +52294,18 @@ var angular = __webpack_require__(16);
 
 
 var module = angular.module('Components', []);
-module.component('bids', __WEBPACK_IMPORTED_MODULE_1__Components_bids_bids_controller__["a" /* BidsComponent */]);
-module.component('bidsCarousel', __WEBPACK_IMPORTED_MODULE_2__Components_bids_carousel_bids_carousel_controller__["a" /* BidsCarouselComponent */]);
-module.component('events', __WEBPACK_IMPORTED_MODULE_3__Components_events_events_controller__["a" /* EventsComponent */]);
-module.component('eventsCarousel', __WEBPACK_IMPORTED_MODULE_4__Components_events_carousel_events_carousel_controller__["a" /* EventsCarouselComponent */]);
-module.component('sales', __WEBPACK_IMPORTED_MODULE_5__Components_sales_sales_controller__["a" /* SalesComponent */]);
-module.component('salesCarousel', __WEBPACK_IMPORTED_MODULE_0__Components_sales_carousel_sales_carousel_controller__["a" /* SalesCarouselComponent */]);
+module.component('bids', __WEBPACK_IMPORTED_MODULE_0__Components_bids_bids_controller__["a" /* BidsComponent */]);
+module.component('bidsCarousel', __WEBPACK_IMPORTED_MODULE_1__Components_bids_carousel_bids_carousel_controller__["a" /* BidsCarouselComponent */]);
+module.component('events', __WEBPACK_IMPORTED_MODULE_2__Components_events_events_controller__["a" /* EventsComponent */]);
+module.component('eventsCarousel', __WEBPACK_IMPORTED_MODULE_3__Components_events_carousel_events_carousel_controller__["a" /* EventsCarouselComponent */]);
+module.component('sales', __WEBPACK_IMPORTED_MODULE_4__Components_sales_sales_controller__["a" /* SalesComponent */]);
+module.component('salesCarousel', __WEBPACK_IMPORTED_MODULE_5__Components_sales_carousel_sales_carousel_controller__["a" /* SalesCarouselComponent */]);
+module.component('saleModal', __WEBPACK_IMPORTED_MODULE_6__Components_sale_modal_sale_modal_controller__["a" /* SaleModalComponent */]);
 
 /* harmony default export */ __webpack_exports__["a"] = (module.name);
 
 /***/ }),
 /* 134 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.sales\">\r\n    <div class=\"tabs-wr__title sale_tabs__title\">\r\n        <div class=\"tabs-wr__title-name\">{%key%}</div>\r\n        <a ui-sref=\"sale-filter({filter: key})\" class=\"see_all\" style=\"color: #007fed\">See All</a>\r\n    </div>\r\n    <div class=\"slider_container\">\r\n        <div class=\"swipe-wr\">\r\n            <sales sales=\"value\" state=\"$ctrl.state\" style=\"display: inline-flex\"></sales>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
-
-/***/ }),
-/* 135 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52309,19 +52331,19 @@ var BidsComponent = {
     bindings: {
         bids: '<'
     },
-    template: __webpack_require__(136),
+    template: __webpack_require__(135),
     controller: Bids,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 136 */
+/* 135 */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div class=\"binds-item\"\r\n     ng-class=\"{\r\n                    'binds-item__matched':      item.status === 1,\r\n                    'binds-item__unmatched':    item.status === 2,\r\n                    'binds-item__settled':      item.status === 3,\r\n                    'binds-item__canceled':     item.status === 4,\r\n                     }\"\r\n     ng-repeat=\"item in $ctrl.bids\">\r\n\r\n    <div class=\"binds-item__profile_info\">\r\n        <div class=\"profile__photo\">\r\n            <img src=\"/images/players.png\" alt=\"\">\r\n        </div>\r\n        <div class=\"profile_text\">\r\n            <div class=\"profile__name\" ng-bind=\"item.investor.name\">\r\n\r\n            </div>\r\n\r\n            <div class=\"profile__country\">\r\n                MILLIONS Russia, 1A\r\n            </div>\r\n\r\n        </div>\r\n\r\n    </div>\r\n    <div class=\"loop_counter\">\r\n        Second loop\r\n    </div>\r\n    <div class=\"binds-item__game_info\">\r\n        <div class=\"geme__text\">\r\n            <div class=\"by_in\">\r\n                Buy in £ <span>1,000,000</span>\r\n            </div>\r\n            <div class=\"gte\">\r\n                £ <span>1,000,000</span> GTE\r\n            </div>\r\n        </div>\r\n        <div class=\"game_atrs\">\r\n            <div class=\"game_atrs__markup\">\r\n                <span>Markup</span><br>\r\n                1.20\r\n            </div>\r\n            <div class=\"game_atrs__value\">\r\n                <span>Value</span><br>\r\n                £2,404.08\r\n            </div>\r\n            <div class=\"game_atrs__date_start\">\r\n                <span>Date of Start</span><br>\r\n                1 Sep\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+module.exports = "\n<div class=\"binds-item\"\n     ng-class=\"{\n                    'binds-item__matched':      item.status === 1,\n                    'binds-item__unmatched':    item.status === 2,\n                    'binds-item__settled':      item.status === 3,\n                    'binds-item__canceled':     item.status === 4,\n                     }\"\n     ng-repeat=\"item in $ctrl.bids\">\n\n    <div class=\"binds-item__profile_info\">\n        <div class=\"profile__photo\">\n            <img src=\"/images/players.png\" alt=\"\">\n        </div>\n        <div class=\"profile_text\">\n            <div class=\"profile__name\" ng-bind=\"item.investor.name\">\n\n            </div>\n\n            <div class=\"profile__country\">\n                MILLIONS Russia, 1A\n            </div>\n\n        </div>\n\n    </div>\n    <div class=\"loop_counter\">\n        Second loop\n    </div>\n    <div class=\"binds-item__game_info\">\n        <div class=\"geme__text\">\n            <div class=\"by_in\">\n                Buy in £ <span>1,000,000</span>\n            </div>\n            <div class=\"gte\">\n                £ <span>1,000,000</span> GTE\n            </div>\n        </div>\n        <div class=\"game_atrs\">\n            <div class=\"game_atrs__markup\">\n                <span>Markup</span><br>\n                1.20\n            </div>\n            <div class=\"game_atrs__value\">\n                <span>Value</span><br>\n                £2,404.08\n            </div>\n            <div class=\"game_atrs__date_start\">\n                <span>Date of Start</span><br>\n                1 Sep\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
-/* 137 */
+/* 136 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52349,19 +52371,19 @@ var BidsCarouselComponent = {
     bindings: {
         bids: '<'
     },
-    template: __webpack_require__(138),
+    template: __webpack_require__(137),
     controller: BidsCarousel,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 138 */
+/* 137 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.bids\">\r\n    <div class=\"tabs-wr__title\">\r\n        <div class=\"tabs-wr__title-name\">{%key%}</div>\r\n        <a ui-sref=\"bids-filter({filter: key})\" class=\"see_all\" style=\"color: #007fed\">See All</a>\r\n    </div>\r\n    <div class=\"slider_container\">\r\n        <div class=\"swipe-wr\">\r\n            <bids class=\"bids_row\"\r\n                    bids=\"value\">\r\n            </bids>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.bids\">\n    <div class=\"tabs-wr__title\">\n        <div class=\"tabs-wr__title-name\">{%key%}</div>\n        <a ui-sref=\"bids-filter({filter: key})\" class=\"see_all\" style=\"color: #007fed\">See All</a>\n    </div>\n    <div class=\"slider_container\">\n        <div class=\"swipe-wr\">\n            <bids class=\"bids_row\"\n                    bids=\"value\">\n            </bids>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
-/* 139 */
+/* 138 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52420,19 +52442,19 @@ var EventsComponent = {
         events: '<',
         state: '<'
     },
-    template: __webpack_require__(140),
+    template: __webpack_require__(139),
     controller: Events,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 140 */
+/* 139 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"event-item\" ng-if=\"$ctrl.state == 'row'\" ng-repeat=\"item in $ctrl.events\">\r\n    <div class=\"event-item-wr\">\r\n\r\n        <a ui-sref=\"event({id:item.id})\">\r\n            <div class=\"event-item__img\">\r\n                <img src=\"/images/event.png\" alt=\"\">\r\n            </div>\r\n        </a>\r\n        <div class=\"event-item__text\">\r\n            <a href=\"\">\r\n                <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\r\n            </a>\r\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\r\n\r\n            <div class=\"event-item__date\" ng-bind=\"item.date\"></div>\r\n        </div>\r\n\r\n    </div>\r\n</div>\r\n\r\n\r\n<div class=\"event_item_rpt\" ng-if=\"$ctrl.state == 'list'\" ng-repeat=\"item in $ctrl.events\">\r\n\r\n    <div class=\"selected_event\">\r\n        <img src=\"/images/select_event_bg.png\" alt=\"\">\r\n    </div>\r\n    <div class=\"selected_event_info event_item col-md-12\">\r\n\r\n        <div class=\"event_list-wr\" ng-click=\"$ctrl.openDetail(item.id)\">\r\n\r\n\r\n            <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\r\n            <a class=\"see_info_a\" ui-sref=\"evet({id:item.id})\">See info</a>\r\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\r\n            <div class=\"event-item__date\" ng-bind=\"item.date\"></div>\r\n            <div class=\"event-items_list_title\" ng-if=\"$ctrl.showDetail(item.id)\">Event list</div>\r\n        </div>\r\n        <a href=\"\">\r\n            <div ng-if=\"$ctrl.hideArrow(item.id)\" class=\"see_more\"></div>\r\n        </a>\r\n\r\n        <div class=\"sub_event_item\" ng-if=\"$ctrl.showDetail(item.id)\" ng-repeat=\"subevent in item.subevents\">\r\n\r\n            <div class=\"event-item__title\" ng-bind=\"subevent.title\"></div>\r\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD • £ {%subevent.fund%} GTD</div>\r\n            <div class=\"event-item__date\" ng-bind=\"item.date\"></div>\r\n        </div>\r\n    </div>\r\n\r\n\r\n</div>\r\n";
+module.exports = "<div class=\"event-item\" ng-if=\"$ctrl.state == 'row'\" ng-repeat=\"item in $ctrl.events\">\n    <div class=\"event-item-wr\">\n\n        <a ui-sref=\"event({id:item.id})\">\n            <div class=\"event-item__img\">\n                <img src=\"/images/event.png\" alt=\"\">\n            </div>\n        </a>\n        <div class=\"event-item__text\">\n            <a href=\"\">\n                <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\n            </a>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\n\n            <div class=\"event-item__date\" ng-bind=\"item.date\"></div>\n        </div>\n\n    </div>\n</div>\n\n\n<div class=\"event_item_rpt\" ng-if=\"$ctrl.state == 'list'\" ng-repeat=\"item in $ctrl.events\">\n\n    <div class=\"selected_event\">\n        <img src=\"/images/select_event_bg.png\" alt=\"\">\n    </div>\n    <div class=\"selected_event_info event_item col-md-12\">\n\n        <div class=\"event_list-wr\" ng-click=\"$ctrl.openDetail(item.id)\">\n\n\n            <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\n            <a class=\"see_info_a\" ui-sref=\"evet({id:item.id})\">See info</a>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\n            <div class=\"event-item__date\" ng-bind=\"item.date\"></div>\n            <div class=\"event-items_list_title\" ng-if=\"$ctrl.showDetail(item.id)\">Event list</div>\n        </div>\n        <a href=\"\">\n            <div ng-if=\"$ctrl.hideArrow(item.id)\" class=\"see_more\"></div>\n        </a>\n\n        <div class=\"sub_event_item\" ng-if=\"$ctrl.showDetail(item.id)\" ng-repeat=\"subevent in item.subevents\">\n\n            <div class=\"event-item__title\" ng-bind=\"subevent.title\"></div>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD • £ {%subevent.fund%} GTD</div>\n            <div class=\"event-item__date\" ng-bind=\"item.date\"></div>\n        </div>\n    </div>\n\n\n</div>\n";
 
 /***/ }),
-/* 141 */
+/* 140 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52459,19 +52481,19 @@ var EventsCarouselComponent = {
         events: '<',
         state: '<'
     },
-    template: __webpack_require__(142),
+    template: __webpack_require__(141),
     controller: EventsCarousel,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 142 */
+/* 141 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"slider_container\">\r\n    <div class=\"swipe-wr\">\r\n       <events class=\"events_carousel\" events=\"$ctrl.events\" state=\"$ctrl.state\"></events>\r\n    </div>\r\n</div>";
+module.exports = "<div class=\"slider_container\">\n    <div class=\"swipe-wr\">\n       <events class=\"events_carousel\" events=\"$ctrl.events\" state=\"$ctrl.state\"></events>\n    </div>\n</div>";
 
 /***/ }),
-/* 143 */
+/* 142 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52481,8 +52503,12 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Sales = function () {
-    function Sales() {
+    function Sales(ngDialog, $scope) {
         _classCallCheck(this, Sales);
+
+        this.$scope = $scope;
+        this.show = false;
+        this.item = null;
     }
 
     _createClass(Sales, [{
@@ -52490,56 +52516,1121 @@ var Sales = function () {
         value: function $onInit() {}
     }, {
         key: 'click',
-        value: function click() {
-            console.log(this.sales);
+        value: function click(key) {
+            this.show = true;
+            this.item = this.sales[key];
         }
     }]);
 
     return Sales;
 }();
 
+Sales.$inject = ['ngDialog', '$scope'];
+
 var SalesComponent = {
     bindings: {
         sales: '<',
         state: '<'
     },
-    template: __webpack_require__(144),
+    template: __webpack_require__(143),
     controller: Sales,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 144 */
+/* 143 */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div class=\"as__item-wr as__item-wr-active\"\r\n     ng-if=\"$ctrl.state === 'list'\"\r\n     ng-repeat=\"item in $ctrl.sales\"\r\n     ng-class=\"{\r\n     'sale_active': item.status === 1,\r\n     'sale_canceled': item.status === 2,\r\n     }\"\r\n     >\r\n\r\n    <div class=\"as__item__text\">\r\n        <div class=\"as__item__title\" ng-bind=\"item.event.title\"></div>\r\n        <a ui-sref=\"sale-manage({id: item.id})\">Edit</a>\r\n        <div class=\"loop_counter loop_counter_sale\" ng-bind=\"item.sub_event_id\">\r\n            Second loop\r\n        </div>\r\n        <div class=\"as__item__by\">Buy in $<span ng-bind=\"item.event.buy_in\"></span> + $<span ng-bind=\"item.subevent.buy_in\"></span></div>\r\n    </div>\r\n    <div class=\"as__item__tags as__item__tags-active\">\r\n        <div class=\"tags_closes\">\r\n            <span>Closes</span><br>\r\n            73 days\r\n        </div>\r\n        <div class=\"tags_markup\">\r\n            <span>Markup</span><br>\r\n            1.20\r\n        </div>\r\n        <div class=\"tags_average\">\r\n            <span>Average markup</span><br>\r\n            0\r\n        </div>\r\n        <div class=\"tags_share\">\r\n            <span>Share sold</span><br>\r\n            0% of 20%\r\n        </div>\r\n        <div class=\"tags_amount\">\r\n            <span>Amount raised</span><br>\r\n            $400 of $1,000\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n\r\n<div class=\"as__item-wr active_sale\"\r\n     ng-click=\"$ctrl.click()\"\r\n     ng-if=\"$ctrl.state === 'row'\"\r\n     ng-class=\"{\r\n     'sale_active': item.status === 1,\r\n     'sale_canceled': item.status === 2,\r\n     }\"\r\n     ng-repeat=\"item in $ctrl.sales\">\r\n    <div class=\"as__item__text\">\r\n        <div class=\"as__item__title\" ng-bind=\"item.event.title\"></div>\r\n        <div class=\"as__item__by\">Buy in $<span ng-bind=\"item.event.buy_in\"></span> + $<span ng-bind=\"item.subevent.buy_in\"></span></div>\r\n    </div>\r\n    <div class=\"as__item__tags\">\r\n        <div class=\"tags_closes\">\r\n            <span>Closes</span><br>\r\n            73 days\r\n        </div>\r\n        <div class=\"tags_markup\">\r\n            <span>Markup</span><br>\r\n            <span ng-bind=\"item.markup\"></span>\r\n        </div>\r\n        <div class=\"tags_share\">\r\n            <span>Share sold</span><br>\r\n            0% of 20%\r\n        </div>\r\n        <div class=\"tags_amount\">\r\n            <span>Amount raised</span><br>\r\n            $400 of $1,000\r\n        </div>\r\n    </div>\r\n\r\n</div>\r\n\r\n\r\n<div class=\"binds-item\"\r\n     ng-if=\"$ctrl.state === 'invest'\"\r\n     ng-repeat=\"item in $ctrl.sales\"\r\n     ng-class=\"{\r\n     'sale_active': item.status === 1,\r\n     'sale_canceled': item.status === 2,\r\n     }\"\r\n>\r\n    <div class=\"binds-item-wr\">\r\n        <div class=\"binds-item__profile_info\">\r\n            <div class=\"profile__photo\">\r\n                <img src=\"/images/players.png\" alt=\"\">\r\n            </div>\r\n            <div class=\"profile_text\">\r\n                <div class=\"profile__name\" ng-bind=\"item.creator.name\">\r\n\r\n                </div>\r\n                <div class=\"profile__country\">\r\n                    MILLIONS Russia, 1A\r\n                </div>\r\n\r\n            </div>\r\n\r\n        </div>\r\n        <div class=\"loop_counter\" ng-bind=\"item.subevent.title\">\r\n\r\n        </div>\r\n        <div class=\"binds-item__game_info\">\r\n            <div class=\"geme__text\">\r\n                <div class=\"by_in\">\r\n                    Buy in £ <span ng-bind=\"item.subevent.buy_in\"></span>\r\n                </div>\r\n                <div class=\"gte\">\r\n                    £ <span ng-bind=\"item.subevent.fund\"></span> GTE\r\n                </div>\r\n            </div>\r\n            <div class=\"game_atrs\">\r\n                <div class=\"game_atrs__markup\">\r\n                    <span>Markup</span><br>\r\n                    <span ng-bind=\"item.markup\"></span>\r\n                </div>\r\n                <div class=\"game_atrs__value\">\r\n                    <span>Value</span><br>\r\n                    £<span ng-bind=\"item.amount\"></span>\r\n                </div>\r\n                <div class=\"game_atrs__date_start\">\r\n                    <span>Date of Start</span><br>\r\n\r\n                    <span ng-bind=\"item.subevent.date\"></span>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+module.exports = "\n<div class=\"as__item-wr as__item-wr-active\"\n\n     ng-if=\"$ctrl.state === 'list'\"\n     ng-repeat=\"item in $ctrl.sales\"\n     ng-class=\"{\n     'sale_active': item.status === 1,\n     'sale_canceled': item.status === 2,\n     }\"\n     >\n\n    <div class=\"as__item__text\">\n        <div class=\"as__item__title\" ng-bind=\"item.event.title\"></div>\n        <a ui-sref=\"sale-manage({id: item.id})\">Edit</a>\n        <div class=\"loop_counter loop_counter_sale\" ng-bind=\"item.sub_event_id\">\n            Second loop\n        </div>\n        <div class=\"as__item__by\">Buy in $<span ng-bind=\"item.event.buy_in\"></span> + $<span ng-bind=\"item.subevent.buy_in\"></span></div>\n    </div>\n    <div class=\"as__item__tags as__item__tags-active\">\n        <div class=\"tags_closes\">\n            <span>Closes</span><br>\n            73 days\n        </div>\n        <div class=\"tags_markup\">\n            <span>Markup</span><br>\n            1.20\n        </div>\n        <div class=\"tags_average\">\n            <span>Average markup</span><br>\n            0\n        </div>\n        <div class=\"tags_share\">\n            <span>Share sold</span><br>\n            0% of 20%\n        </div>\n        <div class=\"tags_amount\">\n            <span>Amount raised</span><br>\n            $400 of $1,000\n        </div>\n    </div>\n</div>\n\n\n<div class=\"as__item-wr active_sale\"\n\n     ng-if=\"$ctrl.state === 'row'\"\n     ng-class=\"{\n     'sale_active': item.status === 1,\n     'sale_canceled': item.status === 2,\n     }\"\n     ng-repeat=\"item in $ctrl.sales\">\n    <div class=\"as__item__text\">\n        <div class=\"as__item__title\" ng-bind=\"item.event.title\"></div>\n        <div class=\"as__item__by\">Buy in $<span ng-bind=\"item.event.buy_in\"></span> + $<span ng-bind=\"item.subevent.buy_in\"></span></div>\n    </div>\n    <div class=\"as__item__tags\">\n        <div class=\"tags_closes\">\n            <span>Closes</span><br>\n            73 days\n        </div>\n        <div class=\"tags_markup\">\n            <span>Markup</span><br>\n            <span ng-bind=\"item.markup\"></span>\n        </div>\n        <div class=\"tags_share\">\n            <span>Share sold</span><br>\n            0% of 20%\n        </div>\n        <div class=\"tags_amount\">\n            <span>Amount raised</span><br>\n            $400 of $1,000\n        </div>\n    </div>\n\n</div>\n\n\n<div class=\"binds-item\"\n     ng-click=\"$ctrl.click(key)\"\n     ng-if=\"$ctrl.state === 'invest'\"\n     ng-repeat=\" (key, item) in $ctrl.sales\"\n     ng-class=\"{\n     'sale_active': item.status === 1,\n     'sale_canceled': item.status === 2,\n     }\"\n>\n    <div class=\"binds-item-wr\">\n        <div class=\"binds-item__profile_info\">\n            <div class=\"profile__photo\">\n                <img src=\"/images/players.png\" alt=\"\">\n            </div>\n            <div class=\"profile_text\">\n                <div class=\"profile__name\" ng-bind=\"item.creator.name\">\n\n                </div>\n                <div class=\"profile__country\">\n                    MILLIONS Russia, 1A\n                </div>\n\n            </div>\n\n        </div>\n        <div class=\"loop_counter\" ng-bind=\"item.subevent.title\">\n\n        </div>\n        <div class=\"binds-item__game_info\">\n            <div class=\"geme__text\">\n                <div class=\"by_in\">\n                    Buy in £ <span ng-bind=\"item.subevent.buy_in\"></span>\n                </div>\n                <div class=\"gte\">\n                    £ <span ng-bind=\"item.subevent.fund\"></span> GTE\n                </div>\n            </div>\n            <div class=\"game_atrs\">\n                <div class=\"game_atrs__markup\">\n                    <span>Markup</span><br>\n                    <span ng-bind=\"item.markup\"></span>\n                </div>\n                <div class=\"game_atrs__value\">\n                    <span>Value</span><br>\n                    £<span ng-bind=\"item.amount\"></span>\n                </div>\n                <div class=\"game_atrs__date_start\">\n                    <span>Date of Start</span><br>\n\n                    <span ng-bind=\"item.subevent.date\"></span>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n<sale-modal sale =\"$ctrl.item\" show=\"$ctrl.show\"></sale-modal>";
 
 /***/ }),
-/* 145 */
+/* 144 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = hack;
-hack.$inject = ['$templateCache'];
-var menu_footer = __webpack_require__(146);
-function hack($templateCache) {
-    $templateCache.put('tpl/view/footer.template.html', menu_footer);
-}
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SalesCarouselComponent; });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var SalesCarousel = function () {
+    function SalesCarousel(ngDialog) {
+        _classCallCheck(this, SalesCarousel);
+
+        this.ngDialog = ngDialog;
+        console.log(ngDialog);
+    }
+
+    _createClass(SalesCarousel, [{
+        key: '$onInit',
+        value: function $onInit() {}
+    }]);
+
+    return SalesCarousel;
+}();
+
+var SalesCarouselComponent = {
+    bindings: {
+        sales: '<',
+        state: '<'
+    },
+    template: __webpack_require__(145),
+    controller: SalesCarousel,
+    controllerAs: '$ctrl'
+};
+
+/***/ }),
+/* 145 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.sales\">\n    <div class=\"tabs-wr__title sale_tabs__title\">\n        <div class=\"tabs-wr__title-name\">{%key%}</div>\n        <a ui-sref=\"sale-filter({filter: key})\" class=\"see_all\" style=\"color: #007fed\">See All</a>\n    </div>\n    <div class=\"slider_container\">\n        <div class=\"swipe-wr\">\n            <sales sales=\"value\" state=\"$ctrl.state\" style=\"display: inline-flex\"></sales>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
 /* 146 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = "<div class=\"footer_binds\">\n    <a ui-sref=\"invest\">\n        <div class=\"footer_binds__item item_invest\">\n            <div class=\"footer_binds__img\"><img src=\"/images/g@3x_INVEST.png\" alt=\"\"></div>\n            invest\n        </div>\n    </a>\n    <a ui-sref=\"bids\">\n        <div class=\"footer_binds__item item_invest_bids\">\n            <div class=\"footer_binds__img\"><img src=\"/images/b@3x_BIDS.png\" alt=\"\"></div>\n            bids\n        </div>\n    </a>\n    <a ui-sref=\"sale\">\n        <div class=\"footer_binds__item item_invest_sale\">\n            <div class=\"footer_binds__img\"><img src=\"/images/g_2@3x_SALE.png\" alt=\"\"></div>\n            sale\n        </div>\n    </a>\n    <a ui-sref=\"wallet\">\n        <div class=\"footer_binds__item item_invest_wallet\">\n            <div class=\"footer_binds__img\"><img src=\"/images/g_3@3x_WALLET.png\" alt=\"\"></div>\n            wallet\n        </div>\n    </a>\n</div>\n";
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleModalComponent; });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var SaleModal = function () {
+    function SaleModal() {
+        _classCallCheck(this, SaleModal);
+
+        console.log(this.sale);
+        console.log('modal - sale');
+    }
+
+    _createClass(SaleModal, [{
+        key: '$onInit',
+        value: function $onInit() {}
+    }, {
+        key: 'close',
+        value: function close() {
+            console.log(this.sale);
+            this.show = !this.show;
+        }
+    }]);
+
+    return SaleModal;
+}();
+
+SaleModal.$inject = ['ngDialog', '$scope'];
+
+var SaleModalComponent = {
+    bindings: {
+        sale: '<',
+        show: '='
+    },
+    template: __webpack_require__(147),
+    controller: SaleModal,
+    controllerAs: '$ctrl'
+};
 
 /***/ }),
 /* 147 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+module.exports = "<div class=\"modal_wrapper\" ng-if=\"$ctrl.show \">\n    <div class=\"row col-md-12\">\n        <div class=\"place_a_bit\">\n            <div class=\"place_a_bit__title\">\n                Place a bid\n                <div class=\"pab__close ngdialog-close\" ng-click=\"$ctrl.close()\">\n                    X\n                </div>\n            </div>\n            <div class=\"binds-item-wr\">\n                <div class=\"binds-item__profile_info\">\n                    <div class=\"profile__photo\">\n                        <img src=\"/images/pl_5.png\" alt=\"\">\n                    </div>\n                    <div class=\"profile_text\">\n                        <div class=\"profile__name\" ng-bind=\"$ctrl.sale.creator.name\">\n                        </div>\n                        <div class=\"profile__country\" ng-bind=\"$ctrl.sale.event.title\">\n                        </div>\n                    </div>\n\n                </div>\n\n                <div class=\"binds-item__game_info\">\n                    <div class=\"geme__text\">\n                        <div class=\"by_in\">\n                            Buy in £ <span ng-bind=\"$ctrl.sale.event.buy_in\"></span>\n                        </div>\n                        <div class=\"gte\">\n                            £ <span ng-bind=\"$ctrl.sale.subevent.buy_in\"></span> GTE\n                        </div>\n                    </div>\n                    <div class=\"game_atrs\">\n                        <div class=\"game_atrs__markup\">\n                            <span>Markup</span><br>\n                            <span ng-bind=\"$ctrl.sale.markup\"></span>\n                        </div>\n                        <div class=\"game_atrs__value\">\n                            <span>Share</span><br>\n                            <span ng-bind=\"$ctrl.sale.share\"></span>\n                        </div>\n                        <div class=\"game_atrs__date_start\">\n                            <span>Value</span><br>\n                            <span ng-bind=\"$ctrl.sale.value\"></span>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"highest_bids\">\n                <div class=\"highest_bids__title\">\n                    HIGHEST BIDS\n                </div>\n                <div class=\"block_1\">\n                    <input type=\"text\" placeholder=\"1\">\n                    <input type=\"text\" placeholder=\"1.53%\">\n                    <input type=\"text\" placeholder=\"$1,182.22\">\n                </div>\n                <div class=\"block_2\">\n                    <input type=\"text\" placeholder=\"1.09\" id=\"123\">\n                    <input type=\"text\" placeholder=\"0.53%\">\n                    <input type=\"text\" placeholder=\"$442\">\n                </div>\n            </div>\n            <div class=\"matched_bid\">\n                <div class=\"matched_bid__title\">\n                    MATCHED BID\n                </div>\n                <div class=\"block_1\">\n                    <input type=\"text\" placeholder=\"1\">\n                    <input type=\"text\" placeholder=\"1.53%\">\n                    <input type=\"text\" placeholder=\"$1,182.22\">\n                </div>\n\n            </div>\n            <div class=\"add_bid\" style=\"\">\n                Add new bid\n            </div>\n\n        </div>\n    </div>\n</div>";
 
 /***/ }),
 /* 148 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = hack;
+hack.$inject = ['$templateCache'];
+var menu_footer = __webpack_require__(149);
+var bid_place = __webpack_require__(150);
+function hack($templateCache) {
+    $templateCache.put('tpl/view/footer.template.html', menu_footer);
+    $templateCache.put('tpl/view/bid-place.template.html', bid_place);
+}
+
+/***/ }),
+/* 149 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"footer_binds\">\n    <a ui-sref=\"invest\">\n        <div class=\"footer_binds__item item_invest\">\n            <div class=\"footer_binds__img\"><img src=\"/images/g@3x_INVEST.png\" alt=\"\"></div>\n            invest\n        </div>\n    </a>\n    <a ui-sref=\"bids\">\n        <div class=\"footer_binds__item item_invest_bids\">\n            <div class=\"footer_binds__img\"><img src=\"/images/b@3x_BIDS.png\" alt=\"\"></div>\n            bids\n        </div>\n    </a>\n    <a ui-sref=\"sale\">\n        <div class=\"footer_binds__item item_invest_sale\">\n            <div class=\"footer_binds__img\"><img src=\"/images/g_2@3x_SALE.png\" alt=\"\"></div>\n            sale\n        </div>\n    </a>\n    <a ui-sref=\"wallet\">\n        <div class=\"footer_binds__item item_invest_wallet\">\n            <div class=\"footer_binds__img\"><img src=\"/images/g_3@3x_WALLET.png\" alt=\"\"></div>\n            wallet\n        </div>\n    </a>\n</div>\n";
+
+/***/ }),
+/* 150 */
+/***/ (function(module, exports) {
+
+module.exports = "    <div class=\"modal_wrapper\">\n    <div class=\"row col-md-12\">\n    <div class=\"place_a_bit\">\n        <div class=\"place_a_bit__title\">\n            Place a bid\n            <div class=\"pab__close ngdialog-close\">\n                X\n            </div>\n        </div>\n        <div class=\"binds-item-wr\">\n            <div class=\"binds-item__profile_info\">\n                <div class=\"profile__photo\">\n                    <img src=\"/images/pl_5.png\" alt=\"\">\n                </div>\n                <div class=\"profile_text\">\n                    <div class=\"profile__name\">\n                        Louise Romero\n                    </div>\n                    <div class=\"profile__country\">\n                        MILLIONS Russia, 1A\n                    </div>\n\n                </div>\n\n            </div>\n\n            <div class=\"binds-item__game_info\">\n                <div class=\"geme__text\">\n                    <div class=\"by_in\">\n                        Buy in £ <span>1,000,000</span>\n                    </div>\n                    <div class=\"gte\">\n                        £ <span>1,000,000</span> GTE\n                    </div>\n                </div>\n                <div class=\"game_atrs\">\n                    <div class=\"game_atrs__markup\">\n                        <span>Markup</span><br>\n                        1.20\n                    </div>\n                    <div class=\"game_atrs__value\">\n                        <span>Share</span><br>\n                        20%</div>\n                    <div class=\"game_atrs__date_start\">\n                        <span>Value</span><br>\n                        1.20</div>\n                </div>\n            </div>\n        </div>\n        <div class=\"highest_bids\">\n            <div class=\"highest_bids__title\">\n                HIGHEST BIDS\n            </div>\n            <div class=\"block_1\">\n                <input type=\"text\" placeholder=\"1\">\n                <input type=\"text\" placeholder=\"1.53%\">\n                <input type=\"text\" placeholder=\"$1,182.22\">\n            </div>\n            <div class=\"block_2\">\n                <input type=\"text\" placeholder=\"1.09\" id=\"123\">\n                <input type=\"text\" placeholder=\"0.53%\">\n                <input type=\"text\" placeholder=\"$442\">\n            </div>\n        </div>\n        <div class=\"matched_bid\">\n            <div class=\"matched_bid__title\">\n                MATCHED BID\n            </div>\n            <div class=\"block_1\">\n                <input type=\"text\" placeholder=\"1\">\n                <input type=\"text\" placeholder=\"1.53%\">\n                <input type=\"text\" placeholder=\"$1,182.22\">\n            </div>\n\n        </div>\n        <div class=\"add_bid\">\n            Add new bid\n        </div>\n    </div>\n</div>\n</div>";
+
+/***/ }),
+/* 151 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
+ * ngDialog - easy modals and popup windows
+ * http://github.com/likeastore/ngDialog
+ * (c) 2013-2015 MIT License, https://likeastore.com
+ */
+
+(function (root, factory) {
+    if (typeof module !== 'undefined' && module.exports) {
+        // CommonJS
+        if (typeof angular === 'undefined') {
+            factory(__webpack_require__(13));
+        } else {
+            factory(angular);
+        }
+        module.exports = 'ngDialog';
+    } else if (true) {
+        // AMD
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(13)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    } else {
+        // Global Variables
+        factory(root.angular);
+    }
+}(this, function (angular) {
+    'use strict';
+
+    var m = angular.module('ngDialog', []);
+
+    var $el = angular.element;
+    var isDef = angular.isDefined;
+    var style = (document.body || document.documentElement).style;
+    var animationEndSupport = isDef(style.animation) || isDef(style.WebkitAnimation) || isDef(style.MozAnimation) || isDef(style.MsAnimation) || isDef(style.OAnimation);
+    var animationEndEvent = 'animationend webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend';
+    var focusableElementSelector = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]';
+    var disabledAnimationClass = 'ngdialog-disabled-animation';
+    var forceElementsReload = { html: false, body: false };
+    var scopes = {};
+    var openIdStack = [];
+    var activeBodyClasses = [];
+    var keydownIsBound = false;
+    var openOnePerName = false;
+    var closeByNavigationDialogStack = [];
+
+    var UI_ROUTER_VERSION_LEGACY = 'legacy';
+    var UI_ROUTER_VERSION_ONE_PLUS = '1.0.0+';
+
+    m.provider('ngDialog', function () {
+        var defaults = this.defaults = {
+            className: 'ngdialog-theme-default',
+            appendClassName: '',
+            disableAnimation: false,
+            plain: false,
+            showClose: true,
+            closeByDocument: true,
+            closeByEscape: true,
+            closeByNavigation: false,
+            appendTo: false,
+            preCloseCallback: false,
+            onOpenCallback: false,
+            overlay: true,
+            cache: true,
+            trapFocus: true,
+            preserveFocus: true,
+            ariaAuto: true,
+            ariaRole: null,
+            ariaLabelledById: null,
+            ariaLabelledBySelector: null,
+            ariaDescribedById: null,
+            ariaDescribedBySelector: null,
+            bodyClassName: 'ngdialog-open',
+            width: null,
+            height: null
+        };
+
+        this.setForceHtmlReload = function (_useIt) {
+            forceElementsReload.html = _useIt || false;
+        };
+
+        this.setForceBodyReload = function (_useIt) {
+            forceElementsReload.body = _useIt || false;
+        };
+
+        this.setDefaults = function (newDefaults) {
+            angular.extend(defaults, newDefaults);
+        };
+
+        this.setOpenOnePerName = function (isOpenOne) {
+            openOnePerName = isOpenOne || false;
+        };
+
+        var globalID = 0, dialogsCount = 0, closeByDocumentHandler, defers = {};
+
+        this.$get = ['$document', '$templateCache', '$compile', '$q', '$http', '$rootScope', '$timeout', '$window', '$controller', '$injector',
+            function ($document, $templateCache, $compile, $q, $http, $rootScope, $timeout, $window, $controller, $injector) {
+                var $elements = [];
+
+                var privateMethods = {
+                    onDocumentKeydown: function (event) {
+                        if (event.keyCode === 27) {
+                            publicMethods.close('$escape');
+                        }
+                    },
+
+                    activate: function($dialog) {
+                        var options = $dialog.data('$ngDialogOptions');
+
+                        if (options.trapFocus) {
+                            $dialog.on('keydown', privateMethods.onTrapFocusKeydown);
+
+                            // Catch rogue changes (eg. after unfocusing everything by clicking a non-focusable element)
+                            $elements.body.on('keydown', privateMethods.onTrapFocusKeydown);
+                        }
+                    },
+
+                    deactivate: function ($dialog) {
+                        $dialog.off('keydown', privateMethods.onTrapFocusKeydown);
+                        $elements.body.off('keydown', privateMethods.onTrapFocusKeydown);
+                    },
+
+                    deactivateAll: function (els) {
+                        angular.forEach(els,function(el) {
+                            var $dialog = angular.element(el);
+                            privateMethods.deactivate($dialog);
+                        });
+                    },
+
+                    setBodyPadding: function (width) {
+                        var originalBodyPadding = parseInt(($elements.body.css('padding-right') || 0), 10);
+                        $elements.body.css('padding-right', (originalBodyPadding + width) + 'px');
+                        $elements.body.data('ng-dialog-original-padding', originalBodyPadding);
+                        $rootScope.$broadcast('ngDialog.setPadding', width);
+                    },
+
+                    resetBodyPadding: function () {
+                        var originalBodyPadding = $elements.body.data('ng-dialog-original-padding');
+                        if (originalBodyPadding) {
+                            $elements.body.css('padding-right', originalBodyPadding + 'px');
+                        } else {
+                            $elements.body.css('padding-right', '');
+                        }
+                        $rootScope.$broadcast('ngDialog.setPadding', 0);
+                    },
+
+                    performCloseDialog: function ($dialog, value) {
+                        var options = $dialog.data('$ngDialogOptions');
+                        var id = $dialog.attr('id');
+                        var scope = scopes[id];
+                        privateMethods.deactivate($dialog);
+
+                        if (!scope) {
+                            // Already closed
+                            return;
+                        }
+
+                        if (typeof $window.Hammer !== 'undefined') {
+                            var hammerTime = scope.hammerTime;
+                            hammerTime.off('tap', closeByDocumentHandler);
+                            hammerTime.destroy && hammerTime.destroy();
+                            delete scope.hammerTime;
+                        } else {
+                            $dialog.unbind('click');
+                        }
+
+                        if (dialogsCount === 1) {
+                            $elements.body.unbind('keydown', privateMethods.onDocumentKeydown);
+                        }
+
+                        if (!$dialog.hasClass('ngdialog-closing')){
+                            dialogsCount -= 1;
+                        }
+
+                        var previousFocus = $dialog.data('$ngDialogPreviousFocus');
+                        if (previousFocus && previousFocus.focus) {
+                            previousFocus.focus();
+                        }
+
+                        $rootScope.$broadcast('ngDialog.closing', $dialog, value);
+                        dialogsCount = dialogsCount < 0 ? 0 : dialogsCount;
+                        if (animationEndSupport && !options.disableAnimation) {
+                            scope.$destroy();
+                            $dialog.unbind(animationEndEvent).bind(animationEndEvent, function () {
+                                privateMethods.closeDialogElement($dialog, value);
+                            }).addClass('ngdialog-closing');
+                        } else {
+                            scope.$destroy();
+                            privateMethods.closeDialogElement($dialog, value);
+                        }
+                        if (defers[id]) {
+                            defers[id].resolve({
+                                id: id,
+                                value: value,
+                                $dialog: $dialog,
+                                remainingDialogs: dialogsCount
+                            });
+                            delete defers[id];
+                        }
+                        if (scopes[id]) {
+                            delete scopes[id];
+                        }
+                        openIdStack.splice(openIdStack.indexOf(id), 1);
+                        if (!openIdStack.length) {
+                            $elements.body.unbind('keydown', privateMethods.onDocumentKeydown);
+                            keydownIsBound = false;
+                        }
+
+                        if (dialogsCount == 0)
+                        {
+                            closeByDocumentHandler = undefined;
+                        }
+                    },
+
+                    closeDialogElement: function($dialog, value) {
+                        var options = $dialog.data('$ngDialogOptions');
+                        $dialog.remove();
+
+                        activeBodyClasses.splice(activeBodyClasses.indexOf(options.bodyClassName), 1);
+                        if (activeBodyClasses.indexOf(options.bodyClassName) === -1) {
+                            $elements.html.removeClass(options.bodyClassName);
+                            $elements.body.removeClass(options.bodyClassName);
+                        }
+
+                        if (dialogsCount === 0) {
+                            privateMethods.resetBodyPadding();
+                        }
+
+                        $rootScope.$broadcast('ngDialog.closed', $dialog, value);
+                    },
+
+                    closeDialog: function ($dialog, value) {
+                        var preCloseCallback = $dialog.data('$ngDialogPreCloseCallback');
+
+                        if (preCloseCallback && angular.isFunction(preCloseCallback)) {
+
+                            var preCloseCallbackResult = preCloseCallback.call($dialog, value);
+
+                            if (angular.isObject(preCloseCallbackResult)) {
+                                if (preCloseCallbackResult.closePromise) {
+                                    preCloseCallbackResult.closePromise.then(function () {
+                                        privateMethods.performCloseDialog($dialog, value);
+                                    }, function () {
+                                        return false;
+                                    });
+                                } else {
+                                    preCloseCallbackResult.then(function () {
+                                        privateMethods.performCloseDialog($dialog, value);
+                                    }, function () {
+                                        return false;
+                                    });
+                                }
+                            } else if (preCloseCallbackResult !== false) {
+                                privateMethods.performCloseDialog($dialog, value);
+                            } else {
+                                return false;
+                            }
+                        } else {
+                            privateMethods.performCloseDialog($dialog, value);
+                        }
+                    },
+
+                    onTrapFocusKeydown: function(ev) {
+                        var el = angular.element(ev.currentTarget);
+                        var $dialog;
+
+                        if (el.hasClass('ngdialog')) {
+                            $dialog = el;
+                        } else {
+                            $dialog = privateMethods.getActiveDialog();
+
+                            if ($dialog === null) {
+                                return;
+                            }
+                        }
+
+                        var isTab = (ev.keyCode === 9);
+                        var backward = (ev.shiftKey === true);
+
+                        if (isTab) {
+                            privateMethods.handleTab($dialog, ev, backward);
+                        }
+                    },
+
+                    handleTab: function($dialog, ev, backward) {
+                        var focusableElements = privateMethods.getFocusableElements($dialog);
+
+                        if (focusableElements.length === 0) {
+                            if (document.activeElement && document.activeElement.blur) {
+                                document.activeElement.blur();
+                            }
+                            return;
+                        }
+
+                        var currentFocus = document.activeElement;
+                        var focusIndex = Array.prototype.indexOf.call(focusableElements, currentFocus);
+
+                        var isFocusIndexUnknown = (focusIndex === -1);
+                        var isFirstElementFocused = (focusIndex === 0);
+                        var isLastElementFocused = (focusIndex === focusableElements.length - 1);
+
+                        var cancelEvent = false;
+
+                        if (backward) {
+                            if (isFocusIndexUnknown || isFirstElementFocused) {
+                                focusableElements[focusableElements.length - 1].focus();
+                                cancelEvent = true;
+                            }
+                        } else {
+                            if (isFocusIndexUnknown || isLastElementFocused) {
+                                focusableElements[0].focus();
+                                cancelEvent = true;
+                            }
+                        }
+
+                        if (cancelEvent) {
+                            ev.preventDefault();
+                            ev.stopPropagation();
+                        }
+                    },
+
+                    autoFocus: function($dialog) {
+                        var dialogEl = $dialog[0];
+
+                        // Browser's (Chrome 40, Forefix 37, IE 11) don't appear to honor autofocus on the dialog, but we should
+                        var autoFocusEl = dialogEl.querySelector('*[autofocus]');
+                        if (autoFocusEl !== null) {
+                            autoFocusEl.focus();
+
+                            if (document.activeElement === autoFocusEl) {
+                                return;
+                            }
+
+                            // Autofocus element might was display: none, so let's continue
+                        }
+
+                        var focusableElements = privateMethods.getFocusableElements($dialog);
+
+                        if (focusableElements.length > 0) {
+                            focusableElements[0].focus();
+                            return;
+                        }
+
+                        // We need to focus something for the screen readers to notice the dialog
+                        var contentElements = privateMethods.filterVisibleElements(dialogEl.querySelectorAll('h1,h2,h3,h4,h5,h6,p,span'));
+
+                        if (contentElements.length > 0) {
+                            var contentElement = contentElements[0];
+                            $el(contentElement).attr('tabindex', '-1').css('outline', '0');
+                            contentElement.focus();
+                        }
+                    },
+
+                    getFocusableElements: function ($dialog) {
+                        var dialogEl = $dialog[0];
+
+                        var rawElements = dialogEl.querySelectorAll(focusableElementSelector);
+
+                        // Ignore untabbable elements, ie. those with tabindex = -1
+                        var tabbableElements = privateMethods.filterTabbableElements(rawElements);
+
+                        return privateMethods.filterVisibleElements(tabbableElements);
+                    },
+
+                    filterTabbableElements: function (els) {
+                        var tabbableFocusableElements = [];
+
+                        for (var i = 0; i < els.length; i++) {
+                            var el = els[i];
+
+                            if ($el(el).attr('tabindex') !== '-1') {
+                                tabbableFocusableElements.push(el);
+                            }
+                        }
+
+                        return tabbableFocusableElements;
+                    },
+
+                    filterVisibleElements: function (els) {
+                        var visibleFocusableElements = [];
+
+                        for (var i = 0; i < els.length; i++) {
+                            var el = els[i];
+
+                            if (el.offsetWidth > 0 || el.offsetHeight > 0) {
+                                visibleFocusableElements.push(el);
+                            }
+                        }
+
+                        return visibleFocusableElements;
+                    },
+
+                    getActiveDialog: function () {
+                        var dialogs = document.querySelectorAll('.ngdialog');
+
+                        if (dialogs.length === 0) {
+                            return null;
+                        }
+
+                        // TODO: This might be incorrect if there are a mix of open dialogs with different 'appendTo' values
+                        return $el(dialogs[dialogs.length - 1]);
+                    },
+
+                    applyAriaAttributes: function ($dialog, options) {
+                        if (options.ariaAuto) {
+                            if (!options.ariaRole) {
+                                var detectedRole = (privateMethods.getFocusableElements($dialog).length > 0) ?
+                                    'dialog' :
+                                    'alertdialog';
+
+                                options.ariaRole = detectedRole;
+                            }
+
+                            if (!options.ariaLabelledBySelector) {
+                                options.ariaLabelledBySelector = 'h1,h2,h3,h4,h5,h6';
+                            }
+
+                            if (!options.ariaDescribedBySelector) {
+                                options.ariaDescribedBySelector = 'article,section,p';
+                            }
+                        }
+
+                        if (options.ariaRole) {
+                            $dialog.attr('role', options.ariaRole);
+                        }
+
+                        privateMethods.applyAriaAttribute(
+                            $dialog, 'aria-labelledby', options.ariaLabelledById, options.ariaLabelledBySelector);
+
+                        privateMethods.applyAriaAttribute(
+                            $dialog, 'aria-describedby', options.ariaDescribedById, options.ariaDescribedBySelector);
+                    },
+
+                    applyAriaAttribute: function($dialog, attr, id, selector) {
+                        if (id) {
+                            $dialog.attr(attr, id);
+                            return;
+                        }
+
+                        if (selector) {
+                            var dialogId = $dialog.attr('id');
+
+                            var firstMatch = $dialog[0].querySelector(selector);
+
+                            if (!firstMatch) {
+                                return;
+                            }
+
+                            var generatedId = dialogId + '-' + attr;
+
+                            $el(firstMatch).attr('id', generatedId);
+
+                            $dialog.attr(attr, generatedId);
+
+                            return generatedId;
+                        }
+                    },
+
+                    detectUIRouter: function() {
+                        // Detect if ui-router module is installed
+                        // Returns ui-router version string if installed
+                        // Otherwise false
+
+                        if ($injector.has('$transitions')) {
+                            // Only 1.0.0+ ui.router allows us to inject $transitions
+                            return UI_ROUTER_VERSION_ONE_PLUS;
+                        }
+                        else if ($injector.has('$state')) {
+                            // The legacy ui.router allows us to inject $state
+                            return UI_ROUTER_VERSION_LEGACY;
+                        }
+                        return false;
+                    },
+
+                    getRouterLocationEventName: function() {
+                        if (privateMethods.detectUIRouter()) {
+                            return '$stateChangeStart';
+                        }
+                        return '$locationChangeStart';
+                    }
+                };
+
+                var publicMethods = {
+                    __PRIVATE__: privateMethods,
+
+                    /*
+                     * @param {Object} options:
+                     * - template {String} - id of ng-template, url for partial, plain string (if enabled)
+                     * - plain {Boolean} - enable plain string templates, default false
+                     * - scope {Object}
+                     * - controller {String}
+                     * - controllerAs {String}
+                     * - className {String} - dialog theme class
+                     * - appendClassName {String} - dialog theme class to be appended to defaults
+                     * - disableAnimation {Boolean} - set to true to disable animation
+                     * - showClose {Boolean} - show close button, default true
+                     * - closeByEscape {Boolean} - default true
+                     * - closeByDocument {Boolean} - default true
+                     * - preCloseCallback {String|Function} - user supplied function name/function called before closing dialog (if set)
+                     * - onOpenCallback {String|Function} - user supplied function name/function called after opening dialog (if set)
+                     * - bodyClassName {String} - class added to body at open dialog
+                     * @return {Object} dialog
+                     */
+                    open: function (opts) {
+                        var dialogID = null;
+                        opts = opts || {};
+                        if (openOnePerName && opts.name) {
+                            dialogID = opts.name.toLowerCase().replace(/\s/g, '-') + '-dialog';
+                            if (this.isOpen(dialogID)) {
+                                return;
+                            }
+                        }
+                        var options = angular.copy(defaults);
+                        var localID = ++globalID;
+                        dialogID = dialogID || 'ngdialog' + localID;
+                        openIdStack.push(dialogID);
+
+                        // Merge opts.data with predefined via setDefaults
+                        if (typeof options.data !== 'undefined') {
+                            if (typeof opts.data === 'undefined') {
+                                opts.data = {};
+                            }
+                            opts.data = angular.merge(angular.copy(options.data), opts.data);
+                        }
+
+                        angular.extend(options, opts);
+
+                        var defer;
+                        defers[dialogID] = defer = $q.defer();
+
+                        var scope;
+                        scopes[dialogID] = scope = angular.isObject(options.scope) ? options.scope.$new() : $rootScope.$new();
+
+                        var $dialog, $dialogParent, $dialogContent;
+
+                        var resolve = angular.extend({}, options.resolve);
+
+                        angular.forEach(resolve, function (value, key) {
+                            resolve[key] = angular.isString(value) ? $injector.get(value) : $injector.invoke(value, null, null, key);
+                        });
+
+                        $q.all({
+                            template: loadTemplate(options.template || options.templateUrl),
+                            locals: $q.all(resolve)
+                        }).then(function (setup) {
+                            var template = setup.template,
+                                locals = setup.locals;
+
+                            if (options.showClose) {
+                                template += '<button aria-label="Dismiss" class="ngdialog-close"></button>';
+                            }
+
+                            var hasOverlayClass = options.overlay ? '' : ' ngdialog-no-overlay';
+                            $dialog = $el('<div id="' + dialogID + '" class="ngdialog' + hasOverlayClass + '"></div>');
+                            $dialog.html((options.overlay ?
+                                '<div class="ngdialog-overlay"></div><div class="ngdialog-content" role="document">' + template + '</div>' :
+                                '<div class="ngdialog-content" role="document">' + template + '</div>'));
+
+                            $dialog.data('$ngDialogOptions', options);
+
+                            scope.ngDialogId = dialogID;
+
+                            if (options.data && angular.isString(options.data)) {
+                                var firstLetter = options.data.replace(/^\s*/, '')[0];
+                                scope.ngDialogData = (firstLetter === '{' || firstLetter === '[') ? angular.fromJson(options.data) : new String(options.data);
+                                scope.ngDialogData.ngDialogId = dialogID;
+                            } else if (options.data && angular.isObject(options.data)) {
+                                scope.ngDialogData = options.data;
+                                scope.ngDialogData.ngDialogId = dialogID;
+                            }
+
+                            if (options.className) {
+                                $dialog.addClass(options.className);
+                            }
+
+                            if (options.appendClassName) {
+                                $dialog.addClass(options.appendClassName);
+                            }
+
+                            if (options.width) {
+                                $dialogContent = $dialog[0].querySelector('.ngdialog-content');
+                                if (angular.isString(options.width)) {
+                                    $dialogContent.style.width = options.width;
+                                } else {
+                                    $dialogContent.style.width = options.width + 'px';
+                                }
+                            }
+
+                            if (options.height) {
+                                $dialogContent = $dialog[0].querySelector('.ngdialog-content');
+                                if (angular.isString(options.height)) {
+                                    $dialogContent.style.height = options.height;
+                                } else {
+                                    $dialogContent.style.height = options.height + 'px';
+                                }
+                            }
+
+                            if (options.disableAnimation) {
+                                $dialog.addClass(disabledAnimationClass);
+                            }
+
+                            if (options.appendTo && angular.isString(options.appendTo)) {
+                                $dialogParent = angular.element(document.querySelector(options.appendTo));
+                            } else {
+                                $dialogParent = $elements.body;
+                            }
+
+                            privateMethods.applyAriaAttributes($dialog, options);
+
+                            [
+                                { name: '$ngDialogPreCloseCallback', value: options.preCloseCallback },
+                                { name: '$ngDialogOnOpenCallback', value: options.onOpenCallback }
+                            ].forEach(function (option) {
+                                if (option.value) {
+                                    var callback;
+
+                                    if (angular.isFunction(option.value)) {
+                                        callback = option.value;
+                                    } else if (angular.isString(option.value)) {
+                                        if (scope) {
+                                            if (angular.isFunction(scope[option.value])) {
+                                                callback = scope[option.value];
+                                            } else if (scope.$parent && angular.isFunction(scope.$parent[option.value])) {
+                                                callback = scope.$parent[option.value];
+                                            } else if ($rootScope && angular.isFunction($rootScope[option.value])) {
+                                                callback = $rootScope[option.value];
+                                            }
+                                        }
+                                    }
+
+                                    if (callback) {
+                                        $dialog.data(option.name, callback);
+                                    }
+                                }
+                            });
+
+                            scope.closeThisDialog = function (value) {
+                                privateMethods.closeDialog($dialog, value);
+                            };
+
+                            if (options.controller && (angular.isString(options.controller) || angular.isArray(options.controller) || angular.isFunction(options.controller))) {
+
+                                var label;
+
+                                if (options.controllerAs && angular.isString(options.controllerAs)) {
+                                    label = options.controllerAs;
+                                }
+
+                                var controllerInstance = $controller(options.controller, angular.extend(
+                                    locals,
+                                    {
+                                        $scope: scope,
+                                        $element: $dialog
+                                    }),
+                                    true,
+                                    label
+                                );
+
+                                if(options.bindToController) {
+                                    angular.extend(controllerInstance.instance, {ngDialogId: scope.ngDialogId, ngDialogData: scope.ngDialogData, closeThisDialog: scope.closeThisDialog, confirm: scope.confirm});
+                                }
+
+                                if(typeof controllerInstance === 'function'){
+                                    $dialog.data('$ngDialogControllerController', controllerInstance());
+                                } else {
+                                    $dialog.data('$ngDialogControllerController', controllerInstance);
+                                }
+                            }
+
+                            $timeout(function () {
+                                var $activeDialogs = document.querySelectorAll('.ngdialog');
+                                privateMethods.deactivateAll($activeDialogs);
+
+                                $compile($dialog)(scope);
+                                var widthDiffs = $window.innerWidth - $elements.body.prop('clientWidth');
+                                $elements.html.addClass(options.bodyClassName);
+                                $elements.body.addClass(options.bodyClassName);
+                                activeBodyClasses.push(options.bodyClassName);
+                                var scrollBarWidth = widthDiffs - ($window.innerWidth - $elements.body.prop('clientWidth'));
+                                if (scrollBarWidth > 0) {
+                                    privateMethods.setBodyPadding(scrollBarWidth);
+                                }
+                                $dialogParent.append($dialog);
+
+                                privateMethods.activate($dialog);
+
+                                if (options.trapFocus) {
+                                    privateMethods.autoFocus($dialog);
+                                }
+
+                                if (options.name) {
+                                    $rootScope.$broadcast('ngDialog.opened', {dialog: $dialog, name: options.name});
+                                } else {
+                                    $rootScope.$broadcast('ngDialog.opened', $dialog);
+                                }
+                                var onOpenCallback = $dialog.data('$ngDialogOnOpenCallback');
+                                if (onOpenCallback && angular.isFunction(onOpenCallback)) {
+                                    onOpenCallback.call($dialog);
+                                }
+
+                            });
+
+                            if (!keydownIsBound) {
+                                $elements.body.bind('keydown', privateMethods.onDocumentKeydown);
+                                keydownIsBound = true;
+                            }
+
+                            if (options.closeByNavigation) {
+                                closeByNavigationDialogStack.push($dialog);
+                            }
+
+                            if (options.preserveFocus) {
+                                $dialog.data('$ngDialogPreviousFocus', document.activeElement);
+                            }
+
+                            closeByDocumentHandler = function (event) {
+                                var isOverlay = options.closeByDocument ? $el(event.target).hasClass('ngdialog-overlay') : false;
+                                var isCloseBtn = $el(event.target).hasClass('ngdialog-close');
+
+                                if (isOverlay || isCloseBtn) {
+                                    publicMethods.close($dialog.attr('id'), isCloseBtn ? '$closeButton' : '$document');
+                                }
+                            };
+
+                            if (typeof $window.Hammer !== 'undefined') {
+                                var hammerTime = scope.hammerTime = $window.Hammer($dialog[0]);
+                                hammerTime.on('tap', closeByDocumentHandler);
+                            } else {
+                                $dialog.bind('click', closeByDocumentHandler);
+                            }
+
+                            dialogsCount += 1;
+
+                            return publicMethods;
+                        });
+
+                        return {
+                            id: dialogID,
+                            closePromise: defer.promise,
+                            close: function (value) {
+                                privateMethods.closeDialog($dialog, value);
+                            }
+                        };
+
+                        function loadTemplateUrl (tmpl, config) {
+                            var config = config || {};
+                            config.headers = config.headers || {};
+
+                            angular.extend(config.headers, {'Accept': 'text/html'});
+
+                            $rootScope.$broadcast('ngDialog.templateLoading', tmpl);
+                            return $http.get(tmpl, config).then(function(res) {
+                                $rootScope.$broadcast('ngDialog.templateLoaded', tmpl);
+                                return res.data || '';
+                            });
+                        }
+
+                        function loadTemplate (tmpl) {
+                            if (!tmpl) {
+                                return 'Empty template';
+                            }
+
+                            if (angular.isString(tmpl) && options.plain) {
+                                return tmpl;
+                            }
+
+                            if (typeof options.cache === 'boolean' && !options.cache) {
+                                return loadTemplateUrl(tmpl, {cache: false});
+                            }
+
+                            return loadTemplateUrl(tmpl, {cache: $templateCache});
+                        }
+                    },
+
+                    /*
+                     * @param {Object} options:
+                     * - template {String} - id of ng-template, url for partial, plain string (if enabled)
+                     * - plain {Boolean} - enable plain string templates, default false
+                     * - name {String}
+                     * - scope {Object}
+                     * - controller {String}
+                     * - controllerAs {String}
+                     * - className {String} - dialog theme class
+                     * - appendClassName {String} - dialog theme class to be appended to defaults
+                     * - showClose {Boolean} - show close button, default true
+                     * - closeByEscape {Boolean} - default false
+                     * - closeByDocument {Boolean} - default false
+                     * - preCloseCallback {String|Function} - user supplied function name/function called before closing dialog (if set); not called on confirm
+                     * - bodyClassName {String} - class added to body at open dialog
+                     *
+                     * @return {Object} dialog
+                     */
+                    openConfirm: function (opts) {
+                        var defer = $q.defer();
+                        var options = angular.copy(defaults);
+
+                        opts = opts || {};
+
+                        // Merge opts.data with predefined via setDefaults
+                        if (typeof options.data !== 'undefined') {
+                            if (typeof opts.data === 'undefined') {
+                                opts.data = {};
+                            }
+                            opts.data = angular.merge(angular.copy(options.data), opts.data);
+                        }
+
+                        angular.extend(options, opts);
+
+                        options.scope = angular.isObject(options.scope) ? options.scope.$new() : $rootScope.$new();
+                        options.scope.confirm = function (value) {
+                            defer.resolve(value);
+                            var $dialog = $el(document.getElementById(openResult.id));
+                            privateMethods.performCloseDialog($dialog, value);
+                        };
+
+                        var openResult = publicMethods.open(options);
+                        if (openResult) {
+                            openResult.closePromise.then(function (data) {
+                                if (data) {
+                                    return defer.reject(data.value);
+                                }
+                                return defer.reject();
+                            });
+                            return defer.promise;
+                        }
+                    },
+
+                    isOpen: function(id) {
+                        var $dialog = $el(document.getElementById(id));
+                        return $dialog.length > 0;
+                    },
+
+                    /*
+                     * @param {String} id
+                     * @return {Object} dialog
+                     */
+                    close: function (id, value) {
+                        var $dialog = $el(document.getElementById(id));
+
+                        if ($dialog.length) {
+                            privateMethods.closeDialog($dialog, value);
+                        } else {
+                            if (id === '$escape') {
+                                var topDialogId = openIdStack[openIdStack.length - 1];
+                                $dialog = $el(document.getElementById(topDialogId));
+                                if ($dialog.data('$ngDialogOptions').closeByEscape) {
+                                    privateMethods.closeDialog($dialog, '$escape');
+                                }
+                            } else {
+                                publicMethods.closeAll(value);
+                            }
+                        }
+
+                        return publicMethods;
+                    },
+
+                    closeAll: function (value) {
+                        var $all = document.querySelectorAll('.ngdialog');
+
+                        // Reverse order to ensure focus restoration works as expected
+                        for (var i = $all.length - 1; i >= 0; i--) {
+                            var dialog = $all[i];
+                            privateMethods.closeDialog($el(dialog), value);
+                        }
+                    },
+
+                    getOpenDialogs: function() {
+                        return openIdStack;
+                    },
+
+                    getDefaults: function () {
+                        return defaults;
+                    }
+                };
+
+                angular.forEach(
+                    ['html', 'body'],
+                    function(elementName) {
+                        $elements[elementName] = $document.find(elementName);
+                        if (forceElementsReload[elementName]) {
+                            var eventName = privateMethods.getRouterLocationEventName();
+                            $rootScope.$on(eventName, function () {
+                                $elements[elementName] = $document.find(elementName);
+                            });
+                        }
+                    }
+                );
+
+                // Listen to navigation events to close dialog
+                var uiRouterVersion = privateMethods.detectUIRouter();
+                if (uiRouterVersion === UI_ROUTER_VERSION_ONE_PLUS) {
+                    var $transitions = $injector.get('$transitions');
+                    $transitions.onStart({}, function (trans) {
+                        while (closeByNavigationDialogStack.length > 0) {
+                            var toCloseDialog = closeByNavigationDialogStack.pop();
+                            if (privateMethods.closeDialog(toCloseDialog) === false) {
+                                return false;
+                            }
+                        }
+                    });
+                }
+                else {
+                    var eventName = uiRouterVersion === UI_ROUTER_VERSION_LEGACY ? '$stateChangeStart' : '$locationChangeStart';
+                    $rootScope.$on(eventName, function ($event) {
+                        while (closeByNavigationDialogStack.length > 0) {
+                            var toCloseDialog = closeByNavigationDialogStack.pop();
+                            if (privateMethods.closeDialog(toCloseDialog) === false) {
+                                $event.preventDefault();
+                            }
+                        }
+                    });
+                }
+
+                return publicMethods;
+            }];
+    });
+
+    m.directive('ngDialog', ['ngDialog', function (ngDialog) {
+        return {
+            restrict: 'A',
+            scope: {
+                ngDialogScope: '='
+            },
+            link: function (scope, elem, attrs) {
+                elem.on('click', function (e) {
+                    e.preventDefault();
+
+                    var ngDialogScope = angular.isDefined(scope.ngDialogScope) ? scope.ngDialogScope : 'noScope';
+                    angular.isDefined(attrs.ngDialogClosePrevious) && ngDialog.close(attrs.ngDialogClosePrevious);
+
+                    var defaults = ngDialog.getDefaults();
+
+                    ngDialog.open({
+                        template: attrs.ngDialog,
+                        className: attrs.ngDialogClass || defaults.className,
+                        appendClassName: attrs.ngDialogAppendClass,
+                        controller: attrs.ngDialogController,
+                        controllerAs: attrs.ngDialogControllerAs,
+                        bindToController: attrs.ngDialogBindToController,
+                        disableAnimation: attrs.ngDialogDisableAnimation,
+                        scope: ngDialogScope,
+                        data: attrs.ngDialogData,
+                        showClose: attrs.ngDialogShowClose === 'false' ? false : (attrs.ngDialogShowClose === 'true' ? true : defaults.showClose),
+                        closeByDocument: attrs.ngDialogCloseByDocument === 'false' ? false : (attrs.ngDialogCloseByDocument === 'true' ? true : defaults.closeByDocument),
+                        closeByEscape: attrs.ngDialogCloseByEscape === 'false' ? false : (attrs.ngDialogCloseByEscape === 'true' ? true : defaults.closeByEscape),
+                        overlay: attrs.ngDialogOverlay === 'false' ? false : (attrs.ngDialogOverlay === 'true' ? true : defaults.overlay),
+                        preCloseCallback: attrs.ngDialogPreCloseCallback || defaults.preCloseCallback,
+                        onOpenCallback: attrs.ngDialogOnOpenCallback || defaults.onOpenCallback,
+                        bodyClassName: attrs.ngDialogBodyClass || defaults.bodyClassName
+                    });
+                });
+            }
+        };
+    }]);
+
+    return m;
+}));
+
+
+/***/ }),
+/* 152 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 153 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
