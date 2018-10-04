@@ -8,7 +8,6 @@ import {ProfileController} from "./Controllers/ProfileController";
 ////////////////////////////////////////////////////////
 import {BidsController} from "./Controllers/BidsController";
 import {BidsFilterController} from "./Controllers/BidsFilterController";
-
 import {SaleController} from "./Controllers/SaleController"
 import {SaleAllController} from "./Controllers/SaleAllController"
 import {SaleFilterController} from "./Controllers/SaleFilterController";
@@ -17,7 +16,7 @@ import {SaleFormController} from "./Controllers/SaleFormController"
 import {InvestController} from "./Controllers/InvestController";
 import {EventController} from "./Controllers/EventController";
 import {EventsListController} from "./Controllers/EventsListController";
-
+import {MenuController} from "./Controllers/MenuController";
 
 
 let module = angular.module('Controllers', []);
@@ -41,6 +40,7 @@ module.controller('EventController', EventController);
 module.controller('EventsListController', EventsListController);
 module.controller('BidsController', BidsController);
 module.controller('BidsFilterController', BidsFilterController);
+module.controller('MenuController', MenuController);
 
 export default module.name;
 

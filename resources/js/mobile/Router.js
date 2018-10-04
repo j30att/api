@@ -70,6 +70,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('invest', {
             url: '/invest',
             template: require('./views/invest/index.template.html'),
+            menu: 'invest',
             controller: 'InvestController',
             controllerAs: 'InvstCtrl',
         })
@@ -95,6 +96,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('bids', {
             url: '/bids',
             template: require('./views/bids/index.template.html'),
+            menu: 'bids',
             controller: 'BidsController',
             controllerAs: 'BidsCtrl',
         })
@@ -119,6 +121,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                 }
             },
             template: require('./views/sale/index.template.html'),
+            menu: 'sales',
             controller: 'SaleController',
             controllerAs: 'SaleCtrl',
         })
@@ -191,6 +194,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('wallet', {
             url: '/wallet',
             template: require('./views/wallet/index.template.html'),
+            menu: 'wallet',
         })
 
     ;
