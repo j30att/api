@@ -1,14 +1,15 @@
 <div class="modal_wrapper" ng-if="$ctrl.show ">
+
     <div class="row col-md-12">
-        <div class="place_a_bit">
-            <div class="place_a_bit__title">
+        <div class="modal_place_a_bid">
+            <div class="modal_place_a_bid__title">
                 Place a bid
-                <div class="pab__close ngdialog-close" ng-click="$ctrl.close()">
+                <div class="modal_place_a_bid_close" ng-click="$ctrl.close()">
                     X
                 </div>
             </div>
-            <div class="binds-item-wr">
-                <div class="binds-item__profile_info">
+            <div class="modal_sale_item-wrapper">
+                <div class="sale_item__profile_info">
                     <div class="profile__photo">
                         <img src="/images/pl_5.png" alt="">
                     </div>
@@ -18,11 +19,10 @@
                         <div class="profile__country" ng-bind="$ctrl.sale.event.title">
                         </div>
                     </div>
-
                 </div>
 
-                <div class="binds-item__game_info">
-                    <div class="geme__text">
+                <div class="sale_item__sale_info">
+                    <div class="sale_info">
                         <div class="by_in">
                             Buy in £ <span ng-bind="$ctrl.sale.event.buy_in"></span>
                         </div>
@@ -30,27 +30,29 @@
                             £ <span ng-bind="$ctrl.sale.subevent.buy_in"></span> GTE
                         </div>
                     </div>
-                    <div class="game_atrs">
-                        <div class="game_atrs__markup">
+                    <div class="sale_atrs">
+                        <div class="sale_atrs__single">
                             <span>Markup</span><br>
                             <span ng-bind="$ctrl.sale.markup"></span>
                         </div>
-                        <div class="game_atrs__value">
+                        <div class="sale_atrs__single">
                             <span>Share</span><br>
                             <span ng-bind="$ctrl.sale.share"></span>
                         </div>
-                        <div class="game_atrs__date_start">
+                        <div class="sale_atrs__single">
                             <span>Value</span><br>
                             <span ng-bind="$ctrl.sale.value"></span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="highest_bids">
-                <div class="highest_bids__title">
+        </div>
+        <div class="modal_bids_block">
+            <div class="modal_type_bids">
+                <div class="modal_type_bids__title">
                     HIGHEST BIDS
                 </div>
-                <div class="block_1">
+                <div class="modal_type_bids__highest">
                     <input type="text" placeholder="1">
                     <input type="text" placeholder="1.53%">
                     <input type="text" placeholder="$1,182.22">
@@ -61,21 +63,21 @@
                     <input type="text" placeholder="$442">
                 </div>
             </div>
-            <div class="matched_bid">
-                <div class="matched_bid__title">
+            <div class="modal_type_bids">
+                <div class="modal_type_bids__title">
                     MATCHED BID
                 </div>
-                <div class="block_1">
+                <div class="modal_type_bids__matched">
                     <input type="text" placeholder="1">
                     <input type="text" placeholder="1.53%">
                     <input type="text" placeholder="$1,182.22">
                 </div>
 
             </div>
-            <div class="add_bid" style="">
-                Add new bid
-            </div>
-
         </div>
+        <div class="modal_add_bid" style="">
+            Add new bid
+        </div>
+
     </div>
 </div>
