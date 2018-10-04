@@ -10608,7 +10608,7 @@ modal_place_a_bid_close {
 }
 
 .event_card_list_last_child {
-  margin-bottom: 50px;
+  margin-bottom: 50px !important;
 }
 
 .event_card_list_img {

@@ -17,7 +17,7 @@ import {InvestController} from "./Controllers/InvestController";
 import {EventController} from "./Controllers/EventController";
 import {EventsListController} from "./Controllers/EventsListController";
 import {MenuController} from "./Controllers/MenuController";
-
+import {EventInfoController} from "./Controllers/EventInfoController";
 
 let module = angular.module('Controllers', []);
 
@@ -41,6 +41,8 @@ module.controller('EventsListController', EventsListController);
 module.controller('BidsController', BidsController);
 module.controller('BidsFilterController', BidsFilterController);
 module.controller('MenuController', MenuController);
+module.controller('EventInfoController', EventInfoController);
+
 
 export default module.name;
 

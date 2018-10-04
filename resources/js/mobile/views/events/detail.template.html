@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="binds event-list-main-wr">
+        <div class="all_events-wr">
+            <div class="event_card_list">
+                <div class="selected_event event_card_list_img">
+                    <img src="/images/select_event_bg.png" alt="">
+                    <div class="event_card_list_back"></div>
+                    <div class="event_card_list_open"></div>
+                </div>
+                <div class="event_card_list_info col-md-12">
+                    <div class="event_card_list_wr">
+                        <div class="event_card_title" ng-bind="EventInfoCtrl.event.title"></div>
+                        <div class="blocks_header_link event_card_details_link">
+                            <a class="" ui-sref="evet({id:item.id})">See info</a>
+                        </div>
+                        <div class="event_card_fund">£{%EventInfoCtrl.event.fund%} GTD</div>
+                        <div class="event_card_date" ng-bind="EventInfoCtrl.event.date"></div>
+                        <div class="blocks_header_title_name event_card_subevent_list_title">Event
+                            list
+                        </div>
+                    </div>
+                    <div class="event_card_list_subevents"
+                         ng-repeat="(key, subevent) in EventInfoCtrl.event.subevents" ng-class="{' event_card_list_last_child':EventInfoCtrl.event.subevents.length == key+1 }">
+                        <div class="event_card_title" ng-bind="subevent.title"></div>
+                        <div class="event_card_fund">£ {%item.fund%} GTD • £ {%subevent.fund%} GTD</div>
+                        <div class="event_card_date" ng-bind="EventInfoCtrl.event.date"></div>
+                        <div class="event_card__see_more"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <span ng-include="'tpl/view/footer.template.html'"></span>
+
+</div>
