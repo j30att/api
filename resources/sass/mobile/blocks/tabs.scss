@@ -26,4 +26,15 @@
     color: #000;
 }
 
+.tabs-wr{
+    width: 100%;
+    margin-top: 10px;
+}
+.tabs-wr:last-child{
+    margin-bottom: 100px;
+
+}
+.tabs-wr__title-name{
+    text-transform: capitalize;
+}
 

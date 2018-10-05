@@ -1,83 +1,114 @@
 <div class="modal_wrapper" ng-if="$ctrl.show ">
 
-    <div class="row col-md-12">
-        <div class="modal_place_a_bid">
-            <div class="modal_place_a_bid__title">
-                Place a bid
-                <div class="modal_place_a_bid_close" ng-click="$ctrl.close()">
-                    X
+    <div class="row col-md-12 modal_header_fixed">
+        <div class="header">
+            <div class="header_close" ng-click="$ctrl.close()"></div>
+            <div class="header_title">Place a bid</div>
+            <div class="header_filter_empty"></div>
+        </div>
+
+
+        <div>
+            <div class="card__profile_info">
+                <div class="sale_card__list_profile__photo card__profile_foto">
+                    <img src="/images/players.png" alt="">
+                </div>
+                <div class="profile_text">
+                    <div class="card__profile_name" ng-bind="$ctrl.sale.creator.name">
+                    </div>
+                    <div class="card__event" ng-bind="$ctrl.sale.event.title">
+                    </div>
                 </div>
             </div>
-            <div class="modal_sale_item-wrapper">
-                <div class="sale_item__profile_info">
-                    <div class="profile__photo">
-                        <img src="/images/pl_5.png" alt="">
-                    </div>
-                    <div class="profile_text">
-                        <div class="profile__name" ng-bind="$ctrl.sale.creator.name">
-                        </div>
-                        <div class="profile__country" ng-bind="$ctrl.sale.event.title">
-                        </div>
-                    </div>
-                </div>
 
-                <div class="sale_item__sale_info">
-                    <div class="sale_info">
-                        <div class="by_in">
-                            Buy in £ <span ng-bind="$ctrl.sale.event.buy_in"></span>
-                        </div>
-                        <div class="gte">
-                            £ <span ng-bind="$ctrl.sale.subevent.buy_in"></span> GTE
-                        </div>
-                    </div>
-                    <div class="sale_atrs">
-                        <div class="sale_atrs__single">
-                            <span>Markup</span><br>
-                            <span ng-bind="$ctrl.sale.markup"></span>
-                        </div>
-                        <div class="sale_atrs__single">
-                            <span>Share</span><br>
-                            <span ng-bind="$ctrl.sale.share"></span>
-                        </div>
-                        <div class="sale_atrs__single">
-                            <span>Value</span><br>
-                            <span ng-bind="$ctrl.sale.value"></span>
-                        </div>
-                    </div>
+        </div>
+
+
+        <div class="binds-item__game_info card__event_info">
+            <div class="geme__text card__event_info_item">
+                <div class="by_in card__event_info_attr">
+                    Buy in £ <span>1,000,000</span>
+                </div>
+                <div class="gte card__event_info_attr">
+                    £ <span>1,000,000</span> GTE
+                </div>
+            </div>
+
+
+            <div class="card__attribute card__attribute_row ng-scope">
+                <div class="sale_card_list_atr_item">
+                    <span>Markup</span><br>
+                    <span class="card__attribute_value ng-binding">1.2</span>
+                </div>
+                <div class="sale_card_list_atr_item">
+                    <span>Value</span><br>
+                    <span class="card__attribute_value">£</span>
+                    <span class="card__attribute_value ng-binding">300</span>
+                </div>
+                <div class="sale_card_list_atr_item">
+                    <span>Date of Start</span><br>
+                    <span class="card__attribute_value ng-binding">31  October</span>
                 </div>
             </div>
         </div>
+    </div>
+
+
+
+    <div class="modal_bids_block_wr col-md-12">
         <div class="modal_bids_block">
             <div class="modal_type_bids">
-                <div class="modal_type_bids__title">
-                    HIGHEST BIDS
-                </div>
-                <div class="modal_type_bids__highest">
-                    <input type="text" placeholder="1">
-                    <input type="text" placeholder="1.53%">
-                    <input type="text" placeholder="$1,182.22">
-                </div>
-                <div class="modal_type_bids__highest">
-                    <input type="text" placeholder="1.09" id="123">
-                    <input type="text" placeholder="0.53%">
-                    <input type="text" placeholder="$442">
-                </div>
+            <div class="blocks_header_title_name">
+                HIGHEST BIDS
             </div>
-            <div class="modal_type_bids">
-                <div class="modal_type_bids__title">
-                    MATCHED BID
-                </div>
-                <div class="modal_type_bids__matched">
-                    <input type="text" placeholder="1">
-                    <input type="text" placeholder="1.53%">
-                    <input type="text" placeholder="$1,182.22">
-                </div>
+            <div class="modal_type_bids_type">
+                <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
+                <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
+                <div class="modal_type_bids__item modal_bids_item_color_highest">$1,182.22</div>
+            </div>
+            <div class="modal_type_bids_type">
+                <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
+                <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
+                <div class="modal_type_bids__item modal_bids_item_color_highest">$1,182.22</div>
+            </div>
+            <div class="modal_type_bids_type">
+                <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
+                <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
+                <div class="modal_type_bids__item modal_bids_item_color_highest">$1,182.22</div>
+            </div>
 
+            <div class="blocks_header_title_name">
+                MATCHED BID
             </div>
+            <div class="modal_type_bids_type">
+                <div class="modal_type_bids__item modal_bids_item_color_matched">1</div>
+                <div class="modal_type_bids__item modal_bids_item_color_matched">1.53%</div>
+                <div class="modal_type_bids__item modal_bids_item_color_matched">$1,182.22</div>
+            </div>
+            <div class="modal_type_bids_type">
+                <div class="modal_type_bids__item modal_bids_item_color_matched">1</div>
+                <div class="modal_type_bids__item modal_bids_item_color_matched">1.53%</div>
+                <div class="modal_type_bids__item modal_bids_item_color_matched">$1,182.22</div>
+            </div>
+            <div class="modal_type_bids_type">
+                <div class="modal_type_bids__item modal_bids_item_color_matched">1</div>
+                <div class="modal_type_bids__item modal_bids_item_color_matched">1.53%</div>
+                <div class="modal_type_bids__item modal_bids_item_color_matched">$1,182.22</div>
+            </div>
+
+
+
+
+
         </div>
+
+
         <div class="modal_add_bid" style="">
             Add new bid
         </div>
-
     </div>
+    </div>
+
+
 </div>
+

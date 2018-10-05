@@ -10474,31 +10474,126 @@ a.text-dark:focus {
 }
 
 .modal_wrapper {
+  overflow: scroll;
+}
+
+.modal_wrapper .card__profile_info {
+  margin: 0 0 10px 0;
+}
+
+.modal_wrapper .binds-item__game_info {
+  padding-left: 0;
+}
+
+.modal_wrapper .binds-item__game_info {
+  margin-top: 0;
+}
+
+.modal_wrapper .row {
+  margin: auto;
+}
+
+.modal_wrapper .blocks_header_title_name {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.modal_header_fixed {
+  position: fixed;
+  z-index: 100000;
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.08);
+}
+
+.modal_bids_block {
+  margin-top: 190px;
+}
+
+.modal_wrapper {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 10000;
   background-color: #fff;
   width: 100vw;
   height: 100vh;
 }
 
-.modal_wrapper > div {
-  margin: auto;
+.modal_bids_block_wr {
+  width: 100%;
+  height: calc(100vh - 190px);
+  position: relative;
 }
 
-.modal_place_a_bid {
-  margin-top: 12pt;
+.modal_type_bids_type {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 4px;
 }
 
-modal_place_a_bid_close {
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  font-size: 22px;
-  top: 12pt;
-  font-weight: 400;
+.modal_type_bids__item {
+  width: 24.75%;
+  height: 40px;
+  line-height: 40px;
+  text-align: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 15px;
+  color: #000;
+  margin-bottom: 8px;
 }
+
+.modal_type_bids__item:first-child {
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.modal_type_bids__item:last-child {
+  width: 49.5%;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/*colors*/
+
+.modal_bids_item_color_highest {
+  background-color: #edf8fd;
+}
+
+.modal_bids_item_color_matched {
+  background-color: #e7f7e4;
+}
+
+.modal_bids_item_color_unmatched {
+  background-color: #fff4ec;
+}
+
+.modal_bids_item_color_settled {
+  background-color: #edf8fd;
+}
+
+.modal_bids_item_color_canceled {
+  background-color: #edebf6;
+}
+
+/*colors end*/
 
 .card__bids {
   width: 250px;
@@ -10968,6 +11063,19 @@ modal_place_a_bid_close {
   color: #000;
 }
 
+.tabs-wr {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.tabs-wr:last-child {
+  margin-bottom: 100px;
+}
+
+.tabs-wr__title-name {
+  text-transform: capitalize;
+}
+
 .blocks_header_title {
   width: 100%;
   display: -webkit-box;
@@ -11150,6 +11258,21 @@ modal_place_a_bid_close {
   width: 22px;
 }
 
+.header_close {
+  width: 22px;
+  height: 22px;
+  background: url("/images/header/close.png") no-repeat center;
+  background-size: 80%;
+}
+
+.header_title {
+  height: 20px;
+  color: #000;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
 .creact_sale {
   width: 100%;
   height: 48px;
@@ -11159,6 +11282,20 @@ modal_place_a_bid_close {
   background-color: #007fed;
   border-radius: 10px;
   margin-bottom: 20px;
+}
+
+.modal_add_bid {
+  width: 90%;
+  height: 48px;
+  line-height: 48px;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 16px;
+  left: 5%;
+  z-index: 500;
+  background-color: #ffffff;
 }
 
 body {
@@ -11194,20 +11331,6 @@ button,
 button:active,
 button:focus {
   outline: none;
-}
-
-.modal_wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  /*z-index: 10000;*/
-  background-color: #fff;
-  width: 100vw;
-  height: 100vh;
-}
-
-.modal_wrapper > div {
-  margin: auto;
 }
 
 .navbar-laravel {
@@ -11464,18 +11587,6 @@ main button {
   background: url("/images/b@3x_forlogo.png") no-repeat left;
   background-size: 25px;
   margin-bottom: 10pt;
-}
-
-.tabs-wr {
-  width: 100%;
-}
-
-.tabs-wr:last-child {
-  margin-bottom: 100px;
-}
-
-.tabs-wr__title-name {
-  text-transform: capitalize;
 }
 
 .binds-item {
@@ -12112,16 +12223,6 @@ __game_info {
 .highest_bids__title,
 .matched_bid__title {
   margin-bottom: 8pt;
-}
-
-.add_bid {
-  width: 100%;
-  height: 48pt;
-  line-height: 48pt;
-  border: 1px solid #e0e0e0;
-  border-radius: 20px;
-  text-align: center;
-  margin-top: 50px;
 }
 
 /*sale*/

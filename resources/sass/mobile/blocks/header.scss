@@ -35,3 +35,17 @@
 .header_filter_empty{
     width: 22px;
 }
+
+.header_close{
+    width: 22px;
+    height: 22px;
+    background: url("/images/header/close.png") no-repeat center;
+    background-size: 80%;
+}
+.header_title{
+    height: 20px;
+    color: #000;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
