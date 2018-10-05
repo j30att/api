@@ -11447,6 +11447,15 @@ a.text-dark:focus {
   margin-bottom: 16px;
 }
 
+.button_login {
+  border-radius: 10pt;
+  border: none;
+  width: 90%;
+  position: fixed;
+  bottom: 15px;
+  left: 5%;
+}
+
 .form_event {
   margin-bottom: 16px;
   color: #000000;
@@ -11464,10 +11473,17 @@ md-select.form-Select-theme {
   border-radius: 10px;
   font-size: 16px;
   color: #000;
-  padding-left: 13 px;
+  padding-left: 13px;
   padding-right: 15px;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
+}
+
+md-input-container.login_input {
+  font-size: 16px;
+  margin-top: 60px;
+  height: 30px;
+  line-height: 30px;
 }
 
 body {
