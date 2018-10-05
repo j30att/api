@@ -11032,6 +11032,108 @@ a.text-dark:focus {
   color: #949494;
 }
 
+/*sales create*/
+
+.sale_form_wr {
+  overflow: hidden;
+}
+
+.sale_form {
+  position: relative;
+}
+
+.sale_form_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 13px;
+  color: #000000;
+}
+
+.sale_form_content .blocks_header_title_name {
+  margin: 12px 0;
+  text-transform: capitalize;
+}
+
+.sale_form_content .sale_form_title {
+  text-transform: uppercase;
+}
+
+.sale_form_content select {
+  margin-bottom: 16px;
+  color: #000000;
+  height: 48px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.sale_form_content input {
+  border: none;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 16px;
+  color: #000000;
+  outline: none;
+}
+
+.sale_form_content .card__attribute {
+  padding: 0;
+  position: relative;
+}
+
+.sale_form_content .card__attribute .card__attribute_value {
+  font-size: 16px;
+}
+
+.sale_form_content .card__attribute::after {
+  content: '';
+  display: block;
+  width: 120%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.08);
+  position: absolute;
+  bottom: -16px;
+  left: -15px;
+}
+
+.sale_form_content .sale_card_list_atr_item input {
+  width: 80%;
+  padding-bottom: 10px;
+  border-bottom-color: #949494;
+}
+
+.offer {
+  margin-top: 16pt;
+}
+
+.offer__title {
+  text-transform: uppercase;
+  margin-bottom: 12pt;
+}
+
+.offer-wr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.offer-wr > div {
+  width: 30%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 10px;
+}
+
+.offer-wr > div input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #949494;
+}
+
 .tabs_list {
   width: 100%;
   display: -webkit-box;
@@ -11298,6 +11400,13 @@ a.text-dark:focus {
   background-color: #ffffff;
 }
 
+.creact_sale_btn {
+  width: 90%;
+  position: fixed;
+  bottom: 15px;
+  left: 5%;
+}
+
 body {
   background-color: #fff;
   font-family: 'Open Sans', sans-serif;
@@ -11323,6 +11432,10 @@ a:hover {
 .fullscreen {
   width: 100%;
   overflow: hidden;
+}
+
+::-webkit-input-placeholder {
+  color: #000000;
 }
 
 /*repeat elements*/
@@ -12239,73 +12352,6 @@ __game_info {
 
 .goback_sale {
   top: calc(50% - 11px);
-}
-
-.events_and_by__title {
-  text-transform: uppercase;
-  font-size: 13pt;
-  color: #949494;
-  margin-bottom: 12pt;
-}
-
-.events_and_by {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.events_and_by select {
-  margin-bottom: 16pt;
-  color: #949494;
-  height: 48px;
-  border-radius: 10pt;
-  outline: none;
-}
-
-.events_and_by {
-  font-size: 13pt;
-  color: #949494;
-}
-
-.events_and_by > input {
-  border: none;
-  border-bottom: 1px solid #949494;
-  padding-bottom: 16px;
-  color: #949494;
-  outline: none;
-}
-
-.offer {
-  margin-top: 16pt;
-}
-
-.offer__title {
-  text-transform: uppercase;
-  margin-bottom: 12pt;
-}
-
-.offer-wr {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.offer-wr > div {
-  width: 30%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-right: 10px;
-}
-
-.offer-wr > div input {
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid #949494;
 }
 
 .active_sale-wr {

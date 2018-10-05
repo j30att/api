@@ -27,10 +27,89 @@
 .sale_card_list_atr_item span{
     color: $warmGrey;
 }
-//.sale_card_list_atr div span
-//{
-//    color: rgb(148, 148, 148);
-//}
-//.game_atrs__date_start{
-//    width: 45%;
-//}
+
+/*sales create*/
+.sale_form_wr{
+    overflow: hidden;
+}
+.sale_form{position: relative}
+.sale_form_content{
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    color: #000000;
+    .blocks_header_title_name{
+        margin: 12px 0;
+        text-transform: capitalize;
+    }
+    .sale_form_title{
+        text-transform: uppercase;
+    }
+    select{
+        margin-bottom: 16px;
+        color: #000000;
+        height: 48px;
+        border-radius: 10px;
+        outline: none;
+    }
+    input{
+        border: none;
+        border-bottom: 1px solid #000000;
+        padding-bottom: 16px;
+        color: #000000;
+        outline: none;
+
+    }
+    .card__attribute{
+        padding: 0;
+        position: relative;
+        .card__attribute_value{
+            font-size: 16px;
+        }
+    }
+    .card__attribute::after{
+        content: '';
+        display: block;
+        width: 120%;
+        height: 1px;
+        background-color: rgba(0,0,0, 0.08);
+        position: absolute;
+        bottom: -16px;
+        left: -15px;
+    }
+    .sale_card_list_atr_item input{
+        width: 80%;
+        padding-bottom: 10px;
+        border-bottom-color: $warmGrey;
+    }
+}
+
+
+
+
+/////////
+
+.offer{
+    margin-top: 16pt;
+}
+.offer__title{
+    text-transform: uppercase;
+    margin-bottom: 12pt;
+}
+
+.offer-wr{
+    display: flex;
+}
+.offer-wr > div{
+    width: 30%;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+.offer-wr > div input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #949494;
+}
+
+
+

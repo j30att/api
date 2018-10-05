@@ -44,7 +44,9 @@ a:hover{
     width: 100%;
     overflow: hidden;
 }
-
+::-webkit-input-placeholder{
+    color: #000000;
+}
 
 
 ///////////////////////////////////////////////////////
@@ -915,57 +917,9 @@ __game_info{
 .goback_sale{
     top: calc(50% - 11px);
 }
-.events_and_by__title{
-    text-transform: uppercase;
-    font-size: 13pt;
-    color: #949494;
-    margin-bottom: 12pt;
-}
-.events_and_by{
-    display: flex;
-    flex-direction: column;
-}
-.events_and_by select{
-    margin-bottom: 16pt;
-    color: #949494;
-    height: 48px;
-    border-radius: 10pt;
-    outline: none;
-}
-.events_and_by{
-    font-size: 13pt;
-    color: #949494;
-}
-.events_and_by > input{
-    border: none;
-    border-bottom: 1px solid #949494;
-    padding-bottom: 16px;
-    color: #949494;
-    outline: none;
 
-}
 
-.offer{
-    margin-top: 16pt;
-}
-.offer__title{
-    text-transform: uppercase;
-    margin-bottom: 12pt;
-}
 
-.offer-wr{
-    display: flex;
-}
-.offer-wr > div{
-    width: 30%;
-    justify-content: space-between;
-    margin-right: 10px;
-}
-.offer-wr > div input{
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #949494;
-}
 
 
 
