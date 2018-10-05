@@ -32,18 +32,24 @@
 .sale_form_wr{
     overflow: hidden;
 }
-.sale_form{position: relative}
+.sale_form{
+    position: relative;
+    .page_title{
+        margin-bottom: 12px;
+    }
+}
 .sale_form_content{
     display: flex;
     flex-direction: column;
     font-size: 13px;
     color: #000000;
     .blocks_header_title_name{
-        margin: 12px 0;
+        margin: 0 0 12px 0;
         text-transform: capitalize;
     }
     .sale_form_title{
         text-transform: uppercase;
+
     }
     select{
         margin-bottom: 16px;
@@ -63,20 +69,21 @@
     .card__attribute{
         padding: 0;
         position: relative;
+        margin-bottom: 25px;
         .card__attribute_value{
             font-size: 16px;
         }
     }
-    .card__attribute::after{
-        content: '';
-        display: block;
-        width: 120%;
-        height: 1px;
-        background-color: rgba(0,0,0, 0.08);
-        position: absolute;
-        bottom: -16px;
-        left: -15px;
-    }
+    //.card__attribute::after:first-child{
+    //    content: '';
+    //    display: block;
+    //    width: 120%;
+    //    height: 1px;
+    //    background-color: rgba(0,0,0, 0.08);
+    //    position: absolute;
+    //    bottom: -16px;
+    //    left: -15px;
+    //}
     .sale_card_list_atr_item input{
         width: 80%;
         padding-bottom: 10px;
