@@ -5,12 +5,11 @@ import routes from './Router';
 import middlewares from './Middlewares';
 import Components from './Components';
 import {permission, uiPermission} from 'angular-permission';
-import hack from './Hack';
+import templateCache from './TemplateCache';
 
 let ngRouter = require('angular-ui-router').default;
 
 let app = angular.module('poker', [
-
     ngRouter,
     Controllers,
     Components,
@@ -25,4 +24,4 @@ app.config(['$interpolateProvider', ($interpolateProvider) => {
 
 app.config(routes);
 app.run(middlewares);
-app.run(hack);
+app.run(templateCache);

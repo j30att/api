@@ -2,7 +2,7 @@ import {
     BID_RESPONSE_CANCELED, BID_RESPONSE_MATCHED, BID_RESPONaSE_SETTLED, BID_RESPONSE_UNMATCHED,
 
 } from "../Constants"
-import {BIDS_CANCELED} from "../Constants"
+import {BID_MATCHED,BID_UNMATCHED,BID_SETTLED,BIDS_CANCELED} from "../Constants"
 
 import {BIDS_INDEX} from "../Constants"
 

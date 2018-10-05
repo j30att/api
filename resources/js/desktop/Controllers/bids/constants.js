@@ -1,0 +1,1 @@
+export const BIDS_TYPES = ['matched','unmatched','settled','canceled'];
