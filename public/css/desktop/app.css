@@ -166,7 +166,6 @@
 }
 
 .sale_container {
-  width: 100%;
   margin-bottom: 40px;
 }
 
@@ -615,6 +614,8 @@ a {
   margin-left: 230px;
   padding: 32px 0 32px 7%;
   width: calc(100% - 230px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /*bids content*/
