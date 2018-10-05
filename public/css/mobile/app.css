@@ -11426,6 +11426,7 @@ a.text-dark:focus {
   border-radius: 10px;
   outline: none;
   width: 300px;
+  margin: 0px;
 }
 
 md-select.form-Select-theme {
