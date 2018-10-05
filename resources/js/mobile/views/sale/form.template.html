@@ -55,7 +55,7 @@
                 </div>
                 <div class="sale_card_list_atr_item">
                     <span>Markup</span><br>
-                    <input ng-model="SaleFrmCtrl.sale.share" type="number" placeholder="1.0">
+                    <input ng-model="SaleFrmCtrl.sale.markup" type="number" placeholder="1.0">
 
                 </div>
                 <div class="sale_card_list_atr_item">
@@ -66,6 +66,6 @@
             </div>
 
         </div>
-        <div class="button creact_sale_btn">Create a Sale</div>
+        <div class="button creact_sale_btn" ng-click="SaleFrmCtrl.createSale()">Create a Sale</div>
     </div>
 </div>

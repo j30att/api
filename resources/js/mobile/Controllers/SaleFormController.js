@@ -77,9 +77,10 @@ class SaleFormController {
 
     createSale(){
         let data = this.sale;
+        console.log(data);
         this.$http.post(SALE_CREATE, data)
             .then(response => {
-                if (response.status === 200) window.location.href = '/sales';
+                //if (response.status === 200) window.location.href = '/sales';
                 console.log(response);
             });
         console.log(this.sale, 'sale');

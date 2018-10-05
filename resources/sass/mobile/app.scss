@@ -29,6 +29,12 @@
 @import "blocks/button";
 
 
+body:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+
 .form_event{
     margin-bottom: 16px;
     color: #000000;
@@ -608,6 +614,7 @@ a.contine_without{
 
 /*data-privacy*/
 .data-privacy{
+    margin-top: 10px;
     width: 100%;
     font-size: 15pt;
     text-align: center;
