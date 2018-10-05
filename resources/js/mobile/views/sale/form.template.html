@@ -11,13 +11,23 @@
                 Event and buy-in
             </div>
 
+
+
+            <div layout="row" layout-align="start_stretch">
+                <md-select class="md-no-underline form-Select-theme"
+                           ng-model="SaleFrmCtrl.sale.event_id" placeholder="Choose an event">
+                    <md-option value="{%item.id%}" ng-repeat="item in SaleFrmCtrl.events">{%item.title%}</md-option>
+                </md-select>
+            </div>
+
+
             <label class="blocks_header_title_name">Event</label>
             <select ng-if="SaleFrmCtrl._opts.load === false">
                 <option ng-bind="'Choose an event'"></option>
             </select>
-            <select  ng-model="SaleFrmCtrl.sale.event_id"
-                     ng-if="SaleFrmCtrl._opts.load === true"
-                     ng-change="SaleFrmCtrl.getSubevents()">
+            <select ng-model="SaleFrmCtrl.sale.event_id"
+                    ng-if="SaleFrmCtrl._opts.load === true"
+                    ng-change="SaleFrmCtrl.getSubevents()">
                 <option ng-repeat="item in SaleFrmCtrl.events"
                         ng-bind="item.title"
                         ng-value="{%item.id%}"></option>
