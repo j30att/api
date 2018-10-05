@@ -11042,6 +11042,10 @@ a.text-dark:focus {
   position: relative;
 }
 
+.sale_form .page_title {
+  margin-bottom: 12px;
+}
+
 .sale_form_content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11055,7 +11059,7 @@ a.text-dark:focus {
 }
 
 .sale_form_content .blocks_header_title_name {
-  margin: 12px 0;
+  margin: 0 0 12px 0;
   text-transform: capitalize;
 }
 
@@ -11082,21 +11086,11 @@ a.text-dark:focus {
 .sale_form_content .card__attribute {
   padding: 0;
   position: relative;
+  margin-bottom: 25px;
 }
 
 .sale_form_content .card__attribute .card__attribute_value {
   font-size: 16px;
-}
-
-.sale_form_content .card__attribute::after {
-  content: '';
-  display: block;
-  width: 120%;
-  height: 1px;
-  background-color: rgba(0, 0, 0, 0.08);
-  position: absolute;
-  bottom: -16px;
-  left: -15px;
 }
 
 .sale_form_content .sale_card_list_atr_item input {
