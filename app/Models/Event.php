@@ -41,4 +41,11 @@ class Event extends Model
 
         return $start_date . ' - ' . $end_date . ' ' . $end_month . ' ' . $end_eyar;
     }
+
+    public function getFormattedStartDateAttribute(){
+        $start_date = Carbon::parse($this->date_start);
+        $start_day =$start_date->day;
+        $start_month =$start_date->englishMonth;
+        return $start_day . ' ' . $start_month;
+    }
 }

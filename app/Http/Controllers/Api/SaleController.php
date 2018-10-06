@@ -79,12 +79,11 @@ class SaleController extends Controller
     public function closingSales(){
         $sale = Sale::query()
             ->with('creator')
-            ->with(['subevent'=>function($query){
-                $query->orderBy('date_end');
-            }])
+            ->with('subevent')
             ->with('event')
-            ->orderBy('markup')
-            ->get();
+            ->get()->sortBy('event.date_start');
+
+
         return SaleResource::collection($sale);
     }
 

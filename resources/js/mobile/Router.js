@@ -109,6 +109,16 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             menu: 'bids',
             controller: 'BidsController',
             controllerAs: 'BidsCtrl',
+            data: {
+                permissions: {
+                    except: 'Guest',
+                    redirectTo: () => {
+                        return {
+                            state: 'index'
+                        }
+                    }
+                }
+            },
         })
 
             .state('bids-filter', {
@@ -116,95 +126,99 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                 template: require('./views/bids/filter.template.html'),
                 controller: 'BidsFilterController',
                 controllerAs: 'BidsCtrl',
+                data: {
+                    permissions: {
+                        except: 'Guest',
+                        redirectTo: () => {
+                            return {
+                                state: 'index'
+                            }
+                        }
+                    }
+                },
             })
 
         .state('sale',{
             url: '/sales',
+            template: require('./views/sale/index.template.html'),
+            menu: 'sales',
+            controller: 'SaleController',
+            controllerAs: 'SaleCtrl',
             data: {
                 permissions: {
                     except: 'Guest',
                     redirectTo: () => {
                         return {
-                            state: 'invest'
+                            state: 'index'
                         }
                     }
                 }
             },
-            template: require('./views/sale/index.template.html'),
-            menu: 'sales',
-            controller: 'SaleController',
-            controllerAs: 'SaleCtrl',
         })
             .state('sale-create', {
                 url: '/sale/create',
                 template: require('./views/sale/form.template.html'),
+                controller: 'SaleFormController',
+                controllerAs: 'SaleFrmCtrl',
                 data: {
                     permissions: {
                         except: 'Guest',
                         redirectTo: () => {
                             return {
-                                state: 'invest'
+                                state: 'index'
                             }
                         }
                     }
                 },
-                controller: 'SaleFormController',
-                controllerAs: 'SaleFrmCtrl',
             })
             .state('sale-manage',{
                 url:'/sale/manage/{id}',
                 template: require('./views/sale/manage.template.html'),
+                controller: 'SaleManageController',
+                controllerAs: 'SaleMngCtrl',
                 data: {
                     permissions: {
                         except: 'Guest',
                         redirectTo: () => {
                             return {
-                                state: 'invest'
+                                state: 'index'
                             }
                         }
                     }
                 },
-                controller: 'SaleManageController',
-                controllerAs: 'SaleMngCtrl',
 
             })
             .state('sale-filter', {
                 url: '/sales/{filter}',
                 template: require('./views/sale/filter.template.html'),
-                data: {
-                    permissions: {
-                        except: 'Guest',
-                        redirectTo: () => {
-                            return {
-                                state: 'invest'
-                            }
-                        }
-                    }
-                },
                 controller: 'SaleFilterController',
                 controllerAs: 'SaleCtrl',
-            })
-            .state('sale-edit',{
-                url:'/sale/{id}',
-                template: require('./views/sale/form.template.html'),
                 data: {
                     permissions: {
                         except: 'Guest',
                         redirectTo: () => {
                             return {
-                                state: 'invest'
+                                state: 'index'
                             }
                         }
                     }
                 },
-                controller: 'SaleFormController',
-                controllerAs: 'SaleFrmCtrl',
             })
 
         .state('wallet', {
             url: '/wallet',
             template: require('./views/wallet/index.template.html'),
             menu: 'wallet',
+            data: {
+                permissions: {
+                    except: 'Guest',
+                    redirectTo: () => {
+                        return {
+                            state: 'index'
+                        }
+                    }
+                }
+            },
         })
         .state('profile', {
             url: '/profile',

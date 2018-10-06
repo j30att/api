@@ -14,7 +14,7 @@
         <div class="card__subevent" ng-bind="item.subevent.title">
         </div>
         <div class="card__sale_event_byin">Buy in $<span ng-bind="item.event.buy_in"></span> + $<span
-            ng-bind="item.subevent.buy_in"></span></div>
+                ng-bind="item.subevent.buy_in"></span></div>
     </div>
     <div class="card__attribute_sale_card">
         <div class="sale_card_list_atr_item">
@@ -95,7 +95,6 @@
         </div>
         <div class="card__subevent" ng-bind="item.subevent.title" ng-if="$ctrl.subevent">
         </div>
-
     </div>
 
     <div class="card__attribute">
@@ -110,7 +109,7 @@
         </div>
         <div class="sale_card_list_atr_item">
             <span>Date of Start</span><br>
-            <span class="card__attribute_value" ng-bind="item.subevent.date"></span>
+            <span class="card__attribute_value" ng-bind="item.event.date_start"></span>
         </div>
     </div>
 </div>
