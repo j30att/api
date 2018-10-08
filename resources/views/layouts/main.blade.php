@@ -13,8 +13,8 @@
         window.__user = {!! json_encode(\Illuminate\Support\Facades\Auth::user()) !!};
     </script>
 </head>
-<body>
-<div class="flex-center position-ref full-height container" ng-controller="MainController as MainCtrl" ng-class="{'no_scroll': MainCtrl.$state.modalOpened == true}">
+<body ng-controller="MainController as MainCtrl" ng-class="{'no_scroll': MainCtrl.$state.modalOpened == true}">
+<div class="flex-center position-ref full-height container">
     <ui-view></ui-view>
 </div>
 </body>
