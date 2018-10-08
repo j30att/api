@@ -47728,9 +47728,10 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Sales = function () {
-    function Sales() {
+    function Sales($state) {
         _classCallCheck(this, Sales);
 
+        this.$state = $state;
         this.show = false;
         this.item = null;
     }
@@ -47742,12 +47743,15 @@ var Sales = function () {
         key: 'click',
         value: function click(key) {
             this.show = true;
+            this.$state.modalOpened = this.show;
             this.item = this.sales[key];
         }
     }]);
 
     return Sales;
 }();
+
+Sales.$inject = ['$state'];
 
 var SalesComponent = {
     bindings: {
@@ -47831,7 +47835,6 @@ var SaleModal = function () {
             stateCreate: false
         };
 
-        if (this.show == true) this.$state.modalOpened = true;
         this.bid = {
             status: 2,
             markup: '',
