@@ -1,12 +1,15 @@
 import {BIDS_MY_STORE} from "../../Constants";
 
 class SaleModal {
-    constructor($window, $http) {
+    constructor($window, $http, $state) {
         this.$http = $http;
+        this.$state = $state;
+        $state.modalOpened = false;
         this.user = window.__user;
         this._opts = {
             stateCreate: false
         };
+        if(this.show == true) this.$state.modalOpened = true;
         this.bid = {
                         status: 2,
             markup: '',
@@ -20,11 +23,12 @@ class SaleModal {
     }
 
     setState(action = null){
-        if(action == 'store') this.storeMyBid();
         this._opts.stateCreate = !this._opts.stateCreate;
+        if(action == 'store') this.storeMyBid();
     }
     close(){
         this.show = !this.show;
+        this.$state.modalOpened = !this.$state.modalOpened
     }
 
     storeMyBid(){
@@ -38,7 +42,7 @@ class SaleModal {
     }
 }
 
-SaleModal.$inject = ['$window', '$http'];
+SaleModal.$inject = ['$window', '$http', '$state'];
 
 export const SaleModalComponent = {
     bindings: {
