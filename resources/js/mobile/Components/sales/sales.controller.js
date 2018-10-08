@@ -15,7 +15,7 @@ class Sales {
 
         if(type == 'manage')  this.showManage = true;
         if(type == 'place')   this.showPlace = true;
-        this.$state.modalOpened = this.show;
+        this.$state.modalOpened = true;
         this.item = this.sales[key];
     }
 }
