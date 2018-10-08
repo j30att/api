@@ -10540,7 +10540,7 @@ a.text-dark:focus {
 
 .modal_bids_block_wr {
   width: 100%;
-  height: calc(100vh - 75px);
+  height: calc(100vh - 175px);
   position: relative;
   overflow: scroll;
 }
@@ -11623,6 +11623,16 @@ a.text-dark:focus {
 
 .bid {
   width: 100%;
+}
+
+.bid_new {
+  height: 77px;
+  position: fixed;
+  width: 100%;
+  padding-left: 5%;
+  bottom: 90px;
+  z-index: 10000;
+  background-color: #ffffff;
 }
 
 .bid_attribute_input {
