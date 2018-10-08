@@ -59,7 +59,7 @@ class BidController extends Controller
     {
         $data = $request->all();
         $bid = Bid::create($data);
-        return json_encode(['status='>1, 'bid'=>$bid]);
+        return json_encode([ 'status'=> 1, 'bid'=>$bid]);
     }
 
 

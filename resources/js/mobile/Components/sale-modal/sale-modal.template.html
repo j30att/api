@@ -60,70 +60,23 @@
                 <div class="blocks_header_title_name">
                     HIGHEST BIDS
                 </div>
-                <div class="modal_type_bids_type">
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">$1,182.22</div>
-                </div>
-                <div class="modal_type_bids_type">
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">$1,182.22</div>
-                </div>
-                <div class="modal_type_bids_type">
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">$1,182.22</div>
+                <div class="modal_type_bids_type" ng-repeat="bid in  $ctrl.sale.bids | orderBy: {share} | limitTo:4">
+                    <div class="modal_type_bids__item modal_bids_item_color_highest" ng-bind="bid.markup"></div>
+                    <div class="modal_type_bids__item modal_bids_item_color_highest" ng-bind="bid.share"></div>
+                    <div class="modal_type_bids__item modal_bids_item_color_highest" ng-bind="bid.amount"></div>
                 </div>
 
                 <div class="blocks_header_title_name">
                     MATCHED BID
                 </div>
-                <div class="modal_type_bids_type">
-                    <div class="modal_type_bids__item modal_bids_item_color_matched">1</div>
-                    <div class="modal_type_bids__item modal_bids_item_color_matched">1.53%</div>
-                    <div class="modal_type_bids__item modal_bids_item_color_matched">$1,182.22</div>
+                <div class="modal_type_bids_type" ng-repeat="  bid in  $ctrl.sale.bids | filter: {status:2}" >
+                    <div class="modal_type_bids__item modal_bids_item_color_matched" ng-bind="bid.markup"></div>
+                    <div class="modal_type_bids__item modal_bids_item_color_matched" ng-bind="bid.share"></div>
+                    <div class="modal_type_bids__item modal_bids_item_color_matched" ng-bind="bid.amount"></div>
                 </div>
 
 
 
-                <div class="blocks_header_title_name">
-                    HIGHEST BIDS
-                </div>
-                <div class="modal_type_bids_type">
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">$1,182.22</div>
-                </div>
-                <div class="modal_type_bids_type">
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">$1,182.22</div>
-                </div>
-                <div class="modal_type_bids_type">
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">$1,182.22</div>
-                </div>
-
-                <div class="blocks_header_title_name">
-                    HIGHEST BIDS
-                </div>
-                <div class="modal_type_bids_type">
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">$1,182.22</div>
-                </div>
-                <div class="modal_type_bids_type">
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">$1,182.22</div>
-                </div>
-                <div class="modal_type_bids_type">
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
-                    <div class="modal_type_bids__item modal_bids_item_color_highest">$1,182.22</div>
-                </div>
 
 
 
