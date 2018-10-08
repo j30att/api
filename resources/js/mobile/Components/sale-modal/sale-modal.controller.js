@@ -6,9 +6,11 @@ class SaleModal {
         this.$state = $state;
         $state.modalOpened = false;
         this.user = window.__user;
+
         this._opts = {
             stateCreate: false
         };
+
         if(this.show == true) this.$state.modalOpened = true;
         this.bid = {
                         status: 2,
