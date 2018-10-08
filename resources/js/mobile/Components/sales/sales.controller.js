@@ -14,7 +14,7 @@ class Sales {
         console.log('hui');
 
         if(type == 'manage')  this.showManage = true;
-        if(type == 'place')   this.show = true;
+        if(type == 'place')   this.showPlace = true;
         this.$state.modalOpened = this.show;
         this.item = this.sales[key];
     }
