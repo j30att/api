@@ -11629,6 +11629,15 @@ a.text-dark:focus {
   height: 60px;
 }
 
+.hideempty {
+  height: 65px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+}
+
 .bid {
   width: 100%;
 }
