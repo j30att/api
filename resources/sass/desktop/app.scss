@@ -19,10 +19,8 @@ a {
 }
 
 .deskwr {
-  max-width: 1366px;
-  margin: 0 auto;
-  box-sizing: border-box;
   display: flex;
+  flex-direction: row;
 }
 
 .header {
@@ -36,6 +34,10 @@ a {
   display: flex;
   flex-direction: column;
   padding: 32px;
+}
+.pseudo-header {
+  width: 256px;
+  height: 100%;
 }
 
 .logo {
@@ -235,10 +237,12 @@ a {
 
 /*main comtent*/
 .main_content {
-  margin-left: 230px;
-  padding: 32px 0 32px 7%;
-  width: calc(100% - 230px);
-  box-sizing: border-box;
+  padding: 32px;
+  max-width: 996px;
+  flex-grow: 1;
+  margin:0 auto;
+  /*width: 100%;
+  box-sizing: border-box;*/
 }
 
 /*bids content*/

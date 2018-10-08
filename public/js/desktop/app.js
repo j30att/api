@@ -51026,7 +51026,7 @@ module.exports = "<div class=\"deskwr\">\n    <main-menu></main-menu>\n    <div 
 /* 102 */
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"header\">\n    <div class=\"logo\">\n        <a ui-sref=\"invest\">\n            <img src=\"/images/desk/logo.png\" alt=\"Logo\">\n        </a>\n    </div>\n    <nav class=\"menu\">\n        <ul class=\"menu_list\">\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('invest')\"\n                   ui-sref=\"invest\"\n                >\n                    Invest\n                </a>\n                <div class=\"menu_item__count\">2</div>\n            </li>\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('bids')\"\n                   ui-sref=\"bids\"\n                >\n                    Bids\n                </a>\n            </li>\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('sale')\"\n                   ui-sref=\"sale\"\n                >\n                    Sale\n                </a>\n            </li>\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('wallet')\"\n                   ui-sref=\"wallet\"\n                >\n                    Wallet\n                </a>\n                <span class=\"menu_item__wallet\">$ 20,240.98</span>\n            </li>\n        </ul>\n    </nav>\n    <div class=\"last_up\">\n        <div class=\"last_up__title\">Last Updates</div>\n        <div class=\"last_up__item last_up__item_blue\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/blue_circle.png\" alt=\"\">\n            </div>\n            <div class=\"message\">Your bid was accepted by Austin Vargas</div>\n\n        </div>\n        <div class=\"last_up__item last_up__item_yellow\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/yellow_minus.png\" alt=\"\">\n            </div>\n            <div class=\"message\">Your bid was declined by Theodore Guerrero</div>\n\n        </div>\n        <div class=\"last_up__item last_up__item_green\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/blue_circle.png\" alt=\"\">\n            </div>\n            <div class=\"message\">You sold 3% for Millions Russua (4% left)</div>\n\n        </div>\n        <div class=\"last_up__item last_up__item_red\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/yellow_minus.png\" alt=\"\">\n            </div>\n            <div class=\"message\">New login attempt from a 73.223.92.66 (US)</div>\n\n        </div>\n    </div>\n    <div class=\"footer\">\n        <div class=\"profile\">\n            <div class=\"profile_info\">\n                <div class=\"profile_left-side\">\n                    <div class=\"profile_img\">\n                        <img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"\">\n                    </div>\n                    <div class=\"profile_name\">James. Co</div>\n                </div>\n                <a class=\"profile_logout\"\n                   ui-sref=\"logout\"></a>\n            </div>\n        </div>\n        <div class=\"footer__links\">\n            <a href=\"#\">Terms of Service</a>\n            <a href=\"#\">Privacy Policy</a>\n            <a href=\"#\">Contact Us</a>\n            <a href=\"#\">English</a>\n        </div>\n    </div>\n</header>\n\n<div class=\"log_out-wr\">\n    <div class=\"log_out_profile\">\n        <div class=\"log_out_text\">\n            Log out\n            <span>Do you want to log out? Don’t do it, if you are not sure. Thanks!</span>\n        </div>\n        <div class=\"log_out_btn\">\n            <div class=\"log_out_cancel\">Cancel</div>\n            <div class=\"log_out_ok\">Log Out</div>\n        </div>\n    </div>\n</div>\n<div class=\"your_profile_wr\">\n    <div class=\"your_profile_content-wr\">\n        <div class=\"your_profile_content\">\n            <div class=\"your_profile__title\">\n                Your Profile\n                <div class=\"your_profile_close\"></div>\n            </div>\n            <div class=\"your_profile_info\">\n                <div class=\"your_profile__pic\"><img src=\"/images/desk/players_img/pl_big_pic.png\" alt=\"player photo\"></div>\n                <div class=\"your_profile__name\">\n                    James. Co\n                    <div class=\"change_photo\">Replace photo</div>\n                </div>\n            </div>\n            <div class=\"link_party_pk\">\n                <div class=\"link_party_inf\">Get a fast access to your bids and money, log in with Party poker account </div>\n                <div class=\"link_party_btn\">Link Party Poker account</div>\n            </div>\n            <div class=\"your_profile_nav\">\n                <ul class=\"pr_nav_list\">\n                    <li class=\"pr_nav_item pr_setting\"><a href=\"#\">Settings</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_notification\"><a href=\"#\">Notification</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_privacy\"><a href=\"#\">Privacy and security</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_acc_inf\"><a href=\"#\">Account info</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_support\"><a href=\"#\">Support</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_tell\"><a href=\"#\">Tell a friends</a><div class=\"pr_show_more\"></div></li>\n                </ul>\n            </div>\n\n        </div>\n    </div>\n</div>\n\n";
+module.exports = "<header class=\"header\">\n    <div class=\"logo\">\n        <a ui-sref=\"invest\">\n            <img src=\"/images/desk/logo.png\" alt=\"Logo\">\n        </a>\n    </div>\n    <nav class=\"menu\">\n        <ul class=\"menu_list\">\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('invest')\"\n                   ui-sref=\"invest\"\n                >\n                    Invest\n                </a>\n                <div class=\"menu_item__count\">2</div>\n            </li>\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('bids')\"\n                   ui-sref=\"bids\"\n                >\n                    Bids\n                </a>\n            </li>\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('sale')\"\n                   ui-sref=\"sale\"\n                >\n                    Sale\n                </a>\n            </li>\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('wallet')\"\n                   ui-sref=\"wallet\"\n                >\n                    Wallet\n                </a>\n                <span class=\"menu_item__wallet\">$ 20,240.98</span>\n            </li>\n        </ul>\n    </nav>\n    <div class=\"last_up\">\n        <div class=\"last_up__title\">Last Updates</div>\n        <div class=\"last_up__item last_up__item_blue\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/blue_circle.png\" alt=\"\">\n            </div>\n            <div class=\"message\">Your bid was accepted by Austin Vargas</div>\n\n        </div>\n        <div class=\"last_up__item last_up__item_yellow\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/yellow_minus.png\" alt=\"\">\n            </div>\n            <div class=\"message\">Your bid was declined by Theodore Guerrero</div>\n\n        </div>\n        <div class=\"last_up__item last_up__item_green\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/blue_circle.png\" alt=\"\">\n            </div>\n            <div class=\"message\">You sold 3% for Millions Russua (4% left)</div>\n\n        </div>\n        <div class=\"last_up__item last_up__item_red\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/yellow_minus.png\" alt=\"\">\n            </div>\n            <div class=\"message\">New login attempt from a 73.223.92.66 (US)</div>\n\n        </div>\n    </div>\n    <div class=\"footer\">\n        <div class=\"profile\">\n            <div class=\"profile_info\">\n                <div class=\"profile_left-side\">\n                    <div class=\"profile_img\">\n                        <img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"\">\n                    </div>\n                    <div class=\"profile_name\">James. Co</div>\n                </div>\n                <a class=\"profile_logout\"\n                   ui-sref=\"logout\"></a>\n            </div>\n        </div>\n        <div class=\"footer__links\">\n            <a href=\"#\">Terms of Service</a>\n            <a href=\"#\">Privacy Policy</a>\n            <a href=\"#\">Contact Us</a>\n            <a href=\"#\">English</a>\n        </div>\n    </div>\n</header>\n\n<div class=\"pseudo-header\"></div>\n\n<div class=\"log_out-wr\">\n    <div class=\"log_out_profile\">\n        <div class=\"log_out_text\">\n            Log out\n            <span>Do you want to log out? Don’t do it, if you are not sure. Thanks!</span>\n        </div>\n        <div class=\"log_out_btn\">\n            <div class=\"log_out_cancel\">Cancel</div>\n            <div class=\"log_out_ok\">Log Out</div>\n        </div>\n    </div>\n</div>\n<div class=\"your_profile_wr\">\n    <div class=\"your_profile_content-wr\">\n        <div class=\"your_profile_content\">\n            <div class=\"your_profile__title\">\n                Your Profile\n                <div class=\"your_profile_close\"></div>\n            </div>\n            <div class=\"your_profile_info\">\n                <div class=\"your_profile__pic\"><img src=\"/images/desk/players_img/pl_big_pic.png\" alt=\"player photo\"></div>\n                <div class=\"your_profile__name\">\n                    James. Co\n                    <div class=\"change_photo\">Replace photo</div>\n                </div>\n            </div>\n            <div class=\"link_party_pk\">\n                <div class=\"link_party_inf\">Get a fast access to your bids and money, log in with Party poker account </div>\n                <div class=\"link_party_btn\">Link Party Poker account</div>\n            </div>\n            <div class=\"your_profile_nav\">\n                <ul class=\"pr_nav_list\">\n                    <li class=\"pr_nav_item pr_setting\"><a href=\"#\">Settings</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_notification\"><a href=\"#\">Notification</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_privacy\"><a href=\"#\">Privacy and security</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_acc_inf\"><a href=\"#\">Account info</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_support\"><a href=\"#\">Support</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_tell\"><a href=\"#\">Tell a friends</a><div class=\"pr_show_more\"></div></li>\n                </ul>\n            </div>\n\n        </div>\n    </div>\n</div>\n\n";
 
 /***/ }),
 /* 103 */,
@@ -51142,7 +51142,7 @@ app.run(__WEBPACK_IMPORTED_MODULE_5__TemplateCache__["a" /* default */]);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Controllers_ProfileController__ = __webpack_require__(170);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Controllers_FilterBidsController__ = __webpack_require__(171);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Controllers_BidResponsesController__ = __webpack_require__(172);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Controllers_FilterBidResponsesController__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Controllers_MainController__ = __webpack_require__(216);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Controllers_bids_bids_controller__ = __webpack_require__(174);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Controllers_SaleController__ = __webpack_require__(176);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Controllers_SaleFormController__ = __webpack_require__(177);
@@ -51173,14 +51173,15 @@ var module = angular.module('Controllers', []);
 
 module.controller('LoginController', __WEBPACK_IMPORTED_MODULE_0__Controllers_LoginController__["a" /* LoginController */]);
 module.controller('RegisterController', __WEBPACK_IMPORTED_MODULE_1__Controllers_RegisterController__["a" /* RegisterController */]);
+module.controller('MainController', __WEBPACK_IMPORTED_MODULE_5__Controllers_MainController__["a" /* MainController */]);
 module.controller('ProfileController', __WEBPACK_IMPORTED_MODULE_2__Controllers_ProfileController__["a" /* ProfileController */]);
 module.controller('EventsListController', __WEBPACK_IMPORTED_MODULE_12__Controllers_EventsListController__["a" /* EventsListController */]);
 module.controller('FilterBidsController', __WEBPACK_IMPORTED_MODULE_3__Controllers_FilterBidsController__["a" /* FilterBidsController */]);
 module.controller('BidResponsesController', __WEBPACK_IMPORTED_MODULE_4__Controllers_BidResponsesController__["a" /* BidResponsesController */]);
-
 module.controller('BidsController', __WEBPACK_IMPORTED_MODULE_6__Controllers_bids_bids_controller__["a" /* BidsController */]);
 
 /////////////////////////////////////////////////////////////
+
 module.controller('SaleController', __WEBPACK_IMPORTED_MODULE_7__Controllers_SaleController__["a" /* SaleController */]);
 module.controller('SaleFormController', __WEBPACK_IMPORTED_MODULE_8__Controllers_SaleFormController__["a" /* SaleFormController */]);
 module.controller('SaleFilterController', __WEBPACK_IMPORTED_MODULE_9__Controllers_SaleFilterController__["a" /* SaleFilterController */]);
@@ -51454,66 +51455,7 @@ BidResponsesController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 173 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export FilterBidResponsesController */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-
-
-
-
-
-
-
-var FilterBidResponsesController = function () {
-    function FilterBidResponsesController($window, $http, $stateParams) {
-        _classCallCheck(this, FilterBidResponsesController);
-
-        this.$window = $window;
-        this.$http = $http;
-        this.filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["d" /* BID_RESPONSE_MATCHED */];
-        this.bids = [];
-        this.$stateParams = $stateParams;
-        this.menu = [{ status: __WEBPACK_IMPORTED_MODULE_0__Constants__["d" /* BID_RESPONSE_MATCHED */], name: 'matched' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["f" /* BID_RESPONSE_UNMATCHED */], name: 'unmatched' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["e" /* BID_RESPONSE_SETTLED */], name: 'settled' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["b" /* BID_RESPONSE_CANCELED */], name: 'canceled' }];
-        this.showListFiltred();
-    }
-
-    _createClass(FilterBidResponsesController, [{
-        key: "showListFiltred",
-        value: function showListFiltred() {
-            var _this = this;
-
-            var self = this;
-            this.menu.forEach(function (value, key) {
-                console.log(value.name);
-                if (value.name === self.$stateParams.filter) self.filter = value.status;
-            });
-
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["c" /* BID_RESPONSE_INDEX */], {
-                params: { filter: this.filter }
-            }).then(function (response) {
-
-                _this.bids = response.data.data;
-            });
-        }
-    }]);
-
-    return FilterBidResponsesController;
-}();
-
-;
-
-FilterBidResponsesController.$inject = ['$window', '$http', '$stateParams'];
-
-
-
-/***/ }),
+/* 173 */,
 /* 174 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -52516,6 +52458,32 @@ function templateCache($templateCache) {
 templateCache.$inject = ['$templateCache'];
 
 /* harmony default export */ __webpack_exports__["a"] = (templateCache);
+
+/***/ }),
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainController; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MainController = function MainController($state) {
+    _classCallCheck(this, MainController);
+
+    this.$state = $state;
+    //console.log(this.$state);
+};
+
+MainController.$inject = ['$state'];
+
+
 
 /***/ })
 /******/ ]);
