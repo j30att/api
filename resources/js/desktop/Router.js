@@ -47,7 +47,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             /*controller: 'EventsListController',
             controllerAs: 'EvntsLstCtrl',*/
         })
-        .state('bids', {
+        /*.state('bids', {
             url: '/bids',
             template: require('./views/bids/index.template.html'),
             controller: 'BidsController',
@@ -58,7 +58,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             template: require('./views/bids/list.template.html'),
             controller: 'BidsController',
             controllerAs: 'BidsCtrl'
-        })
+        })*/
         .state('sale', {
             url: '/sales',
             template: require('./views/sale/index.template.html'),

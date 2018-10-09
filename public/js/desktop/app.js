@@ -51871,17 +51871,20 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
         template: __webpack_require__(221)
         /*controller: 'EventsListController',
         controllerAs: 'EvntsLstCtrl',*/
-    }).state('bids', {
+    })
+    /*.state('bids', {
         url: '/bids',
-        template: __webpack_require__(190),
+        template: require('./views/bids/index.template.html'),
         controller: 'BidsController',
         controllerAs: 'BidsCtrl'
-    }).state('bids-list', {
+    })
+    .state('bids-list', {
         url: '/bids/{type}',
-        template: __webpack_require__(64),
+        template: require('./views/bids/list.template.html'),
         controller: 'BidsController',
         controllerAs: 'BidsCtrl'
-    }).state('sale', {
+    })*/
+    .state('sale', {
         url: '/sales',
         template: __webpack_require__(189)
         /*  controller: 'SaleController',
