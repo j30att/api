@@ -20,6 +20,7 @@ let app = angular.module('poker', [
     ngAria,
     ngAnimate,
     ngRouter,
+    Filters,
     Controllers,
     Components,
     Services,
