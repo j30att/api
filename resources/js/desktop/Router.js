@@ -62,20 +62,14 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('sale', {
             url: '/sales',
             template: require('./views/sale/index.template.html'),
-            /*  controller: 'SaleController',
-              controllerAs: 'SaleCtrl',*/
+            controller: 'SaleController',
+            controllerAs: 'SaleCtrl',
         })
-        .state('sale-active', {
-            url: '/sales/active',
+        .state('sale-list', {
+            url: '/sales/{type}',
             template: require('./views/sale/list.template.html'),
-            /*  controller: 'SaleController',
-              controllerAs: 'SaleCtrl',*/
-        })
-        .state('sale-closed', {
-            url: '/sales/closed',
-            template: require('./views/sale/list.template.html'),
-            /*  controller: 'SaleController',
-              controllerAs: 'SaleCtrl',*/
+            controller: 'SaleFilterController',
+            controllerAs: 'SaleFltrCtrl',
         })
 
         .state ('sale-create', {
