@@ -10,17 +10,13 @@ body, html {
   margin: 0;
 }
 
+
+::-webkit-input-placeholder{
+    color: #000000;
+}
 body * {
   font-family: "Open Sans", sans-serif;
 }
-
-
-
-::-webkit-input-placeholder{
-  color: #000000;
-}
-
-
 
 .your_profile_wr_display {
   display: block;
@@ -268,9 +264,12 @@ a {
 
 /*main content*/
 .main_content {
-  padding: 32px 60px 32px 54px;
+  padding: 32px;
+  max-width: 1145px;
   flex-grow: 1;
   margin: 0 auto;
+  /*width: 100%;
+  box-sizing: border-box;*/
 }
 
 /*bids content*/
@@ -722,7 +721,6 @@ a {
 }
 
 .event_item {
-  min-width: 24%;
   margin: 0 9px 24px;
   flex-grow: 1;
 }
@@ -737,7 +735,6 @@ a {
 .event_item__pic img {
   width: 100%;
   height: auto;
-  display: block;
 }
 
 .event_info {

@@ -76,28 +76,10 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             url: '/sales/create',
             template: require('./views/sale/create.template.html')
         })
-
-        /*.state('bids', {
-            url: '/bids',
-            controller: 'BidsController',
-            template: require('./views/bids/index.template.html')
+        .state ('place-bit', {
+            url: '/bids/place-a-bit',
+            template: require('./views/bids/place.template.html')
         })
-        .state('bids-matched', {
-            url: '/bids/matched',
-            template: require('./views/bids/list.template.html')
-        })
-        .state('bids-unmatched', {
-            url: '/bids/unmatched',
-            template: require('./views/bids/list.template.html')
-        })
-        .state('bids-settled', {
-            url: '/bids/settled',
-            template: require('./views/bids/list.template.html')
-        })
-        .state('bids-canceled', {
-            url: '/bids/canceled',
-            template: require('./views/bids/list.template.html')
-        })*/
 
         .state('terms-and-conditions', {
             url: '/terms-and-conditions',
