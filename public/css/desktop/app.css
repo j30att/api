@@ -462,6 +462,12 @@
   border-radius: 6px;
   margin-bottom: 16px;
   margin-top: 4px;
+  /*delete after add select content*/
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  text-transform: uppercase;
+  /*delete after add select content end*/
 }
 
 .modal_content__sale .attributs_wrapper {

@@ -237,6 +237,12 @@
                 border-radius: 6px;
                 margin-bottom: 16px;
                 margin-top: 4px;
+                /*delete after add select content*/
+                box-sizing: border-box;
+                padding: 10px;
+                text-transform: uppercase;
+                /*delete after add select content end*/
+
             }
 
             .attributs_wrapper{
@@ -251,6 +257,7 @@
                         display: block;
                         margin-bottom: 4px;
                     }
+
                     input{
                         border: none;
                         outline: none;
