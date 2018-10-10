@@ -1379,6 +1379,14 @@ body * {
   font-family: "Open Sans", sans-serif;
 }
 
+#right {
+  position: fixed;
+  right: -3000px;
+  height: 1px;
+  width: 1px;
+  top: 50vh;
+}
+
 ::-webkit-input-placeholder {
   color: #000000;
 }
@@ -1941,8 +1949,8 @@ a {
 }
 
 .your_profile_close {
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
   position: absolute;
   right: 0;
@@ -2615,8 +2623,8 @@ a {
 }
 
 .right_side_content__close {
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
   position: absolute;
   right: 0;

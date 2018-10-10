@@ -31,16 +31,19 @@ class InvestController {
 
     showCreateForm(ev) {
         let vm = this;
+        let elementWrapper ={};
+        elementWrapper.target = document.getElementById('right');
+
         this.$mdDialog.show({
             controller: DialogController,
             controllerAs: 'vm',
             template: require('../../views/bids/place.template.html'),
             parent: angular.element(document.body),
-            targetEvent: ev,
+            targetEvent: elementWrapper,
 
             clickOutsideToClose: true,
 
-        }).openFrom('#left')
+        })
             .then(function (answer) {
 
             }, function () {

@@ -1,14 +1,14 @@
-import Services from "../mobile/Services";
-
 let angular = require('angular');
 
 import Controllers from './Controllers';
+import Services from '../common/Services'
 import routes from './Router';
 import middlewares from './Middlewares';
 import Components from './Components';
 import Filters from './Filters';
 import {permission, uiPermission} from 'angular-permission';
 import templateCache from './TemplateCache';
+
 
 let ngRouter = require('angular-ui-router').default;
 let ngMaterial = require('angular-material');

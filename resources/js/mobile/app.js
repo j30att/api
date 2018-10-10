@@ -2,7 +2,7 @@ let angular = require('angular');
 
 import Controllers from './Controllers';
 import Components from './Components';
-import Services from './Services'
+import Services from '../common/Services'
 import routes from './Router';
 import middlewares from './Middlewares';
 import {permission, uiPermission} from 'angular-permission';

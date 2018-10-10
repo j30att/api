@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 173);
+/******/ 	return __webpack_require__(__webpack_require__.s = 175);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -648,7 +648,7 @@ function _arraysEq(a1, a2) {
 var silenceUncaughtInPromise = function (promise) { return promise.catch(function (e) { return 0; }) && promise; };
 var silentRejection = function (error) { return silenceUncaughtInPromise(__WEBPACK_IMPORTED_MODULE_2__coreservices__["b" /* services */].$q.reject(error)); };
 //# sourceMappingURL=common.js.map
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(77)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(79)))
 
 /***/ }),
 /* 1 */
@@ -1207,7 +1207,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ParamTypes", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["d"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateParams", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["e"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ParamType", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["c"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__path_index__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__path_index__ = __webpack_require__(81);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PathNode", function() { return __WEBPACK_IMPORTED_MODULE_2__path_index__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PathUtils", function() { return __WEBPACK_IMPORTED_MODULE_2__path_index__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__resolve_index__ = __webpack_require__(38);
@@ -1225,7 +1225,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateRegistry", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["e"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateService", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["f"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TargetState", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["g"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__transition_index__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__transition_index__ = __webpack_require__(91);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionHookPhase", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["h"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionHookScope", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["i"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "HookBuilder", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["a"]; });
@@ -1239,7 +1239,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionEventType", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["f"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "defaultTransOpts", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["k"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionService", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["j"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__url_index__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__url_index__ = __webpack_require__(92);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRules", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["h"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlConfig", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["c"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlMatcher", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["d"]; });
@@ -1249,13 +1249,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRuleFactory", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["g"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BaseUrlRule", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlService", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["i"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__view_index__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__view_index__ = __webpack_require__(93);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ViewService", function() { return __WEBPACK_IMPORTED_MODULE_7__view_index__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__globals__ = __webpack_require__(50);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouterGlobals", function() { return __WEBPACK_IMPORTED_MODULE_8__globals__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__router__ = __webpack_require__(46);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__vanilla__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__vanilla__ = __webpack_require__(94);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "$q", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["b"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "$injector", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BaseLocationServices", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["c"]; });
@@ -1273,7 +1273,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "hashLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["k"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pushStateLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["p"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "memoryLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["n"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__interface__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__interface__ = __webpack_require__(97);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouterPluginBase", function() { return __WEBPACK_IMPORTED_MODULE_11__interface__["a"]; });
 /** @publicapi @module common */ /** */
 
@@ -3698,7 +3698,7 @@ var BaseLocationServices = /** @class */ (function () {
 /* unused harmony export SALE_SUBEVENT */
 /* unused harmony export SALE_INDEX */
 /* unused harmony export SALE_CREATE */
-/* unused harmony export SUBEVENTS_INDEX */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return SUBEVENTS_INDEX; });
 var SALE_ACTIVE = 1;
 var SALE_CLOSED = 2;
 var SALE_MARKUP = 3;
@@ -3752,10 +3752,10 @@ var SUBEVENTS_INDEX = '/api/subevents';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__statebuilders_views__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__templateFactory__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__templateFactory__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__stateProvider__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__statebuilders_onEnterExitRetain__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__locationServices__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__statebuilders_onEnterExitRetain__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__locationServices__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__urlRouterProvider__ = __webpack_require__(64);
 /**
  * # Angular 1 types
@@ -4033,7 +4033,7 @@ var Queue = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__param__ = __webpack_require__(14);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__param__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__param__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paramTypes__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paramTypes__ = __webpack_require__(80);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_1__paramTypes__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stateParams__ = __webpack_require__(37);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_2__stateParams__["a"]; });
@@ -4451,21 +4451,21 @@ var StateObject = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interface__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transition__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hookRegistry__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hooks_coreResolvables__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hooks_redirectTo__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__hooks_onEnterExitRetain__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__hooks_resolve__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__hooks_views__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__hooks_updateGlobals__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__hooks_url__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hooks_coreResolvables__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hooks_redirectTo__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__hooks_onEnterExitRetain__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__hooks_resolve__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__hooks_views__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__hooks_updateGlobals__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__hooks_url__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__hooks_lazyLoad__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__transitionEventType__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__transitionHook__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__common_hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__hooks_ignoredTransition__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__hooks_invalidTransition__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__hooks_ignoredTransition__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__hooks_invalidTransition__ = __webpack_require__(90);
 /** @publicapi @module transition */ /** */
 
 
@@ -9928,7 +9928,7 @@ var UrlRouterProvider = /** @class */ (function () {
 /* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(105);
+__webpack_require__(107);
 module.exports = 'ngAnimate';
 
 
@@ -9936,7 +9936,7 @@ module.exports = 'ngAnimate';
 /* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(106);
+__webpack_require__(108);
 module.exports = 'ngAria';
 
 
@@ -9954,12 +9954,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
 var DialogController = function () {
-    function DialogController($mdDialog, $http) {
+    function DialogController($mdDialog, $http, SalesService) {
         _classCallCheck(this, DialogController);
 
         this.$mdDialog = $mdDialog;
+        this.SalesService = SalesService;
         this.$http = $http;
         this.getEvents();
+        this.sale = {
+            event_id: null,
+            subevent_id: null,
+            share: null,
+            markup: null,
+            amount: null
+        };
     }
 
     _createClass(DialogController, [{
@@ -9979,15 +9987,30 @@ var DialogController = function () {
 
             this.$http.get(__WEBPACK_IMPORTED_MODULE_0__common_Constants__["j" /* EVENTS_INDEX */]).then(function (response) {
                 _this.events = response.data.data;
-                console.log(_this.events);
             });
+        }
+    }, {
+        key: 'getSubevents',
+        value: function getSubevents() {
+            var _this2 = this;
+
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__common_Constants__["p" /* SUBEVENTS_INDEX */], { params: { event_id: this.sale.event_id } }).then(function (response) {
+                _this2.subevents = response.data.data;
+            });
+        }
+    }, {
+        key: 'calcAmount',
+        value: function calcAmount() {
+            console.log(this.sale.share, 'this.sale.share');
+            console.log(this.sale.markup, 'this.sale.share');
+            this.sale.amount = this.SalesService.calcAmount(this.sale.share, this.sale.markup, 1000);
         }
     }]);
 
     return DialogController;
 }();
 
-DialogController.$inject = ['$mdDialog', '$http'];
+DialogController.$inject = ['$mdDialog', '$http', 'SalesService'];
 
 
 
@@ -46218,17 +46241,23 @@ $provide.value("$locale", {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_api_BidsResourceService__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_api_SalesResourceService__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__api_BidsResourceService__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_BidService__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__api_SalesResourceService__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_SaleService__ = __webpack_require__(73);
 var angular = __webpack_require__(10);
+
+
 
 
 
 
 var module = angular.module('Services', []);
 
-module.service('BidsResourceService', __WEBPACK_IMPORTED_MODULE_0__common_api_BidsResourceService__["a" /* BidsResourceService */]);
-module.service('SalesResourceService', __WEBPACK_IMPORTED_MODULE_1__common_api_SalesResourceService__["a" /* SalesResourceService */]);
+module.service('BidsResourceService', __WEBPACK_IMPORTED_MODULE_0__api_BidsResourceService__["a" /* BidsResourceService */]);
+module.service('BidsService', __WEBPACK_IMPORTED_MODULE_1__services_BidService__["a" /* BidsService */]);
+module.service('SalesResourceService', __WEBPACK_IMPORTED_MODULE_2__api_SalesResourceService__["a" /* SalesResourceService */]);
+module.service('SalesService', __WEBPACK_IMPORTED_MODULE_3__services_SaleService__["a" /* SalesService */]);
 
 /* harmony default export */ __webpack_exports__["a"] = (module.name);
 
@@ -46291,6 +46320,20 @@ BidsResourceService.$inject = ['$http'];
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BidsService; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var BidsService = function BidsService() {
+    _classCallCheck(this, BidsService);
+};
+
+
+
+/***/ }),
+/* 72 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SalesResourceService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(22);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -46333,7 +46376,39 @@ SalesResourceService.$inject = ['$http'];
 
 
 /***/ }),
-/* 72 */
+/* 73 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SalesService; });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var SalesService = function () {
+    function SalesService() {
+        _classCallCheck(this, SalesService);
+    }
+
+    _createClass(SalesService, [{
+        key: "calcAmount",
+        value: function calcAmount(share, markup, buyin) {
+            var shareValue = null;
+            var amount = null;
+
+            shareValue = buyin * (share / 100);
+            amount = shareValue * markup;
+            return amount;
+        }
+    }]);
+
+    return SalesService;
+}();
+
+
+
+/***/ }),
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -46348,9 +46423,9 @@ SalesResourceService.$inject = ['$http'];
 (function () {
   'use strict';
 
-  var permission = __webpack_require__(73),
-    ngPermission = __webpack_require__(74),
-    uiPermission = __webpack_require__(75);
+  var permission = __webpack_require__(75),
+    ngPermission = __webpack_require__(76),
+    uiPermission = __webpack_require__(77);
 
   module.exports = {
     permission: permission,
@@ -46361,7 +46436,7 @@ SalesResourceService.$inject = ['$http'];
 
 
 /***/ }),
-/* 73 */
+/* 75 */
 /***/ (function(module, exports) {
 
 /**
@@ -47605,7 +47680,7 @@ SalesResourceService.$inject = ['$http'];
 
 
 /***/ }),
-/* 74 */
+/* 76 */
 /***/ (function(module, exports) {
 
 /**
@@ -47829,7 +47904,7 @@ SalesResourceService.$inject = ['$http'];
 
 
 /***/ }),
-/* 75 */
+/* 77 */
 /***/ (function(module, exports) {
 
 /**
@@ -48413,7 +48488,7 @@ SalesResourceService.$inject = ['$http'];
 
 
 /***/ }),
-/* 76 */
+/* 78 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48429,12 +48504,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateProvider", function() { return __WEBPACK_IMPORTED_MODULE_2__stateProvider__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__urlRouterProvider__ = __webpack_require__(64);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRouterProvider", function() { return __WEBPACK_IMPORTED_MODULE_3__urlRouterProvider__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__injectables__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__injectables__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__injectables___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__injectables__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_stateDirectives__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__stateFilters__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_viewDirective__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__viewScroll__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_stateDirectives__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__stateFilters__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_viewDirective__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__viewScroll__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__uirouter_core__ = __webpack_require__(5);
 /* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "core", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRules", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlRules"]; });
@@ -48614,7 +48689,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 77 */
+/* 79 */
 /***/ (function(module, exports) {
 
 var g;
@@ -48641,7 +48716,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 78 */
+/* 80 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48813,7 +48888,7 @@ initDefaultTypes();
 //# sourceMappingURL=paramTypes.js.map
 
 /***/ }),
-/* 79 */
+/* 81 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48827,7 +48902,7 @@ initDefaultTypes();
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 80 */
+/* 82 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48875,7 +48950,7 @@ var treeChangesCleanup = function (trans) {
 //# sourceMappingURL=coreResolvables.js.map
 
 /***/ }),
-/* 81 */
+/* 83 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48920,7 +48995,7 @@ var registerRedirectToHook = function (transitionService) {
 //# sourceMappingURL=redirectTo.js.map
 
 /***/ }),
-/* 82 */
+/* 84 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48984,7 +49059,7 @@ var registerOnEnterHook = function (transitionService) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 83 */
+/* 85 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49052,7 +49127,7 @@ var registerResolveRemaining = function (transitionService) {
 //# sourceMappingURL=resolve.js.map
 
 /***/ }),
-/* 84 */
+/* 86 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49107,7 +49182,7 @@ var registerActivateViews = function (transitionService) {
 //# sourceMappingURL=views.js.map
 
 /***/ }),
-/* 85 */
+/* 87 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49148,7 +49223,7 @@ var registerUpdateGlobalState = function (transitionService) {
 //# sourceMappingURL=updateGlobals.js.map
 
 /***/ }),
-/* 86 */
+/* 88 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49178,7 +49253,7 @@ var registerUpdateUrl = function (transitionService) {
 //# sourceMappingURL=url.js.map
 
 /***/ }),
-/* 87 */
+/* 89 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49216,7 +49291,7 @@ var registerIgnoredTransitionHook = function (transitionService) {
 //# sourceMappingURL=ignoredTransition.js.map
 
 /***/ }),
-/* 88 */
+/* 90 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49240,7 +49315,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=invalidTransition.js.map
 
 /***/ }),
-/* 89 */
+/* 91 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49288,7 +49363,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 90 */
+/* 92 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49318,7 +49393,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 91 */
+/* 93 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49328,11 +49403,11 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 92 */
+/* 94 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vanilla_index__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vanilla_index__ = __webpack_require__(95);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["c"]; });
@@ -49355,7 +49430,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=vanilla.js.map
 
 /***/ }),
-/* 93 */
+/* 95 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49381,7 +49456,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "l", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["c"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "m", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["d"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "o", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["e"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__plugins__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__plugins__ = __webpack_require__(96);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "n", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "p", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["c"]; });
@@ -49399,7 +49474,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 94 */
+/* 96 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49440,7 +49515,7 @@ var memoryLocationPlugin = Object(__WEBPACK_IMPORTED_MODULE_2__utils__["d" /* lo
 //# sourceMappingURL=plugins.js.map
 
 /***/ }),
-/* 95 */
+/* 97 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49464,7 +49539,7 @@ var UIRouterPluginBase = /** @class */ (function () {
 //# sourceMappingURL=interface.js.map
 
 /***/ }),
-/* 96 */
+/* 98 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49675,7 +49750,7 @@ var scopeBindings = function (bindingsObj) {
 //# sourceMappingURL=templateFactory.js.map
 
 /***/ }),
-/* 97 */
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49710,7 +49785,7 @@ var getStateHookBuilder = function (hookName) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 98 */
+/* 100 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49796,7 +49871,7 @@ var Ng1LocationServices = /** @class */ (function () {
 //# sourceMappingURL=locationServices.js.map
 
 /***/ }),
-/* 99 */
+/* 101 */
 /***/ (function(module, exports) {
 
 /**
@@ -50115,7 +50190,7 @@ var $urlMatcherFactoryProvider;
 //# sourceMappingURL=injectables.js.map
 
 /***/ }),
-/* 100 */
+/* 102 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50752,7 +50827,7 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */]
 //# sourceMappingURL=stateDirectives.js.map
 
 /***/ }),
-/* 101 */
+/* 103 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50804,7 +50879,7 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */]
 //# sourceMappingURL=stateFilters.js.map
 
 /***/ }),
-/* 102 */
+/* 104 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51241,7 +51316,7 @@ __WEBPACK_IMPORTED_MODULE_1__angular__["a" /* ng */].module('ui.router.state').d
 //# sourceMappingURL=viewDirective.js.map
 
 /***/ }),
-/* 103 */
+/* 105 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51273,7 +51348,7 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */].module('ui.router.state').p
 //# sourceMappingURL=viewScroll.js.map
 
 /***/ }),
-/* 104 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Should already be required, here for clarity
@@ -51284,14 +51359,14 @@ __webpack_require__(65);
 __webpack_require__(66);
 
 // Now load Angular Material
-__webpack_require__(107);
+__webpack_require__(109);
 
 // Export namespace
 module.exports = 'ngMaterial';
 
 
 /***/ }),
-/* 105 */
+/* 107 */
 /***/ (function(module, exports) {
 
 /**
@@ -55566,7 +55641,7 @@ angular.module('ngAnimate', [], function initAngularHelpers() {
 
 
 /***/ }),
-/* 106 */
+/* 108 */
 /***/ (function(module, exports) {
 
 /**
@@ -55999,7 +56074,7 @@ ngAriaModule.directive('ngShow', ['$aria', function($aria) {
 
 
 /***/ }),
-/* 107 */
+/* 109 */
 /***/ (function(module, exports) {
 
 /*!
@@ -93115,28 +93190,26 @@ angular.module("material.core").constant("$MD_THEME_CSS", "md-autocomplete.md-TH
 })(window, window.angular);;window.ngMaterial={version:{full: "1.1.10"}};
 
 /***/ }),
-/* 108 */
+/* 110 */
 /***/ (function(module, exports) {
 
-module.exports = "<md-dialog>\r\n    <md-dialog-content>\r\n        <div class=\"modal_content\">\r\n            <div class=\"modal_content__title\">\r\n                <div>Create new sale</div>\r\n                <div class=\"close\" ng-click=\"vm.cancel()\"></div>\r\n            </div>\r\n            <div class=\"modal_content__sale\">\r\n\r\n                <div class=\"modal_content__sale_title\">\r\n                    Event and buy-in\r\n                </div>\r\n                <label class=\"modal_content__sale_title modal_content__sale_title_select\">Event</label>\r\n                <div class=\"modal_content__sale_select\">\r\n                    <md-select class=\"md-no-underline\"\r\n                               ng-change=\"vm.getSubevents()\"\r\n                               ng-model=\"vm.sale.event_id\" placeholder=\"Choose an event\">\r\n                        <md-option value=\"{%item.id%}\" ng-repeat=\"item in vm.events\">{%item.title%}</md-option>\r\n                    </md-select>\r\n                </div>\r\n\r\n                <label class=\"modal_content__sale_title modal_content__sale_title_select\">Flight</label>\r\n                <div class=\"modal_content__sale_select\">\r\n                    <md-select class=\"md-no-underline form-Select-theme\"\r\n                               ng-change=\"vm.getSubevents()\"\r\n                               ng-model=\"vm.sale.event_id\" placeholder=\"Choose an event\">\r\n                        <md-option value=\"{%item.id%}\" ng-repeat=\"item in vm.events\">{%item.title%}</md-option>\r\n                    </md-select>\r\n                </div>\r\n\r\n                <div class=\"attributs_wrapper\">\r\n                    <div class=\"attributs_item\">\r\n                        <span>Buy-in</span>\r\n                        <input type=\"text\" placeholder=\"$3,000\">\r\n                    </div>\r\n                    <div class=\"attributs_item\">\r\n                        <span>Closing time</span>\r\n                        <input type=\"text\" placeholder=\"10:44, 10 Apr 2018\">\r\n                    </div>\r\n                </div>\r\n\r\n                <div class=\"modal_content__sale_title\">Offer</div>\r\n\r\n                <div class=\"attributs_wrapper\">\r\n                    <div class=\"attributs_item attributs_item__border\">\r\n                        <span>Share</span>\r\n                        <input type=\"text\" placeholder=\"0\">\r\n                    </div>\r\n                    <div class=\"attributs_item attributs_item__border\">\r\n                        <span>Share</span>\r\n                        <input type=\"text\" placeholder=\"1\">\r\n                    </div>\r\n                    <div class=\"attributs_item attributs_item__border\">\r\n                        <span>Share</span>\r\n                        <input type=\"text\" placeholder=\"0\">\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n    </md-dialog-content>\r\n\r\n    <div class=\"modal_foter\">\r\n        <div class=\"modal_foter__buttons\">\r\n            <div class=\"button_text\" ng-click=\"vm.cancel()\">Cancel</div>\r\n            <div class=\"button_blue\">Create a sale</div>\r\n        </div>\r\n    </div>\r\n\r\n\r\n</md-dialog>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n";
+module.exports = "<md-dialog>\n    <md-dialog-content>\n        <div class=\"modal_content\">\n            <div class=\"modal_content__title\">\n                <div>Create new sale</div>\n                <div class=\"close\" ng-click=\"vm.cancel()\"></div>\n            </div>\n            <div class=\"modal_content__sale\">\n\n                <div class=\"modal_content__sale_title\">\n                    Event and buy-in\n                </div>\n                <label class=\"modal_content__sale_title modal_content__sale_title_select\">Event</label>\n                <div class=\"modal_content__sale_select\">\n                    <md-select class=\"md-no-underline\"\n                               ng-change=\"vm.getSubevents()\"\n                               ng-model=\"vm.sale.event_id\" placeholder=\"Choose an event\">\n                        <md-option value=\"{%item.id%}\" ng-repeat=\"item in vm.events\">{%item.title%}</md-option>\n                    </md-select>\n                </div>\n\n                <label class=\"modal_content__sale_title modal_content__sale_title_select\">Flight</label>\n                <div class=\"modal_content__sale_select\">\n                    <md-select class=\"md-no-underline form-Select-theme\"\n                               ng-model=\"vm.sale.subevent_id\" placeholder=\"Choose an event\">\n                        <md-option value=\"{%item.id%}\" ng-repeat=\"item in vm.subevents\">{%item.title%}</md-option>\n                    </md-select>\n                </div>\n\n                <div class=\"attributs_wrapper\">\n                    <div class=\"attributs_item\">\n                        <span>Buy-in</span>\n                        <input type=\"text\" placeholder=\"$3,000\">\n                    </div>\n                    <div class=\"attributs_item\">\n                        <span>Closing time</span>\n                        <input type=\"text\" placeholder=\"10:44, 10 Apr 2018\">\n                    </div>\n                </div>\n\n                <div class=\"modal_content__sale_title\">Offer</div>\n\n                <div class=\"attributs_wrapper\">\n                    <div class=\"attributs_item attributs_item__border\">\n                        <span>Share</span>\n                        <input type=\"text\" placeholder=\"10%\" ng-model=\"vm.sale.share\" ng-change=\"vm.calcAmount()\">\n                    </div>\n                    <div class=\"attributs_item attributs_item__border\">\n                        <span>Markup</span>\n                        <input type=\"text\" placeholder=\"1.1\" ng-model=\"vm.sale.markup\" ng-change=\"vm.calcAmount()\">\n                    </div>\n                    <div class=\"attributs_item attributs_item__border\">\n                        <span>Amount</span>\n                        <input type=\"text\" placeholder=\"100%\" ng-model=\"vm.sale.amount\" disabled>\n                    </div>\n                </div>\n            </div>\n\n        </div>\n    </md-dialog-content>\n\n    <div class=\"modal_foter\">\n        <div class=\"modal_foter__buttons\">\n            <div class=\"button_text\" ng-click=\"vm.cancel()\">Cancel</div>\n            <div class=\"button_blue\">Create a sale</div>\n        </div>\n    </div>\n\n\n</md-dialog>\n\n\n\n\n\n\n\n\n\n";
 
 /***/ }),
-/* 109 */,
-/* 110 */,
-/* 111 */
+/* 111 */,
+/* 112 */,
+/* 113 */
 /***/ (function(module, exports) {
 
-module.exports = "<md-dialog>\r\n    <md-dialog-content>\r\n\r\n        <div class=\"modal_content\">\r\n            <div class=\"modal_content__title\">\r\n                <div>Place a bid</div>\r\n                <div class=\"close\"></div>\r\n            </div>\r\n            <div class=\"modal_content__bid\">\r\n                <div class=\"profile_status\">\r\n                    <div>\r\n                        <div class=\"profile_status__photo\"><img src=\"/images/desk/players_img/profile_img_8.png\"\r\n                                                                alt=\"photo\"></div>\r\n                        <div>\r\n                            <div class=\"profile_status__name\">Louise Romero</div>\r\n                            <div class=\"profile_status__event\">MILLIONS Russia, 1A</div>\r\n                        </div>\r\n                        <div class=\"profile_status__gte_and_by\">\r\n                            <div class=\"profile_status__buyin\">£1,000</div>\r\n                            <div class=\"profile_status__gte\">£500,000 GTE</div>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"profile_status__attributs d-flex\">\r\n                        <div class=\"profile_status__markup\"><span>Markup</span><br>1.20</div>\r\n                        <div class=\"profile_status__share\"><span>Share</span><br>30%</div>\r\n                        <div class=\"profile_status__value\"><span>Value</span><br>1.20</div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"bids_group bids_group__highest_color\">\r\n                    <span class=\"bids_group__title\">HIGHEST BIDS</span>\r\n                    <div class=\"bids_group__row\">\r\n                        <input type=\"text\" placeholder=\"1.20\">\r\n                        <input type=\"text\" placeholder=\"1.53%\">\r\n                        <input type=\"text\" placeholder=\"$1,182.22\">\r\n                    </div>\r\n                    <div class=\"bids_group__row\">\r\n                        <input type=\"text\" placeholder=\"1.09\">\r\n                        <input type=\"text\" placeholder=\"0.38%\">\r\n                        <input type=\"text\" placeholder=\"$443\">\r\n                    </div>\r\n                </div>\r\n                <div class=\"bids_group bids_group__matched_color\">\r\n                    <span class=\"bids_group__title\">MATCHED BID</span>\r\n                    <div class=\"bids_group__row\">\r\n                        <input type=\"text\" placeholder=\"1.20\">\r\n                        <input type=\"text\" placeholder=\"1.53%\">\r\n                        <input type=\"text\" placeholder=\"$1,182.22\">\r\n                    </div>\r\n                </div>\r\n                <div class=\"bids_group edit_status\">\r\n                    <span class=\"bids_group__title\">MATCHED BID</span>\r\n                    <div class=\"bids_group__row\">\r\n                        <input type=\"text\" placeholder=\"1.20\">\r\n                        <input type=\"text\" placeholder=\"1.53%\">\r\n                        <input type=\"text\" placeholder=\"$1,182.22\">\r\n                    </div>\r\n                    <div class=\"revocation_bid\"></div>\r\n                    <div class=\"conf_bid\"></div>\r\n                    <div class=\"del_bid\"></div>\r\n                </div>\r\n                <div class=\"you_bids\">\r\n                    <span class=\"bids_group__title\">YOUR BID</span>\r\n                    <div class=\"you_bids__wrapper\">\r\n                        <div class=\"you_bids__item\">\r\n                            <label>Share</label>\r\n                            <input type=\"text\" placeholder=\"1.20\">\r\n                        </div>\r\n                        <div class=\"you_bids__item\">\r\n                            <label>Share</label>\r\n                            <input type=\"text\" placeholder=\"1.53%\">\r\n                        </div>\r\n                        <div class=\"you_bids__item\">\r\n                            <label>Share</label>\r\n                            <input type=\"text\" placeholder=\"$1,182.22\">\r\n                        </div>\r\n                        <div class=\"add_new\"></div>\r\n                        <div class=\"you_bids__place_bid\">Place a bid</div>\r\n\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </md-dialog-content>\r\n</md-dialog>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n";
+module.exports = "<md-dialog>\n    <md-dialog-content>\n\n        <div class=\"modal_content\">\n            <div class=\"modal_content__title\">\n                <div>Place a bid</div>\n                <div class=\"close\" ng-click=\"vm.cancel()\"> </div>\n            </div>\n            <div class=\"modal_content__bid\">\n                <div class=\"profile_status\">\n                    <div>\n                        <div class=\"profile_status__photo\"><img src=\"/images/desk/players_img/profile_img_8.png\"\n                                                                alt=\"photo\"></div>\n                        <div>\n                            <div class=\"profile_status__name\">Louise Romero</div>\n                            <div class=\"profile_status__event\">MILLIONS Russia, 1A</div>\n                        </div>\n                        <div class=\"profile_status__gte_and_by\">\n                            <div class=\"profile_status__buyin\">£1,000</div>\n                            <div class=\"profile_status__gte\">£500,000 GTE</div>\n                        </div>\n                    </div>\n                    <div class=\"profile_status__attributs d-flex\">\n                        <div class=\"profile_status__markup\"><span>Markup</span><br>1.20</div>\n                        <div class=\"profile_status__share\"><span>Share</span><br>30%</div>\n                        <div class=\"profile_status__value\"><span>Value</span><br>1.20</div>\n                    </div>\n                </div>\n                <div class=\"bids_group bids_group__highest_color\">\n                    <span class=\"bids_group__title\">HIGHEST BIDS</span>\n                    <div class=\"bids_group__row\">\n                        <input type=\"text\" placeholder=\"1.20\">\n                        <input type=\"text\" placeholder=\"1.53%\">\n                        <input type=\"text\" placeholder=\"$1,182.22\">\n                    </div>\n                    <div class=\"bids_group__row\">\n                        <input type=\"text\" placeholder=\"1.09\">\n                        <input type=\"text\" placeholder=\"0.38%\">\n                        <input type=\"text\" placeholder=\"$443\">\n                    </div>\n                </div>\n                <div class=\"bids_group bids_group__matched_color\">\n                    <span class=\"bids_group__title\">MATCHED BID</span>\n                    <div class=\"bids_group__row\">\n                        <input type=\"text\" placeholder=\"1.20\">\n                        <input type=\"text\" placeholder=\"1.53%\">\n                        <input type=\"text\" placeholder=\"$1,182.22\">\n                    </div>\n                </div>\n                <div class=\"bids_group edit_status\">\n                    <span class=\"bids_group__title\">MATCHED BID</span>\n                    <div class=\"bids_group__row\">\n                        <input type=\"text\" placeholder=\"1.20\">\n                        <input type=\"text\" placeholder=\"1.53%\">\n                        <input type=\"text\" placeholder=\"$1,182.22\">\n                    </div>\n                    <div class=\"revocation_bid\"></div>\n                    <div class=\"conf_bid\"></div>\n                    <div class=\"del_bid\"></div>\n                </div>\n                <div class=\"you_bids\">\n                    <span class=\"bids_group__title\">YOUR BID</span>\n                    <div class=\"you_bids__wrapper\">\n                        <div class=\"you_bids__item\">\n                            <label>Share</label>\n                            <input type=\"text\" placeholder=\"1.20\">\n                        </div>\n                        <div class=\"you_bids__item\">\n                            <label>Share</label>\n                            <input type=\"text\" placeholder=\"1.53%\">\n                        </div>\n                        <div class=\"you_bids__item\">\n                            <label>Share</label>\n                            <input type=\"text\" placeholder=\"$1,182.22\">\n                        </div>\n                        <div class=\"add_new\"></div>\n                        <div class=\"you_bids__place_bid\">Place a bid</div>\n\n                    </div>\n                </div>\n            </div>\n        </div>\n    </md-dialog-content>\n</md-dialog>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
 
 /***/ }),
-/* 112 */
+/* 114 */
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"header\" id=\"left\">\r\n    <div class=\"logo\">\r\n        <a ui-sref=\"invest\">\r\n            <img src=\"/images/desk/logo.png\" alt=\"Logo\">\r\n        </a>\r\n    </div>\r\n    <nav class=\"menu\">\r\n        <ul class=\"menu_list\">\r\n            <li class=\"menu_item\">\r\n                <a class=\"menu_item__link\"\r\n                   ng-class=\"$ctrl.isActive('invest')\"\r\n                   ui-sref=\"invest\"\r\n                >\r\n                    Invest\r\n                </a>\r\n                <div class=\"menu_item__count\">2</div>\r\n            </li>\r\n            <li class=\"menu_item\">\r\n                <a class=\"menu_item__link\"\r\n                   ng-class=\"$ctrl.isActive('bids')\"\r\n                   ui-sref=\"bids\"\r\n                >\r\n                    Bids\r\n                </a>\r\n            </li>\r\n            <li class=\"menu_item\">\r\n                <a class=\"menu_item__link\"\r\n                   ng-class=\"$ctrl.isActive('sale')\"\r\n                   ui-sref=\"sale\"\r\n                >\r\n                    Sale\r\n                </a>\r\n            </li>\r\n            <li class=\"menu_item\">\r\n                <a class=\"menu_item__link\"\r\n                   ng-class=\"$ctrl.isActive('wallet')\"\r\n                   ui-sref=\"wallet\"\r\n                >\r\n                    Wallet\r\n                </a>\r\n                <span class=\"menu_item__wallet\">$ 20,240.98</span>\r\n            </li>\r\n        </ul>\r\n    </nav>\r\n    <div class=\"last_up\">\r\n        <div class=\"last_up__title\">Last Updates</div>\r\n        <div class=\"last_up__item last_up__item_blue\">\r\n            <div class=\"last_up_marker\">\r\n                <img src=\"/images/desk/blue_circle.png\" alt=\"\">\r\n            </div>\r\n            <div class=\"message\">Your bid was accepted by Austin Vargas</div>\r\n\r\n        </div>\r\n        <div class=\"last_up__item last_up__item_yellow\">\r\n            <div class=\"last_up_marker\">\r\n                <img src=\"/images/desk/yellow_minus.png\" alt=\"\">\r\n            </div>\r\n            <div class=\"message\">Your bid was declined by Theodore Guerrero</div>\r\n\r\n        </div>\r\n        <div class=\"last_up__item last_up__item_green\">\r\n            <div class=\"last_up_marker\">\r\n                <img src=\"/images/desk/blue_circle.png\" alt=\"\">\r\n            </div>\r\n            <div class=\"message\">You sold 3% for Millions Russua (4% left)</div>\r\n\r\n        </div>\r\n        <div class=\"last_up__item last_up__item_red\">\r\n            <div class=\"last_up_marker\">\r\n                <img src=\"/images/desk/yellow_minus.png\" alt=\"\">\r\n            </div>\r\n            <div class=\"message\">New login attempt from a 73.223.92.66 (US)</div>\r\n\r\n        </div>\r\n    </div>\r\n    <div class=\"footer\">\r\n        <div class=\"profile\">\r\n            <div class=\"profile_info\">\r\n                <div class=\"profile_left-side\">\r\n                    <div class=\"profile_img\">\r\n                        <img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"\">\r\n                    </div>\r\n                    <div class=\"profile_name\">James. Co</div>\r\n                </div>\r\n                <a class=\"profile_logout\"\r\n                   ui-sref=\"logout\"></a>\r\n            </div>\r\n        </div>\r\n        <div class=\"footer__links\">\r\n            <a href=\"#\">Terms of Service</a>\r\n            <a href=\"#\">Privacy Policy</a>\r\n            <a href=\"#\">Contact Us</a>\r\n            <a href=\"#\">English</a>\r\n        </div>\r\n    </div>\r\n</header>\r\n\r\n<div class=\"pseudo-header\"></div>\r\n\r\n<div class=\"log_out-wr\">\r\n    <div class=\"log_out_profile\">\r\n        <div class=\"log_out_text\">\r\n            Log out\r\n            <span>Do you want to log out? Don’t do it, if you are not sure. Thanks!</span>\r\n        </div>\r\n        <div class=\"log_out_btn\">\r\n            <div class=\"log_out_cancel\">Cancel</div>\r\n            <div class=\"log_out_ok\">Log Out</div>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div class=\"your_profile_wr\">\r\n    <div class=\"your_profile_content-wr\">\r\n        <div class=\"your_profile_content\">\r\n            <div class=\"your_profile__title\">\r\n                Your Profile\r\n                <div class=\"your_profile_close\"></div>\r\n            </div>\r\n            <div class=\"your_profile_info\">\r\n                <div class=\"your_profile__pic\"><img src=\"/images/desk/players_img/pl_big_pic.png\" alt=\"player photo\"></div>\r\n                <div class=\"your_profile__name\">\r\n                    James. Co\r\n                    <div class=\"change_photo\">Replace photo</div>\r\n                </div>\r\n            </div>\r\n            <div class=\"link_party_pk\">\r\n                <div class=\"link_party_inf\">Get a fast access to your bids and money, log in with Party poker account </div>\r\n                <div class=\"link_party_btn\">Link Party Poker account</div>\r\n            </div>\r\n            <div class=\"your_profile_nav\">\r\n                <ul class=\"pr_nav_list\">\r\n                    <li class=\"pr_nav_item pr_setting\"><a href=\"#\">Settings</a><div class=\"pr_show_more\"></div></li>\r\n                    <li class=\"pr_nav_item pr_notification\"><a href=\"#\">Notification</a><div class=\"pr_show_more\"></div></li>\r\n                    <li class=\"pr_nav_item pr_privacy\"><a href=\"#\">Privacy and security</a><div class=\"pr_show_more\"></div></li>\r\n                    <li class=\"pr_nav_item pr_acc_inf\"><a href=\"#\">Account info</a><div class=\"pr_show_more\"></div></li>\r\n                    <li class=\"pr_nav_item pr_support\"><a href=\"#\">Support</a><div class=\"pr_show_more\"></div></li>\r\n                    <li class=\"pr_nav_item pr_tell\"><a href=\"#\">Tell a friends</a><div class=\"pr_show_more\"></div></li>\r\n                </ul>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n";
+module.exports = "<header class=\"header\" id=\"left\">\n    <div class=\"logo\">\n        <a ui-sref=\"invest\">\n            <img src=\"/images/desk/logo.png\" alt=\"Logo\">\n        </a>\n    </div>\n    <nav class=\"menu\">\n        <ul class=\"menu_list\">\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('invest')\"\n                   ui-sref=\"invest\"\n                >\n                    Invest\n                </a>\n                <div class=\"menu_item__count\">2</div>\n            </li>\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('bids')\"\n                   ui-sref=\"bids\"\n                >\n                    Bids\n                </a>\n            </li>\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('sale')\"\n                   ui-sref=\"sale\"\n                >\n                    Sale\n                </a>\n            </li>\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('wallet')\"\n                   ui-sref=\"wallet\"\n                >\n                    Wallet\n                </a>\n                <span class=\"menu_item__wallet\">$ 20,240.98</span>\n            </li>\n        </ul>\n    </nav>\n    <div class=\"last_up\">\n        <div class=\"last_up__title\">Last Updates</div>\n        <div class=\"last_up__item last_up__item_blue\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/blue_circle.png\" alt=\"\">\n            </div>\n            <div class=\"message\">Your bid was accepted by Austin Vargas</div>\n\n        </div>\n        <div class=\"last_up__item last_up__item_yellow\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/yellow_minus.png\" alt=\"\">\n            </div>\n            <div class=\"message\">Your bid was declined by Theodore Guerrero</div>\n\n        </div>\n        <div class=\"last_up__item last_up__item_green\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/blue_circle.png\" alt=\"\">\n            </div>\n            <div class=\"message\">You sold 3% for Millions Russua (4% left)</div>\n\n        </div>\n        <div class=\"last_up__item last_up__item_red\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/yellow_minus.png\" alt=\"\">\n            </div>\n            <div class=\"message\">New login attempt from a 73.223.92.66 (US)</div>\n\n        </div>\n    </div>\n    <div class=\"footer\">\n        <div class=\"profile\">\n            <div class=\"profile_info\">\n                <div class=\"profile_left-side\">\n                    <div class=\"profile_img\">\n                        <img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"\">\n                    </div>\n                    <div class=\"profile_name\">James. Co</div>\n                </div>\n                <a class=\"profile_logout\"\n                   ui-sref=\"logout\"></a>\n            </div>\n        </div>\n        <div class=\"footer__links\">\n            <a href=\"#\">Terms of Service</a>\n            <a href=\"#\">Privacy Policy</a>\n            <a href=\"#\">Contact Us</a>\n            <a href=\"#\">English</a>\n        </div>\n    </div>\n</header>\n\n<div class=\"pseudo-header\"></div>\n\n<div class=\"log_out-wr\">\n    <div class=\"log_out_profile\">\n        <div class=\"log_out_text\">\n            Log out\n            <span>Do you want to log out? Don’t do it, if you are not sure. Thanks!</span>\n        </div>\n        <div class=\"log_out_btn\">\n            <div class=\"log_out_cancel\">Cancel</div>\n            <div class=\"log_out_ok\">Log Out</div>\n        </div>\n    </div>\n</div>\n<div class=\"your_profile_wr\">\n    <div class=\"your_profile_content-wr\">\n        <div class=\"your_profile_content\">\n            <div class=\"your_profile__title\">\n                Your Profile\n                <div class=\"your_profile_close\"></div>\n            </div>\n            <div class=\"your_profile_info\">\n                <div class=\"your_profile__pic\"><img src=\"/images/desk/players_img/pl_big_pic.png\" alt=\"player photo\"></div>\n                <div class=\"your_profile__name\">\n                    James. Co\n                    <div class=\"change_photo\">Replace photo</div>\n                </div>\n            </div>\n            <div class=\"link_party_pk\">\n                <div class=\"link_party_inf\">Get a fast access to your bids and money, log in with Party poker account </div>\n                <div class=\"link_party_btn\">Link Party Poker account</div>\n            </div>\n            <div class=\"your_profile_nav\">\n                <ul class=\"pr_nav_list\">\n                    <li class=\"pr_nav_item pr_setting\"><a href=\"#\">Settings</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_notification\"><a href=\"#\">Notification</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_privacy\"><a href=\"#\">Privacy and security</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_acc_inf\"><a href=\"#\">Account info</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_support\"><a href=\"#\">Support</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_tell\"><a href=\"#\">Tell a friends</a><div class=\"pr_show_more\"></div></li>\n                </ul>\n            </div>\n\n        </div>\n    </div>\n</div>\n\n";
 
 /***/ }),
-/* 113 */,
-/* 114 */,
 /* 115 */,
 /* 116 */,
 /* 117 */,
@@ -93195,29 +93268,29 @@ module.exports = "<header class=\"header\" id=\"left\">\r\n    <div class=\"logo
 /* 170 */,
 /* 171 */,
 /* 172 */,
-/* 173 */
+/* 173 */,
+/* 174 */,
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(174);
+module.exports = __webpack_require__(176);
 
 
 /***/ }),
-/* 174 */
+/* 176 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mobile_Services__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Controllers__ = __webpack_require__(175);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Router__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Middlewares__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Components__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Filters__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular_permission__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers__ = __webpack_require__(177);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_Services__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Router__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Middlewares__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Components__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Filters__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular_permission__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular_permission___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular_permission__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__TemplateCache__ = __webpack_require__(222);
-
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__TemplateCache__ = __webpack_require__(224);
 var angular = __webpack_require__(10);
 
 
@@ -93228,12 +93301,13 @@ var angular = __webpack_require__(10);
 
 
 
-var ngRouter = __webpack_require__(76).default;
-var ngMaterial = __webpack_require__(104);
+
+var ngRouter = __webpack_require__(78).default;
+var ngMaterial = __webpack_require__(106);
 var ngAria = __webpack_require__(66);
 var ngAnimate = __webpack_require__(65);
 
-var app = angular.module('poker', [ngMaterial, ngAria, ngAnimate, ngRouter, __WEBPACK_IMPORTED_MODULE_5__Filters__["a" /* default */], __WEBPACK_IMPORTED_MODULE_1__Controllers__["a" /* default */], __WEBPACK_IMPORTED_MODULE_4__Components__["a" /* default */], __WEBPACK_IMPORTED_MODULE_0__mobile_Services__["a" /* default */], __WEBPACK_IMPORTED_MODULE_6_angular_permission__["permission"], __WEBPACK_IMPORTED_MODULE_6_angular_permission__["uiPermission"]]);
+var app = angular.module('poker', [ngMaterial, ngAria, ngAnimate, ngRouter, __WEBPACK_IMPORTED_MODULE_5__Filters__["a" /* default */], __WEBPACK_IMPORTED_MODULE_0__Controllers__["a" /* default */], __WEBPACK_IMPORTED_MODULE_4__Components__["a" /* default */], __WEBPACK_IMPORTED_MODULE_1__common_Services__["a" /* default */], __WEBPACK_IMPORTED_MODULE_6_angular_permission__["permission"], __WEBPACK_IMPORTED_MODULE_6_angular_permission__["uiPermission"]]);
 
 app.config(['$interpolateProvider', function ($interpolateProvider) {
     $interpolateProvider.startSymbol('{%');
@@ -93245,24 +93319,24 @@ app.run(__WEBPACK_IMPORTED_MODULE_3__Middlewares__["a" /* default */]);
 app.run(__WEBPACK_IMPORTED_MODULE_7__TemplateCache__["a" /* default */]);
 
 /***/ }),
-/* 175 */
+/* 177 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers_LoginController__ = __webpack_require__(176);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Controllers_RegisterController__ = __webpack_require__(177);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Controllers_ProfileController__ = __webpack_require__(178);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Controllers_FilterBidsController__ = __webpack_require__(179);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Controllers_BidResponsesController__ = __webpack_require__(180);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Controllers_MainController__ = __webpack_require__(181);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Controllers_bids_BidsController__ = __webpack_require__(182);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Controllers_invest_InvestController__ = __webpack_require__(184);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Controllers_SaleFormController__ = __webpack_require__(185);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Controllers_EventController__ = __webpack_require__(186);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Controllers_EventsListController__ = __webpack_require__(187);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers_LoginController__ = __webpack_require__(178);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Controllers_RegisterController__ = __webpack_require__(179);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Controllers_ProfileController__ = __webpack_require__(180);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Controllers_FilterBidsController__ = __webpack_require__(181);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Controllers_BidResponsesController__ = __webpack_require__(182);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Controllers_MainController__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Controllers_bids_BidsController__ = __webpack_require__(184);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Controllers_invest_InvestController__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Controllers_SaleFormController__ = __webpack_require__(187);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Controllers_EventController__ = __webpack_require__(188);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Controllers_EventsListController__ = __webpack_require__(189);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Controllers_DialogController__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Controllers_sales_SaleController__ = __webpack_require__(188);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Controllers_sales_SaleFilterController__ = __webpack_require__(189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Controllers_sales_SaleController__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Controllers_sales_SaleFilterController__ = __webpack_require__(191);
 var angular = __webpack_require__(10);
 
 
@@ -93307,7 +93381,7 @@ module.controller('SaleController', __WEBPACK_IMPORTED_MODULE_12__Controllers_sa
 /* harmony default export */ __webpack_exports__["a"] = (module.name);
 
 /***/ }),
-/* 176 */
+/* 178 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93356,7 +93430,7 @@ LoginController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 177 */
+/* 179 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93415,7 +93489,7 @@ RegisterController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 178 */
+/* 180 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93469,7 +93543,7 @@ ProfileController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 179 */
+/* 181 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93519,7 +93593,7 @@ FilterBidsController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 180 */
+/* 182 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93569,7 +93643,7 @@ BidResponsesController.$inject = ['$window', '$http', '$state'];
 
 
 /***/ }),
-/* 181 */
+/* 183 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93588,7 +93662,7 @@ MainController.$inject = ['$state'];
 
 
 /***/ }),
-/* 182 */
+/* 184 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93617,7 +93691,7 @@ var BidsController = function () {
     _createClass(BidsController, [{
         key: '$onInit',
         value: function $onInit() {
-            var allBids = __webpack_require__(183);
+            var allBids = __webpack_require__(185);
             this.bids = allBids.data[this.bidsActive];
             console.log(this.bids);
         }
@@ -93631,13 +93705,13 @@ BidsController.$inject = ['$window', '$http', '$state'];
 
 
 /***/ }),
-/* 183 */
+/* 185 */
 /***/ (function(module, exports) {
 
 module.exports = {"data":{"matched":[{"id":5,"status":2,"investor":{"id":1,"name":"Austin Vargas","age":24,"email":"j30att@gmail.com","email_verified_at":null,"created_at":"2018-10-01 10:02:11","updated_at":"2018-10-01 10:02:11"},"sale":{"id":1,"user_id":1,"event_id":2,"sub_event_id":4,"flight_id":1,"status":1,"markup":0.3,"share":123,"amount":123,"created_at":"2018-10-01 10:15:53","updated_at":"2018-10-01 10:15:53","subevent":{"id":4,"event_id":2,"title":"tuesday","image_id":null,"fund":500000,"buy_in":10000,"date_start":"2018-10-31 10:01:40","date_end":"2018-11-05 10:01:40","created_at":"2018-10-01 10:01:40","updated_at":"2018-10-01 10:01:40","event":{"id":2,"title":"Las Vegas Poker Party","image_id":null,"description":"<p>We’re giving players the chance to <strong>win one of 100 prize packages worth $12,000</strong> each for the\n<strong>Las Vegas Poker Party</strong>strong>, a week-long extravaganza loaded with poolside fun, exciting nightlife,\naward-winning golf, and a variety of live poker events that will show you the best Sin City has to offer!</p>","fund":1000000,"buy_in":1000,"reg_fee":100,"date_start":"2018-11-10 10:01:40","date_end":"2018-11-15 10:01:40","created_at":"2018-10-01 10:01:40","updated_at":"2018-10-01 10:01:40"}}},"markup":1.3,"share":1234,"amount":513,"subevent":{"id":4,"title":"tuesday","fund":500000,"buy_in":10000,"date":"31  October","short_date":"31  Oct"}}],"unmatched":[{"id":3,"status":3,"investor":{"id":1,"name":"jane","age":24,"email":"j30att@gmail.com","email_verified_at":null,"created_at":"2018-10-01 10:02:11","updated_at":"2018-10-01 10:02:11"},"sale":{"id":1,"user_id":1,"event_id":2,"sub_event_id":4,"flight_id":1,"status":1,"markup":0.3,"share":123,"amount":123,"created_at":"2018-10-01 10:15:53","updated_at":"2018-10-01 10:15:53","subevent":{"id":4,"event_id":2,"title":"tuesday","image_id":null,"fund":500000,"buy_in":10000,"date_start":"2018-10-31 10:01:40","date_end":"2018-11-05 10:01:40","created_at":"2018-10-01 10:01:40","updated_at":"2018-10-01 10:01:40","event":{"id":2,"title":"Las Vegas Poker Party","image_id":null,"description":"<p>We’re giving players the chance to <strong>win one of 100 prize packages worth $12,000</strong> each for the\n<strong>Las Vegas Poker Party</strong>strong>, a week-long extravaganza loaded with poolside fun, exciting nightlife,\naward-winning golf, and a variety of live poker events that will show you the best Sin City has to offer!</p>","fund":1000000,"buy_in":1000,"reg_fee":100,"date_start":"2018-11-10 10:01:40","date_end":"2018-11-15 10:01:40","created_at":"2018-10-01 10:01:40","updated_at":"2018-10-01 10:01:40"}}},"markup":1.2,"share":222,"amount":550,"subevent":{"id":4,"title":"tuesday","fund":500000,"buy_in":10000,"date":"31  October","short_date":"31  Oct"}}],"settled":[{"id":4,"status":4,"investor":{"id":1,"name":"jane","age":24,"email":"j30att@gmail.com","email_verified_at":null,"created_at":"2018-10-01 10:02:11","updated_at":"2018-10-01 10:02:11"},"sale":{"id":1,"user_id":1,"event_id":2,"sub_event_id":4,"flight_id":1,"status":1,"markup":0.3,"share":123,"amount":123,"created_at":"2018-10-01 10:15:53","updated_at":"2018-10-01 10:15:53","subevent":{"id":4,"event_id":2,"title":"tuesday","image_id":null,"fund":500000,"buy_in":10000,"date_start":"2018-10-31 10:01:40","date_end":"2018-11-05 10:01:40","created_at":"2018-10-01 10:01:40","updated_at":"2018-10-01 10:01:40","event":{"id":2,"title":"Las Vegas Poker Party","image_id":null,"description":"<p>We’re giving players the chance to <strong>win one of 100 prize packages worth $12,000</strong> each for the\n<strong>Las Vegas Poker Party</strong>strong>, a week-long extravaganza loaded with poolside fun, exciting nightlife,\naward-winning golf, and a variety of live poker events that will show you the best Sin City has to offer!</p>","fund":1000000,"buy_in":1000,"reg_fee":100,"date_start":"2018-11-10 10:01:40","date_end":"2018-11-15 10:01:40","created_at":"2018-10-01 10:01:40","updated_at":"2018-10-01 10:01:40"}}},"markup":1,"share":333,"amount":430,"subevent":{"id":4,"title":"tuesday","fund":500000,"buy_in":10000,"date":"31  October","short_date":"31  Oct"}}],"canceled":[]}}
 
 /***/ }),
-/* 184 */
+/* 186 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93690,16 +93764,19 @@ var InvestController = function () {
         key: "showCreateForm",
         value: function showCreateForm(ev) {
             var vm = this;
+            var elementWrapper = {};
+            elementWrapper.target = document.getElementById('right');
+
             this.$mdDialog.show({
                 controller: __WEBPACK_IMPORTED_MODULE_1__DialogController__["a" /* DialogController */],
                 controllerAs: 'vm',
-                template: __webpack_require__(111),
+                template: __webpack_require__(113),
                 parent: angular.element(document.body),
-                targetEvent: ev,
+                targetEvent: elementWrapper,
 
                 clickOutsideToClose: true
 
-            }).openFrom('#left').then(function (answer) {}, function () {});
+            }).then(function (answer) {}, function () {});
         }
     }, {
         key: "getSales",
@@ -93724,7 +93801,7 @@ InvestController.$inject = ['$window', '$http', '$mdDialog'];
 
 
 /***/ }),
-/* 185 */
+/* 187 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93848,7 +93925,7 @@ SaleFormController.$inject = ['$window', '$http', '$stateParams'];
 
 
 /***/ }),
-/* 186 */
+/* 188 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93907,7 +93984,7 @@ EventController.$inject = ['$window', '$http', '$stateParams'];
 
 
 /***/ }),
-/* 187 */
+/* 189 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93954,7 +94031,7 @@ EventsListController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 188 */
+/* 190 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93987,12 +94064,15 @@ var SaleController = function () {
         key: 'showCreateForm',
         value: function showCreateForm(ev) {
             var vm = this;
+            var elementWrapper = {};
+            elementWrapper.target = document.getElementById('right');
+
             this.$mdDialog.show({
                 controller: __WEBPACK_IMPORTED_MODULE_0__DialogController__["a" /* DialogController */],
                 controllerAs: 'vm',
-                template: __webpack_require__(108),
+                template: __webpack_require__(110),
                 parent: angular.element(document.body),
-                targetEvent: ev,
+                targetEvent: elementWrapper,
 
                 clickOutsideToClose: true
 
@@ -94010,7 +94090,7 @@ SaleController.$inject = ['SalesResourceService', '$mdDialog'];
 
 
 /***/ }),
-/* 189 */
+/* 191 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -94059,12 +94139,14 @@ var SaleFilterController = function () {
         key: "showCreateForm",
         value: function showCreateForm(ev) {
             var vm = this;
+            var elementWrapper = {};
+            elementWrapper.target = document.getElementById('right');
             this.$mdDialog.show({
                 controller: __WEBPACK_IMPORTED_MODULE_1__DialogController__["a" /* DialogController */],
                 controllerAs: 'vm',
-                template: __webpack_require__(108),
+                template: __webpack_require__(110),
                 parent: angular.element(document.body),
-                targetEvent: ev,
+                targetEvent: elementWrapper,
 
                 clickOutsideToClose: true
 
@@ -94082,7 +94164,7 @@ SaleFilterController.$inject = ['SalesResourceService', '$stateParams', '$mdDial
 
 
 /***/ }),
-/* 190 */
+/* 192 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -94101,7 +94183,7 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
 
     $stateProvider.state('index', {
         url: '/',
-        template: __webpack_require__(191),
+        template: __webpack_require__(193),
         data: {
             permissions: {
                 except: 'Auth',
@@ -94114,56 +94196,56 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
         }
     }).state('invest', {
         url: '/invest',
-        template: __webpack_require__(192),
+        template: __webpack_require__(194),
         controller: 'InvestController',
         controllerAs: 'InvestCtrl'
     }).state('invest-events', {
         url: '/invest/events',
-        template: __webpack_require__(193)
+        template: __webpack_require__(195)
         /*controller: 'EventsListController',
         controllerAs: 'EvntsLstCtrl',*/
     }).state('invest-events-detail', {
         url: '/invest/events/{id}',
-        template: __webpack_require__(194)
+        template: __webpack_require__(196)
         /*controller: 'EventsListController',
         controllerAs: 'EvntsLstCtrl',*/
     }).state('bids', {
         url: '/bids',
-        template: __webpack_require__(195),
+        template: __webpack_require__(197),
         controller: 'BidsController',
         controllerAs: 'BidsCtrl'
     }).state('bids-list', {
         url: '/bids/{type}',
-        template: __webpack_require__(196),
+        template: __webpack_require__(198),
         controller: 'BidsController',
         controllerAs: 'BidsCtrl'
     }).state('sale', {
         url: '/sales',
-        template: __webpack_require__(197),
+        template: __webpack_require__(199),
         controller: 'SaleController',
         controllerAs: 'SaleCtrl'
     }).state('sale-list', {
         url: '/sales/{type}',
-        template: __webpack_require__(198),
+        template: __webpack_require__(200),
         controller: 'SaleFilterController',
         controllerAs: 'SaleFltrCtrl'
     }).state('sale-create', {
         url: '/sales/create',
-        template: __webpack_require__(108)
+        template: __webpack_require__(110)
     }).state('place-bit', {
         url: '/bids/place-a-bit',
-        template: __webpack_require__(111)
+        template: __webpack_require__(113)
     }).state('wallet', {
         url: '/wallet',
-        template: __webpack_require__(199)
+        template: __webpack_require__(201)
     }).state('terms-and-conditions', {
         url: '/terms-and-conditions',
-        template: __webpack_require__(200)
+        template: __webpack_require__(202)
     }).state('privacy-policy', {
         url: '/privacy-policy',
-        template: __webpack_require__(201)
+        template: __webpack_require__(203)
     }).state('auth', {
-        template: __webpack_require__(202),
+        template: __webpack_require__(204),
         data: {
             permissions: {
                 except: 'Auth',
@@ -94177,12 +94259,12 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
     }).state('auth.login', {
         //ng-controller="LoginController as LgCtrl"
         url: '/login',
-        template: __webpack_require__(203),
+        template: __webpack_require__(205),
         controller: 'LoginController',
         controllerAs: 'LgCtrl'
     }).state('auth.registration', {
         url: '/register',
-        template: __webpack_require__(204),
+        template: __webpack_require__(206),
         //ng-controller="RegisterController as RgCtrl"
         controller: 'RegisterController',
         controllerAs: 'RgCtrl'
@@ -94199,91 +94281,91 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
 }
 
 /***/ }),
-/* 191 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\r\n    <div class=\"login_page-wr col-md-12\">\r\n        <div class=\"login_block\">\r\n            <div class=\"buy_stakes\">\r\n                Buy stakes in poker players in tournaments online and around the world\r\n            </div>\r\n            <div class=\"btn_block\">\r\n                <a ui-sref=\"auth.login\">\r\n                    <div class=\"login_btn login_in\">Log in</div>\r\n                </a>\r\n                <a ui-sref=\"auth.registration\">\r\n                    <div class=\"login_btn login_registration\" >Register</div>\r\n                </a>\r\n            </div>\r\n            <div class=\"contine_without_wr\">\r\n                <a class=\"contine_without\" ui-sref=\"invest\">\r\n                    Continue without registration\r\n                </a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
-
-/***/ }),
-/* 192 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"deskwr\">\r\n    <main-menu></main-menu>\r\n    <div class=\"main_content\">\r\n        <div class=\"event_content-wr\">\r\n            <div class=\"event_content__title\">\r\n                Events\r\n                <div class=\"event_content__see_more\">\r\n                    <a ui-sref=\"invest-events\">See all</a>\r\n                </div>\r\n            </div>\r\n            <div class=\"events_item-wr\">\r\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_1.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </a>\r\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_2.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </a>\r\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_3.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </a>\r\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_4.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </a>\r\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_5.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </a>\r\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_6.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </a>\r\n            </div>\r\n\r\n        </div>\r\n        <div class=\"events_tabs-wr\">\r\n            <div class=\"events_tabs_nav\">\r\n                <ul class=\"events_tabs_list\">\r\n                    <li class=\"events_tabs_item events_tabs_item_active\">Closing soon</li>\r\n                </ul>\r\n                <a ui-sref=\"\" class=\"events_tabs_nav__link\">See all</a>\r\n            </div>\r\n            <table class=\"table_events_list main_event_table\">\r\n                <thead class=\"table_events_head\">\r\n                <tr>\r\n                    <th>From</th>\r\n                    <th>Event</th>\r\n                    <th>Buy in</th>\r\n                    <th>GTE</th>\r\n                    <th>Markup</th>\r\n                    <th>Share</th>\r\n                    <th>Time</th>\r\n                </tr>\r\n                </thead>\r\n                <tbody class=\"table_events_body\">\r\n                <tr ng-click=\"InvestCtrl.showCreateForm($event)\">\r\n                    <td class=\"t_from t_from_event\">\r\n                        <div class=\"t_from_img\">\r\n                            <img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\">\r\n                        </div>\r\n                        <span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_share\">20%</td>\r\n                    <td class=\"t_time\">< 24 hours</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from t_from_event\">\r\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\r\n                                                     alt=\"profile photo\">\r\n                        </div>\r\n                        <span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_share\">20%</td>\r\n                    <td class=\"t_time\">< 24 hours</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from t_from_event\">\r\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\r\n                                                     alt=\"profile photo\">\r\n                        </div>\r\n                        <span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_share\">20%</td>\r\n                    <td class=\"t_time\">< 24 hours</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from t_from_event\">\r\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\r\n                                                     alt=\"profile photo\">\r\n                        </div>\r\n                        <span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_share\">20%</td>\r\n                    <td class=\"t_time\">< 24 hours</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from t_from_event\">\r\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\r\n                                                     alt=\"profile photo\">\r\n                        </div>\r\n                        <span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_share\">20%</td>\r\n                    <td class=\"t_time\">< 24 hours</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from t_from_event\">\r\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\r\n                                                     alt=\"profile photo\">\r\n                        </div>\r\n                        <span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_share\">20%</td>\r\n                    <td class=\"t_time\">< 24 hours</td>\r\n                </tr>\r\n                </tbody>\r\n            </table>\r\n\r\n        </div>\r\n    </div>\r\n</div>";
-
-/***/ }),
 /* 193 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"deskwr\">\r\n    <main-menu></main-menu>\r\n    <div class=\"main_content\">\r\n        <div class=\"event_content-wr\">\r\n            <div class=\"event_content__title\">\r\n                All Events\r\n            </div>\r\n            <div class=\"event_content_filter-wr filter-wr\">\r\n                <div class=\"filter_item event_content_filter__\">\r\n                    <select name=\"\" id=\"\">\r\n                        <option value=\"\">Filter value</option>\r\n                        <option value=\"\">Filter value</option>\r\n                        <option value=\"\">Filter value</option>\r\n                        <option value=\"\">Filter value</option>\r\n                        <option value=\"\">Filter value</option>\r\n                    </select>\r\n                </div>\r\n\r\n\r\n                <div class=\"filter_item event_content_filter__\"><select name=\"\" id=\"\">\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                </select></div>\r\n                <div class=\"filter_item event_content_filter__\"><select name=\"\" id=\"\">\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                </select></div>\r\n                <div class=\"filter_item event_content_filter__\"><select name=\"\" id=\"\">\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                </select></div>\r\n            </div>\r\n\r\n            <div class=\"events_item-wr\">\r\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_1.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </a>\r\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_2.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </a>\r\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_3.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </a>\r\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_4.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </a>\r\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_5.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </a>\r\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_6.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </a>\r\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_1.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </a>\r\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_2.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </a>\r\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_3.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </a>\r\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_4.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </a>\r\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_5.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </a>\r\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_6.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </a>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n</div>";
+module.exports = "<div class=\"row\">\n    <div class=\"login_page-wr col-md-12\">\n        <div class=\"login_block\">\n            <div class=\"buy_stakes\">\n                Buy stakes in poker players in tournaments online and around the world\n            </div>\n            <div class=\"btn_block\">\n                <a ui-sref=\"auth.login\">\n                    <div class=\"login_btn login_in\">Log in</div>\n                </a>\n                <a ui-sref=\"auth.registration\">\n                    <div class=\"login_btn login_registration\" >Register</div>\n                </a>\n            </div>\n            <div class=\"contine_without_wr\">\n                <a class=\"contine_without\" ui-sref=\"invest\">\n                    Continue without registration\n                </a>\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
 /* 194 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"deskwr\">\r\n    <main-menu></main-menu>\r\n    <div class=\"main_content\">\r\n        <div class=\"event_wrapper\">\r\n            <div class=\"event_left-side\">\r\n                <div class=\"event_left-side_header\">\r\n                    <a ui-sref=\"\" class=\"event_left-side_header_link\">\r\n                        Back to Events\r\n                    </a>\r\n                </div>\r\n                <div class=\"event_left-side_description\">\r\n                    <div class=\"event_left-side_card\">\r\n                        <div class=\"event_left-side_card_img\">\r\n                            <img src=\"/images/desk/event_pic_1.png\" alt=\"event\">\r\n                        </div>\r\n                        <div class=\"event_left-side_card_title\">\r\n                            WSOP International Circuit - Rotterdam\r\n                        </div>\r\n                        <div class=\"event_left-side_card_description\">\r\n                            <span>Jul 20 – Aug 10</span>\r\n                            <span class=\"grey_dot\"></span>\r\n                            <span>£1,000,000 GTD</span>\r\n                            <a ui-sref=\"#\">See info</a>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"event_left-side_list\">\r\n                        <div class=\"event_left-side_list_title\">\r\n                            Events list\r\n                        </div>\r\n                        <div class=\"event_left-side_list_item active\">\r\n                            <div class=\"event_left-side_list_item_title\">\r\n                                Main event\r\n                            </div>\r\n                            <div class=\"event_left-side_list_item_description\">\r\n                                <span>£1,000,000</span>\r\n                                <span class=\"grey_dot\"></span>\r\n                                <span>£1,000,000 GTD</span>\r\n                                <span>Jul 20 – Aug 10</span>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"event_left-side_list_item\">\r\n                            <div class=\"event_left-side_list_item_title\">\r\n                                Hyper-Turbo Deep Stack\r\n                            </div>\r\n                            <div class=\"event_left-side_list_item_description\">\r\n                                <span>£1,000,000</span>\r\n                                <span class=\"grey_dot\"></span>\r\n                                <span>£1,000,000 GTD</span>\r\n                                <span>3-15 Aug</span>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"event_left-side_list_item\">\r\n                            <div class=\"event_left-side_list_item_title\">\r\n                                Hyper-Turbo Deep Stack\r\n                            </div>\r\n                            <div class=\"event_left-side_list_item_description\">\r\n                                <span>£1,000,000</span>\r\n                                <span class=\"grey_dot\"></span>\r\n                                <span>£1,000,000 GTD</span>\r\n                                <span>3-15 Aug</span>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class=\"event_right-side\">\r\n                <div class=\"event_right-side_header\">\r\n                    <div class=\"event_right-side_header_title\">\r\n                        Main event\r\n                    </div>\r\n                    <div class=\"event_right-side_header_description\">\r\n                        <span>£1,000,000</span>\r\n                        <span class=\"grey_dot\"></span>\r\n                        <span>£1,000,000 GTD</span>\r\n                        <span>Jul 20 – Aug 10</span>\r\n                    </div>\r\n                </div>\r\n                <div class=\"event_right-side_table\">\r\n                    <table>\r\n                        <thead>\r\n                        <tr>\r\n                            <th>From</th>\r\n                            <th>Markup</th>\r\n                            <th class=\"align-right\">Share</th>\r\n                            <th class=\"align-right\">Time</th>\r\n                        </tr>\r\n                        </thead>\r\n                        <tbody>\r\n                        <tr>\r\n                            <td>\r\n                                <img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"\">\r\n                                <span>Austin Vargas</span>\r\n                            </td>\r\n                            <td class=\"bold\">1.2</td>\r\n                            <td class=\"bold align-right\">20%</td>\r\n                            <td class=\"color-grey align-right\">< 24hours</td>\r\n                        </tr>\r\n                        <tr>\r\n                            <td>\r\n                                <img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"\">\r\n                                <span>Austin Vargas</span>\r\n                            </td>\r\n                            <td class=\"bold\">1.2</td>\r\n                            <td class=\"bold align-right\">20%</td>\r\n                            <td class=\"color-grey align-right\">< 24hours</td>\r\n                        </tr>\r\n                        <tr>\r\n                            <td>\r\n                                <img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"\">\r\n                                <span>Austin Vargas</span>\r\n                            </td>\r\n                            <td class=\"bold\">1.2</td>\r\n                            <td class=\"bold align-right\">20%</td>\r\n                            <td class=\"color-grey align-right\">< 24hours</td>\r\n                        </tr>\r\n                        <tr>\r\n                            <td>\r\n                                <img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"\">\r\n                                <span>Austin Vargas</span>\r\n                            </td>\r\n                            <td class=\"bold\">1.2</td>\r\n                            <td class=\"bold align-right\">20%</td>\r\n                            <td class=\"color-grey align-right\">< 24hours</td>\r\n                        </tr>\r\n                        <tr>\r\n                            <td>\r\n                                <img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"\">\r\n                                <span>Austin Vargas</span>\r\n                            </td>\r\n                            <td class=\"bold\">1.2</td>\r\n                            <td class=\"bold align-right\">20%</td>\r\n                            <td class=\"color-grey align-right\">< 24hours</td>\r\n                        </tr>\r\n\r\n                        </tbody>\r\n                    </table>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>";
+module.exports = "<div class=\"deskwr\">\n    <main-menu></main-menu>\n    <div class=\"main_content\">\n        <div class=\"event_content-wr\">\n            <div class=\"event_content__title\">\n                Events\n                <div class=\"event_content__see_more\">\n                    <a ui-sref=\"invest-events\">See all</a>\n                </div>\n            </div>\n            <div class=\"events_item-wr\">\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_1.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </a>\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_2.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </a>\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_3.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </a>\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_4.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </a>\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_5.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </a>\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_6.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </a>\n            </div>\n\n        </div>\n        <div class=\"events_tabs-wr\">\n            <div class=\"events_tabs_nav\">\n                <ul class=\"events_tabs_list\">\n                    <li class=\"events_tabs_item events_tabs_item_active\">Closing soon</li>\n                </ul>\n                <a ui-sref=\"\" class=\"events_tabs_nav__link\">See all</a>\n            </div>\n            <table class=\"table_events_list main_event_table\">\n                <thead class=\"table_events_head\">\n                <tr>\n                    <th>From</th>\n                    <th>Event</th>\n                    <th>Buy in</th>\n                    <th>GTE</th>\n                    <th>Markup</th>\n                    <th>Share</th>\n                    <th>Time</th>\n                </tr>\n                </thead>\n                <tbody class=\"table_events_body\">\n                <tr ng-click=\"InvestCtrl.showCreateForm($event)\">\n                    <td class=\"t_from t_from_event\">\n                        <div class=\"t_from_img\">\n                            <img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\">\n                        </div>\n                        <span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_share\">20%</td>\n                    <td class=\"t_time\">< 24 hours</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from t_from_event\">\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\n                                                     alt=\"profile photo\">\n                        </div>\n                        <span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_share\">20%</td>\n                    <td class=\"t_time\">< 24 hours</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from t_from_event\">\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\n                                                     alt=\"profile photo\">\n                        </div>\n                        <span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_share\">20%</td>\n                    <td class=\"t_time\">< 24 hours</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from t_from_event\">\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\n                                                     alt=\"profile photo\">\n                        </div>\n                        <span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_share\">20%</td>\n                    <td class=\"t_time\">< 24 hours</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from t_from_event\">\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\n                                                     alt=\"profile photo\">\n                        </div>\n                        <span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_share\">20%</td>\n                    <td class=\"t_time\">< 24 hours</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from t_from_event\">\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\n                                                     alt=\"profile photo\">\n                        </div>\n                        <span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_share\">20%</td>\n                    <td class=\"t_time\">< 24 hours</td>\n                </tr>\n                </tbody>\n            </table>\n\n        </div>\n    </div>\n</div>";
 
 /***/ }),
 /* 195 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"deskwr\">\r\n    <main-menu></main-menu>\r\n    <div class=\"main_content\">\r\n        <div class=\"bids_container\">\r\n            <div class=\"bids_title\">\r\n                <div class=\"bids_title__text\">Matched Bids</div>\r\n                <a class=\"bids_title__link\" ui-sref=\"bids-list({type:'matched'})\">See all</a>\r\n            </div>\r\n            <div class=\"bids_row\">\r\n                <div class=\"bids_card bids_card__green\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/pl_4.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"bids_card bids_card__green\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/pl_4.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"bids_card bids_card__green\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/pl_4.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"bids_container\">\r\n            <div class=\"bids_title\">\r\n                <div class=\"bids_title__text\">Unmatched Bids</div>\r\n                <a class=\"bids_title__link\" ui-sref=\"bids-list({type:'unmatched'})\">See all</a>\r\n            </div>\r\n            <div class=\"bids_row\">\r\n                <div class=\"bids_card bids_card__red\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/pl_2.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"bids_card bids_card__red\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/pl_2.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"bids_card bids_card__red\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/pl_2.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"bids_container\">\r\n            <div class=\"bids_title\">\r\n                <div class=\"bids_title__text\">Settled Bids</div>\r\n                <a class=\"bids_title__link\" ui-sref=\"bids-list({type:'settled'})\">See all</a>\r\n            </div>\r\n            <div class=\"bids_row\">\r\n                <div class=\"bids_card bids_card__blue\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/pl_5.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"bids_card bids_card__blue\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/pl_5.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"bids_card bids_card__blue\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/pl_5.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"bids_container\">\r\n            <div class=\"bids_title\">\r\n                <div class=\"bids_title__text\">Canceled Bids</div>\r\n                <a class=\"bids_title__link\" ui-sref=\"bids-list({type:'canceled'})\">See all</a>\r\n            </div>\r\n            <div class=\"bids_row\">\r\n                <div class=\"bids_card bids_card__grey\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/players.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"bids_card bids_card__grey\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/players.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"bids_card bids_card__grey\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/players.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+module.exports = "<div class=\"deskwr\">\n    <main-menu></main-menu>\n    <div class=\"main_content\">\n        <div class=\"event_content-wr\">\n            <div class=\"event_content__title\">\n                All Events\n            </div>\n            <div class=\"event_content_filter-wr filter-wr\">\n                <div class=\"filter_item event_content_filter__\">\n                    <select name=\"\" id=\"\">\n                        <option value=\"\">Filter value</option>\n                        <option value=\"\">Filter value</option>\n                        <option value=\"\">Filter value</option>\n                        <option value=\"\">Filter value</option>\n                        <option value=\"\">Filter value</option>\n                    </select>\n                </div>\n\n\n                <div class=\"filter_item event_content_filter__\"><select name=\"\" id=\"\">\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                </select></div>\n                <div class=\"filter_item event_content_filter__\"><select name=\"\" id=\"\">\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                </select></div>\n                <div class=\"filter_item event_content_filter__\"><select name=\"\" id=\"\">\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                </select></div>\n            </div>\n\n            <div class=\"events_item-wr\">\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_1.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </a>\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_2.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </a>\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_3.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </a>\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_4.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </a>\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_5.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </a>\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_6.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </a>\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_1.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </a>\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_2.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </a>\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_3.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </a>\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_4.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </a>\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_5.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </a>\n                <a ui-sref=\"invest-events-detail({id:'1'})\" class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_6.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </a>\n            </div>\n\n        </div>\n    </div>\n</div>";
 
 /***/ }),
 /* 196 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"deskwr\">\r\n    <main-menu></main-menu>\r\n    <div class=\"main_content\">\r\n        <div class=\"bids_content_wr bids_content_{% BidsCtrl.bidsActive %}\">\r\n            <div class=\"bids_nav\">\r\n                <ul class=\"bids_nav_list\">\r\n                    <li ng-repeat=\"(index, type) in BidsCtrl.bidsTypes\"\r\n                        class=\"bids_nav_item\">\r\n                        <a ui-sref=\"bids-list({type:type})\"\r\n                           ui-sref-active=\"active\"\r\n                           ng-bind=\"type | ucFirst\"></a>\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n            <table class=\"bids_table\">\r\n                <thead class=\"bids_table_head\">\r\n                <tr>\r\n                    <th>From</th>\r\n                    <th>Event</th>\r\n                    <th>Buy in</th>\r\n                    <th>GTE</th>\r\n                    <th>Markup</th>\r\n                    <th>Value</th>\r\n                    <th>Time</th>\r\n                </tr>\r\n                </thead>\r\n                <tbody class=\"bids_table_body\">\r\n\r\n                <tr ng-repeat=\"(index, bid) in BidsCtrl.bids\">\r\n                    <td class=\"t_from\">\r\n                        <div class=\"t_from_img\">\r\n                            <img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"\">\r\n                        </div>\r\n                        <span ng-bind=\"bid.investor.name\"></span>\r\n                    </td>\r\n                    <td class=\"t_event\" ng-bind=\"bid.sale.subevent.event.title\"></td>\r\n                    <td class=\"t_buy_in\" ng-bind=\"bid.sale.subevent.event.buy_in | currency:'£':0\"></td>\r\n                    <td class=\"t_gte\" ng-bind=\"bid.sale.subevent.event.fund | currency:'£':0\"></td>\r\n                    <td class=\"t_markup\" ng-bind=\"bid.markup\"></td>\r\n                    <td class=\"t_value\" ng-bind=\"bid.sale.subevent.event.reg_fee | currency:'$':0\">$100</td>\r\n                    <td class=\"t_close\">\r\n                        <ng-pluralize count=\"index +2\"\r\n                                      when=\"{'0': 'Now','1': '1 day','other': '{} days'}\">\r\n                        </ng-pluralize>\r\n                    </td>\r\n                </tr>\r\n\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n    </div>\r\n</div>\r\n";
+module.exports = "<div class=\"deskwr\">\n    <main-menu></main-menu>\n    <div class=\"main_content\">\n        <div class=\"event_wrapper\">\n            <div class=\"event_left-side\">\n                <div class=\"event_left-side_header\">\n                    <a ui-sref=\"\" class=\"event_left-side_header_link\">\n                        Back to Events\n                    </a>\n                </div>\n                <div class=\"event_left-side_description\">\n                    <div class=\"event_left-side_card\">\n                        <div class=\"event_left-side_card_img\">\n                            <img src=\"/images/desk/event_pic_1.png\" alt=\"event\">\n                        </div>\n                        <div class=\"event_left-side_card_title\">\n                            WSOP International Circuit - Rotterdam\n                        </div>\n                        <div class=\"event_left-side_card_description\">\n                            <span>Jul 20 – Aug 10</span>\n                            <span class=\"grey_dot\"></span>\n                            <span>£1,000,000 GTD</span>\n                            <a ui-sref=\"#\">See info</a>\n                        </div>\n                    </div>\n                    <div class=\"event_left-side_list\">\n                        <div class=\"event_left-side_list_title\">\n                            Events list\n                        </div>\n                        <div class=\"event_left-side_list_item active\">\n                            <div class=\"event_left-side_list_item_title\">\n                                Main event\n                            </div>\n                            <div class=\"event_left-side_list_item_description\">\n                                <span>£1,000,000</span>\n                                <span class=\"grey_dot\"></span>\n                                <span>£1,000,000 GTD</span>\n                                <span>Jul 20 – Aug 10</span>\n                            </div>\n                        </div>\n                        <div class=\"event_left-side_list_item\">\n                            <div class=\"event_left-side_list_item_title\">\n                                Hyper-Turbo Deep Stack\n                            </div>\n                            <div class=\"event_left-side_list_item_description\">\n                                <span>£1,000,000</span>\n                                <span class=\"grey_dot\"></span>\n                                <span>£1,000,000 GTD</span>\n                                <span>3-15 Aug</span>\n                            </div>\n                        </div>\n                        <div class=\"event_left-side_list_item\">\n                            <div class=\"event_left-side_list_item_title\">\n                                Hyper-Turbo Deep Stack\n                            </div>\n                            <div class=\"event_left-side_list_item_description\">\n                                <span>£1,000,000</span>\n                                <span class=\"grey_dot\"></span>\n                                <span>£1,000,000 GTD</span>\n                                <span>3-15 Aug</span>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"event_right-side\">\n                <div class=\"event_right-side_header\">\n                    <div class=\"event_right-side_header_title\">\n                        Main event\n                    </div>\n                    <div class=\"event_right-side_header_description\">\n                        <span>£1,000,000</span>\n                        <span class=\"grey_dot\"></span>\n                        <span>£1,000,000 GTD</span>\n                        <span>Jul 20 – Aug 10</span>\n                    </div>\n                </div>\n                <div class=\"event_right-side_table\">\n                    <table>\n                        <thead>\n                        <tr>\n                            <th>From</th>\n                            <th>Markup</th>\n                            <th class=\"align-right\">Share</th>\n                            <th class=\"align-right\">Time</th>\n                        </tr>\n                        </thead>\n                        <tbody>\n                        <tr>\n                            <td>\n                                <img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"\">\n                                <span>Austin Vargas</span>\n                            </td>\n                            <td class=\"bold\">1.2</td>\n                            <td class=\"bold align-right\">20%</td>\n                            <td class=\"color-grey align-right\">< 24hours</td>\n                        </tr>\n                        <tr>\n                            <td>\n                                <img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"\">\n                                <span>Austin Vargas</span>\n                            </td>\n                            <td class=\"bold\">1.2</td>\n                            <td class=\"bold align-right\">20%</td>\n                            <td class=\"color-grey align-right\">< 24hours</td>\n                        </tr>\n                        <tr>\n                            <td>\n                                <img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"\">\n                                <span>Austin Vargas</span>\n                            </td>\n                            <td class=\"bold\">1.2</td>\n                            <td class=\"bold align-right\">20%</td>\n                            <td class=\"color-grey align-right\">< 24hours</td>\n                        </tr>\n                        <tr>\n                            <td>\n                                <img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"\">\n                                <span>Austin Vargas</span>\n                            </td>\n                            <td class=\"bold\">1.2</td>\n                            <td class=\"bold align-right\">20%</td>\n                            <td class=\"color-grey align-right\">< 24hours</td>\n                        </tr>\n                        <tr>\n                            <td>\n                                <img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"\">\n                                <span>Austin Vargas</span>\n                            </td>\n                            <td class=\"bold\">1.2</td>\n                            <td class=\"bold align-right\">20%</td>\n                            <td class=\"color-grey align-right\">< 24hours</td>\n                        </tr>\n\n                        </tbody>\n                    </table>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>";
 
 /***/ }),
 /* 197 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"deskwr\">\r\n    <main-menu></main-menu>\r\n    <div class=\"main_content\">\r\n        <div class=\"sale_container\" ng-repeat=\"(key,items) in SaleCtrl.sales\">\r\n            <div class=\"sale_title\">\r\n                <div>\r\n                    <div class=\"sale_title__text\" ng-bind=\"key\"></div>\r\n                    <div class=\"sale_title__text\">sales</div>\r\n                    <div class=\"sale_title__btn\"\r\n                         ng-if=\"items[0].status == 1\"\r\n                         ng-click=\"SaleCtrl.showCreateForm($event)\">Create a Sale\r\n                    </div>\r\n                </div>\r\n                <a ui-sref=\"sale-list({type:key})\" class=\"sale_title__link\">See all</a>\r\n            </div>\r\n            <div class=\"sale_row\">\r\n                <div class=\"sale_card\"\r\n                     ng-class=\"{'sale_card__yellow':item.status == 1,\r\n                                'sale_card__grey':item.status == 2, }\"\r\n                     ng-repeat=\"item in items\">\r\n                    <div class=\"sale_card__title\">\r\n                        <span ng-bind=\"item.event.title\"></span>\r\n                    </div>\r\n                    <div class=\"sale_card__price\">\r\n                        <span>Buy in $5,000 + $300</span>\r\n                    </div>\r\n                    <div class=\"sale_card__options\">\r\n                        <div class=\"sale_card__options_column\">\r\n                            <span>Closes</span><span>73 days</span>\r\n                        </div>\r\n                        <div class=\"sale_card__options_column\">\r\n                            <span>Bid</span><span>1.11</span>\r\n                        </div>\r\n                        <div class=\"sale_card__options_column\">\r\n                            <span>Value</span><span>£2,404</span>\r\n                        </div>\r\n                        <div class=\"sale_card__options_column\">\r\n                            <span>Start time</span><span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+module.exports = "<div class=\"deskwr\">\n    <main-menu></main-menu>\n    <div class=\"main_content\">\n        <div class=\"bids_container\">\n            <div class=\"bids_title\">\n                <div class=\"bids_title__text\">Matched Bids</div>\n                <a class=\"bids_title__link\" ui-sref=\"bids-list({type:'matched'})\">See all</a>\n            </div>\n            <div class=\"bids_row\">\n                <div class=\"bids_card bids_card__green\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/pl_4.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"bids_card bids_card__green\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/pl_4.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"bids_card bids_card__green\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/pl_4.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"bids_container\">\n            <div class=\"bids_title\">\n                <div class=\"bids_title__text\">Unmatched Bids</div>\n                <a class=\"bids_title__link\" ui-sref=\"bids-list({type:'unmatched'})\">See all</a>\n            </div>\n            <div class=\"bids_row\">\n                <div class=\"bids_card bids_card__red\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/pl_2.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"bids_card bids_card__red\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/pl_2.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"bids_card bids_card__red\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/pl_2.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"bids_container\">\n            <div class=\"bids_title\">\n                <div class=\"bids_title__text\">Settled Bids</div>\n                <a class=\"bids_title__link\" ui-sref=\"bids-list({type:'settled'})\">See all</a>\n            </div>\n            <div class=\"bids_row\">\n                <div class=\"bids_card bids_card__blue\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/pl_5.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"bids_card bids_card__blue\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/pl_5.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"bids_card bids_card__blue\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/pl_5.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"bids_container\">\n            <div class=\"bids_title\">\n                <div class=\"bids_title__text\">Canceled Bids</div>\n                <a class=\"bids_title__link\" ui-sref=\"bids-list({type:'canceled'})\">See all</a>\n            </div>\n            <div class=\"bids_row\">\n                <div class=\"bids_card bids_card__grey\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/players.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"bids_card bids_card__grey\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/players.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"bids_card bids_card__grey\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/players.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
 /* 198 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"deskwr\">\r\n    <main-menu></main-menu>\r\n    <div class=\"main_content\" ng-cloak>\r\n        <div class=\"sale_container\">\r\n            <div class=\"sale_title\">\r\n                <div>\r\n                    <a ui-sref=\"sale-list({type: 'active'})\" class=\"sale_title__text\" ng-class=\"{'sale_title__text_disabled': SaleFltrCtrl.$stateParams.type !='active' }\">Active Sales</a>\r\n                    <a ui-sref=\"sale-list({type: 'closed'})\" class=\"sale_title__text\" ng-class=\"{'sale_title__text_disabled': SaleFltrCtrl.$stateParams.type !='closed' }\">Closed Sales</a>\r\n                </div>\r\n                <div>\r\n                    <div class=\"sale_title__btn\" ng-click=\"SaleFltrCtrl.showCreateForm($event)\">Create a Sale</div>\r\n                </div>\r\n            </div>\r\n            <table class=\"sale_table\" ng-if=\"SaleFltrCtrl.$stateParams.type == 'active' && SaleFltrCtrl._opts.dataLoad == true\">\r\n                <thead class=\"sale_table_head\">\r\n                <td class=\"sale_table_head_td\">event</td>\r\n                <td class=\"sale_table_head_td\">buy in</td>\r\n                <td class=\"sale_table_head_td\">gte</td>\r\n                <td class=\"sale_table_head_td\">av. markup</td>\r\n                <td class=\"sale_table_head_td\">share sold</td>\r\n                <td class=\"sale_table_head_td\">raised</td>\r\n                <td class=\"sale_table_head_td\">time</td>\r\n                </thead>\r\n                <tbody class=\"sale_table_body sale_table_body__yellow\">\r\n                <tr class=\"sale_table_row\" ng-repeat=\"item in SaleFltrCtrl.sales\">\r\n                    <td class=\"sale_table_row__title\">\r\n                        <span ng-bind=\"item.event.title\"></span><br>\r\n                        <span ng-bind=\"item.subevent.title\"></span>\r\n                    </td>\r\n                    <td class=\"sale_table_row__data\">£1,000</td>\r\n                    <td class=\"sale_table_row__data\">£500,000</td>\r\n                    <td class=\"sale_table_row__data\">0</td>\r\n                    <td class=\"sale_table_row__data sale_table_row__data_bold\">1% of 10%</td>\r\n                    <td class=\"sale_table_row__data sale_table_row__data_bold\">£2,404</td>\r\n                    <td class=\"sale_table_row__data\">2 days</td>\r\n                </tr>\r\n\r\n                </tbody>\r\n            </table>\r\n\r\n            <table class=\"sale_table\" ng-if=\"SaleFltrCtrl.$stateParams.type == 'closed' && SaleFltrCtrl._opts.dataLoad == true\">\r\n                <thead class=\"sale_table_head\">\r\n                <td class=\"sale_table_head_td\">event</td>\r\n                <td class=\"sale_table_head_td\">buy in</td>\r\n                <td class=\"sale_table_head_td\">gte</td>\r\n                <td class=\"sale_table_head_td\">closes</td>\r\n                <td class=\"sale_table_head_td\">share sold</td>\r\n                <td class=\"sale_table_head_td\">raised</td>\r\n                <td class=\"sale_table_head_td\">outcome</td>\r\n                </thead>\r\n                <tbody class=\"sale_table_body sale_table_body__grey\">\r\n                <tr class=\"sale_table_row\" ng-repeat=\"item in SaleFltrCtrl.sales\">\r\n                    <td class=\" sale_tablesale_table_row__title\">\r\n                        <span ng-bind=\"item.event.title\"></span><br>\r\n                        <span ng-bind=\"item.subevent.title\"></span>\r\n                    </td>\r\n                    <td class=\"sale_table_row__data\">£1,000</td>\r\n                    <td class=\"sale_table_row__data\">£500,000</td>\r\n                    <td class=\"sale_table_row__data\">24 days</td>\r\n                    <td class=\"sale_table_row__data sale_table_row__data_bold\">1% of 10%</td>\r\n                    <td class=\"sale_table_row__data sale_table_row__data_bold\">£2,404</td>\r\n                    <td class=\"sale_table_row__data sale_table_row__data_bold\">2 days</td>\r\n                </tr>\r\n                </tbody>\r\n\r\n            </table>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n\r\n";
+module.exports = "<div class=\"deskwr\">\n    <main-menu></main-menu>\n    <div class=\"main_content\">\n        <div class=\"bids_content_wr bids_content_{% BidsCtrl.bidsActive %}\">\n            <div class=\"bids_nav\">\n                <ul class=\"bids_nav_list\">\n                    <li ng-repeat=\"(index, type) in BidsCtrl.bidsTypes\"\n                        class=\"bids_nav_item\">\n                        <a ui-sref=\"bids-list({type:type})\"\n                           ui-sref-active=\"active\"\n                           ng-bind=\"type | ucFirst\"></a>\n                    </li>\n                </ul>\n            </div>\n            <table class=\"bids_table\">\n                <thead class=\"bids_table_head\">\n                <tr>\n                    <th>From</th>\n                    <th>Event</th>\n                    <th>Buy in</th>\n                    <th>GTE</th>\n                    <th>Markup</th>\n                    <th>Value</th>\n                    <th>Time</th>\n                </tr>\n                </thead>\n                <tbody class=\"bids_table_body\">\n\n                <tr ng-repeat=\"(index, bid) in BidsCtrl.bids\">\n                    <td class=\"t_from\">\n                        <div class=\"t_from_img\">\n                            <img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"\">\n                        </div>\n                        <span ng-bind=\"bid.investor.name\"></span>\n                    </td>\n                    <td class=\"t_event\" ng-bind=\"bid.sale.subevent.event.title\"></td>\n                    <td class=\"t_buy_in\" ng-bind=\"bid.sale.subevent.event.buy_in | currency:'£':0\"></td>\n                    <td class=\"t_gte\" ng-bind=\"bid.sale.subevent.event.fund | currency:'£':0\"></td>\n                    <td class=\"t_markup\" ng-bind=\"bid.markup\"></td>\n                    <td class=\"t_value\" ng-bind=\"bid.sale.subevent.event.reg_fee | currency:'$':0\">$100</td>\n                    <td class=\"t_close\">\n                        <ng-pluralize count=\"index +2\"\n                                      when=\"{'0': 'Now','1': '1 day','other': '{} days'}\">\n                        </ng-pluralize>\n                    </td>\n                </tr>\n\n                </tbody>\n            </table>\n        </div>\n\n    </div>\n</div>\n";
 
 /***/ }),
 /* 199 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"deskwr\">\n    <main-menu></main-menu>\n    <div class=\"main_content\">\n        <div class=\"wallet_container\">\n            <div class=\"wallet_title\">\n                <div class=\"wallet_title__text\">My balance <span>$ 20,240.98</span></div>\n                <div class=\"wallet_title__button\">Make Deposit</div>\n            </div>\n            <div class=\"wallet_navigation\">\n                <div class=\"wallet_navigation__title\">Transactions</div>\n                <div class=\"wallet_navigation__tabs_wrapper\">\n                    <div class=\"wallet_navigation__tabs\">\n                        <div class=\"wallet_navigation__tabs_item wallet_navigation__tabs_item_active\">Last mont</div>\n                        <div class=\"wallet_navigation__tabs_item\">Half year</div>\n                        <div class=\"wallet_navigation__tabs_item\">Choose dates</div>\n                    </div>\n                    <div class=\"wallet_navigation__search\">Search by sender’s or reciver’s</div>\n                </div>\n            </div>\n            <div class=\"wallet_table_wrapper\">\n                <div class=\"wallet_table\">\n                    <div class=\"wallet_table__title\">\n                        <div class=\"wallet_table__title_item cell_date\">DATE</div>\n                        <div class=\"wallet_table__title_item cell_name\">EVENT</div>\n                        <div class=\"wallet_table__title_item cell_event\">EVENT</div>\n                        <div class=\"wallet_table__title_item cell_status\">Status</div>\n                        <div class=\"wallet_table__title_item cell_delta\"></div>\n                        <div class=\"wallet_table__title_item cell_balance\">BALANCE</div>\n                    </div>\n                    <div class=\"wallet_table__content\">\n                        <div class=\"wallet_table__content_row\">\n                            <div class=\"wallet_table__content_row_data cell_date\">27 May</div>\n                                <div class=\"wallet_table__content_row_transactions\">\n                                    <div class=\"wallet_table__content_row_transaction\">\n                                        <div class=\"wallet_table__content_row_transaction__name cell_name\">North Andreane\n                                            <div class=\"transaction_img\"><img src=\"/images/desk/right_arrow_green.png\" alt=\"\"></div>\n                                        </div>\n                                        <div class=\"wallet_table__content_row_transaction__event cell_event\">MILLIONS Russia, 1A</div>\n                                        <div class=\"wallet_table__content_row_transaction__status cell_status status_color__yellow\">Pending</div>\n                                        <div class=\"wallet_table__content_row_transaction__delta cell_delta\">-495</div>\n                                        <div class=\"wallet_table__content_row_transaction__balance cell_balance\">20,240.00</div>\n                                </div>\n                                    <div class=\"wallet_table__content_row_transaction\">\n                                        <div class=\"wallet_table__content_row_transaction__name cell_name\">North Andreane\n                                            <div class=\"transaction_img\"><img src=\"/images/desk/left_arrow_grey.png\" alt=\"\"></div>\n                                        </div>\n                                        <div class=\"wallet_table__content_row_transaction__event cell_event\">MILLIONS Russia, 1A</div>\n                                        <div class=\"wallet_table__content_row_transaction__status cell_status status_color__yellow\">Pending</div>\n                                        <div class=\"wallet_table__content_row_transaction__delta cell_delta\">-495</div>\n                                        <div class=\"wallet_table__content_row_transaction__balance cell_balance\">20,240.00</div>\n                                    </div>\n                            </div>\n                        </div>\n                        <div class=\"wallet_table__content_row\">\n                            <div class=\"wallet_table__content_row_data cell_date\">27 May</div>\n                            <div class=\"wallet_table__content_row_transactions\">\n                                <div class=\"wallet_table__content_row_transaction\">\n                                    <div class=\"wallet_table__content_row_transaction__name cell_name\">North Andreane\n                                        <div class=\"transaction_img\"><img src=\"/images/desk/right_arrow_green.png\" alt=\"\"></div>\n                                    </div>\n                                    <div class=\"wallet_table__content_row_transaction__event cell_event\">MILLIONS Russia, 1A</div>\n                                    <div class=\"wallet_table__content_row_transaction__status cell_status status_color__yellow\">Pending</div>\n                                    <div class=\"wallet_table__content_row_transaction__delta cell_delta\">-495</div>\n                                    <div class=\"wallet_table__content_row_transaction__balance cell_balance\">20,240.00</div>\n                                </div>\n                                <div class=\"wallet_table__content_row_transaction\">\n                                    <div class=\"wallet_table__content_row_transaction__name cell_name\">North Andreane\n                                        <div class=\"transaction_img\"><img src=\"/images/desk/right_arrow_green.png\" alt=\"\"></div>\n                                    </div>\n                                    <div class=\"wallet_table__content_row_transaction__event cell_event\">MILLIONS Russia, 1A</div>\n                                    <div class=\"wallet_table__content_row_transaction__status cell_status status_color__yellow\">Pending</div>\n                                    <div class=\"wallet_table__content_row_transaction__delta cell_delta\">-495</div>\n                                    <div class=\"wallet_table__content_row_transaction__balance cell_balance\">20,240.00</div>\n                                </div>\n                                <div class=\"wallet_table__content_row_transaction\">\n                                    <div class=\"wallet_table__content_row_transaction__name cell_name\">North Andreane\n                                        <div class=\"transaction_img\"><img src=\"/images/desk/right_arrow_green.png\" alt=\"\"></div>\n                                    </div>\n                                    <div class=\"wallet_table__content_row_transaction__event cell_event\">MILLIONS Russia, 1A</div>\n                                    <div class=\"wallet_table__content_row_transaction__status cell_status status_color__yellow\">Pending</div>\n                                    <div class=\"wallet_table__content_row_transaction__delta cell_delta\">-495</div>\n                                    <div class=\"wallet_table__content_row_transaction__balance cell_balance\">20,240.00</div>\n                                </div>\n                                <div class=\"wallet_table__content_row_transaction\">\n                                    <div class=\"wallet_table__content_row_transaction__name cell_name\">North Andreane\n                                        <div class=\"transaction_img\"><img src=\"/images/desk/right_arrow_green.png\" alt=\"\"></div>\n                                    </div>\n                                    <div class=\"wallet_table__content_row_transaction__event cell_event\">MILLIONS Russia, 1A</div>\n                                    <div class=\"wallet_table__content_row_transaction__status cell_status status_color__yellow\">Pending</div>\n                                    <div class=\"wallet_table__content_row_transaction__delta cell_delta\">-495</div>\n                                    <div class=\"wallet_table__content_row_transaction__balance cell_balance\">20,240.00</div>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"wallet_table__content_row\">\n                            <div class=\"wallet_table__content_row_data cell_date\">27 May</div>\n                            <div class=\"wallet_table__content_row_transactions\">\n                                <div class=\"wallet_table__content_row_transaction\">\n                                    <div class=\"wallet_table__content_row_transaction__name cell_name\">North Andreane\n                                        <div class=\"transaction_img\"><img src=\"/images/desk/left_arrow_grey.png\" alt=\"\"></div>\n                                    </div>\n                                    <div class=\"wallet_table__content_row_transaction__event cell_event\">MILLIONS Russia, 1A</div>\n                                    <div class=\"wallet_table__content_row_transaction__status cell_status\">Sent</div>\n                                    <div class=\"wallet_table__content_row_transaction__delta cell_delta status_color__green\">+495</div>\n                                    <div class=\"wallet_table__content_row_transaction__balance cell_balance\">20,240.00</div>\n                                </div>\n                                <div class=\"wallet_table__content_row_transaction\">\n                                    <div class=\"wallet_table__content_row_transaction__name cell_name\">North Andreane\n                                        <div class=\"transaction_img\"><img src=\"/images/desk/left_arrow_grey.png\" alt=\"\"></div>\n                                    </div>\n                                    <div class=\"wallet_table__content_row_transaction__event cell_event\">MILLIONS Russia, 1A</div>\n                                    <div class=\"wallet_table__content_row_transaction__status cell_status\">Sent</div>\n                                    <div class=\"wallet_table__content_row_transaction__delta cell_delta status_color__green\">+495</div>\n                                    <div class=\"wallet_table__content_row_transaction__balance cell_balance\">20,240.00</div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n";
+module.exports = "<div class=\"deskwr\">\n    <main-menu></main-menu>\n    <div class=\"main_content\">\n        <div class=\"sale_container\" ng-repeat=\"(key,items) in SaleCtrl.sales\">\n            <div class=\"sale_title\">\n                <div>\n                    <div class=\"sale_title__text\" ng-bind=\"key\"></div>\n                    <div class=\"sale_title__text\">sales</div>\n                    <div class=\"sale_title__btn\"\n                         ng-if=\"items[0].status == 1\"\n                         ng-click=\"SaleCtrl.showCreateForm($event)\">Create a Sale\n                    </div>\n                </div>\n                <a ui-sref=\"sale-list({type:key})\" class=\"sale_title__link\">See all</a>\n            </div>\n            <div class=\"sale_row\">\n                <div class=\"sale_card\"\n                     ng-class=\"{'sale_card__yellow':item.status == 1,\n                                'sale_card__grey':item.status == 2, }\"\n                     ng-repeat=\"item in items\">\n                    <div class=\"sale_card__title\">\n                        <span ng-bind=\"item.event.title\"></span>\n                    </div>\n                    <div class=\"sale_card__price\">\n                        <span>Buy in $5,000 + $300</span>\n                    </div>\n                    <div class=\"sale_card__options\">\n                        <div class=\"sale_card__options_column\">\n                            <span>Closes</span><span>73 days</span>\n                        </div>\n                        <div class=\"sale_card__options_column\">\n                            <span>Bid</span><span>1.11</span>\n                        </div>\n                        <div class=\"sale_card__options_column\">\n                            <span>Value</span><span>£2,404</span>\n                        </div>\n                        <div class=\"sale_card__options_column\">\n                            <span>Start time</span><span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
 /* 200 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"personal_inform col-md-12\">\r\n        <div class=\"personal_inform__title \">\r\n            <a ui-sref=\"auth.registration\" ><div class=\"goback\"></div></a>\r\n            Privacy\r\n        </div>\r\n\r\n\r\n        <div class=\"data-privacy\">\r\n            <span>Data & Privacy</span>\r\n            To esure your expirience is personal and relevant, we’re changing the type of advert you see and giving your more control over your data\r\n        </div>\r\n        <div class=\"check-box-wr\">\r\n            <div class=\"check-box__email\">\r\n                <input type=\"checkbox\" id=\"sms_new\" checked>\r\n                <label for=\"sms_new\">Yes, I’d like to hear about the latest poker news and promotions by Email</label>\r\n\r\n            </div>\r\n            <div class=\"check-box__email\">\r\n                <input type=\"checkbox\" id=\"email_new\" checked>\r\n                <label for=\"email_new\">Yes, I’d like to hear about the latest poker news and promotions by SMS</label>\r\n\r\n            </div>\r\n        </div>\r\n        <input id='termconfirm' type=\"submit\" name=\"submit_confirm\" value=\"Confirm\" style=\"border-radius:10pt;\">\r\n\r\n\r\n\r\n        <div class=\"see_policy\">\r\n            <a ui-sref=\"privacy-policy\">See Privacy policy</a>\r\n        </div>\r\n\r\n\r\n    </div>\r\n</div>";
+module.exports = "<div class=\"deskwr\">\n    <main-menu></main-menu>\n    <div class=\"main_content\" ng-cloak>\n        <div class=\"sale_container\">\n            <div class=\"sale_title\">\n                <div>\n                    <a ui-sref=\"sale-list({type: 'active'})\" class=\"sale_title__text\" ng-class=\"{'sale_title__text_disabled': SaleFltrCtrl.$stateParams.type !='active' }\">Active Sales</a>\n                    <a ui-sref=\"sale-list({type: 'closed'})\" class=\"sale_title__text\" ng-class=\"{'sale_title__text_disabled': SaleFltrCtrl.$stateParams.type !='closed' }\">Closed Sales</a>\n                </div>\n                <div>\n                    <div class=\"sale_title__btn\" ng-click=\"SaleFltrCtrl.showCreateForm($event)\">Create a Sale</div>\n                </div>\n            </div>\n            <table class=\"sale_table\" ng-if=\"SaleFltrCtrl.$stateParams.type == 'active' && SaleFltrCtrl._opts.dataLoad == true\">\n                <thead class=\"sale_table_head\">\n                <td class=\"sale_table_head_td\">event</td>\n                <td class=\"sale_table_head_td\">buy in</td>\n                <td class=\"sale_table_head_td\">gte</td>\n                <td class=\"sale_table_head_td\">av. markup</td>\n                <td class=\"sale_table_head_td\">share sold</td>\n                <td class=\"sale_table_head_td\">raised</td>\n                <td class=\"sale_table_head_td\">time</td>\n                </thead>\n                <tbody class=\"sale_table_body sale_table_body__yellow\">\n                <tr class=\"sale_table_row\" ng-repeat=\"item in SaleFltrCtrl.sales\">\n                    <td class=\"sale_table_row__title\">\n                        <span ng-bind=\"item.event.title\"></span><br>\n                        <span ng-bind=\"item.subevent.title\"></span>\n                    </td>\n                    <td class=\"sale_table_row__data\">£1,000</td>\n                    <td class=\"sale_table_row__data\">£500,000</td>\n                    <td class=\"sale_table_row__data\">0</td>\n                    <td class=\"sale_table_row__data sale_table_row__data_bold\">1% of 10%</td>\n                    <td class=\"sale_table_row__data sale_table_row__data_bold\">£2,404</td>\n                    <td class=\"sale_table_row__data\">2 days</td>\n                </tr>\n\n                </tbody>\n            </table>\n\n            <table class=\"sale_table\" ng-if=\"SaleFltrCtrl.$stateParams.type == 'closed' && SaleFltrCtrl._opts.dataLoad == true\">\n                <thead class=\"sale_table_head\">\n                <td class=\"sale_table_head_td\">event</td>\n                <td class=\"sale_table_head_td\">buy in</td>\n                <td class=\"sale_table_head_td\">gte</td>\n                <td class=\"sale_table_head_td\">closes</td>\n                <td class=\"sale_table_head_td\">share sold</td>\n                <td class=\"sale_table_head_td\">raised</td>\n                <td class=\"sale_table_head_td\">outcome</td>\n                </thead>\n                <tbody class=\"sale_table_body sale_table_body__grey\">\n                <tr class=\"sale_table_row\" ng-repeat=\"item in SaleFltrCtrl.sales\">\n                    <td class=\" sale_tablesale_table_row__title\">\n                        <span ng-bind=\"item.event.title\"></span><br>\n                        <span ng-bind=\"item.subevent.title\"></span>\n                    </td>\n                    <td class=\"sale_table_row__data\">£1,000</td>\n                    <td class=\"sale_table_row__data\">£500,000</td>\n                    <td class=\"sale_table_row__data\">24 days</td>\n                    <td class=\"sale_table_row__data sale_table_row__data_bold\">1% of 10%</td>\n                    <td class=\"sale_table_row__data sale_table_row__data_bold\">£2,404</td>\n                    <td class=\"sale_table_row__data sale_table_row__data_bold\">2 days</td>\n                </tr>\n                </tbody>\n\n            </table>\n        </div>\n    </div>\n</div>\n\n\n";
 
 /***/ }),
 /* 201 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"personal_inform col-md-12\">\r\n        <div class=\"personal_inform__title \">\r\n            <a ui-sref=\"auth.registration\"><div class=\"goback\"></div></a>\r\n            Home\r\n        </div>\r\n        <div>\r\n            What is Lorem Ipsum?\r\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.What is Lorem Ipsum?\r\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n        </div>\r\n        <div class=\"private_policy\">\r\n            By creating an account you agree to our\r\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\r\n        </div>\r\n    </div>\r\n</div>";
+module.exports = "<div class=\"deskwr\">\n    <main-menu></main-menu>\n    <div class=\"main_content\">\n        <div class=\"wallet_container\">\n            <div class=\"wallet_title\">\n                <div class=\"wallet_title__text\">My balance <span>$ 20,240.98</span></div>\n                <div class=\"wallet_title__button\">Make Deposit</div>\n            </div>\n            <div class=\"wallet_navigation\">\n                <div class=\"wallet_navigation__title\">Transactions</div>\n                <div class=\"wallet_navigation__tabs_wrapper\">\n                    <div class=\"wallet_navigation__tabs\">\n                        <div class=\"wallet_navigation__tabs_item wallet_navigation__tabs_item_active\">Last mont</div>\n                        <div class=\"wallet_navigation__tabs_item\">Half year</div>\n                        <div class=\"wallet_navigation__tabs_item\">Choose dates</div>\n                    </div>\n                    <div class=\"wallet_navigation__search\">Search by sender’s or reciver’s</div>\n                </div>\n            </div>\n            <div class=\"wallet_table_wrapper\">\n                <div class=\"wallet_table\">\n                    <div class=\"wallet_table__title\">\n                        <div class=\"wallet_table__title_item cell_date\">DATE</div>\n                        <div class=\"wallet_table__title_item cell_name\">EVENT</div>\n                        <div class=\"wallet_table__title_item cell_event\">EVENT</div>\n                        <div class=\"wallet_table__title_item cell_status\">Status</div>\n                        <div class=\"wallet_table__title_item cell_delta\"></div>\n                        <div class=\"wallet_table__title_item cell_balance\">BALANCE</div>\n                    </div>\n                    <div class=\"wallet_table__content\">\n                        <div class=\"wallet_table__content_row\">\n                            <div class=\"wallet_table__content_row_data cell_date\">27 May</div>\n                                <div class=\"wallet_table__content_row_transactions\">\n                                    <div class=\"wallet_table__content_row_transaction\">\n                                        <div class=\"wallet_table__content_row_transaction__name cell_name\">North Andreane\n                                            <div class=\"transaction_img\"><img src=\"/images/desk/right_arrow_green.png\" alt=\"\"></div>\n                                        </div>\n                                        <div class=\"wallet_table__content_row_transaction__event cell_event\">MILLIONS Russia, 1A</div>\n                                        <div class=\"wallet_table__content_row_transaction__status cell_status status_color__yellow\">Pending</div>\n                                        <div class=\"wallet_table__content_row_transaction__delta cell_delta\">-495</div>\n                                        <div class=\"wallet_table__content_row_transaction__balance cell_balance\">20,240.00</div>\n                                </div>\n                                    <div class=\"wallet_table__content_row_transaction\">\n                                        <div class=\"wallet_table__content_row_transaction__name cell_name\">North Andreane\n                                            <div class=\"transaction_img\"><img src=\"/images/desk/left_arrow_grey.png\" alt=\"\"></div>\n                                        </div>\n                                        <div class=\"wallet_table__content_row_transaction__event cell_event\">MILLIONS Russia, 1A</div>\n                                        <div class=\"wallet_table__content_row_transaction__status cell_status status_color__yellow\">Pending</div>\n                                        <div class=\"wallet_table__content_row_transaction__delta cell_delta\">-495</div>\n                                        <div class=\"wallet_table__content_row_transaction__balance cell_balance\">20,240.00</div>\n                                    </div>\n                            </div>\n                        </div>\n                        <div class=\"wallet_table__content_row\">\n                            <div class=\"wallet_table__content_row_data cell_date\">27 May</div>\n                            <div class=\"wallet_table__content_row_transactions\">\n                                <div class=\"wallet_table__content_row_transaction\">\n                                    <div class=\"wallet_table__content_row_transaction__name cell_name\">North Andreane\n                                        <div class=\"transaction_img\"><img src=\"/images/desk/right_arrow_green.png\" alt=\"\"></div>\n                                    </div>\n                                    <div class=\"wallet_table__content_row_transaction__event cell_event\">MILLIONS Russia, 1A</div>\n                                    <div class=\"wallet_table__content_row_transaction__status cell_status status_color__yellow\">Pending</div>\n                                    <div class=\"wallet_table__content_row_transaction__delta cell_delta\">-495</div>\n                                    <div class=\"wallet_table__content_row_transaction__balance cell_balance\">20,240.00</div>\n                                </div>\n                                <div class=\"wallet_table__content_row_transaction\">\n                                    <div class=\"wallet_table__content_row_transaction__name cell_name\">North Andreane\n                                        <div class=\"transaction_img\"><img src=\"/images/desk/right_arrow_green.png\" alt=\"\"></div>\n                                    </div>\n                                    <div class=\"wallet_table__content_row_transaction__event cell_event\">MILLIONS Russia, 1A</div>\n                                    <div class=\"wallet_table__content_row_transaction__status cell_status status_color__yellow\">Pending</div>\n                                    <div class=\"wallet_table__content_row_transaction__delta cell_delta\">-495</div>\n                                    <div class=\"wallet_table__content_row_transaction__balance cell_balance\">20,240.00</div>\n                                </div>\n                                <div class=\"wallet_table__content_row_transaction\">\n                                    <div class=\"wallet_table__content_row_transaction__name cell_name\">North Andreane\n                                        <div class=\"transaction_img\"><img src=\"/images/desk/right_arrow_green.png\" alt=\"\"></div>\n                                    </div>\n                                    <div class=\"wallet_table__content_row_transaction__event cell_event\">MILLIONS Russia, 1A</div>\n                                    <div class=\"wallet_table__content_row_transaction__status cell_status status_color__yellow\">Pending</div>\n                                    <div class=\"wallet_table__content_row_transaction__delta cell_delta\">-495</div>\n                                    <div class=\"wallet_table__content_row_transaction__balance cell_balance\">20,240.00</div>\n                                </div>\n                                <div class=\"wallet_table__content_row_transaction\">\n                                    <div class=\"wallet_table__content_row_transaction__name cell_name\">North Andreane\n                                        <div class=\"transaction_img\"><img src=\"/images/desk/right_arrow_green.png\" alt=\"\"></div>\n                                    </div>\n                                    <div class=\"wallet_table__content_row_transaction__event cell_event\">MILLIONS Russia, 1A</div>\n                                    <div class=\"wallet_table__content_row_transaction__status cell_status status_color__yellow\">Pending</div>\n                                    <div class=\"wallet_table__content_row_transaction__delta cell_delta\">-495</div>\n                                    <div class=\"wallet_table__content_row_transaction__balance cell_balance\">20,240.00</div>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"wallet_table__content_row\">\n                            <div class=\"wallet_table__content_row_data cell_date\">27 May</div>\n                            <div class=\"wallet_table__content_row_transactions\">\n                                <div class=\"wallet_table__content_row_transaction\">\n                                    <div class=\"wallet_table__content_row_transaction__name cell_name\">North Andreane\n                                        <div class=\"transaction_img\"><img src=\"/images/desk/left_arrow_grey.png\" alt=\"\"></div>\n                                    </div>\n                                    <div class=\"wallet_table__content_row_transaction__event cell_event\">MILLIONS Russia, 1A</div>\n                                    <div class=\"wallet_table__content_row_transaction__status cell_status\">Sent</div>\n                                    <div class=\"wallet_table__content_row_transaction__delta cell_delta status_color__green\">+495</div>\n                                    <div class=\"wallet_table__content_row_transaction__balance cell_balance\">20,240.00</div>\n                                </div>\n                                <div class=\"wallet_table__content_row_transaction\">\n                                    <div class=\"wallet_table__content_row_transaction__name cell_name\">North Andreane\n                                        <div class=\"transaction_img\"><img src=\"/images/desk/left_arrow_grey.png\" alt=\"\"></div>\n                                    </div>\n                                    <div class=\"wallet_table__content_row_transaction__event cell_event\">MILLIONS Russia, 1A</div>\n                                    <div class=\"wallet_table__content_row_transaction__status cell_status\">Sent</div>\n                                    <div class=\"wallet_table__content_row_transaction__delta cell_delta status_color__green\">+495</div>\n                                    <div class=\"wallet_table__content_row_transaction__balance cell_balance\">20,240.00</div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n";
 
 /***/ }),
 /* 202 */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n    <ui-view></ui-view>\r\n</div>";
+module.exports = "<div class=\"row\">\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"auth.registration\" ><div class=\"goback\"></div></a>\n            Privacy\n        </div>\n\n\n        <div class=\"data-privacy\">\n            <span>Data & Privacy</span>\n            To esure your expirience is personal and relevant, we’re changing the type of advert you see and giving your more control over your data\n        </div>\n        <div class=\"check-box-wr\">\n            <div class=\"check-box__email\">\n                <input type=\"checkbox\" id=\"sms_new\" checked>\n                <label for=\"sms_new\">Yes, I’d like to hear about the latest poker news and promotions by Email</label>\n\n            </div>\n            <div class=\"check-box__email\">\n                <input type=\"checkbox\" id=\"email_new\" checked>\n                <label for=\"email_new\">Yes, I’d like to hear about the latest poker news and promotions by SMS</label>\n\n            </div>\n        </div>\n        <input id='termconfirm' type=\"submit\" name=\"submit_confirm\" value=\"Confirm\" style=\"border-radius:10pt;\">\n\n\n\n        <div class=\"see_policy\">\n            <a ui-sref=\"privacy-policy\">See Privacy policy</a>\n        </div>\n\n\n    </div>\n</div>";
 
 /***/ }),
 /* 203 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\" >\r\n    <div class=\"personal_inform col-md-12\">\r\n        <div class=\"personal_inform__title \">\r\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\r\n            Please Login\r\n        </div>\r\n        <form ng-submit=\"LgCtrl.sendAuthData($event)\" class=\"form_personal_inf\">\r\n\r\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"LgCtrl.userEmail\" required>\r\n\r\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"LgCtrl.userPassword\" required>\r\n\r\n            <button class=\"button\" type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"LgCtrl.sendAuthData($event)\">Enter</button>\r\n        </form>\r\n\r\n    </div>\r\n</div>\r\n";
+module.exports = "<div class=\"row\">\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"auth.registration\"><div class=\"goback\"></div></a>\n            Home\n        </div>\n        <div>\n            What is Lorem Ipsum?\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.What is Lorem Ipsum?\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n        </div>\n        <div class=\"private_policy\">\n            By creating an account you agree to our\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\n        </div>\n    </div>\n</div>";
 
 /***/ }),
 /* 204 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\" >\r\n    <div class=\"personal_inform col-md-12\">\r\n        <div class=\"personal_inform__title \">\r\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\r\n\r\n            Registration\r\n        </div>\r\n\r\n        <form ng-submit=\"RgCtrl.sendRegisterForm($event)\" class=\"form_personal_inf\">\r\n            <input type=\"text\"  placeholder=\"Your name\" ng-model=\"RgCtrl.userName\"  required>\r\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"RgCtrl.userEmail\" required>\r\n            <input type=\"text\"  placeholder=\"Your age\" ng-model=\"RgCtrl.userAge\" required>\r\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"RgCtrl.userPassword\" required>\r\n            <input type=\"password\"  placeholder=\"Confirm password\"  ng-model=\"RgCtrl.passwordConfirmation\" required>\r\n            <button class=\"button\" type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"RgCtrl.sendRegisterForm($event)\">continue</button>\r\n        </form>\r\n        <div class=\"private_policy\">\r\n            By creating an account you agree to our\r\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+module.exports = "<div>\n    <ui-view></ui-view>\n</div>";
 
 /***/ }),
 /* 205 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\" >\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\n            Please Login\n        </div>\n        <form ng-submit=\"LgCtrl.sendAuthData($event)\" class=\"form_personal_inf\">\n\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"LgCtrl.userEmail\" required>\n\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"LgCtrl.userPassword\" required>\n\n            <button class=\"button\" type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"LgCtrl.sendAuthData($event)\">Enter</button>\n        </form>\n\n    </div>\n</div>\n";
+
+/***/ }),
+/* 206 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\" >\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\n\n            Registration\n        </div>\n\n        <form ng-submit=\"RgCtrl.sendRegisterForm($event)\" class=\"form_personal_inf\">\n            <input type=\"text\"  placeholder=\"Your name\" ng-model=\"RgCtrl.userName\"  required>\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"RgCtrl.userEmail\" required>\n            <input type=\"text\"  placeholder=\"Your age\" ng-model=\"RgCtrl.userAge\" required>\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"RgCtrl.userPassword\" required>\n            <input type=\"password\"  placeholder=\"Confirm password\"  ng-model=\"RgCtrl.passwordConfirmation\" required>\n            <button class=\"button\" type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"RgCtrl.sendRegisterForm($event)\">continue</button>\n        </form>\n        <div class=\"private_policy\">\n            By creating an account you agree to our\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\n        </div>\n    </div>\n</div>\n";
+
+/***/ }),
+/* 207 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -94301,17 +94383,17 @@ function middlewares(PermRoleStore) {
 }
 
 /***/ }),
-/* 206 */
+/* 208 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Components_bids_bids_controller__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Components_bids_carousel_bids_carousel_controller__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_events_events_controller__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components_events_carousel_events_carousel_controller__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Components_sales_sales_controller__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Components_sales_carousel_sales_carousel_controller__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Components_main_menu_main_menu_controller__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Components_bids_bids_controller__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Components_bids_carousel_bids_carousel_controller__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_events_events_controller__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components_events_carousel_events_carousel_controller__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Components_sales_sales_controller__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Components_sales_carousel_sales_carousel_controller__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Components_main_menu_main_menu_controller__ = __webpack_require__(221);
 
 
 
@@ -94334,7 +94416,7 @@ module.component('mainMenu', __WEBPACK_IMPORTED_MODULE_6__Components_main_menu_m
 /* harmony default export */ __webpack_exports__["a"] = (module.name);
 
 /***/ }),
-/* 207 */
+/* 209 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -94360,19 +94442,19 @@ var BidsComponent = {
     bindings: {
         bids: '<'
     },
-    template: __webpack_require__(208),
+    template: __webpack_require__(210),
     controller: Bids,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 208 */
+/* 210 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"binds-item\"\r\n         ng-class=\"{\r\n                    'binds-item__matched':      item.status === 1,\r\n                    'binds-item__unmatched':    item.status === 2,\r\n                    'binds-item__settled':      item.status === 3,\r\n                    'binds-item__canceled':     item.status === 4,\r\n                     }\"\r\n         ng-repeat=\"item in $ctrl.bids\">\r\n        <!--<div class=\"binds-item-wr\">-->\r\n        <!--</div>-->\r\n    <div class=\"binds-item__profile_info\">\r\n        <div class=\"profile__photo\">\r\n            <img src=\"/images/players.png\" alt=\"\">\r\n        </div>\r\n        <div class=\"profile_text\">\r\n            <div class=\"profile__name\" ng-bind=\"item.investor.name\">\r\n\r\n            </div>\r\n            <div class=\"profile__country\">\r\n                MILLIONS Russia, 1A\r\n            </div>\r\n\r\n        </div>\r\n\r\n    </div>\r\n    <div class=\"loop_counter\">\r\n        Second loop\r\n    </div>\r\n    <div class=\"binds-item__game_info\">\r\n        <div class=\"geme__text\">\r\n            <div class=\"by_in\">\r\n                Buy in £ <span>1,000,000</span>\r\n            </div>\r\n            <div class=\"gte\">\r\n                £ <span>1,000,000</span> GTE\r\n            </div>\r\n        </div>\r\n        <div class=\"game_atrs\">\r\n            <div class=\"game_atrs__markup\">\r\n                <span>Markup</span><br>\r\n                1.20\r\n            </div>\r\n            <div class=\"game_atrs__value\">\r\n                <span>Value</span><br>\r\n                £2,404.08\r\n            </div>\r\n            <div class=\"game_atrs__date_start\">\r\n                <span>Date of Start</span><br>\r\n                1 Sep\r\n            </div>\r\n        </div>\r\n    </div>\r\n    </div>\r\n";
+module.exports = "<div class=\"binds-item\"\n         ng-class=\"{\n                    'binds-item__matched':      item.status === 1,\n                    'binds-item__unmatched':    item.status === 2,\n                    'binds-item__settled':      item.status === 3,\n                    'binds-item__canceled':     item.status === 4,\n                     }\"\n         ng-repeat=\"item in $ctrl.bids\">\n        <!--<div class=\"binds-item-wr\">-->\n        <!--</div>-->\n    <div class=\"binds-item__profile_info\">\n        <div class=\"profile__photo\">\n            <img src=\"/images/players.png\" alt=\"\">\n        </div>\n        <div class=\"profile_text\">\n            <div class=\"profile__name\" ng-bind=\"item.investor.name\">\n\n            </div>\n            <div class=\"profile__country\">\n                MILLIONS Russia, 1A\n            </div>\n\n        </div>\n\n    </div>\n    <div class=\"loop_counter\">\n        Second loop\n    </div>\n    <div class=\"binds-item__game_info\">\n        <div class=\"geme__text\">\n            <div class=\"by_in\">\n                Buy in £ <span>1,000,000</span>\n            </div>\n            <div class=\"gte\">\n                £ <span>1,000,000</span> GTE\n            </div>\n        </div>\n        <div class=\"game_atrs\">\n            <div class=\"game_atrs__markup\">\n                <span>Markup</span><br>\n                1.20\n            </div>\n            <div class=\"game_atrs__value\">\n                <span>Value</span><br>\n                £2,404.08\n            </div>\n            <div class=\"game_atrs__date_start\">\n                <span>Date of Start</span><br>\n                1 Sep\n            </div>\n        </div>\n    </div>\n    </div>\n";
 
 /***/ }),
-/* 209 */
+/* 211 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -94400,19 +94482,19 @@ var BidsCarouselComponent = {
     bindings: {
         bids: '<'
     },
-    template: __webpack_require__(210),
+    template: __webpack_require__(212),
     controller: BidsCarousel,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 210 */
+/* 212 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.bids\">\r\n    <div class=\"tabs-wr__title\">\r\n        <div class=\"tabs-wr__title-name\">{%key%}</div>\r\n        <a ui-sref=\"bids-filter({filter: key})\" class=\"see_all\">See All</a>\r\n    </div>\r\n    <div class=\"slider_container\">\r\n        <div class=\"swipe-wr\">\r\n            <bids class=\"bids_row\"\r\n                    bids=\"value\">\r\n            </bids>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.bids\">\n    <div class=\"tabs-wr__title\">\n        <div class=\"tabs-wr__title-name\">{%key%}</div>\n        <a ui-sref=\"bids-filter({filter: key})\" class=\"see_all\">See All</a>\n    </div>\n    <div class=\"slider_container\">\n        <div class=\"swipe-wr\">\n            <bids class=\"bids_row\"\n                    bids=\"value\">\n            </bids>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
-/* 211 */
+/* 213 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -94462,19 +94544,19 @@ var EventsComponent = {
         events: '<',
         state: '<'
     },
-    template: __webpack_require__(212),
+    template: __webpack_require__(214),
     controller: Events,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 212 */
+/* 214 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"event-item\" ng-if=\"$ctrl.state == 'row'\" ng-repeat=\"item in $ctrl.events\">\r\n    <div class=\"event-item-wr\">\r\n\r\n        <a ui-sref=\"event({id:item.id})\">\r\n            <div class=\"event-item__img\">\r\n                <img src=\"/images/event.png\" alt=\"\">\r\n            </div>\r\n        </a>\r\n        <div class=\"event-item__text\">\r\n            <a href=\"\">\r\n                <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\r\n            </a>\r\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\r\n\r\n            <div class=\"event-item__date\" ng-bind=\"item.date\"></div>\r\n        </div>\r\n\r\n    </div>\r\n</div>\r\n\r\n\r\n<div class=\"event_item_rpt\" ng-if=\"$ctrl.state == 'list'\" ng-repeat=\"item in $ctrl.events\">\r\n\r\n    <div class=\"selected_event\">\r\n        <img src=\"/images/select_event_bg.png\" alt=\"\">\r\n    </div>\r\n    <div class=\"selected_event_info event_item col-md-12\">\r\n\r\n        <div class=\"event_list-wr\" ng-click=\"$ctrl.openDetail(item.id)\">\r\n\r\n\r\n            <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\r\n            <a ui-sref=\"evet({id:item.id})\">See info</a>\r\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\r\n            <div class=\"event-item__date\" ng-bind=\"item.date\"></div>\r\n        </div>\r\n        <a href=\"\">\r\n            <div class=\"see_more\"></div>\r\n        </a>\r\n        <div ng-if=\"$ctrl.showDetail(item.id)\">Event list</div>\r\n        <div ng-if=\"$ctrl.showDetail(item.id)\" ng-repeat=\"subevent in item.subevents\">\r\n\r\n            <div ng-bind=\"subevent.title\"></div>\r\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div> . <div class=\"event-item__summa\">£ {%subevent.fund%} GTD</div>\r\n            <div ng-bind=\"item.date\"></div>\r\n        </div>\r\n    </div>\r\n\r\n\r\n</div>\r\n";
+module.exports = "<div class=\"event-item\" ng-if=\"$ctrl.state == 'row'\" ng-repeat=\"item in $ctrl.events\">\n    <div class=\"event-item-wr\">\n\n        <a ui-sref=\"event({id:item.id})\">\n            <div class=\"event-item__img\">\n                <img src=\"/images/event.png\" alt=\"\">\n            </div>\n        </a>\n        <div class=\"event-item__text\">\n            <a href=\"\">\n                <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\n            </a>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\n\n            <div class=\"event-item__date\" ng-bind=\"item.date\"></div>\n        </div>\n\n    </div>\n</div>\n\n\n<div class=\"event_item_rpt\" ng-if=\"$ctrl.state == 'list'\" ng-repeat=\"item in $ctrl.events\">\n\n    <div class=\"selected_event\">\n        <img src=\"/images/select_event_bg.png\" alt=\"\">\n    </div>\n    <div class=\"selected_event_info event_item col-md-12\">\n\n        <div class=\"event_list-wr\" ng-click=\"$ctrl.openDetail(item.id)\">\n\n\n            <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\n            <a ui-sref=\"evet({id:item.id})\">See info</a>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\n            <div class=\"event-item__date\" ng-bind=\"item.date\"></div>\n        </div>\n        <a href=\"\">\n            <div class=\"see_more\"></div>\n        </a>\n        <div ng-if=\"$ctrl.showDetail(item.id)\">Event list</div>\n        <div ng-if=\"$ctrl.showDetail(item.id)\" ng-repeat=\"subevent in item.subevents\">\n\n            <div ng-bind=\"subevent.title\"></div>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div> . <div class=\"event-item__summa\">£ {%subevent.fund%} GTD</div>\n            <div ng-bind=\"item.date\"></div>\n        </div>\n    </div>\n\n\n</div>\n";
 
 /***/ }),
-/* 213 */
+/* 215 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -94501,19 +94583,19 @@ var EventsCarouselComponent = {
         events: '<',
         state: '<'
     },
-    template: __webpack_require__(214),
+    template: __webpack_require__(216),
     controller: EventsCarousel,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 214 */
+/* 216 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"slider_container\">\r\n    <div class=\"swipe-wr\">\r\n       <events class=\"events_carousel\" events=\"$ctrl.events\" state=\"$ctrl.state\"></events>\r\n    </div>\r\n</div>";
+module.exports = "<div class=\"slider_container\">\n    <div class=\"swipe-wr\">\n       <events class=\"events_carousel\" events=\"$ctrl.events\" state=\"$ctrl.state\"></events>\n    </div>\n</div>";
 
 /***/ }),
-/* 215 */
+/* 217 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -94545,19 +94627,19 @@ var SalesComponent = {
         sales: '<',
         state: '<'
     },
-    template: __webpack_require__(216),
+    template: __webpack_require__(218),
     controller: Sales,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 216 */
+/* 218 */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div class=\"as__item-wr as__item-wr-active\"\r\n     ng-if=\"$ctrl.state === 'list'\"\r\n     ng-repeat=\"item in $ctrl.sales\"\r\n     ng-class=\"{\r\n     'sale_active': item.status === 1,\r\n     'sale_canceled': item.status === 2,\r\n     }\"\r\n     >\r\n\r\n    <div class=\"as__item__text\">\r\n        <div class=\"as__item__title\" ng-bind=\"item.event.title\"></div>\r\n        <a ui-sref=\"sale-edit({id: item.id})\">Edit</a>\r\n        <div class=\"loop_counter loop_counter_sale\" ng-bind=\"item.sub_event_id\">\r\n            Second loop\r\n        </div>\r\n        <div class=\"as__item__by\">Buy in $<span ng-bind=\"item.event.buy_in\"></span> + $<span ng-bind=\"item.subevent.buy_in\"></span></div>\r\n    </div>\r\n    <div class=\"as__item__tags as__item__tags-active\">\r\n        <div class=\"tags_closes\">\r\n            <span>Closes</span><br>\r\n            73 days\r\n        </div>\r\n        <div class=\"tags_markup\">\r\n            <span>Markup</span><br>\r\n            1.20\r\n        </div>\r\n        <div class=\"tags_average\">\r\n            <span>Average markup</span><br>\r\n            0\r\n        </div>\r\n        <div class=\"tags_share\">\r\n            <span>Share sold</span><br>\r\n            0% of 20%\r\n        </div>\r\n        <div class=\"tags_amount\">\r\n            <span>Amount raised</span><br>\r\n            $400 of $1,000\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n\r\n<div class=\"as__item-wr active_sale\" ng-click=\"$ctrl.click()\" ng-if=\"$ctrl.state === 'row'\"\r\n     ng-class=\"{\r\n     'sale_active': item.status === 1,\r\n     'sale_canceled': item.status === 2,\r\n     }\"\r\n     ng-repeat=\"item in $ctrl.sales\">\r\n    <div class=\"as__item__text\">\r\n        <div class=\"as__item__title\" ng-bind=\"item.event.title\"></div>\r\n        <div class=\"as__item__by\">Buy in $<span ng-bind=\"item.event.buy_in\"></span> + $<span ng-bind=\"item.subevent.buy_in\"></span></div>\r\n    </div>\r\n    <div class=\"as__item__tags\">\r\n        <div class=\"tags_closes\">\r\n            <span>Closes</span><br>\r\n            73 days\r\n        </div>\r\n        <div class=\"tags_markup\">\r\n            <span>Markup</span><br>\r\n            <span ng-bind=\"item.markup\"></span>\r\n        </div>\r\n        <div class=\"tags_share\">\r\n            <span>Share sold</span><br>\r\n            0% of 20%\r\n        </div>\r\n        <div class=\"tags_amount\">\r\n            <span>Amount raised</span><br>\r\n            $400 of $1,000\r\n        </div>\r\n    </div>\r\n\r\n</div>\r\n\r\n\r\n<div class=\"binds-item\"\r\n     ng-if=\"$ctrl.state === 'invest'\"\r\n     ng-repeat=\"item in $ctrl.sales\"\r\n     ng-class=\"{\r\n     'sale_active': item.status === 1,\r\n     'sale_canceled': item.status === 2,\r\n     }\"\r\n>\r\n    <div class=\"binds-item-wr\">\r\n        <div class=\"binds-item__profile_info\">\r\n            <div class=\"profile__photo\">\r\n                <img src=\"/images/players.png\" alt=\"\">\r\n            </div>\r\n            <div class=\"profile_text\">\r\n                <div class=\"profile__name\" ng-bind=\"item.creator.name\">\r\n\r\n                </div>\r\n                <div class=\"profile__country\">\r\n                    MILLIONS Russia, 1A\r\n                </div>\r\n\r\n            </div>\r\n\r\n        </div>\r\n        <div class=\"loop_counter\" ng-bind=\"item.subevent.title\">\r\n\r\n        </div>\r\n        <div class=\"binds-item__game_info\">\r\n            <div class=\"geme__text\">\r\n                <div class=\"by_in\">\r\n                    Buy in £ <span ng-bind=\"item.subevent.buy_in\"></span>\r\n                </div>\r\n                <div class=\"gte\">\r\n                    £ <span ng-bind=\"item.subevent.fund\"></span> GTE\r\n                </div>\r\n            </div>\r\n            <div class=\"game_atrs\">\r\n                <div class=\"game_atrs__markup\">\r\n                    <span>Markup</span><br>\r\n                    <span ng-bind=\"item.markup\"></span>\r\n                </div>\r\n                <div class=\"game_atrs__value\">\r\n                    <span>Value</span><br>\r\n                    £<span ng-bind=\"item.amount\"></span>\r\n                </div>\r\n                <div class=\"game_atrs__date_start\">\r\n                    <span>Date of Start</span><br>\r\n\r\n                    <span ng-bind=\"item.subevent.date\"></span>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+module.exports = "\n<div class=\"as__item-wr as__item-wr-active\"\n     ng-if=\"$ctrl.state === 'list'\"\n     ng-repeat=\"item in $ctrl.sales\"\n     ng-class=\"{\n     'sale_active': item.status === 1,\n     'sale_canceled': item.status === 2,\n     }\"\n     >\n\n    <div class=\"as__item__text\">\n        <div class=\"as__item__title\" ng-bind=\"item.event.title\"></div>\n        <a ui-sref=\"sale-edit({id: item.id})\">Edit</a>\n        <div class=\"loop_counter loop_counter_sale\" ng-bind=\"item.sub_event_id\">\n            Second loop\n        </div>\n        <div class=\"as__item__by\">Buy in $<span ng-bind=\"item.event.buy_in\"></span> + $<span ng-bind=\"item.subevent.buy_in\"></span></div>\n    </div>\n    <div class=\"as__item__tags as__item__tags-active\">\n        <div class=\"tags_closes\">\n            <span>Closes</span><br>\n            73 days\n        </div>\n        <div class=\"tags_markup\">\n            <span>Markup</span><br>\n            1.20\n        </div>\n        <div class=\"tags_average\">\n            <span>Average markup</span><br>\n            0\n        </div>\n        <div class=\"tags_share\">\n            <span>Share sold</span><br>\n            0% of 20%\n        </div>\n        <div class=\"tags_amount\">\n            <span>Amount raised</span><br>\n            $400 of $1,000\n        </div>\n    </div>\n</div>\n\n\n<div class=\"as__item-wr active_sale\" ng-click=\"$ctrl.click()\" ng-if=\"$ctrl.state === 'row'\"\n     ng-class=\"{\n     'sale_active': item.status === 1,\n     'sale_canceled': item.status === 2,\n     }\"\n     ng-repeat=\"item in $ctrl.sales\">\n    <div class=\"as__item__text\">\n        <div class=\"as__item__title\" ng-bind=\"item.event.title\"></div>\n        <div class=\"as__item__by\">Buy in $<span ng-bind=\"item.event.buy_in\"></span> + $<span ng-bind=\"item.subevent.buy_in\"></span></div>\n    </div>\n    <div class=\"as__item__tags\">\n        <div class=\"tags_closes\">\n            <span>Closes</span><br>\n            73 days\n        </div>\n        <div class=\"tags_markup\">\n            <span>Markup</span><br>\n            <span ng-bind=\"item.markup\"></span>\n        </div>\n        <div class=\"tags_share\">\n            <span>Share sold</span><br>\n            0% of 20%\n        </div>\n        <div class=\"tags_amount\">\n            <span>Amount raised</span><br>\n            $400 of $1,000\n        </div>\n    </div>\n\n</div>\n\n\n<div class=\"binds-item\"\n     ng-if=\"$ctrl.state === 'invest'\"\n     ng-repeat=\"item in $ctrl.sales\"\n     ng-class=\"{\n     'sale_active': item.status === 1,\n     'sale_canceled': item.status === 2,\n     }\"\n>\n    <div class=\"binds-item-wr\">\n        <div class=\"binds-item__profile_info\">\n            <div class=\"profile__photo\">\n                <img src=\"/images/players.png\" alt=\"\">\n            </div>\n            <div class=\"profile_text\">\n                <div class=\"profile__name\" ng-bind=\"item.creator.name\">\n\n                </div>\n                <div class=\"profile__country\">\n                    MILLIONS Russia, 1A\n                </div>\n\n            </div>\n\n        </div>\n        <div class=\"loop_counter\" ng-bind=\"item.subevent.title\">\n\n        </div>\n        <div class=\"binds-item__game_info\">\n            <div class=\"geme__text\">\n                <div class=\"by_in\">\n                    Buy in £ <span ng-bind=\"item.subevent.buy_in\"></span>\n                </div>\n                <div class=\"gte\">\n                    £ <span ng-bind=\"item.subevent.fund\"></span> GTE\n                </div>\n            </div>\n            <div class=\"game_atrs\">\n                <div class=\"game_atrs__markup\">\n                    <span>Markup</span><br>\n                    <span ng-bind=\"item.markup\"></span>\n                </div>\n                <div class=\"game_atrs__value\">\n                    <span>Value</span><br>\n                    £<span ng-bind=\"item.amount\"></span>\n                </div>\n                <div class=\"game_atrs__date_start\">\n                    <span>Date of Start</span><br>\n\n                    <span ng-bind=\"item.subevent.date\"></span>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
-/* 217 */
+/* 219 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -94584,19 +94666,19 @@ var SalesCarouselComponent = {
         sales: '<',
         state: '<'
     },
-    template: __webpack_require__(218),
+    template: __webpack_require__(220),
     controller: SalesCarousel,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 218 */
+/* 220 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.sales\">\r\n    <div class=\"tabs-wr__title sale_tabs__title\">\r\n        <div class=\"tabs-wr__title-name\">{%key%}</div>\r\n        <a ui-sref=\"sale-filter({filter: key})\" class=\"see_all\">See All</a>\r\n    </div>\r\n    <div class=\"slider_container\">\r\n        <div class=\"swipe-wr\">\r\n            <sales sales=\"value\" state=\"$ctrl.state\" style=\"display: inline-flex\"></sales>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.sales\">\n    <div class=\"tabs-wr__title sale_tabs__title\">\n        <div class=\"tabs-wr__title-name\">{%key%}</div>\n        <a ui-sref=\"sale-filter({filter: key})\" class=\"see_all\">See All</a>\n    </div>\n    <div class=\"slider_container\">\n        <div class=\"swipe-wr\">\n            <sales sales=\"value\" state=\"$ctrl.state\" style=\"display: inline-flex\"></sales>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
-/* 219 */
+/* 221 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -94631,17 +94713,17 @@ var MainMenuComponent = {
     bindings: {
         state: '<'
     },
-    template: __webpack_require__(112),
+    template: __webpack_require__(114),
     controller: MainMenuController,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 220 */
+/* 222 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_filters_uc_first__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_filters_uc_first__ = __webpack_require__(223);
 
 
 var module = angular.module('Filters', []);
@@ -94650,7 +94732,7 @@ module.filter('ucFirst', __WEBPACK_IMPORTED_MODULE_0__common_filters_uc_first__[
 /* harmony default export */ __webpack_exports__["a"] = (module.name);
 
 /***/ }),
-/* 221 */
+/* 223 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -94664,12 +94746,12 @@ function ucFirst() {
 }
 
 /***/ }),
-/* 222 */
+/* 224 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 function templateCache($templateCache) {
-    $templateCache.put('view/menu.template.html', __webpack_require__(112));
+    $templateCache.put('view/menu.template.html', __webpack_require__(114));
 }
 
 templateCache.$inject = ['$templateCache'];

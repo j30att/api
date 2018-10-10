@@ -14,6 +14,7 @@
     </script>
 </head>
 <body ng-controller="MainController as MainCtrl" ng-class="{'no_scroll': MainCtrl.$state.modalOpened == true}">
+<div id="right"></div>
 <div class="flex-center position-ref full-height container">
     <ui-view></ui-view>
 </div>
