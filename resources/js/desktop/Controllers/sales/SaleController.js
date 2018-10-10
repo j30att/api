@@ -15,12 +15,15 @@ class SaleController {
 
     showCreateForm(ev) {
         let vm = this;
+        let elementWrapper ={};
+        elementWrapper.target = document.getElementById('right');
+
         this.$mdDialog.show({
             controller: DialogController,
             controllerAs: 'vm',
             template: require('../../views/sale/create.template.html'),
             parent: angular.element(document.body),
-            targetEvent: ev,
+            targetEvent: elementWrapper,
 
             clickOutsideToClose: true,
 

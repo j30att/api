@@ -47,15 +47,23 @@ class InvestController {
     }
 
     showCreateForm(ev) {
-        this.$mdDialog
-            .show({
-                controller: DialogController,
-                controllerAs: 'vm',
-                template: require('../../views/bids/place.template.html'),
-                parent: angular.element(document.body),
-                targetEvent: ev,
+        let vm = this;
+        let elementWrapper ={};
+        elementWrapper.target = document.getElementById('right');
 
-                clickOutsideToClose: true,
+        this.$mdDialog.show({
+            controller: DialogController,
+            controllerAs: 'vm',
+            template: require('../../views/bids/place.template.html'),
+            parent: angular.element(document.body),
+            targetEvent: elementWrapper,
+
+            clickOutsideToClose: true,
+
+        })
+            .then(function (answer) {
+
+            }, function () {
 
             });
     };

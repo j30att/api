@@ -22,9 +22,8 @@
                 <label class="modal_content__sale_title modal_content__sale_title_select">Flight</label>
                 <div class="modal_content__sale_select">
                     <md-select class="md-no-underline form-Select-theme"
-                               ng-change="vm.getSubevents()"
-                               ng-model="vm.sale.event_id" placeholder="Choose an event">
-                        <md-option value="{%item.id%}" ng-repeat="item in vm.events">{%item.title%}</md-option>
+                               ng-model="vm.sale.subevent_id" placeholder="Choose an event">
+                        <md-option value="{%item.id%}" ng-repeat="item in vm.subevents">{%item.title%}</md-option>
                     </md-select>
                 </div>
 
@@ -44,15 +43,15 @@
                 <div class="attributs_wrapper">
                     <div class="attributs_item attributs_item__border">
                         <span>Share</span>
-                        <input type="text" placeholder="0">
+                        <input type="text" placeholder="10%" ng-model="vm.sale.share" ng-change="vm.calcAmount()">
                     </div>
                     <div class="attributs_item attributs_item__border">
-                        <span>Share</span>
-                        <input type="text" placeholder="1">
+                        <span>Markup</span>
+                        <input type="text" placeholder="1.1" ng-model="vm.sale.markup" ng-change="vm.calcAmount()">
                     </div>
                     <div class="attributs_item attributs_item__border">
-                        <span>Share</span>
-                        <input type="text" placeholder="0">
+                        <span>Amount</span>
+                        <input type="text" placeholder="100%" ng-model="vm.sale.amount" disabled>
                     </div>
                 </div>
             </div>
