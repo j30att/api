@@ -1,19 +1,15 @@
 import {SALE_ACTIVE, SALE_CLOSED} from "../../../common/Constants";
-import {DialogController} from "../DialogController";
-
-
 
 class SaleFilterController {
-    constructor(SalesResourceService, $stateParams, $mdDialog) {
+    constructor(SalesResourceService, $stateParams) {
         this.SalesResourceService = SalesResourceService;
         this.$stateParams = $stateParams;
-        this.$mdDialog = $mdDialog;
         this.user = window.__user;
         this.menu = [
             {status: SALE_ACTIVE, name: 'active'},
             {status: SALE_CLOSED, name: 'closed'},
         ];
-        this._opts = {dataLoad: false, limit:3};
+        this._opts = {dataLoad: false, limit:3, openedForm:false};
         this.getList();
     }
 
@@ -33,29 +29,13 @@ class SaleFilterController {
         }
     }
 
-    showCreateForm(ev) {
-        let vm = this;
-        let elementWrapper ={};
-        elementWrapper.target = document.getElementById('right');
-        this.$mdDialog.show({
-            controller: DialogController,
-            controllerAs: 'vm',
-            template: require('../../views/sale/create.template.html'),
-            parent: angular.element(document.body),
-            targetEvent: elementWrapper,
+    togglerCreateForm(){
+        this._opts.openedForm = !this._opts.openedForm;
+    }
 
-            clickOutsideToClose: true,
-
-        }).openFrom('#left')
-            .then(function (answer) {
-
-            }, function () {
-
-            });
-    };
 
 };
 
-SaleFilterController.$inject = ['SalesResourceService', '$stateParams', '$mdDialog'];
+SaleFilterController.$inject = ['SalesResourceService', '$stateParams'];
 
 export {SaleFilterController};

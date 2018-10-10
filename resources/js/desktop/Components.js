@@ -1,21 +1,12 @@
-import {BidsComponent} from "./Components/bids/bids.controller";
-import {BidsCarouselComponent} from "./Components/bids-carousel/bids-carousel.controller";
-import {EventsComponent} from "./Components/events/events.controller";
-import {EventsCarouselComponent} from "./Components/events-carousel/events-carousel.controller";
-import {SalesComponent} from "./Components/sales/sales.controller";
-import {SalesCarouselComponent} from "./Components/sales-carousel/sales-carousel.controller";
 import {MainMenuComponent} from "./Components/main-menu/main-menu.controller";
+import {SaleCreateComponent} from "./Components/sale-create/sale-create.controller"
 
 let angular = require('angular');
 
 let module = angular.module('Components', []);
-module.component('bids', BidsComponent);
-module.component('bidsCarousel', BidsCarouselComponent);
-module.component('events', EventsComponent);
-module.component('eventsCarousel', EventsCarouselComponent);
-module.component('sales', SalesComponent);
-module.component('salesCarousel', SalesCarouselComponent);
+
 module.component('mainMenu', MainMenuComponent);
+module.component('saleCreate', SaleCreateComponent);
 
 export default module.name;
 

@@ -9,8 +9,8 @@ class SalesService {
 
         shareValue = buyin * (share / 100);
         amount = shareValue * markup;
-        return amount;
 
+        return Math.round(amount*10)/10;
     }
 }
 

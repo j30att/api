@@ -826,12 +826,7 @@
   height: 32px;
 }
 
-md-dialog {
-  width: 500px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  max-height: 100%;
-  height: 100%;
+.full_height {
   padding: 24px 40px 0 40px;
 }
 
@@ -2849,5 +2844,9 @@ a {
   width: 422px;
   margin-right: 32px;
   outline: 1px solid black;
+}
+
+.input_disabled {
+  background-color: transparent;
 }
 

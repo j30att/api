@@ -8,7 +8,8 @@
                     <div class="sale_title__text">sales</div>
                     <div class="sale_title__btn"
                          ng-if="items[0].status == 1"
-                         ng-click="SaleCtrl.showCreateForm($event)">Create a Sale
+                         ng-click="SaleCtrl.togglerCreateForm()">
+                         Create a Sale
                     </div>
                 </div>
                 <a ui-sref="sale-list({type:key})" class="sale_title__link">See all</a>
@@ -43,3 +44,4 @@
         </div>
     </div>
 </div>
+<sale-create state="SaleCtrl._opts.openedForm"></sale-create>

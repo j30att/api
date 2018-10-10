@@ -135,15 +135,9 @@ class SaleController extends Controller
      */
     public function store(Request $request)
     {
-
-        //todo: validate data
-
-
-        $data = $request->all();
+        $data = $request->get('sale');
         $sale = Sale::create($data);
-
-        return response(json_encode(['status' => 1]));
-
+        return response(json_encode(['status' => 1, 'data'=> $sale]));
     }
 
     /**

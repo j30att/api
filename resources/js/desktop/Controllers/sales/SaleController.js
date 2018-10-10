@@ -1,43 +1,22 @@
-import {DialogController} from "../DialogController";
-
 class SaleController {
-    constructor(SalesResourceService, $mdDialog) {
+    constructor(SalesResourceService) {
         this.SalesResourceService = SalesResourceService;
-        this.$mdDialog = $mdDialog;
         this.user = window.__user;
-        this._opts = {dataLoad: false, limit:3};
+        this._opts = {dataLoad: false, limit:3, openedForm:false};
+
 
         this.SalesResourceService.getMySales(this.user.id, this._opts.limit).then(response =>{
             this.sales = response.data.data;
-            console.log(this.sales);
         });
     }
 
-    showCreateForm(ev) {
-        let vm = this;
-        let elementWrapper ={};
-        elementWrapper.target = document.getElementById('right');
-
-        this.$mdDialog.show({
-            controller: DialogController,
-            controllerAs: 'vm',
-            template: require('../../views/sale/create.template.html'),
-            parent: angular.element(document.body),
-            targetEvent: elementWrapper,
-
-            clickOutsideToClose: true,
-
-        }).then(function (answer) {
-
-            }, function () {
-
-            });
-    };
-
+    togglerCreateForm(){
+        this._opts.openedForm = !this._opts.openedForm;
+    }
 
 };
 
-SaleController.$inject = ['SalesResourceService', '$mdDialog'];
+SaleController.$inject = ['SalesResourceService'];
 
 export {SaleController};
 
