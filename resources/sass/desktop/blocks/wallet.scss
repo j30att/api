@@ -1,0 +1,198 @@
+.wallet{
+    &_title{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 33px;
+        &__text{
+            font-size: 24px;
+            font-weight: bold;
+            color: #000000;
+            span{
+                color: #007fed;
+            }
+        }
+        &__button{
+            width: 170px;
+            height: 36px;
+            border-radius: 6px;
+            background-color: #007fed;
+            line-height: 36px;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 700;
+            position: relative;
+            text-align: center;
+            box-sizing: border-box;
+            padding-left: 40px;
+            cursor: pointer;
+        }
+        &__button::before{
+            content: '';
+            width: 22px;
+            height: 22px;
+            background: url("/images/make_deposit.png") no-repeat center;
+            background-size: 100%;
+            position: absolute;
+            left: 20px;
+            top: 7px;
+        }
+    }
+    &_navigation{
+        width: 100%;
+        margin-bottom: 24px;
+        &__title{
+            width: 100%;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: left;
+            margin-bottom: 12px;
+        }
+        &__tabs_wrapper{
+            display: flex;
+        }
+        &__tabs{
+            display: flex;
+            margin-right: 16px;
+            &_item{
+                height: 38px;
+                line-height: 38px;
+                background-color: rgba(0,0,0,0.04);
+                font-size: 15px;
+                color: rgba(0,0,0,0.35);
+                text-align: center;
+                margin-right: 1px;
+                padding: 0 12px;
+                &_active{
+                    background-color: rgba(0, 127, 237, 0.1);
+                    color: #007fed;
+                }
+            }
+            &_item:first-child{
+                border-top-left-radius: 6px;
+                border-bottom-left-radius: 6px;
+            }
+            &_item:last-child{
+                border-top-right-radius: 6px;
+                border-bottom-right-radius: 6px;
+                margin-right: 0;
+            }
+        }
+        &__search{
+            height: 38px;
+            line-height: 38px;
+            border-radius: 6px;
+            background-color: rgba(0,0,0,0.04);
+            color: rgba(0,0,0,0.35);
+            text-align: left;
+            padding: 0 77px 0 12px;
+        }
+
+    }
+    &_table{
+        width: 100%;
+        &__title{
+            display: flex;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        &__content{
+
+            &_row{
+                display: flex;
+                border-bottom: 1px solid rgba(0,0,0,0.05);
+                &_data{
+                    font-size: 15px;
+                    color: rgba(0,0,0,0.6);
+                    display: flex;
+                    align-items: flex-start;
+
+                    padding-top: 17px;
+                }
+                &_transactions{}
+                &_transaction{
+                    display: flex;
+                    border-bottom: 1px solid rgba(0,0,0,0.05);
+                    > div{
+                        height: 53px;
+                        line-height: 53px;
+                    }
+                    &__name{
+                        font-weight: 700;
+                        padding-left: 30px;
+                        position: relative;
+                        .transaction_img{
+                            width: 22px;
+                            height: 22px;
+                            position: absolute;
+                            left: 0;
+                            top: 6px;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                    &__event{
+                        color: rgba(0,0,0,0.6);
+                    }
+                    &__status{
+                        color: rgba(0,0,0,0.6);
+                    }
+                    &__delta{
+                        font-weight: 700;
+                    }
+                    &__balance{
+                        color: rgba(0,0,0,0.6);
+                        text-align: right;
+                    }
+
+
+                }
+                &_transaction:last-child{
+                    border-bottom: none;
+                }
+            }
+        }
+        /*width*/
+        .cell_date{
+            width: 96px;
+            box-sizing: border-box;
+            padding-left: 10px;
+        }
+        .cell_name{
+            width: 222px;
+            box-sizing: border-box;
+        }
+        .cell_event{
+            width: 400px;
+            box-sizing: border-box;
+        }
+        .cell_status{
+            width: 127px;
+            box-sizing: border-box;
+        }
+        .cell_delta{
+            width: 83px;
+            box-sizing: border-box;
+        }
+        .cell_balance{
+            width: 80px;
+            box-sizing: border-box;
+            text-align: right;
+        }
+        /*width end*/
+        /*colors*/
+        .status_color__yellow{
+            color: rgba(255, 190, 0, 0.6);
+        }
+        .status_color__green{
+            color: #00c811;
+        }
+        /*colors end*/
+
+    }
+}
+
