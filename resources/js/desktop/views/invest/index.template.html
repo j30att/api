@@ -9,105 +9,29 @@
                 </div>
             </div>
             <div class="events_item-wr">
-                <a ui-sref="invest-events-detail({id:'1'})" class="event_item">
+                <a ng-repeat="event in InvestCtrl.events"
+                    ui-sref="invest-events-detail({id:event.id})" class="event_item">
                     <div class="event_item__pic">
-                        <img src="/images/desk/event_pic_1.png" alt="event">
+                        <img src="/images/desk/event_pic_{% event.id %}.png" alt="event">
                     </div>
                     <div class="event_info">
-                        <div class="event_info_name">WSOP International Circuit - Rotterdam</div>
+                        <div class="event_info_name" ng-bind="event.title"></div>
                         <div class="event_info_date-gtd">
-                            <div class="event_info_date">Jul 20 – Aug 10</div>
-
-                            <div class="event_info_gtd">£1,000,000 GTD</div>
-                        </div>
-
-                    </div>
-
-                </a>
-                <a ui-sref="invest-events-detail({id:'1'})" class="event_item">
-                    <div class="event_item__pic">
-                        <img src="/images/desk/event_pic_2.png" alt="event">
-                    </div>
-                    <div class="event_info">
-                        <div class="event_info_name">WSOP International Circuit - Rotterdam</div>
-                        <div class="event_info_date-gtd">
-                            <div class="event_info_date">Jul 20 – Aug 10</div>
-
-                            <div class="event_info_gtd">£1,000,000 GTD</div>
-                        </div>
-
-                    </div>
-
-                </a>
-                <a ui-sref="invest-events-detail({id:'1'})" class="event_item">
-                    <div class="event_item__pic">
-                        <img src="/images/desk/event_pic_3.png" alt="event">
-                    </div>
-                    <div class="event_info">
-                        <div class="event_info_name">WSOP International Circuit - Rotterdam</div>
-                        <div class="event_info_date-gtd">
-                            <div class="event_info_date">Jul 20 – Aug 10</div>
-
-                            <div class="event_info_gtd">£1,000,000 GTD</div>
-                        </div>
-
-                    </div>
-
-                </a>
-                <a ui-sref="invest-events-detail({id:'1'})" class="event_item">
-                    <div class="event_item__pic">
-                        <img src="/images/desk/event_pic_4.png" alt="event">
-                    </div>
-                    <div class="event_info">
-                        <div class="event_info_name">WSOP International Circuit - Rotterdam</div>
-                        <div class="event_info_date-gtd">
-                            <div class="event_info_date">Jul 20 – Aug 10</div>
-
-                            <div class="event_info_gtd">£1,000,000 GTD</div>
-                        </div>
-
-                    </div>
-
-                </a>
-                <a ui-sref="invest-events-detail({id:'1'})" class="event_item">
-                    <div class="event_item__pic">
-                        <img src="/images/desk/event_pic_5.png" alt="event">
-                    </div>
-                    <div class="event_info">
-                        <div class="event_info_name">WSOP International Circuit - Rotterdam</div>
-                        <div class="event_info_date-gtd">
-                            <div class="event_info_date">Jul 20 – Aug 10</div>
-
-                            <div class="event_info_gtd">£1,000,000 GTD</div>
-                        </div>
-
-                    </div>
-
-                </a>
-                <a ui-sref="invest-events-detail({id:'1'})" class="event_item">
-                    <div class="event_item__pic">
-                        <img src="/images/desk/event_pic_6.png" alt="event">
-                    </div>
-                    <div class="event_info">
-                        <div class="event_info_name">WSOP International Circuit - Rotterdam</div>
-                        <div class="event_info_date-gtd">
-                            <div class="event_info_date">Jul 20 – Aug 10</div>
-
-                            <div class="event_info_gtd">£1,000,000 GTD</div>
+                            <div class="event_info_date" ng-bind="event.period"></div>
+                            <div class="event_info_gtd">{% event.fund | currency:'£':0%} GTD</div>
                         </div>
 
                     </div>
 
                 </a>
             </div>
-
         </div>
         <div class="events_tabs-wr">
             <div class="events_tabs_nav">
                 <ul class="events_tabs_list">
                     <li class="events_tabs_item events_tabs_item_active">Closing soon</li>
                 </ul>
-                <a ui-sref="" class="events_tabs_nav__link">See all</a>
+                <a ui-sref="sale-list({type:'active'})" class="events_tabs_nav__link">See all</a>
             </div>
             <table class="table_events_list main_event_table">
                 <thead class="table_events_head">
@@ -122,83 +46,21 @@
                 </tr>
                 </thead>
                 <tbody class="table_events_body">
-                <tr ng-click="InvestCtrl.showCreateForm($event)">
+                <tr ng-repeat="(index,sale) in InvestCtrl.sales"
+                    ng-click="InvestCtrl.showCreateForm($event)">
                     <td class="t_from t_from_event">
                         <div class="t_from_img">
                             <img src="/images/desk/players_img/profile_img_1.png" alt="profile photo">
                         </div>
-                        <span>Austin Vargas</span></td>
-                    <td class="t_event">MILLIONS Russia, 1A</td>
-                    <td class="t_buy_in">£1,000</td>
-                    <td class="t_gte">£500,000</td>
-                    <td class="t_markup">1.22</td>
-                    <td class="t_share">20%</td>
-                    <td class="t_time">< 24 hours</td>
-                </tr>
-                <tr>
-                    <td class="t_from t_from_event">
-                        <div class="t_from_img"><img src="/images/desk/players_img/profile_img_1.png"
-                                                     alt="profile photo">
-                        </div>
-                        <span>Austin Vargas</span></td>
-                    <td class="t_event">MILLIONS Russia, 1A</td>
-                    <td class="t_buy_in">£1,000</td>
-                    <td class="t_gte">£500,000</td>
-                    <td class="t_markup">1.22</td>
-                    <td class="t_share">20%</td>
-                    <td class="t_time">< 24 hours</td>
-                </tr>
-                <tr>
-                    <td class="t_from t_from_event">
-                        <div class="t_from_img"><img src="/images/desk/players_img/profile_img_1.png"
-                                                     alt="profile photo">
-                        </div>
-                        <span>Austin Vargas</span></td>
-                    <td class="t_event">MILLIONS Russia, 1A</td>
-                    <td class="t_buy_in">£1,000</td>
-                    <td class="t_gte">£500,000</td>
-                    <td class="t_markup">1.22</td>
-                    <td class="t_share">20%</td>
-                    <td class="t_time">< 24 hours</td>
-                </tr>
-                <tr>
-                    <td class="t_from t_from_event">
-                        <div class="t_from_img"><img src="/images/desk/players_img/profile_img_1.png"
-                                                     alt="profile photo">
-                        </div>
-                        <span>Austin Vargas</span></td>
-                    <td class="t_event">MILLIONS Russia, 1A</td>
-                    <td class="t_buy_in">£1,000</td>
-                    <td class="t_gte">£500,000</td>
-                    <td class="t_markup">1.22</td>
-                    <td class="t_share">20%</td>
-                    <td class="t_time">< 24 hours</td>
-                </tr>
-                <tr>
-                    <td class="t_from t_from_event">
-                        <div class="t_from_img"><img src="/images/desk/players_img/profile_img_1.png"
-                                                     alt="profile photo">
-                        </div>
-                        <span>Austin Vargas</span></td>
-                    <td class="t_event">MILLIONS Russia, 1A</td>
-                    <td class="t_buy_in">£1,000</td>
-                    <td class="t_gte">£500,000</td>
-                    <td class="t_markup">1.22</td>
-                    <td class="t_share">20%</td>
-                    <td class="t_time">< 24 hours</td>
-                </tr>
-                <tr>
-                    <td class="t_from t_from_event">
-                        <div class="t_from_img"><img src="/images/desk/players_img/profile_img_1.png"
-                                                     alt="profile photo">
-                        </div>
-                        <span>Austin Vargas</span></td>
-                    <td class="t_event">MILLIONS Russia, 1A</td>
-                    <td class="t_buy_in">£1,000</td>
-                    <td class="t_gte">£500,000</td>
-                    <td class="t_markup">1.22</td>
-                    <td class="t_share">20%</td>
-                    <td class="t_time">< 24 hours</td>
+                        <span ng-bind="sale.creator.name"></span>
+                    </td>
+                    <td class="t_event" ng-bind="sale.event.title"></td>
+                    <td class="t_buy_in" ng-bind="sale.event.buy_in | currency:'£':0"></td>
+                    <td class="t_gte" ng-bind="sale.event.fund | currency:'£':0"></td>
+                    <td class="t_markup" ng-bind="sale.markup"></td>
+                    <td class="t_share">{% sale.share %}%</td>
+                    <!--<td class="t_time">{% sale.event.date_start %}</td>-->
+                    <td class="t_time">< {%10 + index%} hours</td>
                 </tr>
                 </tbody>
             </table>

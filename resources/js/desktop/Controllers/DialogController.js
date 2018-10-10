@@ -1,4 +1,4 @@
-import {EVENTS_INDEX} from "../../common/Constants";
+import {EVENTS_RESOURCE} from "../../common/Constants";
 
 class DialogController {
     constructor($mdDialog,$http) {
@@ -16,7 +16,7 @@ class DialogController {
     };
 
     getEvents() {
-        this.$http.get(EVENTS_INDEX)
+        this.$http.get(EVENTS_RESOURCE)
             .then(response => {
                 this.events = response.data.data;
                 console.log(this.events);

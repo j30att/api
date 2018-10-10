@@ -1,4 +1,4 @@
-import {SALE_MY, SALE_MY_ACTIVE, SALE_MY_CLOSED, SALE_CLOSED, SALE_LOWEST, SALE_ACTIVE} from "../Constants"
+import {SALE_MY, SALE_MY_ACTIVE, SALE_MY_CLOSED, SALE_CLOSED, SALE_ACTIVE, SALE_CLOSING_SOON} from "../Constants"
 
 class SalesResourceService {
     constructor($http){
@@ -13,6 +13,9 @@ class SalesResourceService {
     };
     getMySalesClosed(user_id) {
         return this.$http.post(SALE_MY_CLOSED, {status: SALE_CLOSED, user_id: user_id});
+    };
+    getClosingSoonSales() {
+        return this.$http.post(SALE_CLOSING_SOON);
     };
 }
 SalesResourceService.$inject = ['$http'];

@@ -1,66 +1,67 @@
-import {EVENTS_INDEX, SALE_CLOSED, SALE_INDEX, SALE_MARKUP} from "../../Constants"
 import {DialogController} from "../DialogController";
-
+import {SALE_CLOSED, SALE_INDEX, SALE_MARKUP} from "../../Constants"
 
 class InvestController {
-    constructor($window, $http, $mdDialog){
+    constructor($window, $http, $mdDialog, EventsResourceService, SalesResourceService) {
         this.$window = $window;
         this.$mdDialog = $mdDialog;
+        this.EventsResourceService = EventsResourceService;
+        this.SalesResourceService = SalesResourceService;
         this.$http = $http;
-        this.events =[];
+
         this._opts = {dataLoad: false};
-        this.filter=SALE_CLOSED;
-        this.showList();
+
+        this.events = [];
+        this.sales = [];
+        this.filter = SALE_CLOSED;
+
+        this.getEvents();
         this.getSales();
     }
 
-    setFilter(param){
-        if (param == 'closed') {this.filter=SALE_CLOSED; this.getSales()}
-        if (param == 'markup') {this.filter=SALE_MARKUP; this.getSales()}
+    setFilter(param) {
+        if (param === 'closed') {
+            this.filter = SALE_CLOSED;
+            this.getSales()
+        }
+        if (param === 'markup') {
+            this.filter = SALE_MARKUP;
+            this.getSales()
+        }
     }
 
-    showList() {
-        this.$http.get(EVENTS_INDEX,
-        ).then(response => {
-            this.events = response.data.data;
-            this._opts.dataLoad = true;
-            console.log(this.events, 'console.log(this.events)');
-        });
+    getEvents() {
+        this.EventsResourceService.getMainEvents()
+            .then(response => {
+                this.events = response.data.data;
+                this._opts.dataLoad = true;
+            });
     }
 
+    getSales() {
+        this.SalesResourceService.getClosingSoonSales()
+            .then(response => {
+                this.sales = response.data.data;
+                this._opts.dataLoad = true;
+            });
+    }
 
     showCreateForm(ev) {
-        let vm = this;
-        this.$mdDialog.show({
-            controller: DialogController,
-            controllerAs: 'vm',
-            template: require('../../views/bids/place.template.html'),
-            parent: angular.element(document.body),
-            targetEvent: ev,
+        this.$mdDialog
+            .show({
+                controller: DialogController,
+                controllerAs: 'vm',
+                template: require('../../views/bids/place.template.html'),
+                parent: angular.element(document.body),
+                targetEvent: ev,
 
-            clickOutsideToClose: true,
-
-        }).openFrom('#left')
-            .then(function (answer) {
-
-            }, function () {
+                clickOutsideToClose: true,
 
             });
     };
 
+}
 
-    getSales(){
-        this.$http.get(SALE_INDEX, {params: {status: this.filter}})
-        .then(response => {
-            this.sales = response.data.data;
-            this._opts.dataLoad = true;
-            return true;
-        });
-    }
-
-
-};
-
-InvestController.$inject = ['$window', '$http', '$mdDialog'];
+InvestController.$inject = ['$window', '$http', '$mdDialog','EventsResourceService','SalesResourceService'];
 
 export {InvestController};

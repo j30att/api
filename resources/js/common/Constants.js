@@ -23,8 +23,9 @@ export const BIDS_MY_STORE       = '/api/bids/my/store';
 
 
 //**EVENTS**//
-export const EVENTS_INDEX = '/api/events';
-export const EVENT_SINGLE = '/api/events/';
+export const EVENTS_RESOURCE = '/api/events';
+export const EVENTS_MAIN = '/api/events/main';
+export const EVENTS_FILTER = '/api/events/filter';
 
 //**SALE**//
 
@@ -33,6 +34,7 @@ export const SALE_MY_ACTIVE = '/api/sales/my/active';
 export const SALE_MY_CLOSED = '/api/sales/my/closed';
 
 export const SALE_CLOSING   ='/api/sales/closing';
+export const SALE_CLOSING_SOON   ='/api/sales/closing-soon';
 export const SALE_LOWEST    ='/api/sales/lowest';
 export const SALE_SUBEVENT  ='/api/sales/subevent';
 

@@ -22,8 +22,8 @@ class EventResource extends JsonResource
             'fund'       => $this->fund,
             'buy_in'     => $this->buy_in,
             'subevents'  => $this->resource->subEvents,
-            'date_start' => $this->formatted_start_date
-            ];
-        return parent::toArray($request);
+            'date_start' => $this->formatted_start_date,
+            'date_end'   => $this->formatted_end_date
+        ];
     }
 }

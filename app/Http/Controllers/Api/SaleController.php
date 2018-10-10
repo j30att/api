@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Resources\SaleResource;
 use App\Models\Sale;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\App;
@@ -11,18 +12,28 @@ use Illuminate\Support\Facades\Auth;
 
 class SaleController extends Controller
 {
+    public function closingSoonSales()
+    {
+        $sales = Sale::query()
+            ->where('status', SALE::SALE_ACTIVE)
+            ->with('creator')
+            ->with('event')
+            ->get()
+            ->sortBy('event.date_end');
+        return SaleResource::collection($sales);
+    }
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
     public function mySales(Request $request)
     {
         $user = Auth::user();
         if ($request->get('user_id') != $user->id) App::abort(401);
 
-        $limit=$request->get('limit');
+        $limit = $request->get('limit');
 
         $saleActive = Sale::query()->where(['status' => Sale::SALE_ACTIVE, 'user_id' => $user->id])->limit($limit)->get();
         $saleCanceled = Sale::query()->where(['status' => Sale::SALE_CLOSED, 'user_id' => $user->id])->limit($limit)->get();
@@ -40,8 +51,6 @@ class SaleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-
     public function myFilterSales(Request $request)
     {
         $user = Auth::user();
@@ -62,8 +71,8 @@ class SaleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-    public function lowestSales(){
+    public function lowestSales()
+    {
         $sale = Sale::query()
             ->with('creator')
             ->with('subevent')
@@ -78,8 +87,8 @@ class SaleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-    public function closingSales(){
+    public function closingSales()
+    {
         $sale = Sale::query()
             ->with('creator')
             ->with('subevent')
@@ -95,8 +104,8 @@ class SaleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-    public function subeventSales(Request $request){
+    public function subeventSales(Request $request)
+    {
         $filter = $request->all();
         $sale = Sale::query()->where($filter)->with('subevent')->get();
         return SaleResource::collection($sale);
@@ -181,8 +190,6 @@ class SaleController extends Controller
     {
         //
     }
-
-
 
 
 }

@@ -1,8 +1,7 @@
-import Services from "../mobile/Services";
-
 let angular = require('angular');
 
 import Controllers from './Controllers';
+import Services from "../common/Services";
 import routes from './Router';
 import middlewares from './Middlewares';
 import Components from './Components';

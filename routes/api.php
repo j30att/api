@@ -19,12 +19,17 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group([/*'middleware' => 'auth'*/], function(){
     Route::apiResource('bids', 'Api\BidController');
+
+    Route::post('sales/lowest', 'Api\SaleController@lowestSales');
+    Route::post('sales/closing', 'Api\SaleController@closingSales');
+    Route::post('sales/subevent', 'Api\SaleController@subeventSales');
+    Route::post('sales/closing-soon', 'Api\SaleController@closingSoonSales');
     Route::apiResource('sale', 'Api\SaleController');
+
+    Route::get('events/main', 'Api\EventController@mainEvents');
     Route::apiResource('events', 'Api\EventController');
+
     Route::apiResource('subevents', 'Api\SubEventController');
-
-
-
 
 });
 
@@ -42,6 +47,4 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('/bids/my/store', 'Api\BidController@myStoreBid');
 });
 
-Route::post('/sales/lowest', 'Api\SaleController@lowestSales');
-Route::post('/sales/closing', 'Api\SaleController@closingSales');
-Route::post('/sales/subevent', 'Api\SaleController@subeventSales');
+

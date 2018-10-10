@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Http\Resources\Events;
+
+use App\Models\Event;
+use Illuminate\Http\Resources\Json\JsonResource;
+
+class EventsList extends JsonResource
+{
+    /**
+     * Transform the resource into an array.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @return array
+     */
+    public function toArray($request)
+    {
+        /** @var Event $this */
+        return [
+            'id' => $this->id,
+            'image' => $this->image,
+            //'title' => str_limit($this->title, 20),
+            'title' => $this->title,
+            'fund' => $this->fund,
+            'period' => $this->period
+        ];
+    }
+}
