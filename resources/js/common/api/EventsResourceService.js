@@ -1,4 +1,4 @@
-import {EVENTS_FILTER, EVENTS_MAIN, EVENTS_RESOURCE} from "../Constants";
+import {EVENTS_API} from "../Constants";
 
 class EventsResourceService {
     constructor($http) {
@@ -6,17 +6,21 @@ class EventsResourceService {
     }
 
     getMainEvents() {
-        return this.$http.get(EVENTS_MAIN);
+        return this.$http.get(EVENTS_API + '/main');
     }
 
-    getEvents(filter) {
-        return this.$http.post(EVENTS_FILTER, {filter: filter});
+    getFilteredEvents(filter) {
+        return this.$http.post(EVENTS_API + '/filtered', {filter: filter});
 
     };
 
     getEventById(id) {
-        return this.$http.get(EVENTS_RESOURCE + '/' + id);
+        return this.$http.get(EVENTS_API + '/' + id);
     };
+
+    getFilters() {
+        return this.$http.get(EVENTS_API + '/get-filters');
+    }
 }
 
 EventsResourceService.$inject = ['$http'];

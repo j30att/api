@@ -26,6 +26,8 @@ Route::group([/*'middleware' => 'auth'*/], function(){
     Route::post('sales/closing-soon', 'Api\SaleController@closingSoonSales');
     Route::apiResource('sale', 'Api\SaleController');
 
+    Route::post('events/filtered', 'Api\EventController@filteredEvents');
+    Route::get('events/get-filters', 'Api\EventController@getFilters');
     Route::get('events/main', 'Api\EventController@mainEvents');
     Route::apiResource('events', 'Api\EventController');
 

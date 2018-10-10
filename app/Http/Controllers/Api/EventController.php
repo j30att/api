@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Resources\EventResource;
 use App\Http\Resources\Events\EventsList;
+use App\Models\Country;
 use App\Models\Event;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -97,5 +99,71 @@ class EventController extends Controller
     {
         $events = Event::query()->take(6)->get();
         return EventsList::collection($events);
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     */
+    public function filteredEvents(Request $request)
+    {
+        $query = Event::query();
+        $filter = $request->get('filter');
+
+        if ($filter) {
+
+        }
+
+        return EventsList::collection($query->get());
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     */
+    public function getFilters(Request $request)
+    {
+        //$lastMonth = Carbon::now()->subMonth();
+        $lastYear = Carbon::now()->subYear();
+
+        $events = Event::query()
+            ->orderBy('title')
+            ->pluck('title', 'id')
+            ->toArray();
+        $events[0] = 'All events';
+
+        $countries = Country::query()
+            ->orderBy('name')
+            ->pluck('name', 'id')
+            ->toArray();
+        $countries[0] = 'All regions';
+
+        $filters = [
+            [
+                'name' => 'date',
+                'placeholder' => 'Last month',
+                'options' => [
+                    0 => 'Last month',
+                    $lastYear->toDateTimeString() => 'Last year',
+                ]
+            ],
+            [
+                'name' => 'event',
+                'placeholder' => 'All events',
+                'options' => $events,
+            ],
+            [
+                'name' => 'country',
+                'placeholder' => 'All regions',
+                'options' => $countries
+            ],
+            [
+                'name' => 'venue',
+                'placeholder' => 'All venues',
+                'options' => $countries
+            ]
+        ];
+
+        return response()->json(['data' => $filters]);
     }
 }

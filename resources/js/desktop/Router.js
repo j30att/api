@@ -38,8 +38,8 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('invest-events', {
             url: '/invest/events',
             template: require('./views/events/index.template.html'),
-            /*controller: 'EventsListController',
-            controllerAs: 'EvntsLstCtrl',*/
+            controller: 'EventsController',
+            controllerAs: 'EventsCtrl',
         })
         .state('invest-events-detail', {
             url: '/invest/events/{id}',

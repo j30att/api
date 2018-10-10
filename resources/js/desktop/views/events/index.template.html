@@ -6,216 +6,31 @@
                 All Events
             </div>
             <div class="event_content_filter-wr filter-wr">
-                <div class="filter_item event_content_filter__">
-                    <select name="" id="">
-                        <option value="">Filter value</option>
-                        <option value="">Filter value</option>
-                        <option value="">Filter value</option>
-                        <option value="">Filter value</option>
-                        <option value="">Filter value</option>
-                    </select>
+                <div ng-repeat="filter in EventsCtrl.filters"
+                     class="filter_item event_content_filter__">
+                    <md-select class="md-no-underline"
+                               ng-model="EventsCtrl.activeFilter[filter.name]"
+                               placeholder="{%filter.placeholder%}">
+                        <md-option ng-repeat="(value, name) in filter.options"
+                                   value="{%value%}">
+                            {%name%}
+                        </md-option>
+                    </md-select>
                 </div>
-
-
-                <div class="filter_item event_content_filter__"><select name="" id="">
-                    <option value="">Filter value</option>
-                    <option value="">Filter value</option>
-                    <option value="">Filter value</option>
-                    <option value="">Filter value</option>
-                    <option value="">Filter value</option>
-                </select></div>
-                <div class="filter_item event_content_filter__"><select name="" id="">
-                    <option value="">Filter value</option>
-                    <option value="">Filter value</option>
-                    <option value="">Filter value</option>
-                    <option value="">Filter value</option>
-                    <option value="">Filter value</option>
-                </select></div>
-                <div class="filter_item event_content_filter__"><select name="" id="">
-                    <option value="">Filter value</option>
-                    <option value="">Filter value</option>
-                    <option value="">Filter value</option>
-                    <option value="">Filter value</option>
-                    <option value="">Filter value</option>
-                </select></div>
             </div>
 
-            <div class="events_item-wr">
-                <a ui-sref="invest-events-detail({id:'1'})" class="event_item">
+            <div ng-if="EventsCtrl.events" class="events_item-wr">
+                <a ng-repeat="event in EventsCtrl.events"
+                    ui-sref="invest-events-detail({id:event.id})" class="event_item">
                     <div class="event_item__pic">
-                        <img src="/images/desk/event_pic_1.png" alt="event">
+                        <img src="/images/desk/event_pic_{%event.id%}.png" alt="event">
                     </div>
                     <div class="event_info">
-                        <div class="event_info_name">WSOP International Circuit - Rotterdam</div>
+                        <div class="event_info_name" ng-bind="event.title"></div>
                         <div class="event_info_date-gtd">
-                            <div class="event_info_date">Jul 20 – Aug 10</div>
+                            <div class="event_info_date" ng-bind="event.period"></div>
 
-                            <div class="event_info_gtd">£1,000,000 GTD</div>
-                        </div>
-
-                    </div>
-
-                </a>
-                <a ui-sref="invest-events-detail({id:'1'})" class="event_item">
-                    <div class="event_item__pic">
-                        <img src="/images/desk/event_pic_2.png" alt="event">
-                    </div>
-                    <div class="event_info">
-                        <div class="event_info_name">WSOP International Circuit - Rotterdam</div>
-                        <div class="event_info_date-gtd">
-                            <div class="event_info_date">Jul 20 – Aug 10</div>
-
-                            <div class="event_info_gtd">£1,000,000 GTD</div>
-                        </div>
-
-                    </div>
-
-                </a>
-                <a ui-sref="invest-events-detail({id:'1'})" class="event_item">
-                    <div class="event_item__pic">
-                        <img src="/images/desk/event_pic_3.png" alt="event">
-                    </div>
-                    <div class="event_info">
-                        <div class="event_info_name">WSOP International Circuit - Rotterdam</div>
-                        <div class="event_info_date-gtd">
-                            <div class="event_info_date">Jul 20 – Aug 10</div>
-
-                            <div class="event_info_gtd">£1,000,000 GTD</div>
-                        </div>
-
-                    </div>
-
-                </a>
-                <a ui-sref="invest-events-detail({id:'1'})" class="event_item">
-                    <div class="event_item__pic">
-                        <img src="/images/desk/event_pic_4.png" alt="event">
-                    </div>
-                    <div class="event_info">
-                        <div class="event_info_name">WSOP International Circuit - Rotterdam</div>
-                        <div class="event_info_date-gtd">
-                            <div class="event_info_date">Jul 20 – Aug 10</div>
-
-                            <div class="event_info_gtd">£1,000,000 GTD</div>
-                        </div>
-
-                    </div>
-
-                </a>
-                <a ui-sref="invest-events-detail({id:'1'})" class="event_item">
-                    <div class="event_item__pic">
-                        <img src="/images/desk/event_pic_5.png" alt="event">
-                    </div>
-                    <div class="event_info">
-                        <div class="event_info_name">WSOP International Circuit - Rotterdam</div>
-                        <div class="event_info_date-gtd">
-                            <div class="event_info_date">Jul 20 – Aug 10</div>
-
-                            <div class="event_info_gtd">£1,000,000 GTD</div>
-                        </div>
-
-                    </div>
-
-                </a>
-                <a ui-sref="invest-events-detail({id:'1'})" class="event_item">
-                    <div class="event_item__pic">
-                        <img src="/images/desk/event_pic_6.png" alt="event">
-                    </div>
-                    <div class="event_info">
-                        <div class="event_info_name">WSOP International Circuit - Rotterdam</div>
-                        <div class="event_info_date-gtd">
-                            <div class="event_info_date">Jul 20 – Aug 10</div>
-
-                            <div class="event_info_gtd">£1,000,000 GTD</div>
-                        </div>
-
-                    </div>
-
-                </a>
-                <a ui-sref="invest-events-detail({id:'1'})" class="event_item">
-                    <div class="event_item__pic">
-                        <img src="/images/desk/event_pic_1.png" alt="event">
-                    </div>
-                    <div class="event_info">
-                        <div class="event_info_name">WSOP International Circuit - Rotterdam</div>
-                        <div class="event_info_date-gtd">
-                            <div class="event_info_date">Jul 20 – Aug 10</div>
-
-                            <div class="event_info_gtd">£1,000,000 GTD</div>
-                        </div>
-
-                    </div>
-
-                </a>
-                <a ui-sref="invest-events-detail({id:'1'})" class="event_item">
-                    <div class="event_item__pic">
-                        <img src="/images/desk/event_pic_2.png" alt="event">
-                    </div>
-                    <div class="event_info">
-                        <div class="event_info_name">WSOP International Circuit - Rotterdam</div>
-                        <div class="event_info_date-gtd">
-                            <div class="event_info_date">Jul 20 – Aug 10</div>
-
-                            <div class="event_info_gtd">£1,000,000 GTD</div>
-                        </div>
-
-                    </div>
-
-                </a>
-                <a ui-sref="invest-events-detail({id:'1'})" class="event_item">
-                    <div class="event_item__pic">
-                        <img src="/images/desk/event_pic_3.png" alt="event">
-                    </div>
-                    <div class="event_info">
-                        <div class="event_info_name">WSOP International Circuit - Rotterdam</div>
-                        <div class="event_info_date-gtd">
-                            <div class="event_info_date">Jul 20 – Aug 10</div>
-
-                            <div class="event_info_gtd">£1,000,000 GTD</div>
-                        </div>
-
-                    </div>
-
-                </a>
-                <a ui-sref="invest-events-detail({id:'1'})" class="event_item">
-                    <div class="event_item__pic">
-                        <img src="/images/desk/event_pic_4.png" alt="event">
-                    </div>
-                    <div class="event_info">
-                        <div class="event_info_name">WSOP International Circuit - Rotterdam</div>
-                        <div class="event_info_date-gtd">
-                            <div class="event_info_date">Jul 20 – Aug 10</div>
-
-                            <div class="event_info_gtd">£1,000,000 GTD</div>
-                        </div>
-
-                    </div>
-
-                </a>
-                <a ui-sref="invest-events-detail({id:'1'})" class="event_item">
-                    <div class="event_item__pic">
-                        <img src="/images/desk/event_pic_5.png" alt="event">
-                    </div>
-                    <div class="event_info">
-                        <div class="event_info_name">WSOP International Circuit - Rotterdam</div>
-                        <div class="event_info_date-gtd">
-                            <div class="event_info_date">Jul 20 – Aug 10</div>
-
-                            <div class="event_info_gtd">£1,000,000 GTD</div>
-                        </div>
-
-                    </div>
-
-                </a>
-                <a ui-sref="invest-events-detail({id:'1'})" class="event_item">
-                    <div class="event_item__pic">
-                        <img src="/images/desk/event_pic_6.png" alt="event">
-                    </div>
-                    <div class="event_info">
-                        <div class="event_info_name">WSOP International Circuit - Rotterdam</div>
-                        <div class="event_info_date-gtd">
-                            <div class="event_info_date">Jul 20 – Aug 10</div>
-
-                            <div class="event_info_gtd">£1,000,000 GTD</div>
+                            <div class="event_info_gtd">{% event.fund | currency:'£':0 %} GTD</div>
                         </div>
 
                     </div>

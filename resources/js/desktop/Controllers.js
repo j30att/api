@@ -11,7 +11,7 @@ import {InvestController} from "./Controllers/invest/InvestController";
 import {SaleFormController} from "./Controllers/SaleFormController"
 
 import {EventController} from "./Controllers/EventController";
-import {EventsListController} from "./Controllers/EventsListController";
+import {EventsController} from "./Controllers/events/EventsController";
 import {DialogController} from "./Controllers/DialogController"
 
 
@@ -26,7 +26,7 @@ module.controller('LoginController', LoginController);
 module.controller('RegisterController', RegisterController);
 module.controller('MainController', MainController);
 module.controller('ProfileController', ProfileController);
-module.controller('EventsListController', EventsListController);
+module.controller('EventsController', EventsController);
 module.controller('FilterBidsController', FilterBidsController);
 module.controller('BidResponsesController', BidResponsesController);
 module.controller('BidsController', BidsController);
@@ -34,7 +34,6 @@ module.controller('SaleFormController', SaleFormController);
 module.controller('SaleFilterController', SaleFilterController);
 module.controller('InvestController', InvestController);
 module.controller('EventController', EventController);
-module.controller('EventsListController', EventsListController);
 module.controller('DialogController', DialogController);
 
 
