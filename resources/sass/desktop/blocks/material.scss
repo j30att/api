@@ -1,5 +1,14 @@
 .full_height {
+  width: 500px;
+  box-sizing: border-box;
+  max-height: 100vh;
+  height: 100vh;
   padding: 24px 40px 0 40px;
+}
+
+.md-dialog-container{
+  position: fixed !important;
+  top: 0 !important;
 }
 
 md-select {
@@ -9,4 +18,3 @@ md-select {
 .md-dialog-container{
   justify-content: flex-end;
 }
-
