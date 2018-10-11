@@ -17,8 +17,11 @@ import {DialogController} from "./Controllers/DialogController"
 
 ////////////////////////////////////////////////////////////////////////////
 import {SaleController} from "./Controllers/sales/SaleController";
-import {SaleFilterController} from "./Controllers/sales/SaleFilterController"
+import {SaleInvestController} from "./Controllers/sales/SaleInvestController";
+import {SaleFilterController} from "./Controllers/sales/SaleFilterController";
+
 import {PopupController} from "./Controllers/PopupController"
+
 
 
 let module = angular.module('Controllers', []);
@@ -42,6 +45,7 @@ module.controller('DialogController', DialogController);
 
 module.controller('SaleController', SaleController);
 module.controller('PopupController', PopupController);
+module.controller('SaleInvestController', SaleInvestController);
 
 export default module.name;
 
