@@ -1374,6 +1374,10 @@ body * {
   font-family: "Open Sans", sans-serif;
 }
 
+.no_scroll {
+  overflow: hidden;
+}
+
 #right {
   position: fixed;
   right: -3000px;
