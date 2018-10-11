@@ -1,11 +1,13 @@
 <div class="row">
-    <div class="event_detail__header">
-        <div class="event_detail__header_title" ng-bind="EventCtrl.event.title"></div>
-        <div class="event_detail__header_date" ng-bind="EventCtrl.event.date"></div>
-        <a ui-sref="invest" class="goback">
-
-        </a>
+    <div class="header">
+        <div class="header_empty"><a ui-sref="sale" class="goback" href="#"></a></div>
+        <div class="header_title">
+            <div class="event_detail__header_title" ng-bind="EventCtrl.event.title"></div>
+            <div class="event_detail__header_date" ng-bind="EventCtrl.event.date"></div>
+        </div>
+        <div class="header_empty"></div>
     </div>
+    <div class="header_empty_height header_empty_height_max"></div>
 
     <div class="courusel_no_limit_wr">
 
@@ -22,8 +24,6 @@
 
                 </div>
             </div>
-
-
 
             <div class="event_detail_info">
 
