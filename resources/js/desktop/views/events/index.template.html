@@ -22,19 +22,19 @@
                     <div class="event_filters__item">
                         <md-select
                             class="event_filters__item_select md-no-underline"
-                            md-selected-text="EventsCtrl.filters.country.placeholder"
+                            md-selected-text="EventsCtrl.filters.event.placeholder"
                             data-md-container-class="selectdemoSelectHeader"
-                            ng-model="EventsCtrl.activeFilter['country']"
-                            placeholder="{%EventsCtrl.filters.country.placeholder%}"
+                            ng-model="EventsCtrl.activeFilter['event']"
+                            placeholder="{%EventsCtrl.filters.event.placeholder%}"
                             multiple>
                             <md-select-header class="demo-select-header">
-                                <input ng-model="EventsCtrl.filters.search"
+                                <input ng-model="EventsCtrl.filters.event.search"
                                        type="search"
-                                       placeholder="Search for a vegetable.."
+                                       placeholder="Search events"
                                        class="demo-header-searchbox md-text">
                             </md-select-header>
                             <md-option
-                                ng-repeat="(value, name) in EventsCtrl.filters.country.options | filter:EventsCtrl.filters.search"
+                                ng-repeat="(value, name) in EventsCtrl.filters.event.options | optionFilter:EventsCtrl.filters.event.search"
                                 ng-value="value">
                                 {%name%}
                             </md-option>
@@ -42,13 +42,20 @@
                     </div>
                     <div class="event_filters__item">
                         <md-select
-                            class="event_filters__item_select md-no-underline"
-                            md-selected-text="EventsCtrl.filters.event.placeholder"
-                            ng-model="EventsCtrl.activeFilter['event']"
-                            placeholder="{%EventsCtrl.filters.event.placeholder%}"
+                            class="event_filters__item_select md-no-underline form-Select-theme"
+                            md-selected-text="EventsCtrl.filters.country.placeholder"
+                            data-md-container-class="selectdemoSelectHeader"
+                            ng-model="EventsCtrl.activeFilter['country']"
+                            placeholder="{%EventsCtrl.filters.country.placeholder%}"
                             multiple>
+                            <md-select-header class="demo-select-header">
+                                <input ng-model="EventsCtrl.filters.country.search"
+                                       type="search"
+                                       placeholder="Search regions"
+                                       class="demo-header-searchbox md-text">
+                            </md-select-header>
                             <md-option
-                                ng-repeat="(value, name) in EventsCtrl.filters.event.options"
+                                ng-repeat="(value, name) in EventsCtrl.filters.country.options | optionFilter:EventsCtrl.filters.country.search"
                                 ng-value="value">
                                 {%name%}
                             </md-option>
@@ -66,26 +73,45 @@
                             </md-option>
                         </md-select>
                     </div>
-                    <!--<div ng-repeat="filter in EventsCtrl.filters"
-                         class="event_filters__item">
-                        <md-select class="event_filters__item_select md-no-underline"
-                                   ng-model="EventsCtrl.activeFilter[filter.name]"
-                                   placeholder="{%filter.placeholder%}"
-                                   data-md-container-class="selectdemoSelectHeader"
-                                   multiple>
-                            <md-select-header class="demo-select-header">
-                                <input ng-model="searchTerm"
-                                       type="search"
-                                       placeholder="Search for a vegetable.."
-                                       class="demo-header-searchbox md-text">
-                            </md-select-header>
-                            <md-option ng-repeat="(value, name) in filter.options"
-                                       ng-value="{%value%}">
-                                {%name%}
-                            </md-option>
-                        </md-select>
-                    </div>-->
+                    <div ng-if="EventsCtrl.isSetActiveFilters()"
+                         ng-click="EventsCtrl.disableFilter()"
+                         class="event_filters__close_all">
+                        <span>&times;</span>
+                    </div>
                 </div>
+                <div class="event_filters__active">
+                    <div ng-if="EventsCtrl.activeFilter['event'].length"
+                        class="event_filters__active_wrapper">
+                        <div class="event_filters__active_title">
+                            Events
+                        </div>
+
+                        <div ng-repeat="(index, activeFilter) in EventsCtrl.activeFilter['event']"
+                             ng-click="EventsCtrl.disableFilter('event', index)"
+                             class="event_filters__active_item">
+                            <span class="event_filters__active_item__title">
+                                {% EventsCtrl.filters.event.options[activeFilter] %}
+                            </span>
+                            <span class="event_filters__active_item__close">&times;</span>
+                        </div>
+                    </div>
+                    <div ng-if="EventsCtrl.activeFilter['country'].length"
+                         class="event_filters__active_wrapper">
+                        <div class="event_filters__active_title">
+                            Regions
+                        </div>
+
+                        <div ng-repeat="(index, activeFilter) in EventsCtrl.activeFilter['country']"
+                             ng-click="EventsCtrl.disableFilter('country', index)"
+                             class="event_filters__active_item">
+                            <span class="event_filters__active_item__title">
+                                {% EventsCtrl.filters.country.options[activeFilter] %}
+                            </span>
+                            <span class="event_filters__active_item__close">&times;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div ng-if="EventsCtrl.events" class="events_item-wr">
                 <a ng-repeat="event in EventsCtrl.events"
