@@ -1,7 +1,5 @@
-import {EVENTS_API, SALE_ACTIVE, SUBEVENTS_INDEX} from "../../../common/Constants";
 
-
-class SaleManage {
+class Profile {
     constructor($scope,SalesResourceService, $mdSidenav, $http, SalesService, $timeout, $state) {
         this.SalesResourceService = SalesResourceService;
         this.SalesService = SalesService;
@@ -17,11 +15,13 @@ class SaleManage {
 
     }
     $onInit(){
-        this.$scope.$on('sidenavManage-open', (event, data) => {
-            console.log('sidenavManage-open');
-            this.buildToggler('right_manage');
+        this.$scope.$on('sidenav-profile-open', (event, data) => {
+            console.log(11212);
+            this.buildToggler('right_profile');
         });
+
         this.$scope.$watch('isSidenavOpen', (fixed) => {
+            console.log(fixed);
             this.$state.modalOpened = fixed
         });
 
@@ -29,9 +29,6 @@ class SaleManage {
 
     buildToggler(componentId) {
         this.$mdSidenav(componentId).toggle();
-        if(this.$mdSidenav(componentId).isOpen()){
-            this.$state.modalOpened = true;
-        } else {this.$state.modalOpened = false}
     }
 
 
@@ -41,13 +38,13 @@ class SaleManage {
 
 };
 
-SaleManage.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http', 'SalesService', '$timeout', '$state'];
+Profile.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http', 'SalesService', '$timeout', '$state'];
 
-export const SaleManageComponent = {
+export const ProfileComponent = {
     bindings: {
 
     },
-    template: require('./sale-manage.template.html'),
-    controller: SaleManage,
+    template: require('./profile.template.html'),
+    controller: Profile,
     controllerAs: '$ctrl'
 };

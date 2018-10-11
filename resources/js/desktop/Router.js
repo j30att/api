@@ -44,8 +44,14 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('invest-events-detail', {
             url: '/invest/events/{id}',
             template: require('./views/events/detail.template.html'),
-            /*controller: 'EventsListController',
-            controllerAs: 'EvntsLstCtrl',*/
+            controller: 'EventsDetailController',
+            controllerAs: 'EventsDetailCtrl',
+        })
+        .state('invest-sales', {
+            url:'/invest/sales',
+            template: require('./views/sale/sales.template.html'),
+            controller: 'SaleInvestController',
+            controllerAs: 'SaleInvestCtrl'
         })
         .state('bids', {
             url: '/bids',
@@ -75,6 +81,10 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state ('sale-create', {
             url: '/sales/create',
             template: require('./views/sale/create.template.html')
+        })
+        .state ('profile', {
+            url: '/profile',
+            template: require('./views/profile/profile.trmplate.html')
         })
         .state ('place-bit', {
             url: '/bids/place-a-bit',
