@@ -71,7 +71,86 @@
   }
 }
 
+/*registration block*/
+.md-datepicker-calendar-pane{
+    left:15px !important;
+    .md-datepicker-input-mask{
+        display: none;
+    }
+}
+.register{
+    &_age{
+        width: 100%;
+        margin: 60px auto 20px auto;
+        md-datepicker{
+            .md-datepicker-button{
+                opacity: 0;
+            }
+            .md-datepicker-input-container{
+                width: 100%;
+                input::placeholder{
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
 
+        }
+    }
+}
+.md-required{
+    transform-origin: center !important;
+    color: $warmGrey !important;
+}
+.md-required::after{
+    color: $warmGrey !important;
+}
 
+/*delete label*/
+md-input-container:first-child{
+    margin-top: 30px !important;
+}
+md-input-container{
+    margin-top: 40px !important;
+    text-align: center;
+    font-size: 16px;
+    line-height: 16px !important;
+    input{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    input::placeholder{
+        text-align: center;
+        padding-bottom: 10px;
+    }
 
+}
+.md-input-message-animation{
+    background-color: #ffffff;
+}
+/*registration block end*/
+.input_wrapper{
+    position: relative;
+    background-color: #ffffff;
+    z-index: 10;
+    margin-bottom: 170px;
+}
+.private_policy{
+    width: 90% !important;
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
+    left: 5%;
+    margin: 0 !important;
+    z-index: 5;
+}
+.button_login{
+    bottom: 70px;
+}
+.button_registr_fixed{
+    position: fixed;
+    width: 90% !important;
+    left: 5%;
+    bottom: 70px;
+    z-index: 5;
+}
 

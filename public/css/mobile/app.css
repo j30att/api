@@ -11833,6 +11833,132 @@ a.text-dark:focus {
   border-radius: 4px;
 }
 
+/*registration block*/
+
+.md-datepicker-calendar-pane {
+  left: 15px !important;
+}
+
+.md-datepicker-calendar-pane .md-datepicker-input-mask {
+  display: none;
+}
+
+.register_age {
+  width: 100%;
+  margin: 60px auto 20px auto;
+}
+
+.register_age md-datepicker .md-datepicker-button {
+  opacity: 0;
+}
+
+.register_age md-datepicker .md-datepicker-input-container {
+  width: 100%;
+}
+
+.register_age md-datepicker .md-datepicker-input-container input::-webkit-input-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.register_age md-datepicker .md-datepicker-input-container input:-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.register_age md-datepicker .md-datepicker-input-container input::-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.register_age md-datepicker .md-datepicker-input-container input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.md-required {
+  -webkit-transform-origin: center !important;
+          transform-origin: center !important;
+  color: #949494 !important;
+}
+
+.md-required::after {
+  color: #949494 !important;
+}
+
+/*delete label*/
+
+md-input-container:first-child {
+  margin-top: 30px !important;
+}
+
+md-input-container {
+  margin-top: 40px !important;
+  text-align: center;
+  font-size: 16px;
+  line-height: 16px !important;
+}
+
+md-input-container input {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+md-input-container input::-webkit-input-placeholder {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+md-input-container input:-ms-input-placeholder {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+md-input-container input::-ms-input-placeholder {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+md-input-container input::placeholder {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.md-input-message-animation {
+  background-color: #ffffff;
+}
+
+/*registration block end*/
+
+.input_wrapper {
+  position: relative;
+  background-color: #ffffff;
+  z-index: 10;
+  margin-bottom: 170px;
+}
+
+.private_policy {
+  width: 90% !important;
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  left: 5%;
+  margin: 0 !important;
+  z-index: 5;
+}
+
+.button_login {
+  bottom: 70px;
+}
+
+.button_registr_fixed {
+  position: fixed;
+  width: 90% !important;
+  left: 5%;
+  bottom: 70px;
+  z-index: 5;
+}
+
 body,
 html {
   background-color: #fff;
@@ -12300,12 +12426,12 @@ main button {
   color: #fff !important;
   background: url("/images/login_bg.png") no-repeat center;
   background-size: 100%;
-  background-position-y: 26%;
+  background-position-y: 10%;
   background-color: black;
 }
 
 .login_block {
-  margin-top: 100%;
+  margin-top: 85%;
 }
 
 .buy_stakes {
@@ -12321,15 +12447,15 @@ main button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 24pt;
 }
 
 .login_btn,
 a .login_btn {
-  width: 166px;
+  width: 150px;
   height: 48pt;
   line-height: 48pt;
   text-align: center;
@@ -12339,6 +12465,10 @@ a .login_btn {
   border-radius: 10pt;
   cursor: pointer;
   color: #fff;
+}
+
+.login_btn {
+  margin-right: 10px;
 }
 
 a .login_in,

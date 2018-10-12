@@ -130,13 +130,13 @@ class EventController extends Controller
             ->orderBy('title')
             ->pluck('title', 'id')
             ->toArray();
-        $events[0] = 'All events';
+        //$events[0] = 'All events';
 
         $countries = Country::query()
             ->orderBy('name')
             ->pluck('name', 'id')
             ->toArray();
-        $countries[0] = 'All regions';
+        //$countries[0] = 'All regions';
 
         $filters = [
             'date' => [
