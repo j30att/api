@@ -97,7 +97,50 @@
         }
     }
 }
+.md-required{
+    transform-origin: center !important;
+    color: $warmGrey !important;
+}
+.md-required::after{
+    color: $warmGrey !important;
+}
+
+/*delete label*/
+md-input-container:first-child{
+    margin-top: 30px !important;
+}
+md-input-container{
+    margin-top: 40px !important;
+    text-align: center;
+    font-size: 16px;
+    line-height: 16px !important;
+    input{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    input::placeholder{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+}
 /*registration block end*/
 
-
+.private_policy{
+    width: 80%;
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
+    left: 10%;
+    margin: 0 !important;
+}
+.button_login{
+    bottom: 70px;
+}
+.button_registr_fixed{
+    position: fixed;
+    width: 90% !important;
+    left: 5%;
+    bottom: 70px;
+}
 
