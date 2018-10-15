@@ -19,6 +19,48 @@ md-sidenav{
   position: fixed;
 }
 .md-dialog-container{
-  justify-content: flex-end;
+  justify-content: center;
 }
 
+/*logout window*/
+md-dialog{
+    width: 420px;
+    box-sizing: border-box;
+    border-radius: 10px !important;
+}
+.md-dialog-content{
+    text-align: center;
+    .md-title{
+        font-size: 20px !important;
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+    .ng-binding{
+        font-size: 15px;
+
+    }
+}
+md-dialog-actions{
+    justify-content: center !important;
+    margin-bottom: 40px !important;
+    .md-cancel-button{
+        font-size: 15px;
+        color: #050505 !important;
+        text-transform: capitalize !important;
+    }
+    .md-cancel-button:hover{
+        background-color: inherit !important;
+    }
+    .md-confirm-button{
+        font-size: 15px;
+        font-weight: 700;
+        color: #ffffff !important;
+        height: 38px;
+        line-height: 38px;
+        padding: 0 27px;
+        border-radius: 10px;
+        background-color: #007fed !important;
+        text-transform: capitalize !important;
+    }
+}
+/*logout window end*/

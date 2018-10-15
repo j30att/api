@@ -6,9 +6,9 @@
         top: 0;
         left: 0;
         background: url("/images/login_bg.png") no-repeat center;
-        background-size: 60%;
+        background-size: 40%;
         background-color: #000000;
-        background-position-y: 10%;
+        background-position-y: 0;
         .without_registration{
             width: 40%;
             margin: auto;
@@ -25,7 +25,7 @@
         font-size: 20px;
         color: #ffffff;
         text-align: center;
-        margin-top: 45%;
+        margin-top: 35%;
         margin-bottom: 50px;
     }
     &__buttons{
@@ -36,7 +36,7 @@
         font-weight: 700;
         margin: auto;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
     }
     &__button{
         height: 50px;
@@ -50,6 +50,7 @@
         &_login{
             background-color: #007fed;
             border-color: #007fed;
+            margin-right: 10px;
         }
         &_registration{
             background-color: inherit;
@@ -61,14 +62,13 @@
     &__form_wrapper{
         width: 50%;
         margin: auto;
-        margin-top: 38%;
+        margin-top: 23%;
         &_title{
             width: 100%;
             text-align: center;
             color: #ffffff;
             font-weight: 700;
             font-size: 18px;
-            margin-bottom: 25px;
             text-transform: uppercase;
         }
         form{
