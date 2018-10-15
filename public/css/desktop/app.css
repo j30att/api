@@ -1046,10 +1046,64 @@ md-sidenav {
 }
 
 .md-dialog-container {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
+/*logout window*/
+
+md-dialog {
+  width: 420px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px !important;
+}
+
+.md-dialog-content {
+  text-align: center;
+}
+
+.md-dialog-content .md-title {
+  font-size: 20px !important;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.md-dialog-content .ng-binding {
+  font-size: 15px;
+}
+
+md-dialog-actions {
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  margin-bottom: 40px !important;
+}
+
+md-dialog-actions .md-cancel-button {
+  font-size: 15px;
+  color: #050505 !important;
+  text-transform: capitalize !important;
+}
+
+md-dialog-actions .md-cancel-button:hover {
+  background-color: inherit !important;
+}
+
+md-dialog-actions .md-confirm-button {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff !important;
+  height: 38px;
+  line-height: 38px;
+  padding: 0 27px;
+  border-radius: 10px;
+  background-color: #007fed !important;
+  text-transform: capitalize !important;
+}
+
+/*logout window end*/
 
 .modal_content__bid .profile_status > div {
   display: -webkit-box;

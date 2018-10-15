@@ -1,15 +1,16 @@
 class MainMenuController {
-    constructor($state, $scope) {
+    constructor($state, $scope, $mdDialog, $http) {
+        this.$http = $http;
         this.$scope = $scope;
         this.url = $state.current.url;
-        console.log('main menu');
+        this.$state = $state;
+        this.$mdDialog = $mdDialog;
+
     }
 
 
     toggleSidenav() {
-        console.log('main menu 11111111111');
         this.$scope.$broadcast('sidenav-profile-open', () =>{
-            console.log('open sidenav')
         });
     }
 
@@ -19,10 +20,25 @@ class MainMenuController {
         }
         return null
     }
+    showLogoutPopUp(){
+
+        let self = this;
+        let confirm = this.$mdDialog.confirm()
+            .title('Log out')
+            .textContent('Do you want to log out? Don’t do it, if you are not sure. Thanks!')
+            .ok('Log Out')
+            .cancel('Cancel');
+
+        this.$mdDialog.show(confirm).then(function() {
+            self.$state.go('logout');
+        }, function() {
+
+        });
+    }
 
 }
 
-MainMenuController.$inject = ['$state', '$scope'];
+MainMenuController.$inject = ['$state', '$scope', '$mdDialog', '$http'];
 
 export const MainMenuComponent = {
     bindings: {

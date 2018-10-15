@@ -29,6 +29,11 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                 }
             }
         })
+
+        .state ('logout', {
+            url: '/logout',
+            template: require('./views/main.template.html'),
+        })
         .state('invest', {
             url: '/invest',
             template: require('./views/invest/index.template.html'),
