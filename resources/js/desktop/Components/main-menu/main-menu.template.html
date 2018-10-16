@@ -40,16 +40,27 @@
                 </a>
                 <span class="menu_item__wallet">$ 20,240.98</span>
             </li>
+            <li class="menu_item" ng-click="$ctrl.toggleSidenavLogin()">
+                <a class="menu_item__link" href="#">
+                    Log In
+                </a>
+            </li>
+            <li class="menu_item" ng-click="$ctrl.toggleSidenavRegistration()">
+                <a class="menu_item__link" href="#">
+                    Register
+                </a>
+            </li>
+
         </ul>
     </nav>
     
     <div class="last_up">
-        <div class="last_up__title" ng-click="$ctrl.toggleSidenavLogin()">Last Updates</div>
+        <div class="last_up__title">Last Updates</div>
         <div class="last_up__item last_up__item_blue">
             <div class="last_up_marker">
                 <img src="/images/desk/blue_circle.png" alt="">
             </div>
-            <div class="message" ng-click="$ctrl.toggleSidenavRegistration()">Your bid was accepted by Austin Vargas</div>
+            <div class="message">Your bid was accepted by Austin Vargas</div>
 
         </div>
         <div class="last_up__item last_up__item_yellow">
