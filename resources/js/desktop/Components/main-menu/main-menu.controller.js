@@ -21,7 +21,6 @@ class MainMenuController {
     }
 
     toggleSidenavRegistration() {
-        console.log('reg_click');
         this.$scope.$broadcast('sidenav-registration-open', () =>{
         });
     }
