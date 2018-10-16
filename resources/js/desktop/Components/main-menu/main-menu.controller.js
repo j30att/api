@@ -5,6 +5,7 @@ class MainMenuController {
         this.url = $state.current.url;
         this.$state = $state;
         this.$mdDialog = $mdDialog;
+        this.user = window.__user;
 
     }
 
@@ -35,7 +36,7 @@ class MainMenuController {
             .cancel('Cancel');
 
         this.$mdDialog.show(confirm).then(function() {
-            self.$state.go('logout');
+            window.location.href = '/';
         }, function() {
 
         });

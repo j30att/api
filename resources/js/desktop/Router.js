@@ -18,14 +18,9 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('index', {
             url: '/',
             template: require('./views/main.template.html'),
-            data: {
-                permissions: {
-                    except: 'Auth',
-                    redirectTo: () => {
-                        return {
-                            state: 'invest'
-                        }
-                    }
+            redirectTo : ()=>{
+                return {
+                state: 'invest'
                 }
             }
         })
@@ -99,7 +94,6 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             url: '/wallet',
             template: require('./views/wallet/index.temlate.html')
         })
-
         .state('terms-and-conditions', {
             url: '/terms-and-conditions',
             template: require('./views/static/terms.template.html')
@@ -107,33 +101,6 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('privacy-policy', {
             url: '/privacy-policy',
             template: require('./views/static/privacy.template.html')
-        })
-        .state('auth', {
-            template: require('./views/auth/base.template.html'),
-            data: {
-                permissions: {
-                    except: 'Auth',
-                    redirectTo: () => {
-                        return {
-                            state: 'invest'
-                        }
-                    }
-                }
-            }
-        })
-        .state('auth.login', {
-            //ng-controller="LoginController as LgCtrl"
-            url: '/login',
-            template: require('./views/auth/login.template.html'),
-            controller: 'LoginController',
-            controllerAs: 'LgCtrl'
-        })
-        .state('auth.registration', {
-            url: '/register',
-            template: require('./views/auth/registration.template.html'),
-            //ng-controller="RegisterController as RgCtrl"
-            controller: 'RegisterController',
-            controllerAs: 'RgCtrl'
         })
         .state('event-detail', {
             url: '/event/detail',
