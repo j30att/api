@@ -1,6 +1,6 @@
 .sale {
     &_container {
-        margin-bottom: 40px;
+        margin-bottom: 28px;
     }
 
     &_title {
@@ -52,15 +52,22 @@
 
     &_row {
         display: flex;
-        //justify-content: space-between;
         flex-wrap: wrap;
-        margin: 16px -9px 0;
+        margin: 16px -16px 0 -6px;
     }
-    &_card {
+
+    &_card_wrapper{
         width: 33%;
+        min-width: 256px;
+        box-sizing: border-box;
+        padding: 0 6px;
+        margin-bottom: 12px;
+    }
+
+    &_card {
         border-radius: 4px;
         padding: 12px 16px;
-        margin: 0 6px;
+        //margin: 0 6px;
 
         &__yellow {
             background-color: #fff9e8;

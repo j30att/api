@@ -15,29 +15,30 @@
                 <a ui-sref="sale-list({type:key})" class="sale_title__link">See all</a>
             </div>
             <div class="sale_row">
-                <div class="sale_card"
-                     ng-click="SaleCtrl.toggleSidenavManage(item.status)"
-                     ng-class="{'sale_card__yellow':item.status == 1,
-                                'sale_card__grey':item.status == 2, }"
-                     ng-repeat="item in items">
-                    <div class="sale_card__title">
-                        <span ng-bind="item.event.title"></span>
-                    </div>
-                    <div class="sale_card__price">
-                        <span>Buy in $5,000 + $300</span>
-                    </div>
-                    <div class="sale_card__options">
-                        <div class="sale_card__options_column">
-                            <span>Closes</span><span>73 days</span>
+                <div ng-repeat="item in items" class="sale_card_wrapper">
+                    <div class="sale_card"
+                         ng-click="SaleCtrl.toggleSidenavManage(item)"
+                         ng-class="{'sale_card__yellow':item.status == 1,
+                                    'sale_card__grey':item.status == 2}">
+                        <div class="sale_card__title">
+                            <span ng-bind="item.event.title"></span>
                         </div>
-                        <div class="sale_card__options_column">
-                            <span>Bid</span><span>1.11</span>
+                        <div class="sale_card__price">
+                            <span>Buy in $5,000 + $300</span>
                         </div>
-                        <div class="sale_card__options_column">
-                            <span>Value</span><span>£2,404</span>
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Start time</span><span>Closed</span>
+                        <div class="sale_card__options">
+                            <div class="sale_card__options_column">
+                                <span>Closes</span><span>73 days</span>
+                            </div>
+                            <div class="sale_card__options_column">
+                                <span>Bid</span><span>1.11</span>
+                            </div>
+                            <div class="sale_card__options_column">
+                                <span>Value</span><span>£2,404</span>
+                            </div>
+                            <div class="sale_card__options_column">
+                                <span>Start time</span><span>Closed</span>
+                            </div>
                         </div>
                     </div>
                 </div>
