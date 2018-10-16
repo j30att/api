@@ -44,7 +44,7 @@ class MainMenuController {
             .cancel('Cancel');
 
         this.$mdDialog.show(confirm).then(function() {
-            self.$state.go('logout');
+            window.location.href = '/';
         }, function() {
 
         });
