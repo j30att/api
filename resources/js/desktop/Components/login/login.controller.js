@@ -10,8 +10,6 @@ class Login {
         this._opts = {fixed: false};
         this.isSidenavOpen =false;
         this.state = 1;
-
-
     }
     $onInit(){
         this.$scope.$on('sidenav-login-open', (event, data) => {
