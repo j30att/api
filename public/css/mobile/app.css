@@ -11959,6 +11959,92 @@ md-input-container input::placeholder {
   z-index: 5;
 }
 
+.main_content__empty {
+  height: calc(100vh - 95px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main_content__empty_container {
+  width: 320px;
+}
+
+.main_content__empty_container__img {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px auto;
+}
+
+.main_content__empty_container__img_sale {
+  background: url("/images/desk/empty_user/empty_user_sale.png") no-repeat center;
+  background-size: 100%;
+}
+
+.main_content__empty_container__img_bids {
+  background: url("/images/desk/empty_user/empty_user_bids.png") no-repeat center 100%;
+  background-size: 100%;
+}
+
+.main_content__empty_container__img_wallet {
+  background: url("/images/desk/empty_user/empty_user_wallet.png") no-repeat center 100%;
+  background-size: 100%;
+}
+
+.main_content__empty_container__title {
+  width: 100%;
+  text-align: center;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.main_content__empty_container__discription {
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  color: #000000;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.main_content__empty_container__buttons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main_content__empty_container__button {
+  width: 120px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+
+.main_content__empty_container__button__blue {
+  background-color: #007fed;
+  color: #ffffff;
+  border-color: #007fed;
+  margin-right: 16px;
+}
+
 body,
 html {
   background-color: #fff;
