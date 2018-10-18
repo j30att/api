@@ -1553,7 +1553,7 @@ md-dialog-actions .md-confirm-button {
 }
 
 .wallet_container {
-  width: 996px;
+  width: 100%;
 }
 
 .wallet_title {
@@ -1706,6 +1706,10 @@ md-dialog-actions .md-confirm-button {
   padding-top: 17px;
 }
 
+.wallet_table__content_row_transactions {
+  width: 100%;
+}
+
 .wallet_table__content_row_transaction {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1760,38 +1764,38 @@ md-dialog-actions .md-confirm-button {
 }
 
 .wallet_table .cell_date {
-  width: 96px;
+  width: 9.6%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-left: 10px;
 }
 
 .wallet_table .cell_name {
-  width: 222px;
+  width: 24.6%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 .wallet_table .cell_event {
-  width: 400px;
+  width: 34.4%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 .wallet_table .cell_status {
-  width: 127px;
+  width: 14.1%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 .wallet_table .cell_delta {
-  width: 83px;
+  width: 9.2%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 .wallet_table .cell_balance {
-  width: 80px;
+  width: 17.7%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: right;
@@ -3025,13 +3029,13 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .event_item {
-  width: 33%;
+  width: 320px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0 6px 24px;
@@ -3095,7 +3099,6 @@ a {
 
 .events_tabs-wr {
   width: 100%;
-  min-width: 820px;
   margin-bottom: 60px;
 }
 
