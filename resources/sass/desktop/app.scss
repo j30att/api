@@ -540,11 +540,13 @@ a {
   margin: 0 -6px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  //justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .event_item {
-  width: 33%;
+  //width: 33%;
+  width: 320px;
   box-sizing: border-box;
   padding: 0 6px 24px;
 }
@@ -606,7 +608,7 @@ a {
 
 .events_tabs-wr {
   width: 100%;
-  min-width: 820px;
+  //min-width: 820px;
   margin-bottom: 60px;
 }
 

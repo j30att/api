@@ -1,6 +1,7 @@
 .wallet{
     &_container{
-        width: 996px;
+        //width: 996px;
+        width: 100%;
     }
     &_title{
         width: 100%;
@@ -105,6 +106,7 @@
         &__content{
 
             &_row{
+
                 display: flex;
                 border-bottom: 1px solid rgba(0,0,0,0.05);
                 &_data{
@@ -115,7 +117,7 @@
 
                     padding-top: 17px;
                 }
-                &_transactions{}
+                &_transactions{ width: 100%;}
                 &_transaction{
                     display: flex;
                     border-bottom: 1px solid rgba(0,0,0,0.05);
@@ -163,28 +165,34 @@
         }
         /*width*/
         .cell_date{
-            width: 96px;
+            //width: 96px;
+            width: 9.6%;
             box-sizing: border-box;
             padding-left: 10px;
         }
         .cell_name{
-            width: 222px;
+            //width: 222px;
+            width: 24.6%;
             box-sizing: border-box;
         }
         .cell_event{
-            width: 400px;
+            //width: 400px;
+            width: 34.4%;
             box-sizing: border-box;
         }
         .cell_status{
-            width: 127px;
+            //width: 127px;
+            width: 14.1%;
             box-sizing: border-box;
         }
         .cell_delta{
-            width: 83px;
+            //width: 83px;
+            width: 9.2%;
             box-sizing: border-box;
         }
         .cell_balance{
-            width: 80px;
+            //width: 80px;
+            width: 17.7%;
             box-sizing: border-box;
             text-align: right;
         }
