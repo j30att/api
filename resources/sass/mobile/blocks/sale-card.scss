@@ -10,7 +10,6 @@
 
 }
 
-
 .sale_card_list_atr{
     display: flex;
     justify-content: space-between;
@@ -18,14 +17,20 @@
     padding-left: 15px;
     padding-right: 15px;
 
-    .sale_card_list_atr_value{
+    &_value{
         color: #000000;
     }
 
-}
+    &_item{
+        display: flex;
+        flex-direction: column;
 
-.sale_card_list_atr_item span{
-    color: $warmGrey;
+        span{
+            color: $warmGrey;
+            font-size: 13px;
+            line-height: 17px;
+        }
+    }
 }
 
 /*sales create*/
