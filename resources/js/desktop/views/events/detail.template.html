@@ -63,8 +63,7 @@
                         <tr>
                             <th>From</th>
                             <th>Markup</th>
-                            <th class="align-right">Share</th>
-                            <th class="align-right">Time</th>
+                            <th>Highest bids</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -75,8 +74,12 @@
                                 <span>{% sale.creator.name %}</span>
                             </td>
                             <td class="bold">{% sale.markup %}</td>
-                            <td class="bold align-right">{% sale.share %}%</td>
-                            <td class="color-grey align-right">< 24hours</td>
+                            <td class="event_right-side_table_bids-list">
+                                <div ng-repeat="bid in sale.bids.highest">
+                                    <span>{% bid.markup %}</span>
+                                    <span>{% bid.amount|currency:'$':0 %}</span>
+                                </div>
+                            </td>
                         </tr>
                         </tbody>
                     </table>
