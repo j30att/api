@@ -10533,12 +10533,13 @@ a.text-dark:focus {
 }
 
 .modal_wrapper {
-  background-color: unset;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10000;
   width: 100vw;
   height: 100vh;
+  padding: 0 15px;
 }
 
 .modal_bids_block_wr {
