@@ -1,15 +1,14 @@
 <md-sidenav class="md-sidenav-right full_height" style="min-width: 100vw; max-width: 100vw" md-is-open="isSidenavOpen"
             md-component-id="right_manage">
     <md-content>
+        <div class="modal_wrapper">
         <div class="container">
 
             <div class="header">
-                <div class="header_close" ng-click="$ctrl.close()"></div>
+                <div class="header_close" ng-click="$ctrl.close('right_manage')"></div>
                 <div class="header_title">My sale</div>
                 <div class="header_filter_empty"></div>
             </div>
-
-
 
             <div class="my_sale__header">
                 <div class="binds-item__game_info card__event_info">
@@ -186,6 +185,7 @@
             </div>
 
 
+        </div>
         </div>
     </md-content>
 </md-sidenav>
