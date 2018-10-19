@@ -11412,27 +11412,23 @@ a.text-dark:focus {
 .place_wrapper {
   width: 100vw;
   height: 100vh;
-  padding: 0 15px;
   display: grid;
-  grid-template-rows: 250px auto 80px;
+  grid-template-rows: 210px auto 80px;
+}
+
+.place_wrapper__sale {
+  grid-template-rows: 265px auto 80px;
 }
 
 .my_sale__header {
+  padding: 0 15px;
   top: 0;
   left: 5%;
   right: 5%;
   background-color: #ffffff;
   z-index: 100;
-  border-bottom: 1px solid black;
-}
-
-.my_sale__header hr {
-  width: 150%;
-  position: relative;
-  left: -25%;
-  -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
-  display: none;
+  -webkit-box-shadow: 0px 2px 5px 0px #e0e0e0;
+          box-shadow: 0px 2px 5px 0px #e0e0e0;
 }
 
 .my_sale__header .card__profile_info {
@@ -11468,7 +11464,7 @@ a.text-dark:focus {
 
 .my_sale__content {
   height: auto;
-  padding: 0 5px;
+  padding: 10px 15px 0 15px;
   overflow-y: scroll;
 }
 
