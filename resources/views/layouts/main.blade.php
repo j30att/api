@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ app()->getLocale() }}" ng-app="poker">
+<html lang="{{ app()->getLocale() }}" ng-app="poker" ng-controller="MainController as MainCtrl" ng-class="{'no-scroll': MainCtrl.$state.modalOpened == true}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +13,7 @@
         window.__user = {!! json_encode(\Illuminate\Support\Facades\Auth::user()) !!};
     </script>
 </head>
-<body ng-controller="MainController as MainCtrl"  ng-class="{'no_scroll': MainCtrl.$state.modalOpened == true}">
+<body>
 <div id="right"></div>
 <div class="flex-center position-ref full-height container">
     <ui-view></ui-view>
