@@ -22,7 +22,8 @@ class BidPlace {
             this.buildToggler('right');
         });
         this.$scope.$watch('isSidenavOpen', (fixed) => {
-            this.stopBodyScrolling(fixed);
+            // this.stopBodyScrolling(fixed);
+            document.body.scrollHeight = window.pageYOffset + 'px';
             this.$state.modalOpened = fixed
         });
 
@@ -73,11 +74,11 @@ class BidPlace {
 
 
 
-    stopBodyScrolling (bool) {
+    /*stopBodyScrolling (bool) {
         if (bool === true) {
             document.getElementsByClassName('fullscreen')[0].addEventListener("touchmove", this.freezeVp, true);
-            /*console.log(document.getElementById('scroll_content'));
-            document.getElementById('scroll_content').removeEventListener("touchmove", this.freezeVp);*/
+            console.log(document.getElementById('scroll_content'));
+            document.getElementById('scroll_content').removeEventListener("touchmove", this.freezeVp);
         } else {
             document.getElementsByClassName('fullscreen')[0].removeEventListener("touchmove", this.freezeVp, true);
         }
@@ -91,7 +92,7 @@ class BidPlace {
 
     scroll ($event) {
         $event.stopPropagation();
-    }
+    }*/
 
 };
 
