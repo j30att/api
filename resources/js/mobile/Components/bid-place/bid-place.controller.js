@@ -76,6 +76,7 @@ class BidPlace {
     stopBodyScrolling (bool) {
         if (bool === true) {
             document.getElementsByClassName('fullscreen')[0].addEventListener("touchmove", this.freezeVp, true);
+            document.getElementsByClassName('fullscreen')[0].addEventListener("touchmove", this.freezeVp, false);
 
         } else {
             document.getElementsByClassName('fullscreen')[0].removeEventListener("touchmove", this.freezeVp, true);
@@ -86,7 +87,6 @@ class BidPlace {
     freezeVp ($event) {
         console.log($event);
         $event.preventDefault();
-        
     }
 
 
