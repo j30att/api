@@ -75,8 +75,14 @@ class BidPlace {
 
     stopBodyScrolling (bool) {
         if (bool === true) {
+            document.querySelector(".fullscreen").addEventListener('touchmove', function(event) {
+                if (document.querySelector(".fullscreen") !== event.target) return;
+                event.preventDefault();
+            });
+            /*
             document.getElementsByClassName('fullscreen')[0].addEventListener("touchmove", this.freezeVp, true);
-            document.getElementById('scroll_content').removeEventListener("touchmove", this.freezeVp);
+            console.log(document.getElementById('scroll_content'));
+            document.getElementById('scroll_content').removeEventListener("touchmove", this.freezeVp);*/
         } else {
             document.getElementsByClassName('fullscreen')[0].removeEventListener("touchmove", this.freezeVp, true);
         }
