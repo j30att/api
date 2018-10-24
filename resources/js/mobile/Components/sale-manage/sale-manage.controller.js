@@ -102,7 +102,7 @@ class SaleManage {
 
     stopBodyScrolling (bool) {
         if (bool === true) {
-            document.querySelector('[md-component-id="right_manage"]').addEventListener("touchmove", this.freezeVp, false);
+            document.getElementsByClassName('fullscreen')[0].addEventListener("touchmove", this.freezeVp, false);
         } else {
             document.body.removeEventListener("touchmove", this.freezeVp, false);
         }
@@ -111,7 +111,7 @@ class SaleManage {
 
     freezeVp ($event) {
         console.log($event);
-        $event.stopPropagation();
+        $event.preventDefault();
     }
 
 }
