@@ -21,6 +21,11 @@ class SaleManage {
                 this.buildToggler('right_manage');
         });
         this.$scope.$watch('isSidenavOpen', (fixed) => {
+            if (fixed){
+                this.stopBodyScrolling(true);
+            } else {
+                this.stopBodyScrolling(false);
+            }
             this.$state.modalOpened = fixed
         });
 
@@ -92,6 +97,21 @@ class SaleManage {
         this.$mdDialog.show(confirm).then(() => {
             this.$mdSidenav('right_manage').close();
         }, () => {});
+    }
+
+
+    stopBodyScrolling (bool) {
+        console.log(bool);
+        if (bool === true) {
+            document.body.addEventListener("touchmove", this.freezeVp, false);
+        } else {
+            document.body.removeEventListener("touchmove", this.freezeVp, false);
+        }
+    };
+
+
+    freezeVp ($event) {
+        $event.preventDefault();
     }
 
 }
