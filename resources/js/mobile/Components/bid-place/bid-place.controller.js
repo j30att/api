@@ -23,20 +23,21 @@ class BidPlace {
             this.buildToggler('right');
         });
         this.$scope.$watch('isSidenavOpen', (fixed) => {
-            if (fixed){
+            this.stopBodyScrolling(fixed);
+
+            /*if (fixed){
                 this.scroll = window.pageYOffset;
                 document.body.style.position = 'fixed';
                 document.body.style.top = -(this.scroll)+ 'px';
             }
-
-            this.$state.modalOpened = fixed;
-
+            */this.$state.modalOpened = fixed;
+/*
             if (!fixed){
                 document.body.style.top = 0 + 'px';
                 document.body.style.position = 'relative';
-                // document.querySelector('html').scrollTop = this.scroll;
+                document.querySelector('html').scrollTop = this.scroll;
 
-            }
+            }*/
 
         });
 
@@ -64,7 +65,7 @@ class BidPlace {
         this._opts.stateCreate = !this._opts.stateCreate;
     }
 
-    changeAmount(){
+    /*changeAmount(){
         if (this.bid.share != null){
             this.bid.markup = this.BidsService.calcMarkup(this.bid.share, this.bid.amount, this.sale.event.buy_in);
         } else {
@@ -85,6 +86,25 @@ class BidPlace {
         } else {
             this.bid.share = this.BidsService.calcShare(this.bid.markup, this.bid.amount, this.sale.event.buy_in);
         }
+    }
+*/
+
+    stopBodyScrolling (bool) {
+        if (bool === true) {
+            document.querySelector(".container").addEventListener('touchmove', function(event) {
+                if (document.querySelector(".container") !== event.target) return;
+                event.preventDefault();
+            });
+            /*document.getElementsByClassName('fullscreen')[0].addEventListener("touchmove", this.freezeVp, false);*/
+        } else {
+            document.getElementsByClassName('fullscreen')[0].removeEventListener("touchmove", this.freezeVp, false);
+        }
+    };
+
+
+    freezeVp ($event) {
+        console.log($event);
+        $event.preventDefault();
     }
 
 };
