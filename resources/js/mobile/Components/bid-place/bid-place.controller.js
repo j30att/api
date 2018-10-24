@@ -77,7 +77,7 @@ class BidPlace {
         if (bool === true) {
             document.getElementsByClassName('fullscreen')[0].addEventListener("touchmove", this.freezeVp, false);
         } else {
-            document.body.removeEventListener("touchmove", this.freezeVp, false);
+            document.getElementsByClassName('fullscreen')[0].removeEventListener("touchmove", this.freezeVp, false);
         }
     };
 
