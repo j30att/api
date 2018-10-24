@@ -15,6 +15,7 @@ class BidPlace {
         this.user = window.__user;
         this._opts = {stateCreate: false};
         this.isSidenavOpen =false;
+        this.scroll = 0;
     }
 
     $onInit(){
@@ -22,9 +23,21 @@ class BidPlace {
             this.buildToggler('right');
         });
         this.$scope.$watch('isSidenavOpen', (fixed) => {
-            // this.stopBodyScrolling(fixed);
-            document.body.scrollHeight = window.pageYOffset + 'px';
-            this.$state.modalOpened = fixed
+            if (fixed){
+                this.scroll = window.pageYOffset;
+                document.body.style.position = 'fixed';
+                document.body.style.top = -(this.scroll)+ 'px';
+            }
+
+            this.$state.modalOpened = fixed;
+
+            if (!fixed){
+                document.body.style.top = 0 + 'px';
+                document.body.style.position = 'relative';
+                document.querySelector('html').scrollTop = this.scroll;
+
+            }
+
         });
 
     }
@@ -71,28 +84,6 @@ class BidPlace {
             this.bid.share = this.BidsService.calcShare(this.bid.markup, this.bid.amount, this.sale.event.buy_in);
         }
     }
-
-
-
-    /*stopBodyScrolling (bool) {
-        if (bool === true) {
-            document.getElementsByClassName('fullscreen')[0].addEventListener("touchmove", this.freezeVp, true);
-            console.log(document.getElementById('scroll_content'));
-            document.getElementById('scroll_content').removeEventListener("touchmove", this.freezeVp);
-        } else {
-            document.getElementsByClassName('fullscreen')[0].removeEventListener("touchmove", this.freezeVp, true);
-        }
-    };
-
-
-    freezeVp ($event) {
-        console.log($event);
-        $event.preventDefault();
-    }
-
-    scroll ($event) {
-        $event.stopPropagation();
-    }*/
 
 };
 
