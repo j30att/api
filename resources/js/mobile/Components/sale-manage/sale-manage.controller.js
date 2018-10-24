@@ -110,6 +110,7 @@ class SaleManage {
 
 
     freezeVp ($event) {
+        $event.stopPropagation();
         $event.preventDefault();
     }
 
