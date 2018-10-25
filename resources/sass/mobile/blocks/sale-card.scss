@@ -305,12 +305,11 @@
 .place_wrapper{
   width: 100vw;
   height: 100vh;
-  /*display: grid;
-  grid-template-rows: 210px auto 80px;*/
-  display: flex;
+  display: grid;
+  grid-template-rows: 210px auto 80px;
   flex-direction: column;
     &__sale{
-        //grid-template-rows: 265px auto 80px;
+        grid-template-rows: 265px auto 80px;
     }
 }
 
@@ -364,10 +363,10 @@
   }
 
   &__content {
-    //height: auto;
+    height: auto;
     padding: 10px 15px 0 15px;
     overflow-y: scroll;
-    height: calc(100% - 290px);
+    //height: calc(100% - 290px);
     //add inline for ios
     //height: calc(100% - 340px);
   }
