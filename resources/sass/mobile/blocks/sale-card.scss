@@ -306,11 +306,11 @@
   width: 100vw;
   height: 100%;
   display: grid;
-  grid-template-rows: 210px auto 70px;
+  grid-template-rows: 210px auto 58px;
   //grid-template-rows: 210px auto 110px;
   //flex-direction: column;
     &__sale{
-        grid-template-rows: 265px auto 70px;
+        grid-template-rows: 265px auto 58px;
     }
 }
 
@@ -347,7 +347,7 @@
         margin-bottom: 4px;
       }
     }
-    .manage_sale_atr__yellow {
+    .manage_sale_atr {
       .manage_sale_atr_item:first-child {
           width: 24.75%;
         input {

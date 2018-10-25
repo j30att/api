@@ -10803,7 +10803,7 @@ a.text-dark:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   padding-left: 15px;
 }
 
@@ -11409,11 +11409,11 @@ a.text-dark:focus {
   width: 100vw;
   height: 100%;
   display: grid;
-  grid-template-rows: 210px auto 70px;
+  grid-template-rows: 210px auto 58px;
 }
 
 .place_wrapper__sale {
-  grid-template-rows: 265px auto 70px;
+  grid-template-rows: 265px auto 58px;
 }
 
 .my_sale__header {
@@ -11447,24 +11447,24 @@ a.text-dark:focus {
   margin-bottom: 4px;
 }
 
-.my_sale__header .manage_sale_atr__yellow .manage_sale_atr_item:first-child {
+.my_sale__header .manage_sale_atr .manage_sale_atr_item:first-child {
   width: 24.75%;
 }
 
-.my_sale__header .manage_sale_atr__yellow .manage_sale_atr_item:first-child input {
+.my_sale__header .manage_sale_atr .manage_sale_atr_item:first-child input {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
 
-.my_sale__header .manage_sale_atr__yellow .manage_sale_atr_item:nth-child(2) {
+.my_sale__header .manage_sale_atr .manage_sale_atr_item:nth-child(2) {
   width: 24.75%;
 }
 
-.my_sale__header .manage_sale_atr__yellow .manage_sale_atr_item:nth-child(3) {
+.my_sale__header .manage_sale_atr .manage_sale_atr_item:nth-child(3) {
   width: 49.5%;
 }
 
-.my_sale__header .manage_sale_atr__yellow .manage_sale_atr_item:nth-child(3) input {
+.my_sale__header .manage_sale_atr .manage_sale_atr_item:nth-child(3) input {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
@@ -11871,7 +11871,7 @@ a.text-dark:focus {
 }
 
 .hideempty {
-  height: 70px;
+  height: 58px;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -11890,7 +11890,7 @@ a.text-dark:focus {
   border-radius: 10px;
   text-align: center;
   position: fixed;
-  bottom: 16px;
+  bottom: 5px;
   right: 15px;
   left: 5%;
   z-index: 500;
@@ -11925,7 +11925,7 @@ a.text-dark:focus {
   border-radius: 10px;
   text-align: center;
   position: fixed;
-  bottom: 16px;
+  bottom: 5px;
   left: 5%;
   z-index: 500;
   background-color: #ffffff;
@@ -11941,7 +11941,7 @@ a.text-dark:focus {
   border-radius: 10px;
   text-align: center;
   position: fixed;
-  bottom: 16px;
+  bottom: 5px;
   left: 49%;
   z-index: 500;
   background-color: #007fed;
