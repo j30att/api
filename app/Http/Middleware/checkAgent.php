@@ -22,6 +22,8 @@ class checkAgent
         $typeDevice = 'mobile';
 
 
+        $platform = $agent->platform();
+
         if ($agent->isMobile() || $agent->isTablet()){
             $typeDevice = 'mobile';
             $request->attributes->add(['_typeDevice' => 'mobile']);
@@ -29,6 +31,7 @@ class checkAgent
             $typeDevice = 'desktop';
             $request->attributes->add(['_typeDevice' => 'desktop']);
         }
+
 
         View::share('_typeDevice', $typeDevice);
 

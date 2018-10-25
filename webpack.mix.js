@@ -11,7 +11,6 @@ const mix = require('laravel-mix');
  |
  */
 
-
 mix.js('resources/js/mobile/app.js', 'public/js/mobile')
    .sass('resources/sass/mobile/app.scss', 'public/css/mobile')
    .sourceMaps();
