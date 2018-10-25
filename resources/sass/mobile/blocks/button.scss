@@ -70,11 +70,11 @@
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     text-align: center;
-    //position: fixed;
+    position: fixed;
     bottom: 16px;
-    //right: 15px;
-    //left: 5%;
-    //z-index: 500;
+    right: 15px;
+    left: 5%;
+    z-index: 500;
     background-color: #ffffff;
     &_blue{
         background-color: #007fed;
