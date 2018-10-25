@@ -106,25 +106,24 @@
         border-radius: 10px;
         text-align: center;
         //position: fixed;
-        bottom: 16px;
-        left: 5%;
+        //bottom: 16px;
+        //left: 5%;
         z-index: 500;
         background-color: #ffffff;
         margin-right: 5px;
     }
     &__blue{
         color: white;
-
         width: 45%;
         height: 48px;
         line-height: 48px;
         border: 1px solid #007fed;
         border-radius: 10px;
         text-align: center;
-        position: fixed;
-        bottom: 16px;
-        left: 49%;
-        z-index: 500;
+        //position: fixed;
+        //bottom: 16px;
+        //left: 49%;
+        //z-index: 500;
         background-color: #007fed;
     }
 }
