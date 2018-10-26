@@ -11722,6 +11722,13 @@ a.text-dark:focus {
   z-index: 50;
 }
 
+.header_logo {
+  width: 200px !important;
+  height: 100% !important;
+  background: url("/images/logo/logo_mobile.png") no-repeat center;
+  background-size: 100%;
+}
+
 .header_title {
   font-size: 16px;
 }
