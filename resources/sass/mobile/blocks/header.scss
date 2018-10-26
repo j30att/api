@@ -10,7 +10,13 @@
     padding: 0 5%;
     background-color: #ffffff;
     z-index: 50;
-
+    &_logo{
+        //width: 45.5px;
+        width: 200px !important;
+        height: 100% !important;
+        background: url("/images/logo/logo_mobile.png") no-repeat center;
+        background-size: 100%;
+    }
     &_title {
         font-size: 16px;
         .event_detail__header_title{
