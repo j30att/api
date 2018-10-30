@@ -1,6 +1,6 @@
 <div class="sale_card__row"
      ng-class="{'sale_active': item.status === 1, 'sale_canceled': item.status === 2}"
-     ng-repeat="item in $ctrl.sales">
+     ng-repeat="(key, item) in $ctrl.sales">
     <div class="sale_card__row_text">
         <div class="event_card_title" ng-bind="item.event.title"></div>
         <div class="card__sale_event_byin">Buy in $<span ng-bind="item.event.buy_in"></span> + $<span
@@ -10,7 +10,7 @@
     <div class="card__attribute_sale_card">
         <div class="sale_card_list_atr_item">
             <span>Closes</span>
-            <span class="card__attribute_value">21</span>
+            <span class="card__attribute_value" ng-bind="item.event.date_close_in">21</span>
         </div>
         <div class="sale_card_list_atr_item">
             <span>Markup</span>
@@ -18,11 +18,11 @@
         </div>
         <div class="sale_card_list_atr_item">
             <span>Share sold</span>
-            <span class="card__attribute_value">0% of 20%</span>
+            <span class="card__attribute_value" ng-bind="$ctrl.showShareSold(key)">0% of 20%</span>
         </div>
         <div class="sale_card_list_atr_item">
             <span>Amount raised</span>
-            <span class="card__attribute_value">$400 of $1,000</span>
+            <span class="card__attribute_value" ng-bind="$ctrl.showAmountRaised(key)">$400 of $1,000</span>
         </div>
     </div>
 </div>

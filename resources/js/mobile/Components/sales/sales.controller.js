@@ -1,5 +1,7 @@
 class Sales {
-    constructor($state, $scope) {
+    constructor($state, $scope, SalesService, SalesResourceService) {
+        this.SalesResourceService = SalesResourceService;
+        this.SalesService = SalesService;
         this.$state = $state;
         this.$scope = $scope;
         this.showPlace = false;
@@ -19,8 +21,14 @@ class Sales {
         this.sale = this.sales[index];
         this.$scope.$broadcast('sidenavManage-open', this.sale);
     }
+    showAmountRaised(key){
+        return this.SalesService.calcAmountRaised(this.sales[key]);
+    }
+    showShareSold(key){
+        return this.SalesService.calcShareSold(this.sales[key]);
+    }
 }
 
-Sales.$inject = ['$state', '$scope'];
+Sales.$inject = ['$state', '$scope', 'SalesService', 'SalesResourceService'];
 
 export {Sales}
