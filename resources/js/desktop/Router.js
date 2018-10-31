@@ -181,7 +181,15 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('event-detail', {
             url: '/event/detail',
             //template: require('./views/events/singl.template.html'),
-        });
+        }
+
+        .state('dealer-events', {
+            url: '/dealer/events'
+        })
+        .state('dealer-users', {
+            url: '/dealer/users'
+        })
+    );
 
 
 
