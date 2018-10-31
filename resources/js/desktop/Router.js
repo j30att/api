@@ -190,7 +190,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         })
         .state('dealer-users', {
             url: '/dealer/users'
-        });
+        })
         /*.state('dealer-events-detail', {
             url: '/dealer/events/detail/{id}',
             template: require('./views/dealer/events_detail.template.html')
