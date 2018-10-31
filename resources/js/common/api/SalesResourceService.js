@@ -9,6 +9,7 @@ import {
     SALE_CREATE,
     SALE_INDEX
 } from "../Constants"
+import {SALE_APLLY_BID, SALE_UPDATE} from "../../mobile/Constants";
 
 
 class SalesResourceService {
@@ -40,9 +41,19 @@ class SalesResourceService {
         return this.$http.post(SALE_CREATE, {sale});
     }
 
+    updateMySale(sale){
+        return this.$http.post(SALE_UPDATE, {sale});
+    }
+
+    apllyMyBid(bid){
+        return this.$http.post(SALE_APLLY_BID, {bid});
+    }
+
     getSaleById(id) {
         return this.$http.get(SALE_INDEX + '/' + id);
     };
+
+
 }
 
 SalesResourceService.$inject = ['$http'];
