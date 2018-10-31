@@ -19,6 +19,7 @@ class EventResource extends JsonResource
             'title'         => str_limit($this->resource->title, 20),
             'date'          => $this->formatted_date,
             'fund'          => $this->fund,
+            'period'        => $this->period,
             'buy_in'        => $this->buy_in,
             'subevents'     => $this->resource->subEvents,
             'date_start'    => $this->formatted_start_date,
