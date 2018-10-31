@@ -185,15 +185,17 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('dealer-events', {
             url: '/dealer/events',
             template: require('./views/dealer/events.template.html')
-        });
+        })
         /*.state('dealer-events-detail', {
             url: '/dealer/events/detail/{id}',
             template: require('./views/dealer/events_detail.template.html')
         })
+        */
 
         .state('dealer-users', {
-            url: '/dealer/users'
-        })*/
+            url: '/dealer/users',
+            template: require('./views/dealer/users.template.html')
+        });
 
 
 
