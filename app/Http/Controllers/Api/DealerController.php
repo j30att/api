@@ -11,8 +11,11 @@ namespace App\Http\Controllers\Api;
 use App\Http\Resources\Dealer\EventResource;
 use App\Http\Resources\Dealer\UserResource;
 use App\Models\Event;
+use App\Models\Sale;
+use App\Models\SubEvent;
 use App\Models\User;
 use function Couchbase\defaultDecoder;
+use http\Env\Response;
 use Illuminate\Http\Request;
 
 class DealerController
@@ -30,12 +33,19 @@ class DealerController
 
     public function eventsList(){
         $events = Event::query()->get();
+
         return EventResource::collection($events);
     }
 
     public function eventDetail(Request $request){
         $id = $request->get('id');
-        $event = Event::query()->find($id);
+        $event = Event::query()
+            ->with('subEvents')
+            ->with(['sales'=>function($query){
+                $query->with('creator');
+            }])
+            ->find($id);
+
         return  new EventResource($event);
     }
 }

@@ -13,7 +13,7 @@
                 </thead>
                 <tbody class="events_admin__table_body">
                 <tr ng-repeat="event in dEventsCtrl.events">
-                    <td ng-bind="event.title" class="events_admin__table_event"><a ui-sref="dealer-events-detail({id:event.id})"></a></td>
+                    <td class="events_admin__table_event"><a ui-sref="dealer-events-detail({id:event.id})">{%event.title%}</a></td>
                     <td class="events_admin__table_dates" ng-bind="event.period"> 25th Nov - 5th Dec</td>
                     <td class="events_admin__table_payout">0/3</td>
                 </tr>

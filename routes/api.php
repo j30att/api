@@ -55,7 +55,7 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('/dealer/users', 'Api\DealerController@usersList');
     Route::post('/dealer/events', 'Api\DealerController@eventsList');
     Route::post('/dealer/event/detail', 'Api\DealerController@eventDetail');
-
+                
 });
 
 

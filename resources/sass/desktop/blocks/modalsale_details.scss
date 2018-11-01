@@ -1,0 +1,152 @@
+.modal_sale{
+    &_details{
+        .underline{
+            width: 620px;
+            height: 1px;
+            background-color: #ebebeb;
+            margin: 24px 0;
+        }
+        .sale_details_matched{
+            div{
+                background-color: #e7f7e4;
+
+            }
+        }
+        &__footer{
+            width: 620px;
+            display: flex;
+            justify-content: space-between;
+            .button{
+                width: 133px;
+                height: 38px;
+                line-height: 38px;
+                text-align: center;
+                border-radius: 6px;
+                font-size: 15px;
+                font-weight: 600;
+                color: #000;
+                cursor: pointer;
+            }
+            .red{
+                background-color: #ff3700;
+                color: #ffffff;
+            }
+            .grey{
+                background-color: #999999;
+                color: #ffffff;
+            }
+            .green{
+                background-color: #00c811;
+                color: #ffffff;
+                margin-right: 40px;
+            }
+        }
+    }
+    &__user{
+        &_info{
+            display: flex;
+            position: relative;
+            align-items: center;
+            margin-bottom: 13px;
+            &__pic{
+                width: 32px;
+                height: 32px;
+                border-radius: 4px;
+                overflow: hidden;
+                margin-right: 10px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &__profile{
+                display: flex;
+                flex-direction: column;
+                .name{
+                    font-size: 15px;
+                    font-weight: 600;
+                }
+                .link{
+                    font-size: 12px;
+                    color: #007fed;
+                    cursor: pointer;
+                }
+            }
+            .profile_status__gte_and_by{
+                display: flex;
+                position: absolute;
+                right: 0;
+                color: #949494;
+                .profile_status__buyin::after{
+                    top: 9px;
+                }
+            }
+        }
+        &_details_info{
+            width: 100%;
+            &_type{
+                font-size: 12px;
+                text-transform: uppercase;
+                color: rgba(0,0,0,0.3);
+                font-weight: 700;
+                margin-bottom: 8px;
+
+
+            }
+            .not_found{
+                color: #999999;
+                font-size: 15px;
+
+            }
+            &__title{
+                width: 100%;
+                display: flex;
+                div{
+                    font-size: 12px;
+                    color: #949494;
+                    margin-bottom: 4px;
+                    padding-left: 12px;
+                    width: 20%;
+
+                }
+                div:first-child{
+                    width: 30%;
+                }
+                div:last-child{
+                    width: 30%;
+                }
+            }
+            &__content{
+                width: 100%;
+                display: flex;
+                margin-bottom: 2px;
+                div{
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    font-size: 15px;
+                    padding-left: 12px;
+                    background-color: #fff9e8;
+                    box-sizing: border-box;
+                    width: 20%;
+
+                }
+                div:first-child{
+                    width: 30%;
+                    border-top-left-radius: 4px;
+                    border-bottom-left-radius: 4px;
+                }
+
+                div:last-child{
+                    width: 30%;
+                    padding-right: 12px;
+                    border-top-right-radius: 4px;
+                    border-bottom-right-radius: 4px;
+
+                }
+            }
+
+        }
+    }
+
+}

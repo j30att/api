@@ -35,4 +35,16 @@
             font-weight: 600;
         }
     }
+
+
+    &_details{
+        .event_right-side{
+            .status__open{
+                color: #ffbe00;
+            }
+            .status__close{
+                color: #42aada;
+            }
+        }
+    }
 }

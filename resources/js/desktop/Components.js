@@ -8,6 +8,7 @@ import {RegistrationComponent} from "./Components/registration/registration.cont
 import {InputMarkupComponent} from "../common/components/input/input-markup/input-markup.controller";
 import {InputAmountComponent} from "../common/components/input/input-amount/input-amount.controller";
 import {InputShareComponent} from "../common/components/input/input-share/input-share.controller";
+import {SaleDetailsComponent} from "./Components/sale_details/sale_details.controller";
 
 let angular = require('angular');
 
@@ -23,6 +24,7 @@ module.component('registration', RegistrationComponent);
 module.component('inputMarkup', InputMarkupComponent);
 module.component('inputAmount', InputAmountComponent);
 module.component('inputShare', InputShareComponent);
+module.component('saleDetails', SaleDetailsComponent);
 
 export default module.name;
 
