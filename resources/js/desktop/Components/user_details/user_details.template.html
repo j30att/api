@@ -50,13 +50,14 @@
                     <div>Value</div>
                 </div>
                 <div class="modal_sale__user_details_info__content sale_details_matched"
-                     >
-                    <!--ng-repeat="event in $ctrl.events[this.key].sales"-->
-                        {%$ctrl.event%}
-                    <div ng-bind="event.title"></div>
-                    <div ng-bind="event.sales.markup">1.20</div>
-                    <div>1.53%</div>
-                    <div>$49,292</div>
+                ng-repeat="sale in $ctrl.sales">
+
+
+
+                    <div ng-bind="$ctrl.eventTitle()"></div>
+                    <div ng-bind="sale.markup">1.20</div>
+                    <div ng-bind="sale.share + '%'">1.53%</div>
+                    <div ng-bind="'$' + sale.amount">$49,292</div>
                     <div>July 13, 10:11</div>
                 </div>
 
