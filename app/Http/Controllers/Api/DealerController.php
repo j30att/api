@@ -10,6 +10,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Resources\Dealer\EventResource;
 use App\Http\Resources\Dealer\UserResource;
+use App\Http\Resources\Dealer\ProfileResource;
 use App\Models\Event;
 use App\Models\Sale;
 use App\Models\SubEvent;
@@ -43,9 +44,25 @@ class DealerController
             ->with('subEvents')
             ->with(['sales'=>function($query){
                 $query->with('creator');
+                //$query->with('bids');
+                $query->with(['bids' => function($query){
+                    $query ->with('investor');
+                }]);
             }])
             ->find($id);
 
         return  new EventResource($event);
+    }
+
+    public  function profileDetail(Request $request){
+
+        $user_id = $request->get('id');
+
+
+        $sales = Event::query()
+            ->with('sales')
+            ->get();
+
+        return ProfileResource::collection($sales);
     }
 }

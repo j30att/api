@@ -1,5 +1,30 @@
 .modal_sale{
     &_details{
+        .your_profile__title{
+            display: flex;
+            align-items: center;
+            span{
+                font-size: 15px;
+                color: #999999;
+                display: block;
+                position: relative;
+                font-weight: 100;
+                padding-left: 20px;
+                cursor: pointer;
+            }
+            span::before{
+                content: '';
+                display: block;
+                width: 10px;
+                height: 10px;
+                border-bottom: 1px solid #999999;
+                border-left: 1px solid #999999;
+                transform: rotate(45deg);
+                position: absolute;
+                top: 5px;
+                left: 5px;
+            }
+        }
         .underline{
             width: 620px;
             height: 1px;

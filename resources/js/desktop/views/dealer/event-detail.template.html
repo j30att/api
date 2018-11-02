@@ -72,10 +72,11 @@
                         <tbody>
 
                         <tr ng-repeat="sale in DEventDetailCtrl.event.sales | filter:{sub_event_id:DEventDetailCtrl.activeEvent.id}"
-                            ng-click="DEventDetailCtrl.toggleSidenav()">
+                            ng-click="DEventDetailCtrl.toggleSidenav(sale)">
                             <td>
                                 <img src="/images/desk/players_img/profile_img_1.png">
                                 <span ng-bind="sale.creator.name"></span>
+                                <span ng-bind="sale.id"></span>
                             </td>
                             <td
                                 ng-bind="DEventDetailCtrl.status(sale.status)"

@@ -10,8 +10,8 @@
                     <img src="/images/desk/players_img/profile_img_8.png" alt="pic">
                 </div>
                 <div class="modal_sale__user_info__profile">
-                    <span class="name">Louise Romero</span>
-                    <span class="link">Open profile</span>
+                    <span class="name" ng-bind="$ctrl.sale.creator.name">Louise Romero</span>
+                    <span class="link" ng-click="$ctrl.toggleUserDetails($ctrl.sale)">Open profile</span>
                 </div>
                 <div class="profile_status__gte_and_by">
                     <div class="profile_status__buyin">£ <span>1,000</span></div>
@@ -27,10 +27,10 @@
                     <div>Placed</div>
                 </div>
                 <div class="modal_sale__user_details_info__content">
-                    <div>Louise Romero</div>
-                    <div>1.20</div>
-                    <div>1.53%</div>
-                    <div>$49,292</div>
+                    <div ng-bind="$ctrl.sale.creator.name"></div>
+                    <div ng-bind="$ctrl.sale.markup">1.20</div>
+                    <div ng-bind="$ctrl.sale.share + '%'">1.53%</div>
+                    <div ng-bind="'$'+$ctrl.sale.amount">$49,292</div>
                     <div>July 13, 10:11</div>
                 </div>
 
@@ -40,34 +40,24 @@
                 <div class="modal_sale__user_details_info_type">
                     MATCHED BIDS
                 </div>
-                <div class="modal_sale__user_details_info__title">
+                <div class="modal_sale__user_details_info__title"
+                     ng-if="($ctrl.sale.bids | filter:{status:2}).length > 0">
                     <div>Seller</div>
                     <div>Markup</div>
                     <div>Share</div>
                     <div>Value</div>
                     <div>Placed</div>
                 </div>
-                <div class="modal_sale__user_details_info__content sale_details_matched">
-                    <div>Louise Romero</div>
-                    <div>1.20</div>
-                    <div>1.53%</div>
-                    <div>$49,292</div>
+                <div class="modal_sale__user_details_info__content sale_details_matched"
+                     ng-repeat="bid in $ctrl.sale.bids | filter:{status:2}">
+
+                    <div ng-bind="bid.investor.name"></div>
+                    <div ng-bind="bid.markup">1.20</div>
+                    <div ng-bind="bid.share + '%'">1.53%</div>
+                    <div ng-bind="'$' + bid.amount">$49,292</div>
                     <div>July 13, 10:11</div>
                 </div>
-                <div class="modal_sale__user_details_info__content sale_details_matched">
-                    <div>Louise Romero</div>
-                    <div>1.20</div>
-                    <div>1.53%</div>
-                    <div>$49,292</div>
-                    <div>July 13, 10:11</div>
-                </div>
-                <div class="modal_sale__user_details_info__content sale_details_matched">
-                    <div>Louise Romero</div>
-                    <div>1.20</div>
-                    <div>1.53%</div>
-                    <div>$49,292</div>
-                    <div>July 13, 10:11</div>
-                </div>
+
 
             </div>
 
@@ -75,6 +65,22 @@
             <div class="modal_sale__user_details_info">
                 <div class="modal_sale__user_details_info_type">
                     UNMATCHED BIDS
+                </div>
+                <div class="modal_sale__user_details_info__title"
+                ng-if="($ctrl.sale.bids | filter:{status:3}).length > 0">
+                    <div>Seller</div>
+                    <div>Markup</div>
+                    <div>Share</div>
+                    <div>Value</div>
+                    <div>Placed</div>
+                </div>
+                <div class="modal_sale__user_details_info__content sale_details_matched"
+                     ng-repeat="bid in $ctrl.sale.bids | filter:{status:3}">
+                    <div ng-bind="bid.investor.name"></div>
+                    <div ng-bind="bid.markup">1.20</div>
+                    <div ng-bind="bid.share + '%'">1.53%</div>
+                    <div ng-bind="'$' + bid.amount">$49,292</div>
+                    <div>July 13, 10:11</div>
                 </div>
                <div class="not_found">
                    No matched bids for this sale.
@@ -95,4 +101,5 @@
 
         </div>
     </md-content>
+    <user-details></user-details>
 </md-sidenav>

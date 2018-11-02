@@ -22,11 +22,11 @@ class EventResource extends JsonResource
             'fund'          => $this->fund,
             'period'        => $this->period,
             'buy_in'        => $this->buy_in,
-            'subevents'     => SubEventResource::collection($this->subevents),
             'date_start'    => $this->formatted_start_date,
             'date_end'      => $this->formatted_end_date,
             'date_close_in' => $this->close_in,
             'sales'         => $this->sales,
+            'subevents'     => $this->subevents,
 
         ];
     }

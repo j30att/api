@@ -12,10 +12,18 @@ class SaleDetails {
         this._opts = {fixed: false};
         this.isSidenavOpen =false;
 
-
     }
+
+    toggleUserDetails(){
+        this.$scope.$broadcast('sidenav-userDetails-open', this.sale.creator.id);
+    }
+
     $onInit(){
         this.$scope.$on('sidenav-saleDetails-open', (event, data) => {
+            if (data){
+                this.sale = data;
+            }
+
             this.buildToggler('right_sale_details');
         });
 
@@ -25,6 +33,8 @@ class SaleDetails {
 
     }
 
+
+
     buildToggler(componentId) {
         this.$mdSidenav(componentId).toggle();
     }
@@ -33,6 +43,8 @@ class SaleDetails {
     close(componentId){
         this.$mdSidenav(componentId).close();
     }
+
+
 
 };
 

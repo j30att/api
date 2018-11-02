@@ -5,16 +5,13 @@ class DealerEventDetailController {
         this.$state = $state;
         this.$scope = $scope;
         this.getEvent(this.$state.params.id);
-
-
-
     }
 
-    toggleSidenav(){
-        this.$scope.$broadcast('sidenav-saleDetails-open', () =>{
-            console.log('open sidenav')
-        });
+    toggleSidenav(sale){
+        this.$scope.$broadcast('sidenav-saleDetails-open', sale);
     }
+
+
 
     getEvent(id){
         this.DealerResourceService.getEvent(id).then(response => {

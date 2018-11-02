@@ -2609,6 +2609,39 @@ md-checkbox.md-checked .md-icon:after {
   color: #42aada;
 }
 
+.modal_sale_details .your_profile__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal_sale_details .your_profile__title span {
+  font-size: 15px;
+  color: #999999;
+  display: block;
+  position: relative;
+  font-weight: 100;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.modal_sale_details .your_profile__title span::before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-bottom: 1px solid #999999;
+  border-left: 1px solid #999999;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
 .modal_sale_details .underline {
   width: 620px;
   height: 1px;
