@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Models\Country;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
 
@@ -41,11 +42,14 @@ class GetCountry extends Command
         $path = base_path() . '/slim-2.json';
 
         $file = file_get_contents($path);
-        $countries = json_decode($file);
+        $countries = json_decode($file, 1);
 
         foreach ($countries as $country){
-            dd($country->name);
+            $dbCountry = new Country();
+            $dbCountry->name = $country['name'];
+            $dbCountry->code = $country['alpha-2'];
+            $dbCountry->slug = str_slug($country['name'], '_');
+            $dbCountry->save();
         }
-
     }
 }
