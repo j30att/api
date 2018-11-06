@@ -21,8 +21,6 @@ class UserDetails {
             this.events = response.data.data;
             this.key = 0;
             this.sales = this.events[this.key].sales;
-            console.log(this.events,'this.events');
-            console.log(this.key, 'key');
         })
     }
 
@@ -48,7 +46,6 @@ class UserDetails {
     showSales(key){
         this.key = key;
         this.sales = this.events[this.key].sales;
-        console.log(this.events[this.key]);
     }
     eventTitle(){
         let eventTitle = this.events[this.key].title;

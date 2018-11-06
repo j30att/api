@@ -14,7 +14,7 @@
                     <img src="/images/desk/players_img/profile_img_8.png" alt="pic">
                 </div>
                 <div class="modal_sale__user_info__profile">
-                    <span class="name" >Louise Romero</span>
+                    <span class="name" ng-bind="$ctrl.user.name">Louise Romero</span>
                     <span class="location">London, UK</span>
                 </div>
 
@@ -29,11 +29,11 @@
                 <div class="modal_sale__user_details_info__content"
                     ng-repeat="(key, event) in $ctrl.events"
                     ng-click="$ctrl.showSales(key)">
-                    <div ng-bind="event.title"></div>
+                    <div ng-bind="(event.title | limitTo:13)  + '...'"></div>
                     <div>1.20</div>
                     <div>1.53%</div>
                     <div>$49,292</div>
-                    <div>July 13, 10:11</div>
+
                 </div>
 
             </div>
@@ -54,11 +54,11 @@
 
 
 
-                    <div ng-bind="$ctrl.eventTitle()"></div>
+                    <div ng-bind="($ctrl.eventTitle() | limitTo:13) + '...'"></div>
                     <div ng-bind="sale.markup">1.20</div>
                     <div ng-bind="sale.share + '%'">1.53%</div>
                     <div ng-bind="'$' + sale.amount">$49,292</div>
-                    <div>July 13, 10:11</div>
+
                 </div>
 
 
@@ -83,7 +83,7 @@
                     <div ng-bind="bid.markup">1.20</div>
                     <div ng-bind="bid.share + '%'">1.53%</div>
                     <div ng-bind="'$' + bid.amount">$49,292</div>
-                    <div>July 13, 10:11</div>
+
                 </div>
                <div class="not_found">
                    No matched bids for this sale.
