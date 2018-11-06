@@ -14,7 +14,15 @@ class Event extends Model
         'buy_in',
         'reg_free',
         'date_start',
-        'date_end'
+        'date_end',
+
+
+        'slug',
+        'timezone',
+        'country_id',
+        'currency',
+        'logo',
+
     ];
 
     public function subEvents()

@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Queue;
 use League\Flysystem\Config;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
-use VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue;
+
 
 class update extends Command
 {
@@ -41,6 +41,19 @@ class update extends Command
      */
     public function handle()
     {   $connection = new AMQPStreamConnection('duckbill-01.rmq.cloudamqp.com', 5672, 'pvyiqfal', 'juIMSQ5RKmA9mbrCAglR2Zyt74yQktQW', 'pvyiqfal');
-        dd($connection);
+        $channel = $connection->channel();
+        $queuName = 'staking';
+
+
+        echo " [*] Waiting for messages. To exit press CTRL+C\n";
+        $callback = function ($msg) {
+            echo ' [x] Received ', $msg->body, "\n";
+            updateService::updateEvent(unserialize($msg->body));
+        };
+        $channel->basic_consume($queuName, '', false, true, false, false, $callback);
+        while (count($channel->callbacks)) {
+            $channel->wait();
+        }
+
     }
 }

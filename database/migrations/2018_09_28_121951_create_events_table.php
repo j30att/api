@@ -20,6 +20,9 @@ class CreateEventsTable extends Migration
             $table->integer('image_id')->unsigned()->nullable();
             $table->foreign('image_id')->references('id')->on('image_attachments')->onDelete('set null');
 
+            $table->string('slug');
+            $table->string('logo');
+
             $table->text('description');
             $table->double('fund');
             $table->double('buy_in');

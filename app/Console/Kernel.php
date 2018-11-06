@@ -14,6 +14,8 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         Commands\update::class,
+        Commands\Request::class,
+        Commands\GetCountry::class,
     ];
 
     /**

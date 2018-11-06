@@ -74,7 +74,7 @@ return [
             'host' => env('RABBITMQ_HOST', 'duckbill-01.rmq.cloudamqp.com'),
             'port' => env('RABBITMQ_PORT', 5672),
 
-            'vhost' => env('RABBITMQ_VHOST', '/'),
+            'vhost' => env('RABBITMQ_VHOST', 'pvyiqfal'),
             'login' => env('RABBITMQ_LOGIN', 'pvyiqfal'),
             'password' => env('RABBITMQ_PASSWORD', 'juIMSQ5RKmA9mbrCAglR2Zyt74yQktQW'),
 
