@@ -26,6 +26,9 @@
                 height: 52px;
                 border-bottom: 1px solid rgba(0,0,0,0.05);
                 font-size: 15px;
+                a{
+                    color: #000 !important;
+                }
             }
         }
         &_dates{
@@ -33,6 +36,32 @@
         }
         &_payout{
             font-weight: 600;
+        }
+    }
+
+
+    &_details{
+        .event_right-side{
+            .status__open{
+                color: #ffbe00;
+            }
+            .status__close{
+                color: #42aada;
+            }
+        }
+    }
+}
+
+.detailed_log_table{
+    &_header{
+        th{
+            width: auto;
+        }
+    }
+    &_body{
+        td{
+            font-size: 13px !important;
+            color: #000;
         }
     }
 }

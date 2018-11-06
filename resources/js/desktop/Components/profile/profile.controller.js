@@ -16,12 +16,10 @@ class Profile {
     }
     $onInit(){
         this.$scope.$on('sidenav-profile-open', (event, data) => {
-            console.log(11212);
             this.buildToggler('right_profile');
         });
 
         this.$scope.$watch('isSidenavOpen', (fixed) => {
-            console.log(fixed);
             this.$state.modalOpened = fixed
         });
 

@@ -1,7 +1,7 @@
 <div class="deskwr">
     <main-menu></main-menu>
     <div class="main_content">
-        <div class="event_wrapper">
+        <div class="event_wrapper events_admin_details">
             <div class="event_left-side">
                 <div class="event_left-side_header">
                     <a ui-sref="invest-events" class="event_left-side_header_link">
@@ -46,8 +46,8 @@
             </div>
             <div class="event_right-side">
                 <div class="event_right-side_header">
-                    <div class="event_right-side_header_title">
-                        {% DEventDetailCtrl.activeEvent.title %}
+                    <div class="event_right-side_header_title"
+                         ng-bind="DEventDetailCtrl.activeEvent.title | uppercase">
                     </div>
                     <div class="event_right-side_header_description">
                         <span>{% DEventDetailCtrl.activeEvent.buy_in | currency:'£':0 %}</span>
@@ -56,30 +56,36 @@
                         <span>{% DEventDetailCtrl.activeEvent.period %}</span>
                     </div>
                 </div>
-                <div ng-if="DEventDetailCtrl.activeEvent.sales"
+                <div
                      class="event_right-side_table">
+
                     <table>
                         <thead>
                         <tr>
                             <th>From</th>
-                            <th>Markup</th>
-                            <th>Highest bids</th>
+                            <th>Status</th>
+                            <th>Raised</th>
+                            <th>PAID</th>
+                            <th>LEFT</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr ng-repeat="sale in DEventDetailCtrl.activeEvent.sales"
+
+                        <tr ng-repeat="sale in DEventDetailCtrl.event.sales | filter:{sub_event_id:DEventDetailCtrl.activeEvent.id}"
                             ng-click="DEventDetailCtrl.toggleSidenav(sale)">
                             <td>
-                                <img src="/images/desk/players_img/profile_img_1.png" alt="">
-                                <span>{% sale.creator.name %}</span>
+                                <img src="/images/desk/players_img/profile_img_1.png">
+                                <span ng-bind="sale.creator.name"></span>
+                                <span ng-bind="sale.id"></span>
                             </td>
-                            <td class="bold">{% sale.markup %}</td>
-                            <td class="event_right-side_table_bids-list">
-                                <div ng-repeat="bid in sale.bids.highest">
-                                    <span>{% bid.markup %}</span>
-                                    <span>{% bid.amount|currency:'$':0 %}</span>
-                                </div>
-                            </td>
+                            <td
+                                ng-bind="DEventDetailCtrl.status(sale.status)"
+                                ng-class="{'status__close':sale.status == 2, 'status__open':sale.status == 1}"
+                            ></td>
+                            <td>$0</td>
+                            <td>$983</td>
+                            <td>$231</td>
+
                         </tr>
                         </tbody>
                     </table>

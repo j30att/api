@@ -1,0 +1,101 @@
+<md-sidenav class="md-sidenav-right full_height" style="min-width: 620px" md-is-open="isSidenavOpen" md-component-id="right_user_details">
+    <md-content>
+        <div class="modal_content modal_sale_details">
+            <div class="your_profile__title">
+                <span ng-click="$ctrl.close('right_user_details')">Back to Sales Overview</span>
+                <div class="your_profile_close" ng-click="$ctrl.close('right_user_details')"></div>
+            </div>
+            <div class="your_profile__title">
+                Profile overview
+
+            </div>
+            <div class="modal_sale__user_info">
+                <div class="modal_sale__user_info__pic">
+                    <img src="/images/desk/players_img/profile_img_8.png" alt="pic">
+                </div>
+                <div class="modal_sale__user_info__profile">
+                    <span class="name" ng-bind="$ctrl.user.name">Louise Romero</span>
+                    <span class="location">London, UK</span>
+                </div>
+
+            </div>
+            <div class="modal_sale__user_details_info">
+                <div class="modal_sale__user_details_info__title">
+                    <div>Event</div>
+                    <div>Markup</div>
+                    <div>Share</div>
+                    <div>Value</div>
+                </div>
+                <div class="modal_sale__user_details_info__content"
+                    ng-repeat="(key, event) in $ctrl.events"
+                    ng-click="$ctrl.showSales(key)">
+                    <div ng-bind="(event.title | limitTo:13)  + '...'"></div>
+                    <div>1.20</div>
+                    <div>1.53%</div>
+                    <div>$49,292</div>
+
+                </div>
+
+            </div>
+            <div class="underline"></div>
+            <div class="modal_sale__user_details_info">
+                <div class="modal_sale__user_details_info_type">
+                    MATCHED BIDS
+                </div>
+                <div class="modal_sale__user_details_info__title">
+
+                    <div>Event</div>
+                    <div>Markup</div>
+                    <div>Share</div>
+                    <div>Value</div>
+                </div>
+                <div class="modal_sale__user_details_info__content sale_details_matched"
+                ng-repeat="sale in $ctrl.sales">
+
+
+
+                    <div ng-bind="($ctrl.eventTitle() | limitTo:13) + '...'"></div>
+                    <div ng-bind="sale.markup">1.20</div>
+                    <div ng-bind="sale.share + '%'">1.53%</div>
+                    <div ng-bind="'$' + sale.amount">$49,292</div>
+
+                </div>
+
+
+            </div>
+
+            <div class="underline"></div>
+            <div class="modal_sale__user_details_info">
+                <div class="modal_sale__user_details_info_type">
+                    UNMATCHED BIDS
+                </div>
+                <div class="modal_sale__user_details_info__title"
+                ng-if="($ctrl.sale.bids | filter:{status:3}).length > 0">
+                    <div>Seller</div>
+                    <div>Markup</div>
+                    <div>Share</div>
+                    <div>Value</div>
+                    <div>Placed</div>
+                </div>
+                <div class="modal_sale__user_details_info__content sale_details_matched"
+                     ng-repeat="bid in $ctrl.sale.bids | filter:{status:3}">
+                    <div ng-bind="bid.investor.name"></div>
+                    <div ng-bind="bid.markup">1.20</div>
+                    <div ng-bind="bid.share + '%'">1.53%</div>
+                    <div ng-bind="'$' + bid.amount">$49,292</div>
+
+                </div>
+               <div class="not_found">
+                   No matched bids for this sale.
+               </div>
+
+            </div>
+
+
+
+
+        </div>
+
+    </md-content>
+
+</md-sidenav>
