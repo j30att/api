@@ -15,32 +15,54 @@
                 ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength">
 
             <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
-                <label for="input_first_name" class="login__input_label">First name</label>
-                <input md-no-float required="" type="text" placeholder="Julia"
+                <label for="input_first_name"
+                       class="login__input_label"
+                       ng-class="{'validate_error_label': !$ctrl.validateFirstName()}">First name</label>
+                <input md-no-float
+                       type="text"
+                       placeholder="Enter your First name"
+                       ng-model="$ctrl.user.firstName"
+                       ng-change="$ctrl.validateFirstName()"
+                       ng-class="{'validate_error': !$ctrl.validateFirstName()}"
+
                        class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid
                            ng-invalid-required" id="input_first_name" aria-invalid="true">
             </md-input-container>
             <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
-                <label for="input_last_name" class="login__input_label">Last Name</label>
-                <input md-no-float required="" type="text" placeholder="Norris"
+                <label for="input_last_name"
+                       class="login__input_label"
+                       ng-class="{'validate_error_label': !$ctrl.validateLastName()}">Last Name</label>
+                <input md-no-float
+                       type="text" placeholder="Enter your Last name"
+                       ng-model="$ctrl.user.lastName"
+                       ng-change="$ctrl.validateLastName()"
+                       ng-class="{'validate_error': !$ctrl.validateLastName()}"
                        class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid
                            ng-invalid-required" id="input_last_name" aria-invalid="true">
             </md-input-container>
             <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
                 <label for="input_date" class="login__input_label">Date of Birth</label>
-                <input md-no-float required="" type="date" placeholder="12.03.1988"
+                <input md-no-float
+                       type="date" placeholder="12.03.1988"
+                       ng-model="$ctrl.user.dateOfBirth"
+                       ng-change="$ctrl.validatedateOfBirth()"
+                       ng-class="{'validate_error': !$ctrl.validatedateOfBirth()}"
                        class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid
                            ng-invalid-required" id="input_date" aria-invalid="true">
             </md-input-container>
 
             <div class="location_select_wrapper">
                 <label class="login__input_label">Location</label>
-                <md-select ng-model="$ctrl.user.location"
+                <md-select ng-model="$ctrl.user.country_id"
+
                            class="login__input login__select md-no-underline"
                            placeholder="Select your location">
-                    <md-option value="1">London, UK</md-option>
-                    <md-option value="2">New York, USA</md-option>
-                    <md-option value="3">Moscow, Russia</md-option>
+
+                    <md-option
+                        value="{%item.id%}"
+                        ng-repeat="item in $ctrl.countries | orderBy:'name'">
+                        {%item.name%}, {%item.code%}
+                    </md-option>
                 </md-select>
             </div>
 
@@ -73,8 +95,8 @@
                 ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength">
 
                 <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
-                    <label for="input_7" class="login__input_label">Username</label>
-                    <input md-no-float required="" type="email" placeholder="Enter your username"
+                    <label for="input_7" class="login__input_label">Email</label>
+                    <input md-no-float required="" type="email" placeholder="Enter your Email"
                            name="clientEmail"
                            ng-model="LgCtrl.userEmail" minlength="5" maxlength="100"
                            ng-pattern="/^.+@.+\..+$/"

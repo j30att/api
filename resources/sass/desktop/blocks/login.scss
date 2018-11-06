@@ -137,7 +137,7 @@
     }
     &__input::placeholder{
         font-size: 15px !important;
-        color: #000000 !important;
+        color: rgba(0,0,0,0.3) !important;
     }
     &__input_label{
         font-size: 15px !important;
@@ -265,4 +265,13 @@ md-checkbox.md-checked .md-icon:after{
 }
 .md-ripple-container{
     display: none;
+}
+
+.validate_error{
+    border: 1px solid #fc4d02 !important;
+    border-bottom: 1px solid #fc4d02 !important;
+}
+.validate_error_label{
+    color: #fc4d02 !important;
+
 }

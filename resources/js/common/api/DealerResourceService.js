@@ -4,7 +4,7 @@ import {DEALER_EVENTS_DETAIL_URL, DEALER_EVENTS_URL, DEALER_USERS_URL, DEALER_PR
 class DealerResourceService {
     constructor($http){
         this.$http = $http;
-     }
+    }
 
     getEvents(){
         return this.$http.post(DEALER_EVENTS_URL,{})

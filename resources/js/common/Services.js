@@ -7,6 +7,7 @@ import {SubEventsResourceService} from "./api/SubEventsResourceService";
 import {BidsService} from "./services/BidService";
 import {SalesService} from "./services/SaleService";
 import {DealerResourceService} from "./api/DealerResourceService";
+import {CountriesResourceService} from "./api/CountriesResourceService";
 
 let module = angular.module('Services', []);
 
@@ -17,5 +18,6 @@ module.service('SubEventsResourceService', SubEventsResourceService);
 module.service('BidsService', BidsService);
 module.service('SalesService', SalesService);
 module.service('DealerResourceService', DealerResourceService);
+module.service('CountriesResourceService', CountriesResourceService);
 
 export default module.name;

@@ -33,6 +33,10 @@ Route::group([/*'middleware' => 'auth'*/], function(){
     Route::apiResource('/events', 'Api\EventController');
     Route::apiResource('subevents', 'Api\SubEventController');
 
+
+    Route::post('/countries', 'Api\CountryController@getCountries');
+
+
 });
 
 Route::group(['middleware' => 'auth'], function (){
