@@ -53,4 +53,7 @@ export const DEALER_EVENTS_DETAIL_URL = '/api/dealer/event/detail';
 //**COUNTRY**//
 export const COUNTRIES_URL = '/api/countries';
 
+//**LOGIN**//
+export const REGISTRATION_URL = '/register';
+
 

@@ -42,7 +42,7 @@
             </li>
         </ul>
         <hr>
-        <ul class="menu_list">
+        <ul class="menu_list" ng-if="$ctrl.user.role == 2;">
             <li class="menu_item">
                 <a class="menu_item__link"
                    ng-class="$ctrl.isActive('dealer/events')"

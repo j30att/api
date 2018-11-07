@@ -18,6 +18,8 @@ class ChangeUserTable extends Migration
             $table -> tinyInteger('role')->default('1');
             $table -> integer('country_id')->unsigned()->nullable();
             $table -> foreign('country_id')->references('id')->on('countries')->onDelete('set null');
+            $table -> boolean('sms_subscribe');
+            $table -> boolean('email_subscribe');
 
         });
     }
@@ -33,6 +35,8 @@ class ChangeUserTable extends Migration
 
 
             $table->dropColumn('role');
+            $table->dropColumn('sms_subscribe');
+            $table->dropColumn('email_subscribe');
             $table->dropForeign('users_country_id_foreign');
             $table->dropColumn('country_id');
         });

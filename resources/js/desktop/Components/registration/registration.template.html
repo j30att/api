@@ -9,52 +9,54 @@
         <div class="registration_subtitle">
             ADD PERSONAL INFROMATION
         </div>
-        <form ng-submit=""
-
+        <div
               class="login__form ng-pristine ng-valid-email ng-invalid
                 ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength">
 
             <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
                 <label for="input_first_name"
                        class="login__input_label"
-                       ng-class="{'validate_error_label': !$ctrl.validateFirstName()}">First name</label>
+                       ng-class="{'validate_error_label': $ctrl._opts.validateFirstName}"
+                       >First name</label>
                 <input md-no-float
                        type="text"
                        placeholder="Enter your First name"
                        ng-model="$ctrl.user.firstName"
-                       ng-change="$ctrl.validateFirstName()"
-                       ng-class="{'validate_error': !$ctrl.validateFirstName()}"
-
+                       ng-class="{'validate_error': $ctrl._opts.validateFirstName}"
                        class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid
                            ng-invalid-required" id="input_first_name" aria-invalid="true">
             </md-input-container>
             <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
                 <label for="input_last_name"
                        class="login__input_label"
-                       ng-class="{'validate_error_label': !$ctrl.validateLastName()}">Last Name</label>
+                       ng-class="{'validate_error_label': $ctrl._opts.validateLastName}"
+                       >Last Name</label>
                 <input md-no-float
                        type="text" placeholder="Enter your Last name"
                        ng-model="$ctrl.user.lastName"
-                       ng-change="$ctrl.validateLastName()"
-                       ng-class="{'validate_error': !$ctrl.validateLastName()}"
+
+                       ng-class="{'validate_error': $ctrl._opts.validateLastName}"
                        class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid
                            ng-invalid-required" id="input_last_name" aria-invalid="true">
             </md-input-container>
             <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
-                <label for="input_date" class="login__input_label">Date of Birth</label>
+                <label for="input_date" class="login__input_label"
+                ng-class="{'validate_error_label': $ctrl._opts.validateBirthDate}"
+                >Date of Birth</label>
                 <input md-no-float
                        type="date" placeholder="12.03.1988"
                        ng-model="$ctrl.user.dateOfBirth"
-                       ng-change="$ctrl.validatedateOfBirth()"
-                       ng-class="{'validate_error': !$ctrl.validatedateOfBirth()}"
+                       ng-class="{'validate_error':$ctrl._opts.validateBirthDate}"
                        class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid
                            ng-invalid-required" id="input_date" aria-invalid="true">
             </md-input-container>
 
             <div class="location_select_wrapper">
-                <label class="login__input_label">Location</label>
+                <label class="login__input_label"
+                ng-class="{'validate_error_label': $ctrl._opts.validateLocation}"
+                >Location</label>
                 <md-select ng-model="$ctrl.user.country_id"
-
+                           ng-class="{'validate_error': $ctrl._opts.validateLocation}"
                            class="login__input login__select md-no-underline"
                            placeholder="Select your location">
 
@@ -66,7 +68,7 @@
                 </md-select>
             </div>
 
-        </form>
+        </div>
 
         </div>
         <div class="accords_wrapper">
@@ -95,32 +97,42 @@
                 ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength">
 
                 <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
-                    <label for="input_7" class="login__input_label">Email</label>
+                    <label for="input_7" class="login__input_label"
+                           ng-class="{'validate_error_label': $ctrl._opts.validateEmail}">Email</label>
                     <input md-no-float required="" type="email" placeholder="Enter your Email"
                            name="clientEmail"
-                           ng-model="LgCtrl.userEmail" minlength="5" maxlength="100"
-                           ng-pattern="/^.+@.+\..+$/"
-                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-valid-email ng-invalid
-                           ng-invalid-required ng-valid-pattern ng-valid-minlength
-                           ng-valid-maxlength" id="input_7" aria-invalid="true">
+                           ng-model="$ctrl.user.email"
+
+                           ng-class="{'validate_error': $ctrl._opts.validateEmail}"
+                           class="login__input ng-pristine ng-untouched md-input" id="input_7" aria-invalid="true">
                 </md-input-container>
 
                 <md-input-container class="login__input_container md-block login_input md-formSelect-theme flex-gt-sm"
                                     style="margin-bottom: 20px;">
-                    <label for="input_8" class="login__input_label">Your password</label>
+                    <label for="input_8" class="login__input_label"
+                    ng-class="{'validate_error_label': $ctrl._opts.validatePassword()}"
+                    >Your password</label>
                     <input type="password"
-                           ng-model="LgCtrl.userPassword" placeholder="Enter your password"
+                           placeholder="Enter your password"
+                           ng-model="$ctrl.user.password"
+
+                           ng-class="{'validate_error': $ctrl._opts.validatePassword()}"
                            name="clientPassword" required=""
-                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid ng-invalid-required"
+                           class="login__input"
                            id="input_8" aria-invalid="true">
                 </md-input-container>
                 <md-input-container class="login__input_container md-block login_input md-formSelect-theme flex-gt-sm"
                                     style="margin-bottom: 20px;">
-                    <label for="input_9" class="login__input_label">Confirm password</label>
+                    <label for="input_9" class="login__input_label"
+                    ng-class="{'validate_error_label': $ctrl._opts.validateConfirmPassword()}"
+                    >Confirm password</label>
                     <input type="password"
-                           ng-model="LgCtrl.userPassword" placeholder="Confirm password"
-                           name="clientPasswordConfirm" required=""
-                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid ng-invalid-required"
+                           placeholder="Confirm password"
+                           ng-model="$ctrl.user.confirmPassword"
+
+                           ng-class="{'validate_error_label': $ctrl._opts.validateConfirmPassword()}"
+                           name="clientPasswordConfirm"
+                           class="login__input"
                            id="input_9" aria-invalid="true">
                 </md-input-container>
 
@@ -150,11 +162,11 @@
             we’re changing the type of advert you see and giving your more control over your data
         </div>
         <div class="data_privacy__checkbox_wrapper">
-            <md-checkbox ng-model="data.cb1" aria-label="Checkbox 1">
+            <md-checkbox ng-model="$ctrl.user.checkBoxEmail" aria-label="Checkbox 1">
                 Yes, I’d like to hear about the latest poker news and promotions by Email
             </md-checkbox>
 
-            <md-checkbox ng-model="data.cb2" aria-label="Checkbox 2">
+            <md-checkbox ng-model="$ctrl.user.checkBoxSms" aria-label="Checkbox 2">
                 Yes, I’d like to hear about the latest poker news and promotions by SMS
             </md-checkbox>
         </div>
@@ -168,7 +180,7 @@
         <div class="modal_foter">
             <div class="modal_foter__buttons">
                 <div class="button_text" ng-click="$ctrl.buildToggler('right_registration')">Cancel</div>
-                <div class="button_blue" ng-click="$ctrl.changeState('media_policy')">Continue</div>
+                <div class="button_blue" ng-click="$ctrl.createUser()">Continue</div>
             </div>
         </div>
     </md-content>
