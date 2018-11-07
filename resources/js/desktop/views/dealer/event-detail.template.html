@@ -27,9 +27,22 @@
                         <div class="event_left-side_list_title">
                             Events list
                         </div>
-                        <div ng-repeat="event in DEventDetailCtrl.event.subevents"
-                             ng-class="{active:DEventDetailCtrl.activeEvent.id === event.id}"
-                             ng-click="DEventDetailCtrl.toggleEvent(event)"
+
+                        <div
+                            ng-class="{active:DEventDetailCtrl.activeEvent == 'all'}"
+                             ng-click="DEventDetailCtrl.toggleEvent('all')"
+                             class="event_left-side_list_item">
+                            <div class="event_left-side_list_item_title">
+                                All sales
+                            </div>
+                            <div class="event_left-side_list_item_description">
+                                {%DEventDetailCtrl.event.sales.length%} sales
+                            </div>
+                        </div>
+
+                        <div ng-repeat="(key, event) in DEventDetailCtrl.event.subevents"
+                             ng-class="{active:DEventDetailCtrl.activeEvent == key}"
+                             ng-click="DEventDetailCtrl.toggleEvent(key)"
                              class="event_left-side_list_item">
                             <div class="event_left-side_list_item_title">
                                 {% event.title %}
@@ -44,21 +57,20 @@
                     </div>
                 </div>
             </div>
-            <div class="event_right-side">
-                <div class="event_right-side_header">
-                    <div class="event_right-side_header_title"
-                         ng-bind="DEventDetailCtrl.activeEvent.title | uppercase">
+            <div class="event_right-side" style="height: 70vh; overflow-y: scroll;">
+                <div class="event_right-side_in" ng-repeat="event in DEventDetailCtrl.fakeEvent.subevents">
+                    <div class="event_right-side_header">
+                        <div class="event_right-side_header_title"
+                             ng-bind="event.title | uppercase">
+                        </div>
+                        <div class="event_right-side_header_description">
+                            <span ng-bind="event.buy_in | currency:'£':0"></span>
+                            <span class="grey_dot"></span>
+                            <span ng-bind="(event.fund | currency:'£':0) + ' GTD'"></span>
+                            <span ng-bind="event.period | currency:'£':0"></span>
+                        </div>
                     </div>
-                    <div class="event_right-side_header_description">
-                        <span>{% DEventDetailCtrl.activeEvent.buy_in | currency:'£':0 %}</span>
-                        <span class="grey_dot"></span>
-                        <span>{% DEventDetailCtrl.activeEvent.fund | currency:'£':0 %} GTD</span>
-                        <span>{% DEventDetailCtrl.activeEvent.period %}</span>
-                    </div>
-                </div>
-                <div
-                     class="event_right-side_table">
-
+                    <div class="event_right-side_table">
                     <table>
                         <thead>
                         <tr>
@@ -71,7 +83,7 @@
                         </thead>
                         <tbody>
 
-                        <tr ng-repeat="sale in DEventDetailCtrl.event.sales | filter:{sub_event_id:DEventDetailCtrl.activeEvent.id}"
+                        <tr ng-repeat="sale in DEventDetailCtrl.event.sales | filter:{sub_event_id:event.id}"
                             ng-click="DEventDetailCtrl.toggleSidenav(sale)">
                             <td>
                                 <img src="/images/desk/players_img/profile_img_1.png">
@@ -89,6 +101,7 @@
                         </tr>
                         </tbody>
                     </table>
+                </div>
                 </div>
             </div>
         </div>
