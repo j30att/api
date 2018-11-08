@@ -27,6 +27,8 @@ class User extends Authenticatable
         'country_id',
         'sms_subscribe',
         'email_subscribe',
+        'image_id',
+        'avatar'
 
     ];
 
@@ -52,5 +54,9 @@ class User extends Authenticatable
 
     public function  country(){
         return $this->belongsTo(Country::class, 'country_id');
+    }
+
+    public function  avatar(){
+        return $this->belongsTo(ImageAttachment::class, 'image_id');
     }
 }

@@ -10,7 +10,20 @@
                 <div class="your_profile__name">
                     <!--James. Co-->
                     <span ng-bind="$ctrl.user.name"></span>
-                    <div class="change_photo">Replace photo</div>
+                    <input type="file" hidden id="profile_photo" name="profile_photo">
+                    <!--<div class="change_photo" ng-click="$ctrl.addPhoto()">Replace photo</div>-->
+                    <div class="change_photo"
+                            ngf-select
+                            ng-model="$ctrl.uploadedAvatar"
+                            ngf-change="$ctrl.uploadAvatar()"
+                            ngf-multiple="false"
+                            ngf-pattern="'image/*'"
+                            ngf-accept="'image/*'"
+                            ngf-keep="false"
+                            ngf-allow-dir="true"
+                            >
+                        Replace photo
+                    </div>
                 </div>
             </div>
             <div class="link_party_pk">
