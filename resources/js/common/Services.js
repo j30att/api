@@ -8,6 +8,7 @@ import {BidsService} from "./services/BidService";
 import {SalesService} from "./services/SaleService";
 import {DealerResourceService} from "./api/DealerResourceService";
 import {CountriesResourceService} from "./api/CountriesResourceService";
+import {RegistrationService} from "./services/RegistrationService";
 
 let module = angular.module('Services', []);
 
@@ -19,5 +20,6 @@ module.service('BidsService', BidsService);
 module.service('SalesService', SalesService);
 module.service('DealerResourceService', DealerResourceService);
 module.service('CountriesResourceService', CountriesResourceService);
+module.service('RegistrationService', RegistrationService);
 
 export default module.name;

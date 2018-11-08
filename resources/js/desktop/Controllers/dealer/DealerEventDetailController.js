@@ -16,14 +16,23 @@ class DealerEventDetailController {
     getEvent(id){
         this.DealerResourceService.getEvent(id).then(response => {
             this.event = response.data.data;
-            this.activeEvent = this.event.subevents[0];
+            this.activeEvent = 'all';
+            this.fakeEvent = angular.copy(this.event);
         })
     }
 
 
 
-    toggleEvent(event){
-        this.activeEvent = event;
+    toggleEvent(index){
+
+        this.activeEvent = index;
+        if (index == 'all'){
+            this.fakeEvent.subevents = this.event.subevents;
+        } else {
+            let subevent = this.event.subevents[index];
+            this.fakeEvent.subevents = [];
+            this.fakeEvent.subevents.push(subevent);
+        }
     }
 
     status(status){
@@ -33,6 +42,8 @@ class DealerEventDetailController {
             return 'Closing'
         }
     }
+
+
 }
 
 DealerEventDetailController.$inject = ['DealerResourceService', '$state', '$scope'];

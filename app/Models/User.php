@@ -10,8 +10,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-   // use Notifiable;
 
+    const ROLE_USER         = 1;
+    const ROLE_ADMIN        = 2;
     /**
      * The attributes that are mass assignable.
      *
@@ -19,12 +20,17 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'role',
         'email',
         'password',
-        'age',
-        'country_id'
+        'birth_date',
+        'country_id',
+        'sms_subscribe',
+        'email_subscribe',
 
     ];
+
+    // use Notifiable;
 
     /**
      * The attributes that should be hidden for arrays.

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use function Couchbase\defaultDecoder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -31,7 +32,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/bids';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -64,12 +65,19 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
+
     protected function create(array $data)
     {
-        return User::create([
+        $birthDate = Carbon::parse($data['birth_date']);
+
+
+          return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'age' => $data['age'],
+            'birth_date' => $birthDate,
+            'country_id'=> $data['country_id'],
+            'sms_subscribe' => $data['sms_subscribe'],
+            'email_subscribe' => $data['email_subscribe'],
             'password' => Hash::make($data['password']),
         ]);
     }
