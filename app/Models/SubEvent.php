@@ -14,6 +14,14 @@ class SubEvent extends Model
         'buy_in',
         'date_start',
         'date_end',
+
+
+        'id',
+        'type',
+        'day',
+        'flight',
+        'late_reg',
+        'clock'
     ];
 
 

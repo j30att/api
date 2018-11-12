@@ -22,6 +22,7 @@ class Event extends Model
         'country_id',
         'currency',
         'logo',
+        'country',
 
     ];
 

@@ -12253,6 +12253,77 @@ md-input-container input::placeholder {
   z-index: 5;
 }
 
+/*dollar block*/
+
+.dollar_content {
+  padding-top: 48px;
+}
+
+.dollar_content__img {
+  width: 70px;
+  height: 70px;
+  background: url("/images/dollar.png") no-repeat center;
+  background-size: 100%;
+  margin: auto;
+}
+
+.dollar_content__title {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px auto 12px auto;
+}
+
+.dollar_content__description {
+  font-size: 15px;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.dollar_content__button {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 16px;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 6px;
+  background-color: #007fed;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dollar_content .faq {
+  width: 22px;
+  height: 22px;
+  background: url("/images/faq.png") no-repeat center;
+  background-size: 100%;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.dollar_content__skip {
+  width: 100%;
+  font-style: 16px;
+  color: #949494;
+  margin-top: 24px;
+  text-align: center;
+}
+
+.dollar_content__terms {
+  text-align: center;
+}
+
+.dollar_content__terms a {
+  color: #007fed;
+  font-size: 15px;
+}
+
 .main_content__empty {
   height: calc(100vh - 95px);
   display: -webkit-box;
