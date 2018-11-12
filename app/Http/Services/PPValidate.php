@@ -27,6 +27,7 @@ class PPValidate
     public function authentication()
     {
         $user = User::query()->find(5);
+     //   $user = Auth::user();
         $data = [
             'partnerToken' => $user->pp_partner_token,
             'accountId' => $user->pp_account_id
@@ -36,7 +37,7 @@ class PPValidate
             'headers' => [
                 'Content-Type' => 'application/json'
             ],
-            $data
+            'body' => $data
         ]);
 
         dd($request->getBody());
@@ -44,3 +45,18 @@ class PPValidate
     }
 
 }
+/*
+18d4acc2-926a-4ebf-a642-c2d2297d2c79
+
+curl -v -X POST \
+ 'http://re-partnerservices.ivycomptech.co.in/api?partner=staking&partnerAccountId=staking' \
+-H 'Content-Type: application/json' \
+--data '{"partnerToken":"9285bf4c-46c0-4c78-8ead-18930742a500","accountId":"116186665"}'
+
+curl -X POST \
+'http://re-partnerservices.ivycomptech.co.in/api?partner=staking&partnerAccountId=staking' \
+-H 'Content-Type: application/json' \
+-d '{
+    "partnerToken": "9285bf4c-46c0-4c78-8ead-18930742a500",
+    "accountId": "116186665"
+}'*/
