@@ -1,9 +1,10 @@
+import {DealerWinController} from "../../Controllers/dealer/DealerWinController";
 
 class SaleDetails {
-    constructor($scope,SalesResourceService, $mdSidenav, $http, SalesService, $timeout, $state, $mdDialog, DealerWinController) {
+    constructor($scope,SalesResourceService, $mdSidenav, $http,
+                SalesService, $timeout, $state, $mdDialog) {
         this.SalesResourceService = SalesResourceService;
         this.SalesService = SalesService;
-        this.DealerWinController = DealerWinController;
         this.$mdSidenav = $mdSidenav;
         this.$mdDialog = $mdDialog;
         this.$timeout=$timeout;
@@ -96,7 +97,8 @@ class SaleDetails {
     showWonPopUp (ev){
         console.log('hui');
         this.$mdDialog.show({
-            controller: this.DealerWinController,
+            controller: DealerWinController,
+            controllerAs: 'DealerWinCtrl',
             template: require('./won.tmpl.html'),
             parent: angular.element(document.querySelector('[md-component-id="right_sale_details"]')),
             targetEvent: ev,
@@ -108,6 +110,8 @@ class SaleDetails {
             }, function() {
                 this.$scope.status = 'You cancelled the dialog.';
             });
+
+
 
 
     }

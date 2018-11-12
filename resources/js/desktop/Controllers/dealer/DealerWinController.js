@@ -1,19 +1,11 @@
 class DealerWinController{
-    constructor(){
-
-
+    constructor($scope){
+        this.$scope = $scope;
     }
-
-    hui(){
-        console.log('DealerWinController');
-    }
-
-
-
 
 
 }
 
+DealerWinController.$inject = ['$scope'];
 
 export {DealerWinController};
-

@@ -180,10 +180,30 @@
         <div class="modal_foter">
             <div class="modal_foter__buttons">
                 <div class="button_text" ng-click="$ctrl.buildToggler('right_registration')">Cancel</div>
-                <div class="button_blue" ng-click="$ctrl.createUser()">Continue</div>
+                <!--<div class="button_blue" ng-click="$ctrl.createUser()">Continue</div>-->
+                <div class="button_blue" ng-click="$ctrl.changeState('demo_state')">demoState</div>
             </div>
         </div>
     </md-content>
+
+    <md-content ng-if="$ctrl.state == 'demo_state'">
+        <div class="modal_content">
+            <div class="link_party_pk">
+                <div class="link_party_inf">Get a fast access to your bids and money, log in with Party poker account </div>
+                <div class="link_party_btn">Link Party Poker account</div>
+            </div>
+        </div>
+        <div class="modal_foter">
+            <div class="modal_foter__buttons">
+                <div class="button_text" ng-click="$ctrl.buildToggler('right_registration')">Cancel</div>
+                <!--<div class="button_blue" ng-click="$ctrl.createUser()">Continue</div>-->
+                <div class="button_blue">testState</div>
+            </div>
+        </div>
+    </md-content>
+
+
+
     <md-content ng-if="$ctrl.state == 'media_policy'">
         <div class="modal_content">
             <div class="your_profile__title">
