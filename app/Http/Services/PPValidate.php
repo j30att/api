@@ -37,7 +37,7 @@ class PPValidate
             'headers' => [
                 'Content-Type' => 'application/json'
             ],
-            'body' => $data
+            'form_params' => $data
         ]);
 
         dd($request->getBody());
