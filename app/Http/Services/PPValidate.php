@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Auth;
 class PPValidate
 {
 
-    protected $uri = 'http://re-partnerservices.ivycomptech.co.in/api?partner=staking&partnerAccountId=staking';
+    protected $uri = '/api?partner=staking&partnerAccountId=staking';
 
     public function __construct()
     {
-        $this->guzzle = new Client();
+        $this->guzzle = new Client(['base_uri'=>'http://re-partnerservices.ivycomptech.co.in']);
     }
 
     public function authentication()
