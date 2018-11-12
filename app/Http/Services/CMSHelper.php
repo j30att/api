@@ -11,6 +11,8 @@ namespace App\Http\Services;
 
 use App\Models\Country;
 use App\Models\Event;
+use App\Models\SubEvent;
+use Carbon\Carbon;
 use GuzzleHttp\Client;
 use http\Exception;
 use Illuminate\Support\Facades\Log;
@@ -76,6 +78,16 @@ class CMSHelper
             $event = Event::query()->find($eventId);
 
             $eventData = json_decode($apiResource->getBody());
+
+
+
+            $country_code = $eventData->event->eventCountry;
+            $country = json_decode(Country::query()->where('code', $country_code)->get());
+            $country_id = $country[0]->id;
+
+            //dd($eventData->event);
+
+            //dd($eventData->event->eventCountry);
             if (is_null($eventData->event->deletedAt)) {
                 if (is_null($event)) {
                     $event = new Event();
@@ -90,9 +102,16 @@ class CMSHelper
                 $event->currency = $eventData->event->eventCurrency;
                 $event->slug = $eventData->event->eventNameSlug;
                 $event->logo = $eventData->event->eventLogo;
-                $event->country_id = $this->updateCountries();
+                //$event->country_id = $this->updateCountries();
+                $event->country_id = $country_id;
+
+
 
                 $event->save();
+
+                dd($event);
+
+                $this->updateSchedule();
 
             }
         }
@@ -107,14 +126,32 @@ class CMSHelper
 
 
         foreach ($event->event->days as $day){
+            $subEvent = SubEvent::query()->find($day->id);
+
+            if (is_null($subEvent)){
+                $subEvent = new SubEvent();
+                $subEvent->id = $day->id;
+            }
+
+            $subEvent->event_id = '1';
+            $subEvent->title    = 'sub_event';
+            $subEvent->fund     = 500;
+            $subEvent->buy_in   = 500;
+            $subEvent->type     = $day->type;
+            $subEvent->day      = $day->day;
+            $subEvent->flight   = $day->flight;
+            $subEvent->late_reg = Carbon::parse($day->lateReg);
+            $subEvent->clock    = $day->clock;
+            $subEvent->save();
 
         }
-
 
     }
 
     public function updateCountries()
     {
+
+
 
         //todo куда идти  за странами по коду
 

@@ -202,6 +202,41 @@
         </div>
     </md-content>
 
+    <md-content ng-if="$ctrl.state == 'dollar'">
+        <div class="your_profile__title">
+            <div class="your_profile_close" ng-click="$ctrl.buildToggler('right_registration')"></div>
+        </div>
+        <div class="modal_content dollar_content_wrapper">
+
+            <div class="dollar_content">
+                <div class="dollar_content__img"></div>
+                <div class="dollar_content__title">
+                    In order to receive your a free $22 partypoker LIVE Satellite ticket
+                </div>
+                <div class="dollar_content__description">
+                    Your My partypoker LIVE username should be the same as your partypoker username.
+                </div>
+                <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
+                    <label for="input_first_name"
+                           class="login__input_label"
+                    >Username</label>
+                    <input md-no-float
+                           type="text"
+                           placeholder="Enter partypoker username"
+                           class="login__input">
+                    <div class="faq"></div>
+                </md-input-container>
+
+                <div class="dollar_content__button button">Link my partypoker account</div>
+                <div class="dollar_content__terms">
+                    <a href="#" ng-click="$ctrl.changeState('terms')">Terms & Conditions</a>
+                </div>
+
+
+
+            </div>
+        </div>
+    </md-content>
 
 
     <md-content ng-if="$ctrl.state == 'media_policy'">
