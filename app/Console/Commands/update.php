@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Http\Services\CMSHelper;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Queue;
 use League\Flysystem\Config;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
@@ -46,7 +47,7 @@ class update extends Command
         $queuName = 'staking';
 
 
-        echo " [*] Waiting for messages. To exit press CTRL+C\n";
+        Log::info(' [*] Waiting for messages.');
         $callback = function ($msg) {
             $helper = new CMSHelper();
             $helper->execute(unserialize($msg->body));
