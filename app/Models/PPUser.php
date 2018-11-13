@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class PPUser extends Model
 {
+    protected $table = 'pp_users';
+
     protected $fillable=[
         'user_id',
         'first_name',

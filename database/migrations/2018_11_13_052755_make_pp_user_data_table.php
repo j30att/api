@@ -14,6 +14,7 @@ class MakePpUserDataTable extends Migration
     public function up()
     {
         Schema::create('pp_users', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('user_id')->nullable()->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
             $table->string('first_name');
@@ -23,6 +24,7 @@ class MakePpUserDataTable extends Migration
             $table->string('screen_name');
             $table->string('funded');
             $table->string('session');
+            $table->timestamps();
         });
     }
 
