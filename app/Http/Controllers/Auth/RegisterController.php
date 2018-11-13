@@ -9,6 +9,7 @@ use function Couchbase\defaultDecoder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -68,9 +69,9 @@ class RegisterController extends Controller
 
     protected function create(array $data)
     {
+        try {
+
         $birthDate = Carbon::parse($data['birth_date']);
-
-
           return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -81,6 +82,9 @@ class RegisterController extends Controller
             'email_subscribe' => $data['email_subscribe'],
             'password' => Hash::make($data['password']),
         ]);
+        } catch (\Exception $e){
+            Log::error($e->getMessage());
+        }
     }
 
     public function showRegistrationForm(Request $request)

@@ -220,6 +220,7 @@ return [
     ],
 
     'pp'=>[
+        'pp_base_api_url'=>'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet',
         'pp_validate' => 'http://re-partnerservices.ivycomptech.co.in/api?partner=staking&partnerAccountId=staking'
     ]
 

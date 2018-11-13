@@ -8,15 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class SubEvent extends Model
 {
     protected $fillable =[
+        'id',
         'event_id',
         'title',
         'fund',
         'buy_in',
         'date_start',
         'date_end',
-
-
-        'id',
         'type',
         'day',
         'flight',

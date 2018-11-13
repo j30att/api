@@ -19,6 +19,12 @@ class SubEventsSeeder extends Seeder
                 'buy_in' => 10000,
                 'date_start' => new \DateTimeImmutable(sprintf('+%d days', 30)),
                 'date_end' => new \DateTimeImmutable(sprintf('+%d days', 35)),
+                'type' => 'NEW',
+                'day' => 1,
+                'flight'=> 1,
+                'late_reg' => new \DateTimeImmutable(sprintf('+%d days', 35)),
+                'clock' => 12
+
             ],
             1 => [
                 'event_id' => '1',
@@ -27,6 +33,11 @@ class SubEventsSeeder extends Seeder
                 'buy_in' => 10000,
                 'date_start' => new \DateTimeImmutable(sprintf('+%d days', 30)),
                 'date_end' => new \DateTimeImmutable(sprintf('+%d days', 35)),
+                'type' => 'NEW',
+                'day' => 1,
+                'flight'=> 2,
+                'late_reg' => new \DateTimeImmutable(sprintf('+%d days', 35)),
+                'clock' => 12
             ],
             2 => [
                 'event_id' => '2',
@@ -35,6 +46,11 @@ class SubEventsSeeder extends Seeder
                 'buy_in' => 10000,
                 'date_start' => new \DateTimeImmutable(sprintf('+%d days', 30)),
                 'date_end' => new \DateTimeImmutable(sprintf('+%d days', 35)),
+                'type' => 'NEW',
+                'day' => 1,
+                'flight'=> 3,
+                'late_reg' => new \DateTimeImmutable(sprintf('+%d days', 35)),
+                'clock' => 12
             ],
             3 => [
                 'event_id' => '2',
@@ -43,6 +59,11 @@ class SubEventsSeeder extends Seeder
                 'buy_in' => 10000,
                 'date_start' => new \DateTimeImmutable(sprintf('+%d days', 30)),
                 'date_end' => new \DateTimeImmutable(sprintf('+%d days', 35)),
+                'type' => 'NEW',
+                'day' => 1,
+                'flight'=> 4,
+                'late_reg' => new \DateTimeImmutable(sprintf('+%d days', 35)),
+                'clock' => 12
             ],
             4 => [
                 'event_id' => '3',
@@ -51,6 +72,11 @@ class SubEventsSeeder extends Seeder
                 'buy_in' => 10000,
                 'date_start' => new \DateTimeImmutable(sprintf('+%d days', 30)),
                 'date_end' => new \DateTimeImmutable(sprintf('+%d days', 35)),
+                'type' => 'NEW',
+                'day' => 1,
+                'flight'=> 5,
+                'late_reg' => new \DateTimeImmutable(sprintf('+%d days', 35)),
+                'clock' => 12
             ],
             5 => [
                 'event_id' => '3',
@@ -59,6 +85,11 @@ class SubEventsSeeder extends Seeder
                 'buy_in' => 10000,
                 'date_start' => new \DateTimeImmutable(sprintf('+%d days', 30)),
                 'date_end' => new \DateTimeImmutable(sprintf('+%d days', 35)),
+                'type' => 'NEW',
+                'day' => 1,
+                'flight'=> 1,
+                'late_reg' => new \DateTimeImmutable(sprintf('+%d days', 35)),
+                'clock' => 12
             ],
 
         ];
@@ -71,6 +102,11 @@ class SubEventsSeeder extends Seeder
                 'buy_in' => $subEvent['buy_in'],
                 'date_start' => $subEvent['date_start'],
                 'date_end' => $subEvent['date_end'],
+                'type' => $subEvent['type'],
+                'day' => $subEvent['day'],
+                'flight'=>$subEvent['flight'],
+                'late_reg' =>$subEvent['late_reg'],
+                'clock' => $subEvent['clock']
             ]);
         }
 
