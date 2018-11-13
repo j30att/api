@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Http\Services\CMSHelper;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Queue;
 use League\Flysystem\Config;
@@ -47,7 +48,8 @@ class update extends Command
 
         echo " [*] Waiting for messages. To exit press CTRL+C\n";
         $callback = function ($msg) {
-            updateService::updateEvent(unserialize($msg->body));
+            $helper = new CMSHelper();
+            $helper->execute(unserialize($msg->body));
         };
         $channel->basic_consume($queuName, '', false, true, false, false, $callback);
         while (count($channel->callbacks)) {

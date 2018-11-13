@@ -8,14 +8,14 @@ use Illuminate\Console\Command;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
 
-class Request extends Command
+class GetPPData extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'get:entity';
+    protected $signature = 'get:data';
 
     /**
      * The console command description.
