@@ -16,13 +16,13 @@ class AddFieldsForEventsTableFromPpData extends Migration
         Schema::table('events', function (Blueprint $table){
             $table -> string('event_time_zone')->nullable();
             $table -> string('event_venue_address_str')->nullable();
-            $table -> timestamp('first_live_day')->nullable();
-            $table -> timestamp('last_live_day')->nullable();
-            $table -> timestamp('first_day_date')->nullable();
-            $table -> timestamp('last_day_date')->nullable();
-            $table -> timestamp('start_date_time')->nullable();
-            $table -> timestamp('late_reg')->nullable();
-            $table -> timestamp('time_zone')->nullable();
+            $table -> dateTime('first_live_day')->nullable();
+            $table -> dateTime('last_live_day')->nullable();
+            $table -> dateTime('first_day_date')->nullable();
+            $table -> dateTime('last_day_date')->nullable();
+            $table -> dateTime('start_date_time')->nullable();
+            $table -> dateTime('late_reg')->nullable();
+            $table -> string('time_zone')->nullable();
             $table -> string('currency')->nullable();
 
         });

@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class SubEvent extends Model
 {
+    const TYPE_LIVE = 1;
+    const TYPE_ONLINE = 2;
+
     protected $fillable =[
         'id',
         'event_id',

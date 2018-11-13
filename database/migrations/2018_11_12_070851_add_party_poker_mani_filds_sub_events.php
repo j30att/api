@@ -14,11 +14,11 @@ class AddPartyPokerManiFildsSubEvents extends Migration
     public function up()
     {
         Schema::table('sub_events', function (Blueprint $table){
-            $table -> string('type');
+            $table -> integer('type');
             $table -> integer('day');
-            $table -> string('flight');
+            $table -> string('flight')->nullable();
             $table -> timestamp('late_reg')->nullable();
-            $table -> integer('clock');
+            $table -> integer('clock')->nullable();
         });
     }
 

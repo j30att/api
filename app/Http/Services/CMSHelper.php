@@ -68,9 +68,8 @@ class CMSHelper
         }
     }
 
-    public function updateEvent($eventId): string
+    public function updateEvent($eventId)
     {
-        //https://dev.cms.mypartypokerlive.com/en/api/mobile/events/current-and-upcoming/countries?_format=json
         $eventUri = 'https://dev.cms.mypartypokerlive.com/en/api/web/2.3/events/event_only/' . $eventId;//.'?softdeleteable=0';
         $apiResource = $this->guzzle->get($eventUri);
 
@@ -78,15 +77,8 @@ class CMSHelper
             $event = Event::query()->find($eventId);
 
             $eventData = json_decode($apiResource->getBody());
+            $country = Country::query()->where('code', $eventData->event->eventCountry)->first();
 
-
-            $country_code = $eventData->event->eventCountry;
-            $country = json_decode(Country::query()->where('code', $country_code)->get());
-            $country_id = $country[0]->id;
-
-            dd($eventData->event);
-
-            //dd($eventData->event->eventCountry);
             if (is_null($eventData->event->deletedAt)) {
                 if (is_null($event)) {
                     $event = new Event();
@@ -94,66 +86,54 @@ class CMSHelper
                 }
 
                 $event->title = $eventData->event->eventName;
-                $event->date_start = $eventData->event->eventStartDate;
-                $event->date_end = $eventData->event->eventEndDate;
+                $event->date_start = Carbon::parse($eventData->event->eventStartDate);
+                $event->date_end = Carbon::parse($eventData->event->eventEndDate);
                 $event->buy_in = $eventData->event->eventBuyIn;
-
                 $event->slug = $eventData->event->eventNameSlug;
                 $event->logo = $eventData->event->eventLogo;
-
-                $event->country_id = $country_id;
-
+                $event->country_id = $country->id;
                 $event->event_time_zone = $eventData->event->eventTimeZone;
                 $event->event_venue_address_str = $eventData->event->eventVenueAddressStr;
-
                 $event->first_live_day = Carbon::parse($eventData->event->firstLiveDayDate);
                 $event->last_live_day = Carbon::parse($eventData->event->lastLiveDayDate);
                 $event->first_day_date = Carbon::parse($eventData->event->firstDayDate);
                 $event->last_day_date = Carbon::parse($eventData->event->lastDayDate);
                 $event->start_date_time = Carbon::parse($eventData->event->startDateTime);
                 $event->late_reg = Carbon::parse($eventData->event->lateReg);
-
                 $event->time_zone = $eventData->event->eventTimeZone;
                 $event->currency = $eventData->event->eventCurrency;
-
-
-
-
                 $event->save();
-
-                //dd($event);
-
-                $this->updateSchedule();
+                $this->updateSchedule($eventId);
 
             }
         }
 
     }
 
-    public function updateSchedule(){
+    public function updateSchedule($eventId)
+    {
 
-        $scheduleUri = 'https://dev.cms.mypartypokerlive.com/en/api/web/2.3/events/schedules/105';
+        $scheduleUri = 'https://dev.cms.mypartypokerlive.com/en/api/web/2.3/events/schedules/' . $eventId;
         $apiResource = $this->guzzle->get($scheduleUri);
         $event = json_decode($apiResource->getBody());
 
-
-        foreach ($event->event->days as $day){
+        foreach ($event->event->days as $day) {
             $subEvent = SubEvent::query()->find($day->id);
 
-            if (is_null($subEvent)){
+            if (is_null($subEvent)) {
                 $subEvent = new SubEvent();
                 $subEvent->id = $day->id;
             }
 
-            $subEvent->event_id = '1';
-            $subEvent->title    = 'sub_event';
-            $subEvent->fund     = 500;
-            $subEvent->buy_in   = 500;
-            $subEvent->type     = $day->type;
-            $subEvent->day      = $day->day;
-            $subEvent->flight   = $day->flight;
+            $subEvent->event_id = $eventId;
+            $subEvent->title = 'sub_event';
+            $subEvent->fund = 500;
+            $subEvent->buy_in = 500;
+            $subEvent->type = $day->type == 'live' ? SubEvent::TYPE_LIVE: SubEvent::TYPE_ONLINE ;
+            $subEvent->day = $day->day;
+            $subEvent->flight = $day->flight;
             $subEvent->late_reg = Carbon::parse($day->lateReg);
-            $subEvent->clock    = $day->clock;
+            $subEvent->clock = $day->clock;
             $subEvent->save();
 
         }
@@ -162,7 +142,6 @@ class CMSHelper
 
     public function updateCountries()
     {
-
 
 
         //todo куда идти  за странами по коду

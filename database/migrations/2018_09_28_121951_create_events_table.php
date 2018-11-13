@@ -23,12 +23,12 @@ class CreateEventsTable extends Migration
             $table->string('slug');
             $table->string('logo');
 
-            $table->text('description');
-            $table->double('fund');
-            $table->double('buy_in');
-            $table->double('reg_fee');
-            $table->timestamp('date_start')->nullable();
-            $table->timestamp('date_end')->nullable();
+            $table->text('description')->nullable();
+            $table->double('fund')->nullable();
+            $table->double('buy_in')->nullable();
+            $table->double('reg_fee')->nullable();
+            $table->dateTime('date_start')->nullable();
+            $table->dateTime('date_end')->nullable();
             $table->timestamps();
         });
     }

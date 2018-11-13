@@ -47,7 +47,6 @@ class update extends Command
 
         echo " [*] Waiting for messages. To exit press CTRL+C\n";
         $callback = function ($msg) {
-            echo ' [x] Received ', $msg->body, "\n";
             updateService::updateEvent(unserialize($msg->body));
         };
         $channel->basic_consume($queuName, '', false, true, false, false, $callback);
