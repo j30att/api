@@ -38,10 +38,10 @@ class CMSHelper
         Log::info('[x] Message received', [$msg]);
         try {
             $msgDetails = unserialize($msg);
-            Log::info('UNSERIALIZE', $msgDetails);
+            Log::info($msgDetails);
 
             $msgDetails = json_decode($msg);
-            Log::info('JSONDECODE', $msgDetails);
+            Log::info($msgDetails);
 
             switch ($msgDetails["entityName"]) {
                 case 'AppBundle\\Entity\\Event':
