@@ -21,7 +21,7 @@
 
                 <label class="modal_content__sale_title modal_content__sale_title_select">Flight</label>
                 <div class="modal_content__sale_select">
-                    <md-select class="md-no-underline form-Select-theme"
+                    <md-select class="md-no-underline"
                                ng-model="$ctrl.sale.sub_event_id"
                                ng-change="$ctrl.fillStatic()"
                                placeholder="Choose an subevent">
@@ -55,7 +55,7 @@
                     </div>
                     <div class="attributs_item attributs_item__border">
                         <span>Amount</span>
-                        <input type="text" placeholder="100%" ng-model="$ctrl.sale.amount" disabled>
+                        <input type="text" placeholder="100%" ng-model="$ctrl.sale.amount | currency:'$'" disabled>
                     </div>
                 </div>
             </div>

@@ -246,6 +246,9 @@
         margin-bottom: 12px;
         &_select {
           text-transform: capitalize;
+            md-select-menu{
+                margin-left: -10px !important;
+            }
         }
       }
       &_select {
@@ -278,6 +281,14 @@
             font-size: 18px;
             color: #000;
           }
+            input::placeholder{
+                color: #949494;
+            }
+
+            input:focus::placeholder{
+                color: transparent;
+            }
+
         }
         .attributs_item:first-child {
           width: 45%;
@@ -418,5 +429,8 @@
   }
 }
 
+.md-select-menu-container.md-active md-select-menu{
+    margin-left: -10px;
+}
 
 

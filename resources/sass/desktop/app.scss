@@ -43,6 +43,9 @@ body * :focus{
 ::-webkit-input-placeholder{
     color: #000000;
 }
+input:focus::placeholder{
+    color: transparent;
+}
 
 .your_profile_wr_display {
   display: block;

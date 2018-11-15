@@ -572,6 +572,10 @@
   text-transform: capitalize;
 }
 
+.modal_content__sale_title_select md-select-menu {
+  margin-left: -10px !important;
+}
+
 .modal_content__sale_select {
   width: 100%;
   height: 38px;
@@ -609,6 +613,30 @@
   padding-bottom: 20px;
   font-size: 18px;
   color: #000;
+}
+
+.modal_content__sale .attributs_wrapper .attributs_item input::-webkit-input-placeholder {
+  color: #949494;
+}
+
+.modal_content__sale .attributs_wrapper .attributs_item input::-ms-input-placeholder {
+  color: #949494;
+}
+
+.modal_content__sale .attributs_wrapper .attributs_item input::placeholder {
+  color: #949494;
+}
+
+.modal_content__sale .attributs_wrapper .attributs_item input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.modal_content__sale .attributs_wrapper .attributs_item input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.modal_content__sale .attributs_wrapper .attributs_item input:focus::placeholder {
+  color: transparent;
 }
 
 .modal_content__sale .attributs_wrapper .attributs_item:first-child {
@@ -785,6 +813,10 @@
   background-repeat: no-repeat;
   background-size: 24px;
   background-position: center;
+}
+
+.md-select-menu-container.md-active md-select-menu {
+  margin-left: -10px;
 }
 
 .event_wrapper {
@@ -3068,6 +3100,18 @@ body * :focus {
 
 ::-webkit-input-placeholder {
   color: #000000;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+input:focus::placeholder {
+  color: transparent;
 }
 
 .your_profile_wr_display {

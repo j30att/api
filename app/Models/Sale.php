@@ -92,6 +92,7 @@ class Sale extends Model
         }
     }
 
+
     public function calculateAmountRaise(){
         $raiseds = $this->bids;
         $raisedSumm = 0;
