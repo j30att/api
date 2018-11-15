@@ -33,14 +33,15 @@ class CMSHelper
     public function execute($msg)
     {
 
+        Log::info('ORIGINAL', $msg);
 
         Log::info('[x] Message received', [$msg]);
         try {
             $msgDetails = unserialize($msg);
-            $logContext = array(
-                $msgDetails["entityName"],
-                $msgDetails["entityId"],
-            );
+            Log::info('UNSERIALIZE', $msgDetails);
+
+            $msgDetails = json_decode($msg);
+            Log::info('JSONDECODE', $msgDetails);
 
             switch ($msgDetails["entityName"]) {
                 case 'AppBundle\\Entity\\Event':
