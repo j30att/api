@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class PPResponse extends Model
 {
-    const TYPE_PLACE_BID = 1;
-
+    const TYPE_PLACE_BID    = 1;
+    const TYPE_BID_CHANGE   = 2;
 
     protected $fillable = [
         'type',

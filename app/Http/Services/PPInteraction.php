@@ -79,8 +79,55 @@ class PPInteraction
 
     }
 
-    public function bidChange(){
+    public function bidChange(Bid $bid){
+        $user = Auth::user();
+        $sale = $bid->sale;
+        $ppUser = $user->ppUser;
+        $event = $sale->event;
+        $salerUser = $sale->creator;
+        $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/bidamendedinfo/';
 
+
+        $guzzleClient = new Client();
+
+
+        $header = [
+            'Content-Type'   =>'application/json',
+            'player-session' => $user->pp_partner_player_session,
+            'auth-token'     => 'staking:pg:Test:ReleaseB',
+            'partner-name'   => 'stakingapp'
+        ];
+
+        $body = [
+            'accountName'   =>  'pp_' . $ppUser->screen_name,
+            'newBidAmount'  =>  $bid->ammount * 2,
+            'oldBidAmount'  =>  $bid->ammount,
+            "tournamentDetails"=>[
+                "sellerAccountId"   =>'pp_' . $salerUser->ppUser->screen_name,
+                "mainEvent"         =>$event->title,
+                "tournamentId"      =>$event->id,
+                "venuId"            =>$event->venue_id,
+                "venuName"          =>$event->venue_name,
+                "currency"          =>$event->currency
+            ]
+        ];
+
+        try{
+            $response = $guzzleClient->request('post', $uri, [
+                'headers'   => $header,
+                'json'      => $body
+            ]);
+
+
+            $PPResponse = new PPResponse();
+            $PPResponse->bid_id = $bid->id;
+            $PPResponse->type = PPResponse::TYPE_BID_CHANGE;
+            $PPResponse->response = $response->getBody()->getContents();
+            $PPResponse->save();
+        }catch (\Exception $e){
+            Log::error($e->getMessage());
+            Log::info(serialize($body));
+        }
     }
 
     public function bidCancel()
