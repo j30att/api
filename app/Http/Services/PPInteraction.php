@@ -11,17 +11,20 @@ namespace App\Http\Services;
 
 use App\Models\Bid;
 use App\Models\Event;
+use App\Models\PPResponse;
 use App\Models\Sale;
 use Carbon\Carbon;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class PPInteraction
 {
 
-    public static function bidPlace(Bid $bid, Sale $sale)
+    public static function bidPlace(Bid $bid)
     {
         $user = Auth::user();
+        $sale = $bid->sale;
         $ppUser = $user->ppUser;
         $event = $sale->event;
         $salerUser = $sale->creator;
@@ -35,11 +38,11 @@ class PPInteraction
             'Content-Type'   =>'application/json',
             'player-session' => $user->pp_partner_player_session,
             'auth-token'     => 'staking:pg:Test:ReleaseB',
-            'partner-name'   => 'partner-name'
+            'partner-name'   => 'stakingapp'
         ];
 
         $body = [
-            'accountId'                 => $ppUser->screen_name,
+            'accountId'                 => 'pp_' . $ppUser->screen_name,
             'amount'                    => $bid->amount * 100,
             'transactionType'           => Bid::BID_PLACE,
             'requestorReferenceId'      => $bid->transaction_code,
@@ -55,8 +58,24 @@ class PPInteraction
             ]
         ];
 
-        $response = $guzzleClient->request('post', $uri,['headers'=>$header, 'body'=>$body]);
-        dd($response);
+        try{
+            $response = $guzzleClient->request('post', $uri, [
+                'headers'   => $header,
+                'json'      => $body
+            ]);
+
+
+            $PPResponse = new PPResponse();
+            $PPResponse->bid_id = $bid->id;
+            $PPResponse->type = $PPResponse::TYPE_PLACE_BID;
+            $PPResponse->response = $response->getBody()->getContents();
+            $PPResponse->save();
+        }catch (\Exception $e){
+            Log::error($e->getMessage());
+            Log::info(serialize($body));
+        }
+
+
 
     }
 
