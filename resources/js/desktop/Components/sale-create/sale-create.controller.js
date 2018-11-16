@@ -35,8 +35,7 @@ class SaleCreate {
         });
 
         this.$scope.$watch('isSidenavOpen', (fixed) => {
-            console.log(fixed);
-            this.$state.modalOpened = fixed
+            this.$state.modalOpened = fixed;
         });
 
     }
@@ -80,7 +79,6 @@ class SaleCreate {
         });
         }
 
-        console.log(this.sale);
         this.events.forEach(function (value, key) {
             if (value.id == self.sale.event_id) {
                 self.static.buy_in = value.buy_in;
@@ -111,8 +109,14 @@ class SaleCreate {
     createSale(){
 
         if(!this.validate()) return false;
-        this.SalesResourceService.createMySale(this.sale).then(response => {
+        this.SalesResourceService.createMySale(this.sale, this.type).then(response => {
             if (response.data.status == 1){
+                if (this.type == 'row'){
+                    this.sales.active = response.data.data;
+                }
+                if (this.type == 'list'){
+                    this.sales = response.data.data;
+                }
                 this.close('right');
             } else {
 
@@ -132,7 +136,8 @@ SaleCreate.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http', '
 
 export const SaleCreateComponent = {
     bindings: {
-        func:     '&',
+        sales:     '=',
+        type:      '='
     },
     template: require('./sale-create.template.html'),
     controller: SaleCreate,

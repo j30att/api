@@ -7,6 +7,7 @@
  */
 
 namespace App\Http\Controllers;
+use App\Http\Services\CloudderService;
 use App\Models\ImageAttachment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -38,6 +39,7 @@ class ImageAttachmentController
             $fileName = ImageAttachment::generateFileName($file->getClientOriginalExtension());
             $filePath = ImageAttachment::generateFileFolder($fileName);
             $file->move($filePath, $fileName);
+
            // ImageOptimizer::optimize($filePath.$fileName);
             $data = [
                 'original_name' => $file->getClientOriginalName(),
@@ -47,10 +49,11 @@ class ImageAttachmentController
             $newImage = ImageAttachment::create($data);
             $user = Auth::user();
             $user->avatar()->associate($newImage->id);
+            $clouder = CloudderService::upload();
+            $user->avatar = $clouder['url'];
             $user->save();
 
-
-            return response()->json(['status' => 1, 'avatar' => $user->profile_avatar_url]);
+            return response()->json(['status' => 1, 'avatar' => $clouder['url']]);
 
         }catch(\Exception $e){
             Log::error($e->getMessage());

@@ -38,8 +38,9 @@ class SalesResourceService {
         return this.$http.post(SALE_API + '/filtered', {filter: filter});
     };
 
-    createMySale(sale) {
-        return this.$http.post(SALE_CREATE, {sale});
+    createMySale(sale, type) {
+
+        return this.$http.post(SALE_CREATE, {sale, type});
     }
 
     updateMySale(sale){

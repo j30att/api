@@ -1,5 +1,6 @@
-<md-sidenav class="md-sidenav-right full_height" style="min-width: 500px" md-is-open="isSidenavOpen" md-component-id="right_login">
-    <md-content ng-if="$ctrl.state == 1">
+<md-sidenav class="md-sidenav-right full_height" style="min-width: 500px" md-is-open="isSidenavOpen" md-component-id="right_login" ng-keydown="$ctrl.down($event)">
+
+    <md-content ng-if="$ctrl.state == 1" >
         <div class="modal_content">
             <div class="your_profile__title">
                 Log In

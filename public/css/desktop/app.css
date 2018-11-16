@@ -2012,11 +2012,9 @@ md-dialog-actions .md-confirm-button {
   border-radius: 100%;
   overflow: hidden;
   margin-right: 16px;
-}
-
-.your_profile__pic img {
-  width: auto;
-  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .your_profile__name {
@@ -2038,6 +2036,7 @@ md-dialog-actions .md-confirm-button {
   color: #999999;
   width: 150px;
   font-weight: 100;
+  cursor: pointer;
 }
 
 .link_party__pk {
@@ -4378,5 +4377,11 @@ a {
 
 .input_disabled {
   background-color: transparent;
+}
+
+.profile_img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 

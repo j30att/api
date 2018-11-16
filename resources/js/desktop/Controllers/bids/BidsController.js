@@ -13,14 +13,12 @@ class BidsController {
         this.bidsTypes = BIDS_TYPES;
         this.bidsActive = this.$state.params.type;
         this.getBids();
-        console.log(this.bidsActive, 'this.bidsActive');
 
     }
 
     $onInit(){
         let allBids = require('../../../common/api/bids-lists.json');
         this.bids = allBids.data[this.bidsActive];
-        //console.log(this.bids, 'this bids');
     }
 
     getBids(){

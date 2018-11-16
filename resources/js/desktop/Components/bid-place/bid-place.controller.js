@@ -44,6 +44,12 @@ class BidPlace {
         this.$mdSidenav(componentId).close();
     }
 
+    changeYourBid(bid){
+        this.bid = bid
+
+    }
+
+
 };
 
 BidPlace.$inject = ['$scope', 'BidsResourceService', '$mdSidenav', '$http', 'SalesService', '$timeout', '$state'];

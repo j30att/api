@@ -15,6 +15,12 @@ class Login {
 
         this.userEmail = null;
         this.userPassword = null;
+
+    }
+    down(event){
+        if(event.keyCode === 13){
+            this.sendAuthData(event);
+        }
     }
 
     $onInit() {
