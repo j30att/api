@@ -19,7 +19,7 @@ class BetsManageService
 
     public static function linkBidToSale(Bid $bid)
     {
-        $sale = Sale::find($bid->sale_id);
+        $sale = $bid->sale;
 
         if (self::equationLinkBids($bid, $sale)) {
             $bid->status = Bid::BIDS_MATCHED;
