@@ -223,7 +223,11 @@
       &:last-child {
         flex-grow: 1;
         border-radius: 0 4px 4px 0;
-      }
+      }&:nth-child(3) {
+           flex-grow: 1;
+           border-radius: 0 4px 4px 0;
+       }
+
     }
   }
 

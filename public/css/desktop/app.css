@@ -279,6 +279,14 @@
   border-radius: 0 4px 4px 0;
 }
 
+.bids-common__items span:nth-child(3),
+.bids-common__items input:nth-child(3) {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-radius: 0 4px 4px 0;
+}
+
 .sale {
   /*active sales table*/
   /*create sale*/
