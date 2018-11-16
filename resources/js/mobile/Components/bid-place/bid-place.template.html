@@ -66,7 +66,7 @@
 
                     </div>
                     <div class="bids_edit_pen" role="button" tabindex="0" ng-if="key == 'unmatched'">
-                        <button class="bids_edit_pen__btn" ng-click="$ctrl.changeYourBid(key)"></button>
+                        <button class="bids_edit_pen__btn" ng-click="$ctrl.changeYourBid(bid)"></button>
                     </div>
                 </div>
 
@@ -117,6 +117,7 @@
                     Place
                 </div>
             </div>
+
             <div class="modal_add_bid"
                  ng-if="!$ctrl._opts.stateCreate" ng-click="$ctrl.setState()">
                 Add new bid
