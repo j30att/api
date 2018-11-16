@@ -45,6 +45,7 @@ class InvestController {
             .then(response => {
                 this.sales = response.data.data;
                 this._opts.dataLoad = true;
+                console.log(this.sales, 'this.sales');
             });
     }
 

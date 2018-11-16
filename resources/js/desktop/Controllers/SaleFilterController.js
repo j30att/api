@@ -30,7 +30,6 @@ class SaleFilterController {
         this.$http.get(SALE_INDEX, {params: {status: this.filter}})
             .then(response => {
                 this.sales = response.data.data;
-                console.log(this.sales, 'this.sales');
                 this._opts.dataLoad = true;
             });
     }

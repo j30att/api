@@ -28,10 +28,10 @@ class BidController extends Controller
 
         if ($request->get('user_id') != $user->id) App::abort(401);
 
-        $bidsMutched = Bid::query()->where(['status' => Bid::BIDS_MATCHED, 'user_id' => $user->id])->with('sale.subevent.event')->get();
-        $bidsUnmutched = Bid::query()->where(['status' => Bid::BIDS_UNMATCHED, 'user_id' => $user->id])->with('sale.subevent.event')->get();
-        $bidsSetted = Bid::query()->where(['status' => Bid::BIDS_SETTLED, 'user_id' => $user->id])->with('sale.subevent.event')->get();
-        $bidsCanceled = Bid::query()->where(['status' => Bid::BIDS_CANCELED, 'user_id' => $user->id])->with('sale.subevent.event')->get();
+        $bidsMutched    = Bid::query()->where(['status'=> Bid::BIDS_MATCHED, 'user_id'=>$user->id])->with('sale.subevent.event')->limit(3)->get();
+        $bidsUnmutched  = Bid::query()->where(['status'=> Bid::BIDS_UNMATCHED, 'user_id'=>$user->id])->with('sale.subevent.event')->limit(3)->get();
+        $bidsSetted     = Bid::query()->where(['status'=> Bid::BIDS_SETTLED, 'user_id'=>$user->id])->with('sale.subevent.event')->limit(3)->get();
+        $bidsCanceled   = Bid::query()->where(['status'=> Bid::BIDS_CANCELED, 'user_id'=>$user->id])->with('sale.subevent.event')->limit(3)->get();
 
         return response()->json(['data' => [
             'matched' => BidResource::collection($bidsMutched),
@@ -113,8 +113,33 @@ class BidController extends Controller
     }
 
 
+
+
     public function index(Request $request)
     {
+    /*    $user = Auth::user();
+        $filter = $request->all();
+
+
+        if(array_key_exists('status', $filter)){
+                $bids = Bid::query()->where($filter)
+                    ->with('sale.subevent.event')
+                    ->with('investor')
+                    ->get();
+            return BidResource::collection($bids);
+        }
+        $bidsMutched    = Bid::query()->where(['status'=> Bid::BIDS_MATCHED])->with('sale.subevent.event')->get();
+        $bidsUnmutched  = Bid::query()->where(['status'=> Bid::BIDS_UNMATCHED])->with('sale.subevent.event')->get();
+        $bidsSetted     = Bid::query()->where(['status'=> Bid::BIDS_SETTLED])->with('sale.subevent.event')->get();
+        $bidsCanceled   = Bid::query()->where(['status'=> Bid::BIDS_CANCELED])->with('sale.subevent.event')->get();
+
+        return response()->json(['data' =>[
+            'matched'   => BidResource::collection($bidsMutched),
+            'unmatched' => BidResource::collection($bidsUnmutched),
+            'settled' => BidResource::collection($bidsSetted),
+            'canceled' => BidResource::collection($bidsCanceled)]
+        ]);
+*/
 
     }
 
@@ -131,7 +156,7 @@ class BidController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -142,7 +167,7 @@ class BidController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -153,7 +178,7 @@ class BidController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -164,8 +189,8 @@ class BidController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  int $id
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)

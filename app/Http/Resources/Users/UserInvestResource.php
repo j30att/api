@@ -16,7 +16,7 @@ class UserInvestResource extends JsonResource
     {
         return [
             'name' => $this->name,
-            'avatar' => 'to do avatar url'
+            'avatar' => $this->avatar
         ];
         return parent::toArray($request);
     }
