@@ -59,5 +59,6 @@ class ImageAttachment extends Model
 
     public function getUrlAttribute () {
         return $this->getUrl();
+
     }
 }

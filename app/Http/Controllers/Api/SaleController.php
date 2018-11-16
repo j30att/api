@@ -40,6 +40,7 @@ class SaleController extends Controller
             ->get()
             ->sortBy('event.date_end');
 
+
         return SaleInvestResource::collection($sales);
     }
 
@@ -68,8 +69,11 @@ class SaleController extends Controller
 
         $limit = $request->get('limit');
 
-        $saleActive = Sale::query()->where(['status' => Sale::SALE_ACTIVE, 'user_id' => $user->id])->limit($limit)->get();
-        $saleCanceled = Sale::query()->where(['status' => Sale::SALE_CLOSED, 'user_id' => $user->id])->limit($limit)->get();
+
+
+        $saleActive = Sale::query()->where(['status' => Sale::SALE_ACTIVE, 'user_id' => $user->id])->limit($limit)->latest()->get();
+        $saleCanceled = Sale::query()->where(['status' => Sale::SALE_CLOSED, 'user_id' => $user->id])->limit($limit)->latest()->get();
+
         return response()->json([
             'data' => [
                 'active' => SaleResource::collection($saleActive),
@@ -236,9 +240,23 @@ class SaleController extends Controller
      */
     public function store(Request $request)
     {
+        $user = Auth::user();
+
         $data = $request->get('sale');
+        $type = $request->get('type');
+
+        if ($user->id != $data['user_id']){
+            return response(json_encode(['status' => 0, 'data' => 'unauthorized user']));
+        }
         $sale = Sale::create($data);
-        return response(json_encode(['status' => 1, 'data' => $sale]));
+
+        if ($type == 'row'){
+            $saleActive = Sale::query()->where(['status' => Sale::SALE_ACTIVE, 'user_id' => $user->id])->limit(3)->latest()->get();
+        }
+        if ($type == 'list'){
+            $saleActive = Sale::query()->where(['status' => Sale::SALE_ACTIVE, 'user_id' => $user->id])->orderByDesc('id')->get();
+        }
+        return response(json_encode(['status' => 1, 'data' => SaleResource::collection($saleActive)]));
     }
 
     /**

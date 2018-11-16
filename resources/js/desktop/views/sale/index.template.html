@@ -32,10 +32,10 @@
                                 <span>Closes</span><span>73 days</span>
                             </div>
                             <div class="sale_card__options_column">
-                                <span>Bid</span><span>1.11</span>
+                                <span>Bid</span><span ng-bind="item.markup">1.11</span>
                             </div>
                             <div class="sale_card__options_column">
-                                <span>Value</span><span>£2,404</span>
+                                <span>Value</span><span ng-bind="item.amount | currency:'£  '">£2,404</span>
                             </div>
                             <div class="sale_card__options_column">
                                 <span>Start time</span><span>Closed</span>
@@ -57,5 +57,5 @@
         </div>
     </div>
 </div>
-<sale-create></sale-create>
+<sale-create sales="SaleCtrl.sales" type="'row'"></sale-create>
 <sale-manage></sale-manage>

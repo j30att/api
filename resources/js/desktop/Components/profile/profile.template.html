@@ -6,7 +6,7 @@
                 <div class="your_profile_close"></div>
             </div>
             <div class="your_profile_info">
-                <div class="your_profile__pic"><img src="/images/desk/players_img/pl_big_pic.png" alt="player photo"></div>
+                <div class="your_profile__pic" style="background-image: url({%$ctrl.user.avatar%})"></div>
                 <div class="your_profile__name">
                     <!--James. Co-->
                     <span ng-bind="$ctrl.user.name"></span>
@@ -28,7 +28,10 @@
             </div>
             <div class="link_party_pk">
                 <div class="link_party_inf">Get a fast access to your bids and money, log in with Party poker account </div>
-                <div class="link_party_btn">Link Party Poker account</div>
+                <a href="https://releaseb-ciwic.ivycomptech.co.in/en_US/VC/login-staking.html?redirect_URI=http://devpoker.itsumma.ru">
+                    <div class="link_party_btn">Link Party Poker account</div>
+                </a>
+                
             </div>
             <div class="your_profile_nav">
                 <ul class="pr_nav_list">
