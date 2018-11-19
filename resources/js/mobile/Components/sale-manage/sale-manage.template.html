@@ -2,7 +2,7 @@
             md-is-open="isSidenavOpen"
             md-component-id="right_manage">
     <md-content class="place_wrapper place_wrapper__sale">
-            <div class="my_sale__header">
+            <div class="my_sale__header" style="z-index: 70 !important;">
                 <div class="header_modal">
                     <div class="header_close" ng-click="$ctrl.close('right_manage')"></div>
                     <div class="header_title">My sale</div>
@@ -35,7 +35,7 @@
                         <div class="sale_card_list_atr_item manage_sale_atr_item">
                             <span>Markup</span>
 
-                            <input type="number" ng-model="$ctrl.sale.markup">
+                            <input type="number" ng-model="$ctrl.sale.markup" id="getFocus">
                         </div>
                         <div class="sale_card_list_atr_item manage_sale_atr_item">
                             <span>Share</span>
@@ -69,7 +69,7 @@
                              ng-bind="bid.share"></div>
                         <div class="modal_type_bids__item modal_bids_item_color_highest">
                             <div ng-bind="bid.amount">$1,182.22</div>
-                            <div class="confirm" ng-click="$ctrl.apllyBid(bid)"></div>
+                            <div class="confirm" ng-click="$ctrl.showBidsConfirm(bid)"></div>
                         </div>
                 </div>
                 <div class="my_sale_attention">
