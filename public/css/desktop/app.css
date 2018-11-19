@@ -664,13 +664,20 @@
   overflow: hidden;
 }
 
-.modal_content__sale .attributs_wrapper .attributs_item__border input {
+.modal_content__sale .attributs_wrapper .attributs_item__border input,
+.modal_content__sale .attributs_wrapper .attributs_item__border div {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.04);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 8px 0 10px 12px;
   border-radius: 6px;
+}
+
+.modal_content__sale .attributs_wrapper .attributs_item__border > div {
+  height: 42px;
+  color: black;
+  font-size: 18px;
 }
 
 .modal_foter {
