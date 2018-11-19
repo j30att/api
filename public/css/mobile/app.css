@@ -12577,6 +12577,49 @@ md-checkbox.md-formSelect-theme.md-checked .md-icon {
   background-color: #007fed !important;
 }
 
+md-dialog {
+  border-radius: 12px !important;
+}
+
+md-dialog md-dialog-content {
+  border-bottom: 1px solid rgba(77, 77, 77, 0.3);
+}
+
+md-dialog md-dialog-content h2 {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: #000 !important;
+  text-align: center !important;
+}
+
+md-dialog md-dialog-content .md-dialog-content-body {
+  font-size: 13px !important;
+  color: #000 !important;
+  text-align: center !important;
+}
+
+md-dialog md-dialog-actions {
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  padding: 0 !important;
+}
+
+md-dialog md-dialog-actions .md-button {
+  width: 50%;
+  padding: 0;
+  color: #000 !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  height: 52px;
+  text-transform: capitalize !important;
+}
+
+md-dialog md-dialog-actions .md-button:first-child {
+  border-right: 1px solid rgba(77, 77, 77, 0.3);
+}
+
 body,
 html {
   -webkit-overflow-scrolling: touch;

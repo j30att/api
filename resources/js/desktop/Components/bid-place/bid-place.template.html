@@ -82,7 +82,8 @@
             <div class="modal_foter">
                 <div class="modal_foter__buttons">
                     <div class="button_text" role="button" tabindex="0" ng-click="$ctrl.close('right')">Cancel</div>
-                    <div class="button_blue" role="button" tabindex="0" ng-click="$ctrl.saveMyBid()">Place a bid</div>
+                    <div class="button_blue" role="button" tabindex="0" ng-click="$ctrl.saveMyBid()" ng-if="$ctrl.user != null">Place a bid</div>
+
                 </div>
             </div>
         </div>

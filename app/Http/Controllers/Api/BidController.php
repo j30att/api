@@ -69,12 +69,12 @@ class BidController extends Controller
             $data = $request->get('bid');
             if ($user->id != $data['user_id']) App::abort(401);
 
-            DB::beginTransaction();
             $bid = Bid::create($data);
             $bid = ManageService::linkBidToSale($bid);
-            PPInteraction::bidPlace($bid);
 
-            DB::commit();
+            if ($bid->status == Bid::BIDS_MATCHED) {
+                ManageService::manageTransaction($bid);
+            }
 
             $highest = Bid::query()
                 ->where('sale_id', $bid->sale_id)

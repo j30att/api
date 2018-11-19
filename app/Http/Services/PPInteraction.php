@@ -10,6 +10,7 @@ namespace App\Http\Services;
 
 
 use App\Models\Bid;
+use App\Models\PPBid;
 use App\Models\PPRequest;
 use App\Models\PPResponse;
 use App\Models\Sale;
@@ -62,7 +63,6 @@ class PPInteraction
         ];
 
 
-
         try {
             $ppRequest = new PPRequest();
             $ppRequest->bid_id = $bid->id;
@@ -77,7 +77,8 @@ class PPInteraction
                 'json' => $body
             ]);
 
-            $responseContent = json_decode($response->getBody()->getContents(),1);
+            $responseContent = json_decode($response->getBody()->getContents(), 1);
+
 
             $PPResponse = new PPResponse();
             $PPResponse->bid_id = $bid->id;
@@ -90,7 +91,20 @@ class PPInteraction
             $PPResponse->error_description = $responseContent['errorDescription'];
 
             $PPResponse->p_p_request = $ppRequest->id;
-            //$PPResponse->save();
+            $PPResponse->save();
+
+            $PPBid = false;
+            if ($responseContent['status'] == 'SUCCESS'){
+                $PPBid = new PPBid();
+                $PPBid->pp_bid_id = $responseContent['walletReferenceId'];
+                $PPBid->sale_id = $sale->id;
+                $PPBid->amount = $bid->amount;
+                $PPBid->status = PPResponse::TYPE_PLACE_BID;
+                $PPBid->save();
+            }
+            return $PPBid;
+
+
         } catch (\Exception $e) {
             Log::error($e->getMessage());
             Log::info(serialize($body));
@@ -99,7 +113,7 @@ class PPInteraction
 
     }
 
-    public static function bidChange(Bid $bid, $oldAmount)
+    public static function bidChange(Bid $bid, PPBid $PPBid)
     {
         $sale = $bid->sale;
         $event = $sale->event;
@@ -114,6 +128,7 @@ class PPInteraction
 
         $guzzleClient = new Client();
 
+        $newAmount = $PPBid->amount + $bid->amount;
 
         $header = [
             'Content-Type' => 'application/json',
@@ -124,8 +139,8 @@ class PPInteraction
 
         $body = [
             'accountName' => $ppUser->party_poker_login,
-            'newBidAmount' => (integer)($bid->amount * 100),
-            'oldBidAmount' => (integer)($oldAmount*100),
+            'newBidAmount' => (integer)($newAmount * 100),
+            'oldBidAmount' => (integer)($PPBid->amount * 100),
             "tournamentDetails" => [
                 "sellerAccountId" => $ppCreator->party_poker_login,
                 "mainEvent" => $event->title,
@@ -139,7 +154,7 @@ class PPInteraction
         try {
             $ppRequest = new PPRequest();
             $ppRequest->bid_id = $bid->id;
-            $ppRequest->transaction_type = PPRequest::TYPE_PLACE_BID;
+            $ppRequest->transaction_type = PPRequest::TYPE_BID_CHANGE;
             $ppRequest->amount = $bid->amount;
             $ppRequest->headers = json_encode($header);
             $ppRequest->body = json_encode($body);
@@ -151,7 +166,7 @@ class PPInteraction
                 'json' => $body
             ]);
 
-            $responseContent = json_decode($response->getBody()->getContents(),1);
+            $responseContent = json_decode($response->getBody()->getContents(), 1);
 
             $PPResponse = new PPResponse();
             $PPResponse->bid_id = $bid->id;
@@ -165,51 +180,100 @@ class PPInteraction
 
             $PPResponse->p_p_request = $ppRequest->id;
             $PPResponse->save();
+
+
+            if ($responseContent['status'] == 'SUCCESS'){
+
+                $PPBid->amount = $newAmount;
+                $PPBid->status = PPResponse::TYPE_BID_CHANGE;
+                $PPBid->save();
+                return $PPBid;
+            }
+            return false;
+
         } catch (\Exception $e) {
             Log::error($e->getMessage());
             Log::info(serialize($body));
         }
     }
 
-    public static function bidCancel(Bid $bid)
+    public static function bidCancel(Bid $bid = null, Sale $sale = null)
     {
-        $user = Auth::user();
-        $sale = $bid->sale;
-        $ppUser = $user->ppUser;
-        $event = $sale->event;
-        $salerUser = $sale->creator;
+        $body =[];
+        $header =[];
+        if (!is_null($bid)) {
+            $investor = $bid->investor;
+            $sale = $bid->sale;
+            $ppUser = $investor->ppUser;
+            $event = $sale->event;
+            $salerUser = $sale->creator;
+
+            $header = [
+                'Content-Type' => 'application/json',
+                'player-session' => $ppUser->session,
+                'auth-token' => 'staking:pg:Test:ReleaseB',
+                'partner-name' => 'stakingapp'
+            ];
+
+            $body = [
+                'accountId' => $ppUser->party_poker_login,
+                'amount' => (integer)$bid->amount * 100,
+                'transactionType' => Bid::BID_CANCEL,
+                'requestorReferenceId' => $bid->transaction_code,
+                'transactionInitiatedDate' => $bid->transaction_initiated_date,
+                'brand' => 'PARTYPOKER',
+                "tournamentDetails" => [
+                    "sellerAccountId" => $salerUser->ppUser->party_poker_login,
+                    "mainEvent" => $event->title,
+                    "tournamentId" => $event->id,
+                    "venuId" => $event->venue_id,
+                    "venuName" => $event->venue_name,
+                    "currency" => $event->currency
+                ]
+            ];
+
+        } else {
+            $saleRequest = PPRequest::query()
+                ->where('sale_id', $sale->id)
+                ->where('transaction_type', PPRequest::TYPE_BID_REMAINING)
+                ->with(['response'=>function($query){
+                   $query->where('status', 'SUCCESS');
+                }])->first();
+
+            $event= $sale->event;
+            $salerUser = $sale->creator;
+            $ppUser = $salerUser->ppUser;
+            $header = [
+                'Content-Type' => 'application/json',
+                'player-session' => $ppUser->session,
+                'auth-token' => 'staking:pg:Test:ReleaseB',
+                'partner-name' => 'stakingapp'
+            ];
+            $body = [
+                'accountId' => $ppUser->party_poker_login,
+                'amount' => $saleRequest->amount,
+                'transactionType' => Bid::BID_CANCEL,
+                'requestorReferenceId' => $sale->transaction_code,
+                'transactionInitiatedDate' => $sale->transaction_initiated_date,
+                'brand' => 'PARTYPOKER',
+                "tournamentDetails" => [
+                    "sellerAccountId" => $salerUser->ppUser->party_poker_login,
+                    "mainEvent" => $event->title,
+                    "tournamentId" => $event->id,
+                    "venuId" => $event->venue_id,
+                    "venuName" => $event->venue_name,
+                    "currency" => $event->currency
+                ]
+            ];
+
+        }
+
         $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/transaction/';
-
         $guzzleClient = new Client();
-
-        $header = [
-            'Content-Type' => 'application/json',
-            'player-session' => $user->pp_partner_player_session,
-            'auth-token' => 'staking:pg:Test:ReleaseB',
-            'partner-name' => 'stakingapp'
-        ];
-
-        $body = [
-            'accountId' => 'pp_' . $ppUser->screen_name,
-            'amount' => $bid->amount * 100,
-            'transactionType' => Bid::BID_CANCEL,
-            'requestorReferenceId' => $bid->transaction_code,
-            'transactionInitiatedDate' => $bid->transaction_initiated_date,
-            'brand' => 'PARTYPOKER',
-            "tournamentDetails" => [
-                "sellerAccountId" => 'pp_' . $salerUser->ppUser->screen_name,
-                "mainEvent" => $event->title,
-                "tournamentId" => $event->id,
-                "venuId" => $event->venue_id,
-                "venuName" => $event->venue_name,
-                "currency" => $event->currency
-            ]
-        ];
-
         try {
             $ppRequest = new PPRequest();
             $ppRequest->bid_id = $bid->id;
-            $ppRequest->transaction_type = PPRequest::TYPE_PLACE_BID;
+            $ppRequest->transaction_type = PPRequest::TYPE_BID_CANCEL;
             $ppRequest->amount = $bid->amount;
             $ppRequest->headers = json_encode($header);
             $ppRequest->body = json_encode($body);
@@ -220,15 +284,13 @@ class PPInteraction
                 'json' => $body
             ]);
 
-            $responseContent = json_decode($response->getBody()->getContents(),1);
-
+            $responseContent = json_decode($response->getBody()->getContents(), 1);
 
             $PPResponse = new PPResponse();
             $PPResponse->bid_id = $bid->id;
             $PPResponse->type = PPResponse::TYPE_BID_CANCEL;
             $PPResponse->response = $response->getBody()->getContents();
             $PPResponse->wallet_references_id = $responseContent['walletReferenceId'];
-
             $PPResponse->status = $responseContent['status'];
             $PPResponse->error_code = $responseContent['errorCode'];
             $PPResponse->error_description = $responseContent['errorDescription'];
@@ -242,7 +304,7 @@ class PPInteraction
         }
     }
 
-    public static function bidClosure(Bid $bid)
+    public static function bidClosure(array $transactions)
     {
         $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/bidClosure/';
 
@@ -256,35 +318,30 @@ class PPInteraction
         ];
 
         $body = [
-            'transactionIds' => []
+            'transactionIds' => $transactions
         ];
 
         try {
             $ppRequest = new PPRequest();
-            $ppRequest->bid_id = $bid->id;
-            $ppRequest->transaction_type = PPRequest::TYPE_PLACE_BID;
-            $ppRequest->amount = $bid->amount;
+            $ppRequest->transaction_type = PPRequest::TYPE_BID_CLOSURE;
             $ppRequest->headers = json_encode($header);
             $ppRequest->body = json_encode($body);
             $ppRequest->save();
+
 
             $response = $guzzleClient->request('post', $uri, [
                 'headers' => $header,
                 'json' => $body
             ]);
-
-            $responseContent = json_decode($response->getBody()->getContents(),1);
+            $responseContent = json_decode($response->getBody()->getContents(), 1);
 
             $PPResponse = new PPResponse();
-            $PPResponse->bid_id = $bid->id;
+
             $PPResponse->type = PPResponse::TYPE_BID_CLOSURE;
             $PPResponse->response = $response->getBody()->getContents();
-
-
             $PPResponse->status = $responseContent['status'];
             $PPResponse->error_code = $responseContent['errorCode'];
             $PPResponse->error_description = $responseContent['errorDescription'];
-
             $PPResponse->p_p_request = $ppRequest->id;
             $PPResponse->save();
         } catch (\Exception $e) {
@@ -332,7 +389,7 @@ class PPInteraction
 
             $ppRequest = new PPRequest();
             $ppRequest->sale_id = $sale->id;
-            $ppRequest->transaction_type = PPRequest::TYPE_PLACE_BID;
+            $ppRequest->transaction_type = PPRequest::TYPE_BID_REMAINING;
             $ppRequest->amount = $remaining;
             $ppRequest->headers = json_encode($header);
             $ppRequest->body = json_encode($body);
@@ -343,7 +400,7 @@ class PPInteraction
                 'headers' => $header,
                 'json' => $body
             ]);
-            $responseContent = json_decode($response->getBody()->getContents(),1);
+            $responseContent = json_decode($response->getBody()->getContents(), 1);
 
             $PPResponse = new PPResponse();
             $PPResponse->sale_id = $sale->id;
@@ -375,12 +432,12 @@ class PPInteraction
         ];
 
         try {
-        $response = $guzzleClient->request('POST', $uri, [
-            'headers' => $header,
-            'json' => ['date'=> "01-11-2018"]
-        ]);
+            $response = $guzzleClient->request('POST', $uri, [
+                'headers' => $header,
+                'json' => ['date' => "01-11-2018"]
+            ]);
 
-        dd($response->getBody()->getContents());
+            dd($response->getBody()->getContents());
         } catch (\Exception $e) {
             Log::error($e->getMessage());
 
