@@ -1,4 +1,4 @@
-import {EVENTS_API, SALE_ACTIVE, SUBEVENTS_INDEX} from "../../../common/Constants";
+import {EVENTS_API, FLIGH_FILTER, SALE_ACTIVE, SUBEVENTS_INDEX} from "../../../common/Constants";
 
 
 class SaleCreate {
@@ -58,9 +58,9 @@ class SaleCreate {
 
     getSubevents() {
         this.fillStatic();
-        this.$http.get(SUBEVENTS_INDEX, {params: {event_id: this.sale.event_id}})
+        this.$http.post(FLIGH_FILTER, {event_id: this.sale.event_id})
             .then(response => {
-                this.subevents = response.data.data;
+                this.flights = response.data.data;
             });
     }
 
@@ -92,28 +92,20 @@ class SaleCreate {
         return true;
     }
 
-    /*showSaleConfirm(sale) {
-        let confirm = this.$mdDialog.confirm()
-            .parent(angular.element(document.querySelector('[md-component-id="right"]')))
-            .htmlContent(
-                `
-                <div>Are you sure?</div>`)
-            .ok('Accept')
-            .cancel('Cancel');
-
-        this.$mdDialog.show(confirm).then(() => {
-        }, () => {});
-    }*/
-
     createSale(){
         if(!this.validate()) return false;
         this.SalesResourceService.createMySale(this.sale).then(response => {
             if (response.data.status == 1){
-             //   this.showErorModal('right');
+                if (this.type == 'row'){
+                    this.sales.active = response.data.data;
+                }
+                if (this.type == 'list'){
+                    this.sales = response.data.data;
+                }
+                this.close('right');
             } else {
 
             }
-
         });
 
     }
@@ -128,7 +120,8 @@ SaleCreate.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http', '
 
 export const SaleCreateComponent = {
     bindings: {
-        func:     '&',
+        sales:     '=',
+        type:      '='
     },
     template: require('./sale-create.template.html'),
     controller: SaleCreate,

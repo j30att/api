@@ -29,7 +29,7 @@
                                    ng-model="$ctrl.sale.sub_event_id"
                                    ng-change="$ctrl.fillStatic()"
                                    placeholder="Choose an subevent">
-                            <md-option value="{%item.id%}" ng-repeat="item in $ctrl.subevents">{%item.title%}</md-option>
+                            <md-option value="{%item.id%}" ng-repeat="(key, item) in $ctrl.flights">{%item.title%}</md-option>
                         </md-select>
                     </div>
                     <div class="card__attribute card__attribute_static">

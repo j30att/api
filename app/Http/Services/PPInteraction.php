@@ -79,6 +79,7 @@ class PPInteraction
 
             $responseContent = json_decode($response->getBody()->getContents(),1);
 
+
             $PPResponse = new PPResponse();
             $PPResponse->bid_id = $bid->id;
             $PPResponse->type = PPResponse::TYPE_PLACE_BID;
@@ -90,7 +91,7 @@ class PPInteraction
             $PPResponse->error_description = $responseContent['errorDescription'];
 
             $PPResponse->p_p_request = $ppRequest->id;
-            //$PPResponse->save();
+            $PPResponse->save();
         } catch (\Exception $e) {
             Log::error($e->getMessage());
             Log::info(serialize($body));

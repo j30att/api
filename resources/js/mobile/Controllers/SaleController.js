@@ -12,6 +12,13 @@ class SaleController {
             this._opts.dataLoad = true;
         });
     }
+
+    toggleSidenav(index) {
+        this.$scope.$broadcast('sidenav-open', () =>{
+            console.log('open sidenav')
+        });
+    }
+
 };
 
 SaleController.$inject = ['SalesResourceService' , '$scope'];
