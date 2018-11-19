@@ -169,7 +169,6 @@ class CMSHelper
             $flight->id = $ppDay->day->id;
         }
 
-
         $subEvent = SubEvent::query()->where('id', $ppDay->day->schedule_id)->with('event')->first();
 
         $flight->sub_event_id = $ppDay->day->schedule_id;
