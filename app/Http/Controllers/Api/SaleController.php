@@ -17,6 +17,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class SaleController extends Controller
 {
@@ -260,15 +261,16 @@ class SaleController extends Controller
         return response(json_encode(['status' => 1, 'data' => SaleResource::collection($saleActive)]));
     }
 
-    public function payRemaining(Request $request){
+    public function payRemaining(Request $request)
+    {
         $sale = $request->get('sale');
         $remaining = $request->get('remaining');
         $sale = Sale::query()->where('id', $sale['id'])->first();
         $calcRemaining = ManageService::calcRemaining($sale);
-        if ($calcRemaining != $remaining){
+        if ($calcRemaining != $remaining) {
             $remaining = $calcRemaining;
         }
-        try{
+        try {
             DB::beginTransaction();
 
             $sale->fill_status = Sale::TYPE_FULL;
@@ -277,17 +279,48 @@ class SaleController extends Controller
             DB::commit();
 
             //todo правильный респонс
-            return response()->json(['status'=>1]);
+            return response()->json(['status' => 1]);
 
-        } catch (\Exception $e){
+        } catch (\Exception $e) {
             DB::rollBack();
             Log::error($e->getMessage());
         }
 
     }
 
-    public function bidApplay(Request $request){
-        dd($request);
+    public function bidApplay(Request $request)
+    {
+        try {
+            $user = Auth::user();
+            DB::beginTransaction();
+            $bid = $request->get('bid');
+            $bid = Bid::query()->find($bid['id']);
+            $sale = $bid->sale;
+            $sale->markup = $bid->markup;
+            $sale->share = $bid->share;
+            $sale->amount= $bid->amount;
+            $sale->save();
+            ManageService::calcAmountRaised($sale);
+            ManageService::calcAvgMarkup($sale);
+            ManageService::calcShareSold($sale);
+            $bid->status = Bid::BIDS_MATCHED;
+            $bid->save();
+            DB::commit();
+
+            $saleActive = Sale::query()->where(['status' => Sale::SALE_ACTIVE, 'user_id' => $user->id])->limit(3)->latest()->get();
+            $saleCanceled = Sale::query()->where(['status' => Sale::SALE_CLOSED, 'user_id' => $user->id])->limit(3)->latest()->get();
+
+            return response()->json([
+                'data' => [
+                    'active' => SaleResource::collection($saleActive),
+                    'closed' => SaleResource::collection($saleCanceled)
+                ]
+            ]);
+
+        } catch (\Exception $e) {
+            DB::rollBack();
+            Log::error($e->getMessage());
+        }
     }
 
     /**

@@ -60,7 +60,7 @@ class ManageService
         }
     }
 
-    private static function calcAmountRaised(Sale $sale){
+    public static function calcAmountRaised(Sale $sale){
         $bidsMatched = $sale->bids_matched;
         $event = $sale->event;
 
@@ -77,7 +77,7 @@ class ManageService
     }
 
 
-    private static function calcAvgMarkup(Sale $sale){
+    public static function calcAvgMarkup(Sale $sale){
         $bids = $sale->bids;
         $count = count($bids);
         $avgMarkup = 0;
@@ -89,7 +89,7 @@ class ManageService
         $sale->save();
     }
 
-    private static function calcShareSold (Sale $sale){
+    public static function calcShareSold (Sale $sale){
         $event = $sale->event;
         $percent = $event->buy_in / 100;
         $percentage = $sale->amount_raised / $percent;

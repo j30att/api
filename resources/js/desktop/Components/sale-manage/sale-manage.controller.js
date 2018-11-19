@@ -62,11 +62,15 @@ class SaleManage {
 
         this.$mdDialog.show(confirm).then(() => {
 
-            /*this.sale.bids.forEach((item) => {
-                if(item.id === bid.id){
-                    item.status = 2;
-                }
-            });*/
+            this.SalesResourceService.bidConfirm(bid).then((response)=>{
+                console.log(response.data.data);
+                this.sales = response.data.data;
+                this.sales['active'].forEach((item)=>{
+                    if (item.id == bid.sale_id)
+                    this.sale = item;
+                })
+
+            })
         }, () => {});
     }
 
@@ -85,9 +89,7 @@ class SaleManage {
 
         this.$mdDialog.show(confirm).then(
             () => {
-                this.SalesResourceService.payRemainig().then((response)=>{
-                    console.log(response)
-                })
+
             },
             () => {});
     }
@@ -103,8 +105,8 @@ class SaleManage {
         this.$mdDialog.show(confirm).then(() => {
             this.SalesResourceService.payRemaining(this.sale, this.payRemainig).then((response)=>{
                 console.log(response)
-            })
-            //this.$mdSidenav('right_manage').close();
+            });
+            this.$mdSidenav('right_manage').close();
         }, () => {});
     }
 
@@ -116,7 +118,10 @@ class SaleManage {
 SaleManage.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http', 'SalesService', '$timeout', '$state', '$mdDialog'];
 
 export const SaleManageComponent = {
-    bindings: {},
+    bindings: {
+        sales: '=',
+        type: '='
+    },
     template: require('./sale-manage.template.html'),
     controller: SaleManage,
     controllerAs: '$ctrl'

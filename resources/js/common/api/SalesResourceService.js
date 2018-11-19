@@ -9,6 +9,7 @@ import {
     SALE_CREATE,
     SALE_INDEX,
     SALE_PAY_REMAING,
+    SALE_BID_CONFIRM,
 
 } from "../Constants"
 import {SALE_APLLY_BID, SALE_UPDATE} from "../../mobile/Constants";
@@ -52,8 +53,8 @@ class SalesResourceService {
         return this.$http.post(SALE_PAY_REMAING, {sale:sale, remaining:remaining})
     }
 
-    bidConfirm(sale, bid){
-        return this.$http.post(SALE_BID_CONFIRM, {bid:bid, sale:sale});
+    bidConfirm(bid){
+        return this.$http.post(SALE_BID_CONFIRM, {bid});
     }
 
     getSaleById(id) {
