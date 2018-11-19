@@ -13,12 +13,11 @@ class SaleController {
         });
     }
 
-    toggleSidenav(index) {
+    toggleSidenav() {
         this.$scope.$broadcast('sidenav-open', () =>{
             console.log('open sidenav')
         });
     }
-
 };
 
 SaleController.$inject = ['SalesResourceService' , '$scope'];

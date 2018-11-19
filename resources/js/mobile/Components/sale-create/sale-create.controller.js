@@ -65,8 +65,19 @@ class SaleCreate {
     }
 
     fillStatic() {
+
         let self;
         self = this;
+        if (this.flights){
+            this.flights.forEach(function (value, key) {
+                if (value.id == self.sale.flight_id){
+
+                    console.log(value);
+                    self.sale.sub_event_id = value.subevent_id;
+                }
+            });
+        }
+
         this.events.forEach(function (value, key) {
             if (value.id == self.sale.event_id) {
                 self.static.buy_in = value.buy_in;
@@ -93,19 +104,10 @@ class SaleCreate {
     }
 
     createSale(){
-        if(!this.validate()) return false;
-        this.SalesResourceService.createMySale(this.sale).then(response => {
-            if (response.data.status == 1){
-                if (this.type == 'row'){
-                    this.sales.active = response.data.data;
-                }
-                if (this.type == 'list'){
-                    this.sales = response.data.data;
-                }
-                this.close('right');
-            } else {
 
-            }
+        if(!this.validate()) return false;
+        this.SalesResourceService.createMySale(this.sale, 'row').then(response => {
+            this.close('right');
         });
 
     }
@@ -120,8 +122,7 @@ SaleCreate.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http', '
 
 export const SaleCreateComponent = {
     bindings: {
-        sales:     '=',
-        type:      '='
+        func:     '&',
     },
     template: require('./sale-create.template.html'),
     controller: SaleCreate,

@@ -14,9 +14,10 @@ class BidPlace {
         this.$http = $http;
         this.user = window.__user;
         this._opts = {stateCreate: false};
-        this.isSidenavOpen =false;
+        this.isSidenavOpen = false;
         this.scroll = 0;
         this.bid = {};
+
     }
 
     $onInit(){
@@ -67,6 +68,7 @@ class BidPlace {
     }
     setState(){
         this._opts.stateCreate = !this._opts.stateCreate;
+        //document.querySelector('.getfocus input').focus();
     }
 
 

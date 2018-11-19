@@ -42,8 +42,8 @@ class SaleManage {
     }
 
     setState(action = null) {
+        document.querySelector('.manage_sale_atr_item input').focus();
 
-        console.log(this.sale, 'this.salethis.salethis.salethis.salethis.sale');
         this._opts.stateCreate = !this._opts.stateCreate;
         if (action == 'store') this.updateSale(this.sale);
     }
@@ -53,24 +53,26 @@ class SaleManage {
     }
 
     showBidsConfirm(bid) {
+        console.log(bid);
+        let marhkupCh = bid.markup;
         let confirm = this.$mdDialog.confirm()
             .parent(angular.element(document.querySelector('[md-component-id="right_manage"]')))
-            .htmlContent(
-                `<div class="bids_group_blue">
-                    <span>${bid.markup}</span>
-                    <span>${bid.share}%</span>
-                    <span>$${bid.amount}</span>
-                </div>
-                <div>Accept bid. Your markup will be decreased to 1.1 to accept all bids</div>`)
+            .title('Accept bids')
+            .textContent('Your markup will be change to ' + marhkupCh +' accept all bids')
             .ok('Accept')
             .cancel('Cancel');
 
         this.$mdDialog.show(confirm).then(() => {
-            this.sale.bids.forEach((item) => {
-                if (item.id === bid.id) {
-                    item.status = 2;
-                }
-            });
+
+            this.SalesResourceService.bidConfirm(bid).then((response)=>{
+
+                this.sales = response.data.data;
+                this.sales['active'].forEach((item)=>{
+                    if (item.id == bid.sale_id)
+                        this.sale = item;
+                })
+
+            })
         }, () => {
         });
     }
