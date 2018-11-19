@@ -6,12 +6,11 @@ class MainController {
 
     toggleSidenavLogin() {
         this.$scope.$broadcast('sidenav-login-open', () =>{
-            console.log(12312312312);
         });
     }
-    toggleSidenavRegistration() {
-        this.$scope.$broadcast('sidenav-registration-open', () =>{
-        });
+
+    toggleSidenavRegistration(state) {
+        this.$scope.$broadcast('sidenav-registration-open', {state});
     }
 
 }

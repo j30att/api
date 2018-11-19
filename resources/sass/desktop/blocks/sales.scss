@@ -299,13 +299,18 @@
         .attributs_item__border {
           width: 132px !important;
           overflow: hidden;
-          input {
+          input, div {
             width: 100%;
             background-color: rgba(0, 0, 0, 0.04);
             box-sizing: border-box;
             padding: 8px 0 10px 12px;
             border-radius: 6px;
           }
+            > div{
+                height: 42px;
+                color: black;
+                font-size: 18px;
+            }
         }
       }
     }
