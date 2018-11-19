@@ -16,6 +16,7 @@ class BidPlace {
         this._opts = {stateCreate: false};
         this.isSidenavOpen =false;
         this.scroll = 0;
+        this.bid = {};
     }
 
     $onInit(){
@@ -35,13 +36,30 @@ class BidPlace {
         this.$mdSidenav(componentId).toggle();
     }
 
+    // saveMyBid(){
+    //     this.bid.user_id = this.user.id;
+    //     this.bid.sale_id = this.sale.id;
+    //     this.bid.status  = BID_NEW;
+    //     this.BidsResourceService.storeMyBid(this.bid).then(response => {
+    //         this.sale.bids = response.data.bids;
+    //     })
+    // }
     saveMyBid(){
         this.bid.user_id = this.user.id;
         this.bid.sale_id = this.sale.id;
         this.bid.status  = BID_NEW;
-        this.BidsResourceService.storeMyBid(this.bid).then(response => {
-            this.sale.bids = response.data.bids;
-        })
+
+        if(this.bid.id == undefined){
+            this.BidsResourceService.storeMyBid(this.bid).then(response => {
+                this.sale.bids = response.data.bids;
+            })
+        } else {
+            this.BidsResourceService.changeMyBid(this.bid).then((response) =>{
+
+            });
+
+
+        }
     }
 
     close(componentId){
@@ -51,29 +69,11 @@ class BidPlace {
         this._opts.stateCreate = !this._opts.stateCreate;
     }
 
-    /*changeAmount(){
-        if (this.bid.share != null){
-            this.bid.markup = this.BidsService.calcMarkup(this.bid.share, this.bid.amount, this.sale.event.buy_in);
-        } else {
-            this.bid.share = this.BidsService.calcShare(this.bid.markup, this.bid.amount, this.sale.event.buy_in);
-        }
-    }
-    changeShare(){
-        if (this.bid.markup = null){
-           this.bid.amount = this.BidsService.calcAmount(this.bid.markup, this.bid.share, this.sale.event.buy_in);
-       } else {
-           this.bid.markup = this.BidsService.calcMarkup(this.bid.share, this.bid.amount, this.sale.event.buy_in);
-       }
 
+    changeYourBid(bid){
+        console.log(bid);
+        this.bid = bid;
     }
-    changeMarkup(){
-        if(this.bid.share != null){
-            this.bid.amount = this.BidsService.calcAmount(this.bid.markup, this.bid.share, this.sale.event.buy_in);
-        } else {
-            this.bid.share = this.BidsService.calcShare(this.bid.markup, this.bid.amount, this.sale.event.buy_in);
-        }
-    }
-*/
 
     stopBodyScrolling (bool) {
         if (bool === true) {
