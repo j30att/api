@@ -4,6 +4,21 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class PPResponse
+ * @property int $id
+ * @property int $type
+ * @property int $bid_id
+ * @property string $response
+ * @property int $wallet_references_id
+ * @property int $p_p_request
+ * @property int $status
+ * @property int $error_code
+ * @property string $error_description
+ * @property int $sale_id
+ *
+ * @package App\Models
+ */
 class PPResponse extends Model
 {
     const TYPE_PLACE_BID        = 1;

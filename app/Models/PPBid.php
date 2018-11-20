@@ -4,6 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class PPBid
+ * @property int $id
+ * @property int $pp_bid_id
+ * @property int $sale_id
+ * @property int $status
+ * @property float $amount
+ * @property string $created_at
+ * @property string $updated_at
+ *
+ * @package App\Models
+ */
 class PPBid extends Model
 {
     protected $fillable =[

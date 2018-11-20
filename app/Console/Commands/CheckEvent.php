@@ -48,12 +48,17 @@ class CheckEvent extends Command
     {
         $now = Carbon::now();
 
-        $events = Event::query()->where('status', Event::STATUS_ACTIVE)->with('sales')->get();
+        $events = Event::query()
+            ->where('status', Event::STATUS_ACTIVE)
+            ->with('sales')
+            ->get();
 
         foreach ($events as $event) {
             $startDate = Carbon::parse($event->date_start);
+
             if ($now->gte($startDate)) {
                 $event->update(['status' => Event::STATUS_CLOSED]);
+
                 foreach ($event->sales as $sale) {
                     if ($sale->status == Sale::SALE_CLOSED) {
                         $ppBids = PPBid::query()->where('sale_id', $sale->id)->get();
