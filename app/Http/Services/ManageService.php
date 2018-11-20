@@ -184,7 +184,7 @@ class ManageService
 
         if (isset($ppbid) && $ppbid) {
             $transaction = self::createTransaction($bid, Transaction::TYPE_BID_CHANGED);
-            $ppbid = PPInteraction::bidChange($bid, $ppbid->amount);
+            $ppbid = PPInteraction::bidChange($bid, $ppbid);
             self::updateTransaction($bid, $transaction, $ppbid);
         } else {
             $transaction = self::createTransaction($bid, Transaction::TYPE_BID_CREATED);
@@ -220,7 +220,7 @@ class ManageService
     {
         if ($ppbid) {
             $transaction->update([
-                'pp_bid_id' => $ppbid->id,
+                'pp_bid_id' => $ppbid->pp_bid_id,
                 'status' => Transaction::STATUS_SUCCESS
             ]);
             $bid->update(['pp_bid_id' => $ppbid->id]);

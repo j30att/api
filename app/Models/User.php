@@ -4,6 +4,13 @@ namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+/**
+ * Class User
+ *
+ * @property PPUser ppUser
+ *
+ * @package App\Models
+ */
 class User extends Authenticatable
 {
 

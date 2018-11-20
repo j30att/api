@@ -119,18 +119,17 @@ class BidController extends Controller
             $bidId = $data['id'];
             unset($data['id']);
 
+            /** @var Bid $bid */
             $bid = Bid::query()->where('id', $bidId)->first();
 
-            $oldAmount = $bid->amount;
-
-            DB::beginTransaction();
             $bid->update($data);
             $bid->save();
 
             $bid = ManageService::linkBidToSale($bid);
-            PPInteraction::bidChange($bid, $oldAmount);
 
-            DB::commit();
+            if ($bid->status == Bid::BIDS_MATCHED) {
+                ManageService::manageTransaction($bid);
+            }
 
             $highest = Bid::query()
                 ->where('sale_id', $bid->sale_id)
@@ -144,12 +143,19 @@ class BidController extends Controller
                 ->where('user_id', $bid->user_id)
                 ->where('sale_id', $bid->sale_id)
                 ->where('status', Bid::BIDS_UNMATCHED)->get();
+            $sale = Sale::query()
+                ->where('id', $bid->sale_id)
+                ->first();
 
-            return json_encode(['status' => 1, 'bids' => [
-                'highest' => BidsInvestResource::collection($highest),
-                'matched' => BidsInvestResource::collection($matched),
-                'unmatched' => BidsInvestResource::collection($unmatched)
-            ]]);
+            return json_encode([
+                'status' => 1,
+                'bids' => [
+                    'highest' => BidsInvestResource::collection($highest),
+                    'matched' => BidsInvestResource::collection($matched),
+                    'unmatched' => BidsInvestResource::collection($unmatched)
+                ],
+                'sale' => $sale
+            ]);
 
         } catch (\Exception $e) {
             DB::rollBack();
