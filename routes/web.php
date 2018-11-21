@@ -14,6 +14,9 @@
 Route::group(['middleware' => 'guest'], function(){
     Route::post('/login', 'Auth\LoginController@login')->name('login');
     Route::post('/register', 'Auth\RegisterController@register')->name('register');
+    Route::post('/password/forgot', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+
+    Route::post('/password/reset', 'Auth\ResetPasswordController@reset')->name('password.reset');
 
 });
 
@@ -34,9 +37,4 @@ Route::group(['middleware' => 'admin'], function() {
 Route::get('{any}', 'PageController@app')->where(['any' => '.*'])->name('index');
 
 
-
-Route::get('desktop/all', function (){
-    return view('desktop.bids.index');
-});
-
-
+Route::get('desktop/all', 'PageController@desktop');

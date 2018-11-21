@@ -2409,7 +2409,8 @@ md-dialog-actions .md-confirm-button {
 .check__img {
   width: 70px;
   height: 70px;
-  outline: 1px solid black;
+  background: url("/images/check_inbox.png") no-repeat center;
+  background-size: 100%;
   margin: 274px auto 20px auto;
 }
 
