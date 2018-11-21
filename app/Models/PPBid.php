@@ -21,6 +21,13 @@ use Illuminate\Database\Eloquent\Model;
  */
 class PPBid extends Model
 {
+    const TYPE_PLACE = 1;
+    const TYPE_CHANGE = 2;
+    const TYPE_CANCEL = 3;
+    const TYPE_CLOSURE = 4;
+    const TYPE_REMAINING = 5;
+    const TYPE_ERROR = 6;
+
     protected $fillable = [
         'pp_bid_id',
         'sale_id',

@@ -188,7 +188,7 @@ class PPInteraction
     public static function bidCancel(PPBid $PPBid)
     {
         $sale = Sale::query()->where('id', $PPBid->sale_id)->first();
-        $bid = Bid::query()->where('p_p_bid', $PPBid->id)->first();
+        $bid = Bid::query()->where('p_p_bid_id', $PPBid->pp_bid_id)->first();
 
         $event = $sale->event;
         $investor = $bid->investor;
@@ -203,7 +203,7 @@ class PPInteraction
 
         $body = [
             'accountId' => $investor->ppUser->party_poker_login,
-            'amount' => (integer)$bid->amount * 100,
+            'amount' => (integer)$PPBid->amount * 100,
             'transactionType' => Bid::BID_CANCEL,
             'requestorReferenceId' => $bid->transaction_code,
             'transactionInitiatedDate' => $bid->transaction_initiated_date,
@@ -225,7 +225,7 @@ class PPInteraction
             $ppRequest = new PPRequest();
             $ppRequest->bid_id = $bid->id;
             $ppRequest->transaction_type = PPRequest::TYPE_BID_CANCEL;
-            $ppRequest->amount = $bid->amount;
+            $ppRequest->amount = $PPBid->amount;
             $ppRequest->headers = json_encode($header);
             $ppRequest->body = json_encode($body);
             $ppRequest->save();
@@ -252,7 +252,7 @@ class PPInteraction
                 return true;
             }
         } catch (\Exception $e) {
-            Log::error($e->getMessage());
+            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine());
             Log::info(serialize($body));
         }
 
@@ -295,10 +295,12 @@ class PPInteraction
             $PPResponse->type = PPResponse::TYPE_BID_CLOSURE;
             $PPResponse->response = $json;
 
-            foreach ($responseContent['errorCode'] as $status) {
-                $PPResponse->status = $status;
-                if ($status == 'FAILED') {
-                    break;
+            if(is_array($responseContent['status'])) {
+                foreach ($responseContent['status'] as $status) {
+                    $PPResponse->status = $status;
+                    if ($status == 'FAILED') {
+                        break;
+                    }
                 }
             }
 
@@ -307,11 +309,11 @@ class PPInteraction
             $PPResponse->p_p_request = $ppRequest->id;
 
             if ($PPResponse->save()) {
-                return $responseContent['errorCode'];
+                return $responseContent['status'];
             }
 
         } catch (\Exception $e) {
-            Log::error($e->getMessage());
+            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine());
             Log::info(serialize($body));
         }
 
