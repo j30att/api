@@ -188,7 +188,7 @@ class PPInteraction
     public static function bidCancel(PPBid $PPBid)
     {
         $sale = Sale::query()->where('id', $PPBid->sale_id)->first();
-        $bid = Bid::query()->where('p_p_bid', $PPBid->id)->first();
+        $bid = Bid::query()->where('p_p_bid_id', $PPBid->pp_bid_id)->first();
 
         $event = $sale->event;
         $investor = $bid->investor;
@@ -203,7 +203,7 @@ class PPInteraction
 
         $body = [
             'accountId' => $investor->ppUser->party_poker_login,
-            'amount' => (integer)$bid->amount * 100,
+            'amount' => (integer)$PPBid->amount * 100,
             'transactionType' => Bid::BID_CANCEL,
             'requestorReferenceId' => $bid->transaction_code,
             'transactionInitiatedDate' => $bid->transaction_initiated_date,
@@ -225,7 +225,7 @@ class PPInteraction
             $ppRequest = new PPRequest();
             $ppRequest->bid_id = $bid->id;
             $ppRequest->transaction_type = PPRequest::TYPE_BID_CANCEL;
-            $ppRequest->amount = $bid->amount;
+            $ppRequest->amount = $PPBid->amount;
             $ppRequest->headers = json_encode($header);
             $ppRequest->body = json_encode($body);
             $ppRequest->save();

@@ -116,6 +116,7 @@ class CheckEvent extends Command
                         ->whereIn('id', $transactionsId)
                         ->update(['status' => Transaction::STATUS_SUCCESS]);
                 } else {
+                    PPInteraction::bidCancel($ppBid);
                     $ppBid->update(['status' => PPBid::TYPE_ERROR]);
                     $ppBid->transactions()
                         ->whereIn('id', $transactionsId)

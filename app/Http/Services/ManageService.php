@@ -162,6 +162,7 @@ class ManageService
             $PPBid->save();
 
             $sale->status = Sale::SALE_CLOSED;
+            $sale->fill_status = 1;
             $sale->save();
 
             $transaction->update([
@@ -170,10 +171,7 @@ class ManageService
             ]);
         } else {
             $transaction->update(['status' => Transaction::STATUS_FAILED]);
-
         }
-
-
     }
 
     public static function sendBidToAPI(Bid $bid)
