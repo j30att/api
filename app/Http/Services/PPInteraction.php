@@ -252,7 +252,7 @@ class PPInteraction
                 return true;
             }
         } catch (\Exception $e) {
-            Log::error($e->getMessage());
+            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine());
             Log::info(serialize($body));
         }
 
@@ -295,10 +295,12 @@ class PPInteraction
             $PPResponse->type = PPResponse::TYPE_BID_CLOSURE;
             $PPResponse->response = $json;
 
-            foreach ($responseContent['errorCode'] as $status) {
-                $PPResponse->status = $status;
-                if ($status == 'FAILED') {
-                    break;
+            if(is_array($responseContent['status'])) {
+                foreach ($responseContent['status'] as $status) {
+                    $PPResponse->status = $status;
+                    if ($status == 'FAILED') {
+                        break;
+                    }
                 }
             }
 
@@ -307,11 +309,11 @@ class PPInteraction
             $PPResponse->p_p_request = $ppRequest->id;
 
             if ($PPResponse->save()) {
-                return $responseContent['errorCode'];
+                return $responseContent['status'];
             }
 
         } catch (\Exception $e) {
-            Log::error($e->getMessage());
+            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine());
             Log::info(serialize($body));
         }
 

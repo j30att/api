@@ -26,6 +26,7 @@ class PPResponse extends Model
     const TYPE_BID_CANCEL       = 3;
     const TYPE_BID_CLOSURE      = 4;
     const TYPE_BID_REMAINING    = 5;
+    const TYPE_BID_ERROR        = 6;
 
 
     protected $fillable = [
