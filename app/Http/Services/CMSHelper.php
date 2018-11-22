@@ -51,7 +51,7 @@ class CMSHelper
                     break;
 
                 default:
-                    Log::info('[x] Unprocessable entity');
+                    Log::info('[x] Unprocessable entity. ' . print_r($msgDetails, 1));
                     break;
 
             }
@@ -72,7 +72,7 @@ class CMSHelper
             $eventData = json_decode($apiResource->getBody());
             $country = Country::query()->where('code', $eventData->event->eventCountry)->first();
             if (!$country) {
-                Log::info('[x] Unprocessable entity');
+                Log::info('[x] Unprocessable entity. EventId: ' . $eventData->event->id . '. Not found country:' . $eventData->event->eventCountry);
                 return false;
             }
 
@@ -83,11 +83,11 @@ class CMSHelper
                 }
                 $event->title = $eventData->event->eventName;
                 $event->description = $eventData->event->eventUpcomingAbout;
-                $event->buy_in = $eventData->event->eventBuyIn;
+                $event->buy_in = str_replace(",", ".", $eventData->event->eventBuyIn);
                 $event->reg_free = $eventData->event->eventRegFee;
                 $event->fund = $eventData->event->eventUpcomingPrizepool;
                 $event->slug = $eventData->event->eventNameSlug;
-                $event->logo = $eventData->event->eventLogo;
+                $event->logo = $eventData->event->eventLogoBg;
                 $event->country_id = $country->id;
                 $event->currency = $eventData->event->eventCurrency;
                 $event->venue_id = $eventData->event->eventVenueId;
@@ -133,7 +133,7 @@ class CMSHelper
         $event = Event::query()->find($ppSubEvent->schedule->event_id);
 
         if (!$event){
-            Log::info('[x] Unprocessable entity');
+            Log::info('[x] Unprocessable entity. ScheduleId: ' . $ppSubEvent->schedule->id . '. Do no found event: ' . $ppSubEvent->schedule->event_id);
             return false;
         }
 
@@ -146,7 +146,7 @@ class CMSHelper
         $subEvent->event_id = $ppSubEvent->schedule->event_id;
         $subEvent->title = $ppSubEvent->schedule->scheduleTitle;
         $subEvent->fund = isset($ppSubEvent->schedule->schedulePrizePool)?$ppSubEvent->schedule->schedulePrizePool: null;
-        $subEvent->buy_in = $ppSubEvent->schedule->scheduleBuyIn;
+        $subEvent->buy_in = str_replace(",", ".", $ppSubEvent->schedule->scheduleBuyIn);
         $subEvent->date_start = isset($ppSubEvent->schedule->firstDayDate)?$ppSubEvent->schedule->firstDayDate:null;
         $subEvent->date_end = isset($ppSubEvent->schedule->lastDayDate)?$ppSubEvent->schedule->lastDayDate:null;
         $subEvent->save();
