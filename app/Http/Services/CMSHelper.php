@@ -72,7 +72,7 @@ class CMSHelper
             $eventData = json_decode($apiResource->getBody());
             $country = Country::query()->where('code', $eventData->event->eventCountry)->first();
             if (!$country) {
-                Log::info('[x] Unprocessable entity. Not found country: ' . $eventData->event->eventCountry);
+                Log::info('[x] Unprocessable entity. EventId: ' . $eventData->event->id . '. Not found country:' . $eventData->event->eventCountry);
                 return false;
             }
 
@@ -133,7 +133,7 @@ class CMSHelper
         $event = Event::query()->find($ppSubEvent->schedule->event_id);
 
         if (!$event){
-            Log::info('[x] Unprocessable entity. Do no found event: ' . $ppSubEvent->schedule->event_id);
+            Log::info('[x] Unprocessable entity. ScheduleId: ' . $ppSubEvent->schedule->id . '. Do no found event: ' . $ppSubEvent->schedule->event_id);
             return false;
         }
 
