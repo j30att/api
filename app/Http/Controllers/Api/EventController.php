@@ -21,7 +21,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = Event::query()->where(['status'=>Event::STATUS_ACTIVE])->with('subEvents')->get();
+        $events = Event::query()->where('status',Event::STATUS_ACTIVE)->with('subEvents')->get();
 
         return EventResource::collection($events);
     }
@@ -56,6 +56,7 @@ class EventController extends Controller
     public function show($id)
     {
         $event = Event::query()
+            ->where('status',Event::STATUS_ACTIVE)
             ->where('id', $id)
             ->with('subEvents')
             ->with('sales')
