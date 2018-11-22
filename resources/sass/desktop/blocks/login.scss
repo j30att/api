@@ -136,12 +136,14 @@
         border-radius: 6px !important;
 
         &__error {
+            vertical-align: top;
             display: none;
             color: #fc4d02;
-            font-size: 15px;
+            margin-top: 2px;
+            font-size: 13px;
 
             &.active{
-                display: initial;
+                display: inline-block;
             }
         }
     }

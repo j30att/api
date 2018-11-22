@@ -2356,13 +2356,15 @@ md-dialog-actions .md-confirm-button {
 }
 
 .login__input__error {
+  vertical-align: top;
   display: none;
   color: #fc4d02;
-  font-size: 15px;
+  margin-top: 2px;
+  font-size: 13px;
 }
 
 .login__input__error.active {
-  display: initial;
+  display: inline-block;
 }
 
 .login__input::-webkit-input-placeholder {
