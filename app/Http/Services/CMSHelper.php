@@ -72,7 +72,7 @@ class CMSHelper
             $eventData = json_decode($apiResource->getBody());
             $country = Country::query()->where('code', $eventData->event->eventCountry)->first();
             if (!$country) {
-                Log::info('[x] Unprocessable entity');
+                Log::info('[x] Unprocessable entity. Not found country: ' . $eventData->event->eventCountry);
                 return false;
             }
 
