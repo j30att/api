@@ -205,6 +205,14 @@ class CMSHelper
 
 
         $subEvent = SubEvent::query()->where('id', $ppDay->day->schedule_id)->with('event')->first();
+        $event = Event::query()->where('id', $ppDay->day->event_id)->first();
+
+        if ($subEvent && $event){
+            Log::info('[x] Unprocessable entity. DayId: ' . $ppDay->day->schedule_id
+                . '. Do no found sub_event: ' . $subEvent->id
+                . '. Do no found event: ' . $ppDay->day->event_id);
+            return false;
+        }
 
         $flight->sub_event_id = $ppDay->day->schedule_id;
         $flight->title = $ppDay->day->day . $ppDay->day->flight;
