@@ -87,7 +87,7 @@ class CMSHelper
                 $event->reg_free = $eventData->event->eventRegFee;
                 $event->fund = $eventData->event->eventUpcomingPrizepool;
                 $event->slug = $eventData->event->eventNameSlug;
-                $event->logo = $eventData->event->eventLogo;
+                $event->logo = $eventData->event->eventLogoBg;
                 $event->country_id = $country->id;
                 $event->currency = $eventData->event->eventCurrency;
                 $event->venue_id = $eventData->event->eventVenueId;
