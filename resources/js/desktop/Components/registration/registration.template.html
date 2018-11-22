@@ -119,6 +119,10 @@
                            ng-model="$ctrl.user.email"
                            ng-class="{'validate_error': $ctrl._opts.validateEmail}"
                            class="login__input ng-pristine ng-untouched md-input" id="input_7" aria-invalid="true">
+                    <span class="login__input__error"
+                          ng-class="{'active': $ctrl._opts.validateEmail}">
+                        {% $ctrl._opts.validateEmail %}
+                    </span>
                 </md-input-container>
 
                 <md-input-container class="login__input_container md-block login_input md-formSelect-theme flex-gt-sm"
@@ -133,6 +137,10 @@
                            name="clientPassword" required=""
                            class="login__input"
                            id="input_8" aria-invalid="true">
+                    <span class="login__input__error"
+                          ng-class="{'active': $ctrl._opts.validatePassword}">
+                        {% $ctrl._opts.validatePassword %}
+                    </span>
                 </md-input-container>
                 <md-input-container class="login__input_container md-block login_input md-formSelect-theme flex-gt-sm"
                                     style="margin-bottom: 20px;">
