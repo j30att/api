@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use App\Http\Services\PPValidate;
 use Closure;
 use Illuminate\Support\Facades\Auth;
+use Torann\GeoIP\GeoIP;
 
 class Integration
 {
@@ -17,6 +18,8 @@ class Integration
      */
     public function handle($request, Closure $next)
     {
+        dd(geoip()->getLocation($request->getClientIp()));
+
         $partnerToken = $request->get('partnerToken');
         $accountId = $request->get('accountId');
         $user = Auth::user();
