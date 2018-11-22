@@ -12497,8 +12497,21 @@ md-input-container input::placeholder {
   margin-right: 16px;
 }
 
+.events_filters {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
+  height: 100%;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.5);
+}
+
 .events_filters_wrapper_first {
-  height: 310px;
+  height: 420px;
   background-color: #ffffff;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
