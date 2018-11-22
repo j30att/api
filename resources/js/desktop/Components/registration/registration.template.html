@@ -72,8 +72,8 @@
 
         </div>
         <div class="accords_wrapper">
-            By creating an account you agree to our <a href="#" ng-click="$ctrl.changeState('terms')">Terms & Conditions</a>
-            and <a href="#" ng-click="$ctrl.changeState('privacy')">Privacy Policy</a>
+            By creating an account you agree to our <a href="#" ng-click="$ctrl.showTerms('register')">Terms & Conditions</a>
+            and <a href="#" ng-click="$ctrl.showPrivacy('register')">Privacy Policy</a>
         </div>
         <div class="modal_foter">
             <div class="modal_foter__buttons">
@@ -141,8 +141,8 @@
 
         </div>
         <div class="accords_wrapper">
-            By creating an account you agree to our <a href="#" ng-click="$ctrl.changeState('terms')">Terms & Conditions</a>
-            and <a href="#" ng-click="$ctrl.changeState('privacy')">Privacy Policy</a>
+            By creating an account you agree to our <a href="#" ng-click="$ctrl.showTerms('register_password')">Terms & Conditions</a>
+            and <a href="#" ng-click="$ctrl.showPrivacy('register_password')">Privacy Policy</a>
         </div>
         <div class="modal_foter">
             <div class="modal_foter__buttons">
@@ -174,8 +174,8 @@
 
         </div>
         <div class="accords_wrapper">
-            By creating an account you agree to our <a href="#" ng-click="$ctrl.changeState('terms')">Terms & Conditions</a>
-            and <a href="#" ng-click="$ctrl.changeState('privacy')">Privacy Policy</a>
+            By creating an account you agree to our <a href="#" ng-click="$ctrl.showTerms('confirm_privacy')">Terms & Conditions</a>
+            and <a href="#" ng-click="$ctrl.showPrivacy('confirm_privacy')">Privacy Policy</a>
         </div>
         <div class="modal_foter">
             <div class="modal_foter__buttons">
@@ -230,8 +230,8 @@
 
         </div>
         <div class="accords_wrapper">
-            By creating an account you agree to our <a href="#" ng-click="$ctrl.changeState('terms')">Terms & Conditions</a>
-            and <a href="#" ng-click="$ctrl.changeState('privacy')">Privacy Policy</a>
+            By creating an account you agree to our <a href="#" ng-click="$ctrl.showTerms('media_policy')">Terms & Conditions</a>
+            and <a href="#" ng-click="$ctrl.showPrivacy('media_policy')">Privacy Policy</a>
         </div>
         <div class="modal_foter">
             <div class="modal_foter__buttons">
@@ -256,8 +256,8 @@
 
         </div>
         <div class="accords_wrapper">
-            By creating an account you agree to our <a href="#" ng-click="$ctrl.changeState('terms')">Terms & Conditions</a>
-            and <a href="#" ng-click="$ctrl.changeState('privacy')">Privacy Policy</a>
+            By creating an account you agree to our <a href="#" ng-click="$ctrl.showTerms('privacy')">Terms & Conditions</a>
+            and <a href="#" ng-click="$ctrl.showPrivacy('privacy')">Privacy Policy</a>
         </div>
         <div class="modal_foter">
             <div class="modal_foter__buttons">
@@ -271,7 +271,7 @@
         <div class="modal_content" style="height: 90vh">
             <div class="your_profile__title" style="position: fixed; width: 80%">
                 Terms of Service
-                <div class="your_profile_close" ng-click="$ctrl.buildToggler('right_registration')"></div>
+                <div class="your_profile_close" ng-click="$ctrl.hideTerms()"></div>
             </div>
             <div class="data_privacy__discription">
 
@@ -454,12 +454,6 @@
             </div>
 
         </div>
-        <!--<div class="accords_wrapper">
-            By creating an account you agree to our <a href="#" ng-click="$ctrl.changeState('terms')">Terms & Conditions</a>
-            and <a href="#" ng-click="$ctrl.changeState('privacy')">Privacy Policy</a>
-        </div>-->
-
-
     </md-content>
 
 

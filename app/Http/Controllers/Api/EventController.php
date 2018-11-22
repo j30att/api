@@ -110,6 +110,18 @@ class EventController extends Controller
         return EventsList::collection($events);
     }
 
+
+    /*public function allEvents()
+    {
+        //$events = Event::query()->take(6)->get();
+        $events = Event::query()
+            ->with('country')
+            ->get();
+        return EventsList::collection($events);
+    }*/
+
+
+
     /**
      * @param Request $request
      * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection

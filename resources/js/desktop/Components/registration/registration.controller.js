@@ -23,8 +23,6 @@ class Registration {
         this.CountriesResourceService = CountriesResourceService;
         this.RegistrationService = RegistrationService;
         this.getCountries();
-        //this.createUser();
-
     }
 
     $onInit() {
@@ -32,7 +30,6 @@ class Registration {
             this.state = data.state;
             this.buildToggler('right_registration');
             this._opts.opened = true;
-            console.log(this.user, 'user');
         });
 
         this.$scope.$watch('isSidenavOpen', (fixed) => {
@@ -40,6 +37,18 @@ class Registration {
         });
     }
 
+    showTerms(prevstate){
+        this.state = 'terms';
+        this.previousState = prevstate;
+    }
+    showPrivacy(prevstate){
+        this.state = 'privacy';
+        this.previousState = prevstate;
+    }
+    hideTerms(){
+        if(this.previousState == null) this.buildToggler('right_registration');
+        this.state = this.previousState;
+    }
 
     getCountries() {
         this.CountriesResourceService.getCountries().then((response) => {
@@ -60,6 +69,7 @@ class Registration {
 
     buildToggler(componentId) {
         this.$mdSidenav(componentId).toggle();
+        this.previousState = null;
     }
 
     close(componentId) {
@@ -67,9 +77,38 @@ class Registration {
     }
 
     secondStep() {
-
+        console.log(this.validateAge());
         if (this.firstStepValidate()) {
             this.state = 'register_password';
+        }
+
+    }
+
+    validateAge(){
+        let today           = new Date();
+        let userDateBirth   = this.user.dateOfBirth;
+        let dayDiff         = today.getDate() - userDateBirth.getDate();
+        let monthDiff       = today.getMonth() - userDateBirth.getMonth();
+        let yearDiff        = today.getFullYear() - userDateBirth.getFullYear();
+
+        if(yearDiff>18){
+            return true;
+        } else
+            if(yearDiff == 18){
+                if(monthDiff>0){
+                        return true;
+            } else
+                if(monthDiff  == 0){
+                    if(dayDiff > 0){
+                        return true;
+                }
+                    if(dayDiff == 0){
+                        return true;
+                    }
+                    else{
+                        return false;
+                    }
+            }
         }
 
     }
@@ -77,7 +116,6 @@ class Registration {
     thirdStep() {
         if (this.secondStepValidate())
         this.state = 'confirm_privacy';
-        console.log(this.user);
     }
 
 
@@ -140,7 +178,7 @@ class Registration {
     }
 
     validatedateOfBirth() {
-        if (this.user.dateOfBirth == null){
+        if (this.user.dateOfBirth == null || !this.validateAge()){
             this._opts.validateBirthDate = true;
             return false;
         }
