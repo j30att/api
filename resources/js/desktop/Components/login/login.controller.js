@@ -16,12 +16,22 @@ class Login {
         this.userEmail = null;
         this.userPassword = null;
 
+        this.msgErrorr = {email: '', password:''};
+        this.msgErrorrList = {
+            incorrectEmail:'Your email must be between 6 and 100 characters long and look like an e-mail address.',
+            invalidEmail:'Invalid email or password.',
+            emptyPassword:'Password field can not be empty.'
+        };
+        this.errorEmail = false;
+        this.errorPassword = false;
     }
     down(event){
         if(event.keyCode === 13){
             this.sendAuthData(event);
         }
     }
+
+
 
     $onInit() {
         this.$scope.$on('sidenav-login-open', (event, data) => {
@@ -85,9 +95,36 @@ class Login {
         this.state = 1;
     }
 
+    validateEmail(){
+        if (this.userEmail){
+            let valid_email = /^[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[a-z]{2,4}|museum|travel)$/.test(this.userEmail);
+            if (valid_email){
+                this.errorEmail = false;
+                return true;
+            }
+        }
+        this.msgErrorr.email = this.msgErrorrList.incorrectEmail;
+        this.errorEmail = true;
+        return false;
+    }
+
+    validatePassword(){
+        if (this.userPassword){
+            this.errorPassword = false;
+            return true;
+        }
+        this.msgErrorr.password = this.msgErrorrList.emptyPassword;
+        this.errorPassword = true;
+        return false;
+    }
+
     sendAuthData(e) {
         e.stopPropagation();
         e.preventDefault();
+        if ((this.validateEmail() || !this.validatePassword()) && !this.validateEmail())return false;
+
+
+        console.log(12);
         let data = {
             email: this.userEmail,
             password: this.userPassword
