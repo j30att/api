@@ -1127,7 +1127,7 @@
 .event_item__pic {
   width: 100%;
   height: 160px;
-  background-size: 100%;
+  background-size: 100% !important;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -3837,8 +3837,8 @@ a {
   border-radius: 100%;
   background-color: #cdcdcd;
   position: absolute;
-  top: 5px;
-  right: -10px;
+  top: 8px;
+  right: -14px;
 }
 
 /*events end*/
@@ -4462,4 +4462,30 @@ a {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.add_money {
+  position: relative;
+}
+
+.add_money input {
+  padding-left: 20px !important;
+}
+
+.add_money::after {
+  content: '$';
+  position: absolute;
+  top: 15px;
+  left: 12px;
+}
+
+.add_persent {
+  position: relative;
+}
+
+/*.add_persent::after{
+    content: '%';
+    position: absolute;
+    top: 15px;
+    left: 36px;
+}*/
 
