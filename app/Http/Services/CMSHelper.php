@@ -233,14 +233,8 @@ class CMSHelper
         $client = new Client();
         $request = $client->get($url);
         $response = $request->getBody()->getContents();
-        // Получить файл
-        file_put_contents('./public/image.png',$response);
-        $params = ["transformation"=>[["width" => 651, "height" => 340, "crop" => "crop","x"=>58]]];
-        $q = \Cloudinary\Uploader::upload($url,$params);
-        $new_url = $q['url'];
-        $request = $client->get($new_url);
-        $response = $request->getBody()->getContents();
-        $fileName = ImageAttachment::generateFileName($q['format']);
+        //Hello_world
+        $fileName = ImageAttachment::generateFileName('png');
         $filePath = ImageAttachment::generateFileFolder($fileName);
         if (!file_exists($filePath)) {
             mkdir($filePath, 0777, true);
