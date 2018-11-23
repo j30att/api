@@ -31,13 +31,19 @@ class SaleCreate {
 
     }
     $onInit(){
-        this.$scope.$on('sidenav-open', (event, data) => {
-            this.buildToggler('right');
+        this.$scope.$on('sidenav-open-create_sale', (event, data) => {
+
+            if(data != null){
+                this.sale.event_id = data;
+            }
+
+            this.buildToggler('right_create_sale');
         });
 
         this.$scope.$watch('isSidenavOpen', (fixed) => {
             this.$state.modalOpened = fixed;
         });
+
     }
 
     buildToggler(componentId) {

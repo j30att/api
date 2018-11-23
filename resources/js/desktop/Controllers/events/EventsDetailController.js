@@ -17,8 +17,12 @@ class EventsDetailController {
     toggleSidenav(sale) {
         this.sale = sale;
         this.$scope.$broadcast('sidenav-open', () => {
-            console.log('open sidenav')
         });
+    }
+
+    toggleSaleSidenav() {
+        console.log('toggleSaleSidenav');
+        this.$scope.$broadcast('sidenav-open-create_sale', this.event.id);
     }
 
     toggleEvent(event){

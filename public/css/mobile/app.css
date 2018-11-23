@@ -14438,3 +14438,9 @@ input:checked + label::after {
   outline: none;
 }
 
+.closing_soon_ivest_mobile {
+  width: 100vw;
+  overflow-y: scroll;
+  height: 100%;
+}
+

@@ -18,7 +18,7 @@ class InvestController {
         this.selectedEvents = [];
         this.selectedCountries = [];
         this.getCountries();
-
+        this.getSales();
         this.user = window.__user;
     }
 
