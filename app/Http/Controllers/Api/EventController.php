@@ -23,7 +23,7 @@ class EventController extends Controller
     public function index()
     {
         $events = Event::query()
-            ->where('status',Event::STATUS_ACTIVE)
+            ->where('status', Event::STATUS_ACTIVE)
             ->with('subEvents')
             ->get();
 
@@ -60,7 +60,7 @@ class EventController extends Controller
     public function show($id)
     {
         $event = Event::query()
-            ->where('status',Event::STATUS_ACTIVE)
+            ->where('status', Event::STATUS_ACTIVE)
             ->where('id', $id)
             ->with('subEvents')
             ->with('sales')
@@ -160,7 +160,11 @@ class EventController extends Controller
             }
 
             if (!empty($filter['venue'])) {
-                $query->where(['venue_id' => $filter['venue']]);
+                if (is_array($filter['venue'])) {
+                    $query->whereIn('venue_id', $filter['venue']);
+                } else {
+                    $query->where(['venue_id' => $filter['venue']]);
+                }
             }
 
         }

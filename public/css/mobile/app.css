@@ -12605,7 +12605,7 @@ md-input-container input::placeholder {
 }
 
 .events_filters_wrapper .events_list_items {
-  max-height: 80vh;
+  height: 290px;
   overflow: scroll;
 }
 
