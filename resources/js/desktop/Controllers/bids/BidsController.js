@@ -20,6 +20,11 @@ class BidsController {
         let allBids = require('../../../common/api/bids-lists.json');
         this.bids = allBids.data[this.bidsActive];
     }
+    togglePlaceBid(){
+        console.log('open place bid');
+        this.$scope.$broadcast('sidenav-open', () => {
+        });
+    }
 
     getBids(){
         if (this.bidsActive == undefined){

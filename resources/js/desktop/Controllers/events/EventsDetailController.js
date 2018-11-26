@@ -5,6 +5,7 @@ class EventsDetailController {
         this.EventsResourceService = EventsResourceService;
         this.event = {};
         this.sale = {};
+        this.bid = {};
         this.activeEvent = [];
 
         this._opts = {dataLoad: false};
@@ -14,14 +15,23 @@ class EventsDetailController {
         this.getEvent();
     }
 
-    toggleSidenav(sale) {
+    toggleSidenav(sale, bid) {
         this.sale = sale;
+
+        this.bid.markup = bid.markup;
+        this.bid.share = bid.share + '%';
+        this.bid.amount = '$' + bid.amount;
+
         this.$scope.$broadcast('sidenav-open', () => {
-            console.log('open sidenav')
         });
     }
 
-    toggleEvent(event){
+    toggleSaleSidenav() {
+        console.log('toggleSaleSidenav');
+        this.$scope.$broadcast('sidenav-open-create_sale', this.event.id);
+    }
+
+    toggleEvent(event) {
         this.activeEvent = event;
     }
 
@@ -33,7 +43,7 @@ class EventsDetailController {
                 .then(response => {
                     this.event = response.data.data;
 
-                    if(this.event.subevents[0]){
+                    if (this.event.subevents[0]) {
                         this.activeEvent = this.event.subevents[0];
                     } else {
                         this.activeEvent = this.event;

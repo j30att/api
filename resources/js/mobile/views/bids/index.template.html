@@ -8,10 +8,18 @@
             <div class="header_filter_empty" ></div>
         </div>
         <div class="header_empty_height"></div>
-        <bids-carousel
-                       bids="BidsCtrl.bids"
-        >
-        </bids-carousel>
+        <bids-carousel bids="BidsCtrl.bids" ng-if="BidsCtrl.state != 'empty'"></bids-carousel>
+
+        <div class="main_content__empty_container" ng-if="BidsCtrl.state == 'empty'" style="margin: 100px auto 0 auto; width: 100%">
+            <div class="main_content__empty_container__img main_content__empty_container__img_bids"></div>
+            <div class="main_content__empty_container__title">No bids yet</div>
+            <div class="main_content__empty_container__discription">There are no bids yet. Discover sales and make a bid</div>
+            <div class="main_content__empty_container__buttons">
+                <div class="main_content__empty_container__button main_content__empty_container__button__blue" ng-click="BidsCtrl.togglePlace()" role="button" tabindex="0">Discover sales</div>
+            </div>
+            <bid-place></bid-place>
+        </div>
+
         <span ng-include="'tpl/view/footer.template.html'"></span>
     </div>
 

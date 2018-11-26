@@ -1613,3 +1613,10 @@ input:checked + label::after{
     border: none;
     outline: none;
 }
+
+.closing_soon_ivest_mobile{
+    //position: fixed;
+    width: 100vw;
+    overflow-y: scroll;
+    height: 100%;
+}

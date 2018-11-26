@@ -57,7 +57,7 @@
                 </div>
                 <div ng-if="EventsDetailCtrl.activeEvent.sales"
                      class="event_right-side_table">
-                    <table>
+                    <table ng-if="EventsDetailCtrl.activeEvent.sales.length > 0">
                         <thead>
                         <tr>
                             <th>From</th>
@@ -66,8 +66,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr ng-repeat="sale in EventsDetailCtrl.activeEvent.sales"
-                            ng-click="EventsDetailCtrl.toggleSidenav(sale)">
+                        <tr ng-repeat="sale in EventsDetailCtrl.activeEvent.sales">
                             <td>
                                 <!--<img src="/images/desk/players_img/profile_img_1.png" alt="" style="vertical-align: middle">-->
                                 <div class="event_detail_table_avatar" style="background: url({%sale.creator.avatar%})"></div>
@@ -75,7 +74,9 @@
                             </td>
                             <td class="bold">{% sale.markup %}</td>
                             <td class="event_right-side_table_bids-list">
-                                <div ng-repeat="bid in sale.bids.highest">
+                                <div ng-repeat="bid in sale.bids.highest"
+                                     ng-click="EventsDetailCtrl.toggleSidenav(sale,bid)"
+                                     style="cursor:pointer">
                                     <span>{% bid.markup %}</span>
                                     <span>{% bid.amount|currency:'$':0 %}</span>
                                 </div>
@@ -83,9 +84,25 @@
                         </tr>
                         </tbody>
                     </table>
+
+
+                    <div class="main_content main_content__empty" ng-if="EventsDetailCtrl.activeEvent.sales.length == 0">
+                        <div class="main_content__empty_container">
+                        <div class="main_content__empty_container__img main_content__empty_container__img_sale"></div>
+                        <div class="main_content__empty_container__title">No sales yet</div>
+                        <div class="main_content__empty_container__discription">
+                            Be the first who will create sale in this event and rise money</div>
+                        <div class="main_content__empty_container__buttons">
+                        <div class="main_content__empty_container__button main_content__empty_container__button__blue" ng-click="EventsDetailCtrl.toggleSaleSidenav()" role="button" tabindex="0">Create a Sale</div>
+                    </div>
+        </div>
+    </div>
+
+
                 </div>
             </div>
         </div>
     </div>
 </div>
-<bid-place sale="EventsDetailCtrl.sale"></bid-place>
+<bid-place sale="EventsDetailCtrl.sale" bid="EventsDetailCtrl.bid"></bid-place>
+<sale-create></sale-create>
