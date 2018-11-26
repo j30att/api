@@ -14,7 +14,10 @@ class BidPlace {
         this.isSidenavOpen = false;
         this.bid = {};
         this.status = 1;
-    }
+        this.show = false;
+
+       }
+
 
     $onInit() {
         this.$scope.$on('sidenav-open', (event, data) => {
@@ -64,7 +67,19 @@ class BidPlace {
     }
 
     changeYourBid(bid) {
-        this.bid = bid
+        this.bid.markup = bid.markup;
+        this.bid.share = bid.share + '%';
+        this.bid.amount = '$' + bid.amount;
+
+        this.show = true;
+    }
+
+    copyBid(bid, iCan){
+        if(iCan){
+            this.bid.markup = bid.markup;
+            this.bid.share = bid.share + '%';
+            this.bid.amount = '$' + bid.amount;
+        }
     }
 
 }
@@ -73,7 +88,8 @@ BidPlace.$inject = ['$scope', 'BidsResourceService', '$mdSidenav', '$http', 'Sal
 
 export const BidPlaceComponent = {
     bindings: {
-        sale: '='
+        sale: '=',
+        bid: '<'
     },
     template: require('./bid-place.template.html'),
     controller: BidPlace,
