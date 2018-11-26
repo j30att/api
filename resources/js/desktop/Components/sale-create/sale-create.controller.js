@@ -128,7 +128,6 @@ class SaleCreate {
                     this.close('right_create_sale');
                 }
             });
-
     }
 
     close(componentId){
