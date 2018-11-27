@@ -44,10 +44,18 @@ class ResetPasswordController extends Controller
         $this->middleware('guest');
     }
 
+    public function showResetForm(Request $request){
+        if(!empty($request->get('token'))){
+            $request->session()->put('__restoreToken', $request->get('token'));
+            return redirect('/restore');
+        }
+    }
 
     public function reset(Request $request)
     {
-
+        $token = $request->session()->get('__restoreToken');
+        $request->session()->forget('__restoreToken');
+        $request->merge(['token' => $token]);
         $request->validate($this->rules(), $this->validationErrorMessages());
 
         // Here we will attempt to reset the user's password. If it is successful we
@@ -58,6 +66,7 @@ class ResetPasswordController extends Controller
             $this->credentials($request), function ($user, $password) {
               $this->resetPassword($user, $password);
         });
+
 
         // If the password was successfully reset, we will redirect the user back to
         // the application's home authenticated view. If there is an error we can

@@ -103,7 +103,9 @@ class CMSHelper
                 Log::info($now->gte(Carbon::parse($eventData->event->eventStartDate)) . 'status event');
                 Log::info($now . 'NOW');
                 Log::info(Carbon::parse($eventData->event->eventStartDate) . 'START DAY');
-                $this->updateImage($event);
+
+//                if ($eventData->event->eventLogoBg != null) $this->updateImage($event);
+
                 $event->save();
 
 
@@ -241,7 +243,7 @@ class CMSHelper
 
     }
 
-    public function updateImage(Event $event){
+    /*public function updateImage(Event $event){
         \Cloudinary::config([
             "cloud_name" => config('cloudinary.cloudName'),
             "api_key" => config('cloudinary.apiKey'),
@@ -267,5 +269,5 @@ class CMSHelper
         $newImage->save();
         $event->image_id = $newImage->id;
 
-    }
+    }*/
 }

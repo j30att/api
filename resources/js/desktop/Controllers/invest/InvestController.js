@@ -2,7 +2,7 @@ import {DialogController} from "../DialogController";
 import {SALE_CLOSED, SALE_INDEX, SALE_MARKUP} from "../../Constants"
 
 class InvestController {
-    constructor($window, $http, $mdDialog, EventsResourceService, SalesResourceService, $scope) {
+    constructor($window, $http, $mdDialog, EventsResourceService, SalesResourceService, $scope, $stateParams) {
         this.EventsResourceService = EventsResourceService;
         this.SalesResourceService = SalesResourceService;
         this.user = window.__user;
@@ -10,7 +10,7 @@ class InvestController {
         this.$window = $window;
         this.$scope = $scope;
         this.$http = $http;
-
+        this.$stateParams = $stateParams;
         this._opts = {dataLoad: false};
 
         this.events = [];
@@ -27,11 +27,25 @@ class InvestController {
     }
 
     $onInit(){
+
+
+        if(this.$stateParams.restore == 1){
+            this.toggleSidenavLogin();
+        }
+
         this.$scope.$on('place-a-bid', (event, data) => {
             if(data.status === 2){
                 this.sales = this.sales.filter(item => item.id !== data.id);
             }
         });
+    }
+
+
+    toggleSidenavLogin() {
+        setTimeout(() => {
+            this.$scope.$broadcast('sidenav-login-open', {state: 4});
+        }, 100);
+
     }
 
     setFilter(param) {
@@ -70,6 +84,6 @@ class InvestController {
 
 }
 
-InvestController.$inject = ['$window', '$http', '$mdDialog','EventsResourceService','SalesResourceService', '$scope'];
+InvestController.$inject = ['$window', '$http', '$mdDialog','EventsResourceService','SalesResourceService', '$scope', '$stateParams'];
 
 export {InvestController};

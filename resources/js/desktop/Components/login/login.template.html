@@ -120,19 +120,17 @@
 
                   class="login__form ng-pristine ng-valid-email ng-invalid
                 ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength">
-                <div class="reset_information">
-                    Enter your code of email & create new password
-                </div>
 
                 <md-input-container class="login__input_container md-block login_input md-formSelect-theme flex-gt-sm"
                                     style="margin-bottom: 20px;">
-                    <label for="input_6" class="login__input_label">Code of Email</label>
-                    <input type="text"
-                           ng-model="$ctrl.codeOfEmail" placeholder="Code of Email"
-                           required=""
+                    <label for="input_6" class="login__input_label">Your email</label>
+                    <input type="email"
+                           ng-model="$ctrl.confirmEmail" placeholder="Enter your email"
+                           name="clientPassword" required=""
                            class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid ng-invalid-required"
                            aria-invalid="true">
                 </md-input-container>
+
 
                 <md-input-container class="login__input_container md-block login_input md-formSelect-theme flex-gt-sm"
                                     style="margin-bottom: 20px;">
