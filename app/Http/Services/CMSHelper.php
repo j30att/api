@@ -53,8 +53,9 @@ class CMSHelper
                     break;
 
             }
-        } catch (\Exception $e) {
-            Log::error($msgDetails["entityName"].' '.$e->getMessage());
+
+        } catch (Exception $e) {
+            Log::error($msgDetails["entityName"] . ' ' . $e->getMessage() . ' ' . $e->getFile() . ' ' . $e->getLine());
         }
     }
 
