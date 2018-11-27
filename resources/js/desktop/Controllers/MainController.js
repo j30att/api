@@ -1,7 +1,8 @@
 class MainController {
-    constructor($state, $scope) {
+    constructor($state, $scope, $stateParams) {
         this.$scope = $scope;
         this.$state = $state;
+        this.$stateParams = $stateParams;
     };
 
     toggleSidenavLogin() {
@@ -15,6 +16,6 @@ class MainController {
 
 }
 
-MainController.$inject = ['$state', '$scope'];
+MainController.$inject = ['$state', '$scope', '$stateParams'];
 
 export {MainController};

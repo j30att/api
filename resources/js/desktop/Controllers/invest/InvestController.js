@@ -11,7 +11,6 @@ class InvestController {
         this.$scope = $scope;
         this.$http = $http;
         this.$stateParams = $stateParams;
-
         this._opts = {dataLoad: false};
 
         this.events = [];
@@ -28,12 +27,25 @@ class InvestController {
     }
 
     $onInit(){
-        console.log(this.$stateParams);
+
+
+        if(this.$stateParams.restore == 1){
+            this.toggleSidenavLogin();
+        }
+
         this.$scope.$on('place-a-bid', (event, data) => {
             if(data.status === 2){
                 this.sales = this.sales.filter(item => item.id !== data.id);
             }
         });
+    }
+
+
+    toggleSidenavLogin() {
+        setTimeout(() => {
+            this.$scope.$broadcast('sidenav-login-open', {state: 4});
+        }, 100);
+
     }
 
     setFilter(param) {
