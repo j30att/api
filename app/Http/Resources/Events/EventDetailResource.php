@@ -16,8 +16,9 @@ class EventDetailResource extends JsonResource
      */
     public function toArray($request)
     {
+
         return [
-            'id'         => $this->resource->id,
+            'id'         => $this->id,
             'title'      => str_limit($this->resource->title, 20),
             'date'       => $this->formatted_date,
             'fund'       => $this->fund,
@@ -25,7 +26,7 @@ class EventDetailResource extends JsonResource
             'period'     => $this->period,
             'subevents'  => SubEventResource::collection($this->subEvents),
             'sales'      => SaleInvestResource::collection($this->sales),
-             'image'        => $this->main_image
+            'image'        => $this->main_image
         ];
     }
 }

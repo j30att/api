@@ -15,9 +15,10 @@ class UserRegisteredNotification extends Notification
      *
      * @return void
      */
-    public function __construct($user)
+    public function __construct($user, $token)
     {
         $this->user = $user;
+        $this->token = $token;
     }
 
     /**
@@ -39,12 +40,7 @@ class UserRegisteredNotification extends Notification
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)
-            ->success()
-            ->subject('Welcome')
-            ->line('Dear ' . ', we are happy to see you here.')
-            ->action('Go to site', url('/'))
-            ->line('Please tell your friends about us.');
+        return (new MailMessage)->view('emails.emailConfirmation', ['url'=>$this->token->confirmation_url]);
     }
 
     /**

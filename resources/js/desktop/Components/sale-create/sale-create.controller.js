@@ -16,7 +16,7 @@ class SaleCreate {
             closing_time: null
         };
         this.sale = {
-            user_id: this.user.id,
+            user_id: this.user?  this.user.id : null,
             event_id: null,
             sub_event_id: null,
             status: SALE_ACTIVE,
@@ -31,13 +31,22 @@ class SaleCreate {
 
     }
     $onInit(){
-        this.$scope.$on('sidenav-open', (event, data) => {
-            this.buildToggler('right');
+        this.$scope.$on('sidenav-open-create_sale', (event, data) => {
+
+            if (this.user == null){
+                return false
+            }
+            if(data != null){
+                this.sale.event_id = data;
+            }
+
+            this.buildToggler('right_create_sale');
         });
 
         this.$scope.$watch('isSidenavOpen', (fixed) => {
             this.$state.modalOpened = fixed;
         });
+
     }
 
     buildToggler(componentId) {
@@ -109,35 +118,34 @@ class SaleCreate {
     createSale(){
 
         if(!this.validate()) return false;
-        this.SalesResourceService.createMySale(this.sale, this.type).then(response => {
-            if (response.data.status == 1){
-                if (this.type == 'row'){
-                    this.sales.active = response.data.data;
+        this.SalesResourceService.createMySale(this.sale, this.type)
+            .then(response => {
+                if (response.data.status == 1){
+                    if (this.type == 'row'){
+                        this.sales.active = response.data.data;
+                        this.showStub = false;
+                    }
+                    if (this.type == 'list'){
+                        this.sales = response.data.data;
+                    }
+                    this.close('right_create_sale');
                 }
-                if (this.type == 'list'){
-                    this.sales = response.data.data;
-                }
-                this.close('right');
-            } else {
-
-            }
-
-        });
-
+            });
     }
 
     close(componentId){
         this.$mdSidenav(componentId).close();
     }
 
-};
+}
 
 SaleCreate.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http', 'SalesService', '$timeout', '$state'];
 
 export const SaleCreateComponent = {
     bindings: {
-        sales:     '=',
-        type:      '='
+        sales: '=',
+        type: '=',
+        showStub: '='
     },
     template: require('./sale-create.template.html'),
     controller: SaleCreate,

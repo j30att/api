@@ -6,14 +6,13 @@
                     'bids-item__canceled':     item.status === 5,
                      }"
      ng-repeat="item in $ctrl.bids"
-     ng-if="$ctrl.state =='row'"
->
+     ng-if="$ctrl.state =='row'">
 
     <div>
 
         <div class="card__profile_info">
-            <div class="sale_card__list_profile__photo card__profile_foto" style="background-image: url({%item.investor.avatar%});  border: none;">
-                <!--<img src="/images/players.png" alt="">-->
+            <div class="sale_card__list_profile__photo card__profile_foto"
+                 style="background-image: url({%item.investor.avatar%})">
             </div>
             <div class="profile_text">
                 <div class="card__profile_name" ng-bind="item.investor.name">
@@ -132,7 +131,8 @@
 
         <div class="card__profile_info">
             <div class="blocks_header_link" ng-if="item.status==3"><a ui-sref="">edit</a></div>
-            <div class="sale_card__list_profile__photo card__profile_foto" style="background-image: url({%item.investor.avatar%}); border: none;">
+            <div class="sale_card__list_profile__photo card__profile_foto"
+                 style="background-image: url({%item.investor.avatar%})">
 
             </div>
             <div class="profile_text">

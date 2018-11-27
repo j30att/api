@@ -1,6 +1,7 @@
 <div class="deskwr">
     <main-menu></main-menu>
-    <div class="main_content">
+    <div class="main_content"
+         style="display: flex; flex-direction: column;">
         <div class="event_content-wr">
             <div class="event_content__title">
                 Events
@@ -12,12 +13,13 @@
                 <a ng-repeat="event in InvestCtrl.events"
                     ui-sref="invest-events-detail({id:event.id})" class="event_item">
                     <div class="event_item__pic" style="background-image: url({%event.image%})">
+
                     </div>
                     <div class="event_info">
                         <div class="event_info_name" ng-bind="event.title"></div>
                         <div class="event_info_date-gtd">
                             <div class="event_info_date" ng-bind="event.period"></div>
-                            <div class="event_info_gtd">{% event.fund | currency:'£':2%} GTD</div>
+                            <div class="event_info_gtd">{% event.fund | currency:'£':0%} GTD</div>
                         </div>
 
                     </div>
@@ -25,14 +27,15 @@
                 </a>
             </div>
         </div>
-        <div class="events_tabs-wr">
+        <div ng-if="InvestCtrl.sales && InvestCtrl.sales.length > 0"
+            class="events_tabs-wr">
             <div class="events_tabs_nav">
                 <ul class="events_tabs_list">
                     <li class="events_tabs_item events_tabs_item_active">Closing soon</li>
                 </ul>
                 <a ui-sref="sale-list({type:'active'})" class="events_tabs_nav__link">See all</a>
             </div>
-            <table class="table_events_list main_event_table">
+            <table class="table_events_list main_event_table" ng-if="InvestCtrl.sales.length > 0">
                 <thead class="table_events_head">
                 <tr>
                     <th>From</th>
@@ -50,6 +53,7 @@
                     <td class="t_from">
                         <div class="t_from_fix_height">
                             <div class="t_from_img" style="background-image: url({%sale.creator.avatar%})"></div>
+
                             <span ng-bind="sale.creator.name"></span>
                         </div>
                     </td>
@@ -62,8 +66,14 @@
                 </tr>
                 </tbody>
             </table>
-
         </div>
+
+        <stub ng-if="InvestCtrl.sales.length == 0"
+              style="height: auto"
+              title="Closing sales"
+              description="There are no closing sales yet"
+              class="stub">
+        </stub>
     </div>
 </div>
 <bid-place sale ="InvestCtrl.sale"></bid-place>

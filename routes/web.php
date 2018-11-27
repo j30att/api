@@ -12,11 +12,13 @@
 */
 
 Route::group(['middleware' => 'guest'], function(){
+
     Route::post('/login', 'Auth\LoginController@login')->name('login');
     Route::post('/register', 'Auth\RegisterController@register')->name('register');
     Route::post('/check-email', 'Auth\RegisterController@checkEmail')->name('check.email');
     Route::post('/password/forgot', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
     Route::post('/password/reset', 'Auth\ResetPasswordController@reset')->name('password.reset');
+    Route::post('/confirm-email', 'Auth\LoginController@resendConfirm');
 
 });
 
@@ -38,3 +40,5 @@ Route::get('{any}', 'PageController@app')->where(['any' => '.*'])->name('index')
 
 
 Route::get('desktop/all', 'PageController@desktop');
+
+

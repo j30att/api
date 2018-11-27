@@ -1,9 +1,9 @@
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12" ng-if="!SaleCtrl.showStub">
         <div class="header">
-            <a ui-sref="profile">
-                <div class="header_profile"></div>
-            </a>
+            <div class="header_profile"
+                 ng-click="MainCtrl.toggleMobileProfile()" >
+            </div>
             <div class="header_logo"></div>
             <div class="header_filter_empty" ></div>
         </div>
@@ -15,6 +15,26 @@
         <sales-carousel sales="SaleCtrl.sales" state="'row'"></sales-carousel>
         <span ng-include="'tpl/view/footer.template.html'"></span>
     </div>
+
+    <div class="col-md-12" ng-if="SaleCtrl.showStub">
+        <div class="header">
+            <div class="header_profile"
+                 ng-click="MainCtrl.toggleMobileProfile()" >
+            </div>
+            <div class="header_logo"></div>
+            <div class="header_filter_empty" ></div>
+        </div>
+        <div class="main_content__empty_container" style="margin: 100px auto 0 auto; width: 100%">
+            <div class="main_content__empty_container__img main_content__empty_container__img_sale"></div>
+            <div class="main_content__empty_container__title">No sales yet</div>
+            <div class="main_content__empty_container__discription">
+                Be the first who will create sale in this event and rise money</div>
+            <div class="main_content__empty_container__buttons">
+                <div class="main_content__empty_container__button main_content__empty_container__button__blue" ng-click="SaleCtrl.toggleSidenav()" role="button" tabindex="0">Create a Sale</div>
+            </div>
+        </div>
+        <span ng-include="'tpl/view/footer.template.html'"></span>
+    </div>
 </div>
 
-<sale-create></sale-create>
+<sale-create sales="SaleCtrl.sales" type="'row'" show-stub="SaleCtrl.showStub"></sale-create>
