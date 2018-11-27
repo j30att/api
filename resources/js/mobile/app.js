@@ -11,11 +11,13 @@ import hack from './Hack';
 
 let ngRouter = require('angular-ui-router').default;
 let ngMaterial = require('angular-material');
+let ngMessages = require('angular-messages');
 let ngAria = require('angular-aria');
 let ngAnimate = require('angular-animate');
 
 let app = angular.module('poker', [
     ngMaterial,
+    ngMessages,
     ngAria,
     ngAnimate,
     ngRouter,
