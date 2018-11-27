@@ -36,7 +36,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                 return {
                     state: 'invest',
                     params: {
-                        restore: true
+                        restore: 1
                     }
                 }
             }
