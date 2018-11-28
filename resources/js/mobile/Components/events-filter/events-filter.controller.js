@@ -1,5 +1,6 @@
 class EventsFilterController {
-    constructor(EventsResourceService) {
+    constructor($scope, EventsResourceService) {
+        this.$scope = $scope;
         this.EventsResourceService = EventsResourceService;
         this.state = 'none';
         this.filters = {};
@@ -20,6 +21,9 @@ class EventsFilterController {
 
     $onInit() {
         this.getFilters();
+        this.$scope.$on('clear-filter', () => {
+            this.clearFilters()
+        });
     }
 
     getFilters() {
@@ -78,12 +82,13 @@ class EventsFilterController {
     }
 }
 
-EventsFilterController.$inject = ['EventsResourceService'];
+EventsFilterController.$inject = ['$scope', 'EventsResourceService'];
 
 export const EventsFilterComponent = {
     bindings: {
         events: '=',
-        show: '='
+        show: '=',
+        clearFilter: '<'
     },
     template: require('./events-filter.template.html'),
     controller: EventsFilterController,

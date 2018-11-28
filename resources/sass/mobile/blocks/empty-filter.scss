@@ -1,0 +1,50 @@
+.empty-filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+  &__title {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  &__description {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 19px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    & div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45%;
+      max-width: 160px;
+      min-width: 120px;
+      height: 48px;
+      border-radius: 10px;
+      font-size: 16px;
+      letter-spacing: 0;
+      font-weight: bold;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    &__blue {
+      background: #007FED;
+      color: white;
+      margin-bottom: 10px;
+    }
+    &__white {
+      border: 0.5px solid #E0E0E0;
+    }
+  }
+}

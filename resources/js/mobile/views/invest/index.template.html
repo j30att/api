@@ -15,15 +15,17 @@
         </div>
         <div class="header_empty_height"></div>
 
-        <div class="invest_events">
+        <div class="invest_events"
+             ng-if="!InvstCtrl.emptyResult()">
             <div class="blocks_header_title">
                 <div class="blocks_header_title_name">Events</div>
                 <div class="blocks_header_link"><a ui-sref="events">See All</a></div>
             </div>
 
 
-            <events-carousel ng-if="InvstCtrl._opts.dataLoad"
-                             events="InvstCtrl.events" state="'row'">
+            <events-carousel
+                events="InvstCtrl.events"
+                state="'row'">
             </events-carousel>
 
             <div class="blocks_header_title">
@@ -31,8 +33,30 @@
                 <div class="blocks_header_link"><a ui-sref="sale-all">See All</a></div>
             </div>
         </div>
+
+        <div ng-if="InvstCtrl.emptyResult()"
+             class="empty-filter">
+            <div class="empty-filter__title">
+                Oops, nothing found!
+            </div>
+            <div class="empty-filter__description">
+                Try to change your filter settings or reset to go
+                back to the full list of events.
+            </div>
+            <div class="empty-filter__button">
+                <div class="empty-filter__button__blue"
+                     ng-click="InvstCtrl.showFilter = true">
+                    Change filter
+                </div>
+                <div class="empty-filter__button__white"
+                     ng-click="InvstCtrl.clearFilter()">
+                    Clear all
+                </div>
+            </div>
+        </div>
+
     </div>
-    <div class="fullscreen">
+    <div class="fullscreen" ng-if="!InvstCtrl.emptyResult()">
         <div class="invest_sales">
             <div class="tabs_list tabs_list__single">
                 <div class="tabs_item tabs_item__active"
@@ -42,8 +66,8 @@
             </div>
         </div>
         <sales-invest sales="InvstCtrl.sales" class="closing_soon_ivest_mobile"></sales-invest>
-        <span ng-include="'tpl/view/footer.template.html'"></span>
     </div>
+    <span ng-include="'tpl/view/footer.template.html'"></span>
 </div>
 
 <events-filter events="InvstCtrl.events" show="InvstCtrl.showFilter"></events-filter>

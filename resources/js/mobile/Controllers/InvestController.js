@@ -96,9 +96,8 @@ class InvestController {
 
     };
 
-    clearAllFilters() {
-        this.selectedEvents = [];
-        this.selectedCountries = [];
+    clearFilter() {
+        this.$scope.$broadcast('clear-filter')
     }
 
     saveFilters() {
@@ -109,11 +108,14 @@ class InvestController {
         this.EventsResourceService.getFilteredEvents(filter)
             .then(response => {
                 this.events = response.data.data;
+                console.log(this.events)
             });
         this.state = 'filters_close';
-
     }
 
+    emptyResult(){
+        return (this._opts.dataLoad && !this.events.length);
+    }
 
 }
 
