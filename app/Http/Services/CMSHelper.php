@@ -58,8 +58,7 @@ class CMSHelper
 
             }
         } catch (Exception $e) {
-            $this->error($e->getMessage());
-            Log::error($msgDetails["entityName"] . ' ' . $e->getMessage());
+            Log::error($msgDetails["entityName"] . ' ' . $e->getMessage() . ' ' . $e->getFile() . ' ' . $e->getLine());
         }
     }
 
@@ -79,7 +78,7 @@ class CMSHelper
             $country = Country::query()->where('code', $eventData->event->eventCountry)->first();
             if (!$country) {
                 Log::info('[x] Unprocessable COUNTRY');
-                return false;
+
             }
             if (is_null($eventData->event->deletedAt)) {
                 if (is_null($event)) {
@@ -93,7 +92,7 @@ class CMSHelper
                 $event->fund = (float)$eventData->event->eventUpcomingPrizepool;
                 $event->slug = $eventData->event->eventNameSlug;
                 $event->logo = $eventData->event->eventLogoBg;
-                $event->country_id = $country->id;
+                $event->country_id = $country ? $country->id : null;
                 $event->currency = $eventData->event->eventCurrency;
                 $event->venue_id = $eventData->event->eventVenueId;
                 $event->venue_name = $eventData->event->eventVenueName;
@@ -104,7 +103,9 @@ class CMSHelper
                 Log::info($now->gte(Carbon::parse($eventData->event->eventStartDate)) . 'status event');
                 Log::info($now . 'NOW');
                 Log::info(Carbon::parse($eventData->event->eventStartDate) . 'START DAY');
-                $this->updateImage($event);
+
+//                if ($eventData->event->eventLogoBg != null) $this->updateImage($event);
+
                 $event->save();
 
 
@@ -223,7 +224,7 @@ class CMSHelper
 
     }
 
-    public function updateImage(Event $event){
+    /*public function updateImage(Event $event){
         \Cloudinary::config([
             "cloud_name" => config('cloudinary.cloudName'),
             "api_key" => config('cloudinary.apiKey'),
@@ -249,5 +250,5 @@ class CMSHelper
         $newImage->save();
         $event->image_id = $newImage->id;
 
-    }
+    }*/
 }

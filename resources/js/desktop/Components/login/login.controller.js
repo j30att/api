@@ -27,7 +27,6 @@ class Login {
         this.errorPassword = false;
         this.notConfirmed = {status: false, text: ''};
 
-
     }
 
     down(event) {
@@ -39,7 +38,9 @@ class Login {
 
     $onInit() {
         this.$scope.$on('sidenav-login-open', (event, data) => {
-
+            if(data.state !== undefined){
+                this.state = data.state;
+            }
             this.buildToggler('right_login');
         });
 
@@ -73,14 +74,12 @@ class Login {
     }
 
     resetPassword() {
-        if (this.codeOfEmail.length > 10 && this.createNewPassword === this.createNewPasswordConfirm) {
+        if (this.createNewPassword === this.createNewPasswordConfirm) {
             let password = this.createNewPassword;
-            let token = this.codeOfEmail;
-            let email = this.forgotPasswordEmail;
+            let email = this.confirmEmail;
             let password_confirmation = this.createNewPasswordConfirm;
 
             this.$http.post(RESET_URL, {
-                token: token,
                 email: email,
                 password: password,
                 password_confirmation: password_confirmation
