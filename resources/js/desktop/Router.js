@@ -18,7 +18,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('index', {
             url: '/',
             template: require('./views/main.template.html'),
-            redirectTo : ()=>{
+            redirectTo: () => {
                 return {
                     state: 'invest'
                 }
@@ -50,6 +50,12 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             params: {
                 restore: null
             }
+        })
+        .state('closing-soon-list', {
+            url: '/closing-soon-list',
+            template: require('./views/sale/closing.template.html'),
+            controller: 'InvestController',
+            controllerAs: 'InvestCtrl',
         })
         .state('invest-events', {
             url: '/invest/events?date&event&country&venue',
