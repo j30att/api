@@ -23,46 +23,55 @@ use Illuminate\Support\Facades\Log;
 
 class SaleController extends Controller
 {
-    /**
-     * @param Request $request
-     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
-     */
-    public function closingSoonSales(Request $request)
+    public function closingSoonSalesAuth(Request $request)
     {
+
         /** @var User $user */
         $user = Auth::user();
 
-        $query = Sale::query()
+        if ($user == null) {
+            return $this->closingSoonSales();
+        } else {
+            if ($user->id != $request->get('user_id')) $this->closingSoonSales();
+        }
+
+        $sales = Sale::query()
             ->where('status', SALE::SALE_ACTIVE)
             ->with('creator')
-            ->with('event');
-
-        if($user){
-            $query->with(['bids_matched' => function (HasMany $query) use ($user) {
+            ->with('event')
+            ->with(['bids_matched' => function (HasMany $query) use ($user) {
                 $query->where('user_id', $user->id);
             }])
-                ->with(['bids_unmatched' => function (HasMany $query) use ($user) {
-                    $query->where('user_id', $user->id);
-            }]);
-        } else {
-            $query->with('bids_highest');
-        }
-
-        $sales = $query->get()
+            ->with(['bids_unmatched' => function (HasMany $query) use ($user) {
+                $query->where('user_id', $user->id);
+            }])
+            ->get()
             ->sortBy('event.date_start');
 
-        $limit = $request->get('limit');
-        if($limit){
-            $sales = $sales->take($limit);
-        }
-
         return SaleInvestResource::collection($sales);
+    }
+
+    public function closingSoonSales()
+    {
+       /* $sales = Sale::query()
+            ->where('status', SALE::SALE_ACTIVE)
+            ->with('creator')
+//            ->with('event')
+                ->with(['event' => function(){
+                    $start = Event::query()->where('date_start');
+                    $now = Carbon::now();
+                    dd($start);
+            }])
+            ->with('bids_highest')
+            ->get()
+            ->sortBy('event.date_start');*/
+
+       // return SaleInvestResource::collection($sales);
     }
 
     /**
      * Display a listing of the resource.
      *
-     * @param Request $request
      * @return \Illuminate\Http\Response
      */
     public function mySales(Request $request)
@@ -88,8 +97,7 @@ class SaleController extends Controller
     /**
      * Show the sale of authorized user by filter.
      *
-     * @param Request $request
-     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     * @return \Illuminate\Http\Response
      */
     public function myFilterSales(Request $request)
     {
@@ -109,7 +117,7 @@ class SaleController extends Controller
     /**
      * Show the sale order_by markup.
      *
-     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     * @return \Illuminate\Http\Response
      */
     public function lowestSales()
     {
@@ -125,7 +133,7 @@ class SaleController extends Controller
     /**
      * Show the sale order_by date_end in subevents.
      *
-     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     * @return \Illuminate\Http\Response
      */
     public function closingSales()
     {
@@ -142,8 +150,7 @@ class SaleController extends Controller
     /**
      * Show the sale for subevent.
      *
-     * @param Request $request
-     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     * @return \Illuminate\Http\Response
      */
     public function subeventSales(Request $request)
     {
@@ -176,6 +183,8 @@ class SaleController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
+     * @param  int $id
+     * @return \Illuminate\Http\Response
      */
     public function myUpdateSales(Request $request)
     {
@@ -187,12 +196,9 @@ class SaleController extends Controller
         $sale->save();
     }
 
-    /**
-     * @param Request $request
-     * @return SaleResource
-     */
     public function applayBidToMySale(Request $request)
     {
+
         $data = $request->get('bid');
 
         $bid = Bid::query()->find($data['bid']['id']);
@@ -202,6 +208,7 @@ class SaleController extends Controller
         $bid->amount = $data['bid']['amount'];
         $bid->status = Bid::BIDS_MATCHED;
         $bid->save();
+
 
         $sale = Sale::query()
             ->with('creator')
@@ -214,7 +221,9 @@ class SaleController extends Controller
         $sale->amount = $data['bid']['amount'];
         $sale->save();
 
+
         return new SaleResource($sale);
+
     }
 
 
