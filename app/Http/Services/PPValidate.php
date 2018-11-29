@@ -31,7 +31,7 @@ class PPValidate
     public static function getPPSession(User $user):array {
         $url = config('api.linkHost').'/api?partner='.config('api.pp_partner').'&partnerAccountId='.config('api.pp_accountId');
         $ch = curl_init();
-
+        Log::info('[*] url to link pp'.  $url);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, "{\"partnerToken\": $user->pp_partner_token,\n    \"accountId\": \"$user->pp_account_id\"}");
