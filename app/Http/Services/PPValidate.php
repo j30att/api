@@ -29,7 +29,9 @@ class PPValidate
     }
 
     public static function getPPSession(User $user):array {
-        $url = config('api.linkHost').'/api?partner='.config('api.pp_partner').'&partnerAccountId='.config('api.pp_accountId');
+        $url = config('api.pp_partner_host').'/api?partner='.config('api.pp_partner').'&partnerAccountId='.config('api.pp_accountId');
+
+
         $ch = curl_init();
         Log::info('[*] url to link pp'.  $url);
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -43,6 +45,7 @@ class PPValidate
 
         $result = curl_exec($ch);
         $result = json_decode($result, 1);
+
 
         return $result;
     }

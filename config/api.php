@@ -20,6 +20,8 @@ return [
 
     'linkRedirect'=> env('APP_URL', ''),
 
+    'pp_partner_host' => env('SEND_PP_HOST', ''),
+
     'pp_partner' => env('SEND_PP_ACCOUNT_PARTNER', ''),
 
     'pp_accountId' =>env('SEND_PP_ACCOUNT_ACCOUNT', ''),
