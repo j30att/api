@@ -14,6 +14,8 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         }
     });
 
+    $urlRouterProvider.otherwise('/404');
+
     $stateProvider
         .state('index', {
             url: '/',
@@ -25,10 +27,10 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             }
         })
 
-        /*.state ('logout', {
-            url: '/logout',
-            template: require('./views/main.template.html'),
-        })*/
+        .state ('404', {
+            url: '/404',
+            template: require('./views/errors/404.template.html'),
+        })
 
         .state('restorePass', {
             url: '/restore',
@@ -186,13 +188,13 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                 }
             }
         })
-        .state('auth.login', {
+        /*.state('auth.login', {
             //ng-controller="LoginController as LgCtrl"
             url: '/login',
             template: require('./views/auth/login.template.html'),
             controller: 'LoginController',
             controllerAs: 'LgCtrl'
-        })
+        })*/
         /*.state('auth.registration', {
             url: '/register',
             template: require('./views/auth/registration.template.html'),
