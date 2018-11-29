@@ -10,6 +10,7 @@ class EventsDetailController {
         this.activeEvent = [];
         this.user = window.__user;
         this._opts = {dataLoad: false};
+        this.sub_event_id = null;
     }
 
     $onInit() {
@@ -28,11 +29,15 @@ class EventsDetailController {
     }
 
     toggleSaleSidenav() {
-        console.log('toggleSaleSidenav');
-        this.$scope.$broadcast('sidenav-open-create_sale', this.event.id);
+        let data = {
+            event:this.event.id,
+            sub_event_id: this.sub_event_id,
+        };
+        this.$scope.$broadcast('sidenav-open-create_sale', data);
     }
 
     toggleEvent(event) {
+        this.sub_event_id = event.id;
         this.activeEvent = event;
     }
 

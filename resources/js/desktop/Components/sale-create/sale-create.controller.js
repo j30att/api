@@ -28,6 +28,7 @@ class SaleCreate {
             fixed: false,
             showSub: true
         };
+        this.data =
         this.isSidenavOpen =false;
 
 
@@ -39,7 +40,10 @@ class SaleCreate {
                 return false
             }
             if(data != null){
-                this.sale.event_id = data;
+                this.data = data;
+                this.sale.event_id = data.event;
+                this.sale.sub_event_id = data.sub_event_id;
+                console.log(this.sale);
             }
 
 
@@ -69,6 +73,12 @@ class SaleCreate {
         this.$http.post(EVENTS_CREATE_SALE)
             .then(response => {
                 this.events = response.data.data;
+                this.sale.event_id = this.data.event_id;
+                this.sale.event_id = this.data.event;
+                if (this.sale.event_id != null ){
+
+                    this.getSubevents();
+                }
             });
     }
     getSubevents() {
@@ -76,14 +86,13 @@ class SaleCreate {
         this.$http.post(SUB_EVENT_FILTER, {event_id: this.sale.event_id})
             .then(response => {
 
-                console.log(response.data.data.length);
                 if (response.data.data.length > 0 ){
                     this._opts.showSub = true;
                 }else {
                     this._opts.showSub = false;
                 }
-                console.log(response.data.data);
                 this.subevents = response.data.data;
+                this.sale.sub_event_id =this.data.sub_event_id;
             });
     }
 

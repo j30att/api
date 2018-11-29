@@ -319,12 +319,13 @@
     width: 500px;
     height: 70px;
     border-top: 1px solid #f2f2f2;
-    position: fixed;
+    //position: fixed;
     bottom: 0;
     right: 0;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    margin-left: -50px !important;
     &__buttons {
       display: flex;
       height: 38px;
