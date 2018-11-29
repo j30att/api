@@ -19,8 +19,8 @@
                     </md-select>
                 </div>
 
-                <label class="modal_content__sale_title modal_content__sale_title_select" ng-if="$ctrl._opts.showFlight">Subevents</label>
-                <div class="modal_content__sale_select" ng-if="$ctrl._opts.showFlight">
+                <label class="modal_content__sale_title modal_content__sale_title_select" ng-if="$ctrl._opts.showSub">Subevents</label>
+                <div class="modal_content__sale_select" ng-if="$ctrl._opts.showSub">
                     <md-select class="md-no-underline form-Select-theme"
                                ng-model="$ctrl.sale.sub_event_id"
                                ng-change="$ctrl.fillStatic()"
