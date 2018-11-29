@@ -29,7 +29,7 @@ class PPValidate
     }
 
     public static function getPPSession(User $user):array {
-        $url = 'http://'.config('api.pp_validate').'/api?partner='.config('api.pp_partner').'&partnerAccountId='.config('api.pp_accountId');
+        $url = 'http://'.config('api.linkHost').'/api?partner='.config('api.pp_partner').'&partnerAccountId='.config('api.pp_accountId');
         $ch = curl_init();
 
 
