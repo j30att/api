@@ -190,7 +190,9 @@
                    outline: none;
                    margin-top: 5px;
                    box-sizing: border-box;
-
+                   &.error{
+                       border: 1px solid red;
+                   }
                    &::placeholder {
                        color: #999999 !important;
                        opacity: 1 !important;

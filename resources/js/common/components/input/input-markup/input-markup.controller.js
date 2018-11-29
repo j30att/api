@@ -13,6 +13,8 @@ class InputMarkupController {
                 let amount = bid.amount.indexOf('$') > -1 ? bid.amount.replace('$', '') : bid.amount;
                 bid.share = Math.round((amount / buyIn * bid.markup * 100) * 100) / 100 + '%';
             }
+
+            this.validate();
         }
     }
 }
@@ -20,6 +22,8 @@ class InputMarkupController {
 export const InputMarkupComponent = {
     bindings: {
         bid: '=',
+        error: '=',
+        validate: '&',
         buyIn: '<',
         type: '@',
         className: '@',

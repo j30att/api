@@ -1667,6 +1667,10 @@ md-dialog-actions .md-confirm-button {
           box-sizing: border-box;
 }
 
+.modal_content__bid .you_bids__item input.error {
+  border: 1px solid red;
+}
+
 .modal_content__bid .you_bids__item input::-webkit-input-placeholder {
   color: #999999 !important;
   opacity: 1 !important;

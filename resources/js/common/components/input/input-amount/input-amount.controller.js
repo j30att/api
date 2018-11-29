@@ -13,15 +13,20 @@ class InputAmountController {
                 bid.share = (Math.round((bid.amount / buyIn * bid.markup * 100) * 100) / 100) + '%';
             }
             bid.amount = '$' + bid.amount;
+
         } else if (bid.amount === '$') {
             bid.amount = '';
         }
+
+        this.validate();
     }
 }
 
 export const InputAmountComponent = {
     bindings: {
         bid: '=',
+        error: '=',
+        validate: '&',
         buyIn: '<',
         type: '@',
         className: '@',
