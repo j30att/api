@@ -10,6 +10,7 @@ namespace App\Http\Services;
 
 use App\Models\PPUser;
 use App\Models\User;
+use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 
@@ -29,11 +30,32 @@ class PPValidate
     }
 
     public static function getPPSession(User $user):array {
-        $url = config('api.pp_partner_host').'/api?partner='.config('api.pp_partner').'&partnerAccountId='.config('api.pp_accountId');
+        $uri = config('api.pp_partner_host').'/api?partner='.config('api.pp_partner').'&partnerAccountId='.config('api.pp_accountId');
+
+        Log::info('[*] url to link pp'.  $uri);
+
+        $header = [
+            'Content-Type' => 'application/json',
+        ];
+
+        $body = [
+            'partnerToken'  => $user->pp_partner_token,
+            'accountId'     => $user->pp_account_id
+        ];
+
+        $response = self::request($uri, $header, $body);
+        $json = $response->getBody()->getContents();
+        $result = json_decode($json, 1);
 
 
+
+
+
+
+
+        /*
         $ch = curl_init();
-        Log::info('[*] url to link pp'.  $url);
+
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, "{\"partnerToken\": $user->pp_partner_token,\n    \"accountId\": \"$user->pp_account_id\"}");
@@ -44,7 +66,7 @@ class PPValidate
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
         $result = curl_exec($ch);
-        $result = json_decode($result, 1);
+        $result = json_decode($result, 1);*/
 
 
         return $result;
@@ -70,5 +92,23 @@ class PPValidate
         }
     }
 
+    private static function request($uri, $header, $body)
+    {
+        $guzzleClient = new Client();
+
+        if (config('api.useProxy') && config('api.proxyIP')) {
+
+            return $guzzleClient->request('post', $uri, [
+                'headers' => $header,
+                'json' => $body,
+                'proxy' => config('api.proxyIP')
+            ]);
+        }
+
+        return $guzzleClient->request('post', $uri, [
+            'headers' => $header,
+            'json' => $body
+        ]);
+    }
 
 }
