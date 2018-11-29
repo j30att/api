@@ -244,6 +244,7 @@ class SaleController extends Controller
         $user = Auth::user();
 
         $data = $request->get('sale');
+
         $type = $request->get('type');
 
         if ($user->id != $data['user_id']) {

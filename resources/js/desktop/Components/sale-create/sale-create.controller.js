@@ -1,4 +1,4 @@
-import {EVENTS_API, SALE_ACTIVE, FLIGH_FILTER, EVENTS_CREATE_SALE} from "../../../common/Constants";
+import {EVENTS_API, SALE_ACTIVE, FLIGH_FILTER, EVENTS_CREATE_SALE, SUB_EVENT_FILTER} from "../../../common/Constants";
 
 
 class SaleCreate {
@@ -68,15 +68,14 @@ class SaleCreate {
                 this.events = response.data.data;
             });
     }
-
     getSubevents() {
         this.fillStatic();
-        this.$http.post(FLIGH_FILTER, {event_id: this.sale.event_id})
+        this.$http.post(SUB_EVENT_FILTER, {event_id: this.sale.event_id})
             .then(response => {
                 if (!response.data.data.length > 0){
                     this._opts.showFlight = !this._opts.showFlight;
                 }
-                this.flights = response.data.data;
+                this.subevents = response.data.data;
             });
     }
 
@@ -112,15 +111,13 @@ class SaleCreate {
             || this.sale.amount == null
             || this.sale.user_id == null
         ){
-            console.log(this.sale.event_id, this.sale.sub_event_id, this.sale.flight_id);
-            console.log('validate faild');
+
             return false
         }
         return true;
     }
 
     createSale(){
-
         if(!this.validate()) return false;
         this.SalesResourceService.createMySale(this.sale, this.type)
             .then(response => {

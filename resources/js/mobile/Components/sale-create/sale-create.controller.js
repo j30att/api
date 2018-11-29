@@ -1,4 +1,4 @@
-import {EVENTS_API, EVENTS_CREATE_SALE, FLIGH_FILTER, SALE_ACTIVE} from "../../../common/Constants";
+import {EVENTS_API, EVENTS_CREATE_SALE, FLIGH_FILTER, SALE_ACTIVE, SUB_EVENT_FILTER} from "../../../common/Constants";
 
 
 class SaleCreate {
@@ -62,12 +62,12 @@ class SaleCreate {
 
     getSubevents() {
         this.fillStatic();
-        this.$http.post(FLIGH_FILTER, {event_id: this.sale.event_id})
+        this.$http.post(SUB_EVENT_FILTER, {event_id: this.sale.event_id})
             .then(response => {
                 if (!response.data.data.length > 0){
                     this._opts.showFlight = !this._opts.showFlight;
                 }
-                this.flights = response.data.data;
+                this.subevents = response.data.data;
             });
     }
 
