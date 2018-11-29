@@ -14,14 +14,14 @@ return [
 
 
 
-    'linkHost' =>  env('LINK_PP_HOST', ''),
+    'linkHost' =>  env('PP_API_HOST', ''),
 
     'linkLang' => env('LINK_PP_LANG', ''),
 
     'linkRedirect'=> env('APP_URL', ''),
 
-    'pp_partner' => env('LINK_PP_ACCOUNT_PARTNER', ''),
+    'pp_partner' => env('SEND_PP_ACCOUNT_PARTNER', ''),
 
-    'pp_accountId' =>env('LINK_PP_ACCOUNT_ACCOUNT', ''),
+    'pp_accountId' =>env('SEND_PP_ACCOUNT_ACCOUNT', ''),
 
 ];
