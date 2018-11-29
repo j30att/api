@@ -3,4 +3,5 @@
        placeholder="{% InputCtrl.placeholder %}"
        ng-model="InputCtrl.bid.amount"
        ng-change="InputCtrl.onChange($event)"
+       ng-class="{error:InputCtrl.error}"
 >

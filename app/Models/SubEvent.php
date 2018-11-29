@@ -5,6 +5,16 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class SubEvent
+ * @property int $id
+ * @property int $event_id
+ * @property string $title
+ * @property float $fund
+ * @property float $buy_in
+ *
+ * @package App\Models
+ */
 class SubEvent extends Model
 {
     const TYPE_LIVE = 1;

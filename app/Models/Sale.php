@@ -25,6 +25,9 @@ use Illuminate\Support\Str;
  * @property string $created_at
  * @property string $updated_at
  *
+ * @property float $buy_in
+ * @property float $fund
+ *
  * @property Bid[] $bids
  * @property Bid[] $bids_matched
  * @property Bid[] $bids_unmatched
@@ -113,4 +116,11 @@ class Sale extends Model
         return Carbon::now()->timestamp;
     }
 
+    public function getBuyInAttribute(){
+        return $this->event->buy_in;
+    }
+
+    public function getFundAttribute(){
+        return $this->event->fund;
+    }
 }

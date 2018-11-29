@@ -12,6 +12,7 @@ import {SaleDetailsComponent} from "./Components/sale_details/sale_details.contr
 import {UserDetailsComponent} from "./Components/user_details/user_details.controller";
 import {LogDetailsComponent} from "./Components/log_details/log_details.controller";
 import {StubComponent} from "./Components/stub/stub.controller";
+import {LoaderComponent} from "./Components/loader/loader.controller";
 
 let angular = require('angular');
 
@@ -31,6 +32,7 @@ module.component('saleDetails', SaleDetailsComponent);
 module.component('userDetails', UserDetailsComponent);
 module.component('logDetails', LogDetailsComponent);
 module.component('stub', StubComponent);
+module.component('loader', LoaderComponent);
 
 export default module.name;
 

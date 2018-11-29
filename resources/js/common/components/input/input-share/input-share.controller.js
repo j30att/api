@@ -17,6 +17,7 @@ class InputShareController {
             }
 
             bid.share += '%';
+            this.validate();
         }
     }
 
@@ -49,6 +50,8 @@ class InputShareController {
 export const InputShareComponent = {
     bindings: {
         bid: '=',
+        error: '=',
+        validate: '&',
         buyIn: '<',
         type: '@',
         className: '@',

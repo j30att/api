@@ -19,7 +19,7 @@ class InvestController {
     }
 
     $onInit() {
-        if(this.$state.current.name === 'closing-soon-list'){
+        if(this.$state.current.name === 'invest-sales'){
             this.getSales();
         } else {
             this.getEvents();
@@ -67,7 +67,7 @@ class InvestController {
         this.SalesResourceService.getClosingSoonSales(filter)
             .then(response => {
                 this.sales = response.data.data;
-                this._opts.dataLoad = true;
+                //this._opts.dataLoad = true;
             });
     }
 

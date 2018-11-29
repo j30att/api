@@ -16,12 +16,15 @@ class BidPlace {
         this.status = 1;
         this.show = false;
 
-       }
-
+        this.errors = {
+            markup: false,
+            share: false,
+            amount: false,
+        }
+    }
 
     $onInit() {
         this.$scope.$on('sidenav-open', (event, data) => {
-
             this.buildToggler('right');
         });
         this.$scope.$watch('isSidenavOpen', (fixed) => {
@@ -34,11 +37,27 @@ class BidPlace {
         this.$mdSidenav(componentId).toggle();
     }
 
+    validate() {
+        const {markup, share, amount} = this.bid;
+
+        this.errors.markup = !markup;
+        this.errors.share = !share;
+        this.errors.amount = !amount;
+
+        return !this.errors.markup
+            && !this.errors.share
+            && !this.errors.amount
+    }
+
     saveMyBid() {
+        if (typeof this.bid === 'undefined') {
+            this.bid = {};
+        }
+
         this.bid.user_id = this.user.id;
         this.bid.sale_id = this.sale.id;
 
-        if (this.bid.markup && this.bid.share && this.bid.amount) {
+        if (this.validate()) {
             if (typeof this.bid.id === 'undefined') {
                 this.BidsResourceService.storeMyBid(this.bid)
                     .then(response => {
@@ -55,11 +74,7 @@ class BidPlace {
                     });
             }
             this.bid = {};
-        } else {
-            console.log('Empty fields');
         }
-
-
     }
 
     close(componentId) {
@@ -74,8 +89,8 @@ class BidPlace {
         this.show = true;
     }
 
-    copyBid(bid, iCan){
-        if(iCan){
+    copyBid(bid, iCan) {
+        if (iCan) {
             this.bid.markup = bid.markup;
             this.bid.share = bid.share + '%';
             this.bid.amount = '$' + bid.amount;

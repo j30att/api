@@ -48,14 +48,14 @@ class DealerController
         $event = Event::query()
             ->with('subEvents')
             ->with(['sales'=>function($query){
-                $query->with('creator');
-                //$query->with('bids');
-                $query->with(['bids' => function($query){
-                    $query ->with('investor');
-                }]);
+                $query->with('creator')
+                    ->with(['bids' => function($query){
+                        $query ->with('investor');
+                    }]);
             }])
             ->find($id);
-        return  new EventResource($event);
+
+        return new EventResource($event);
     }
 
     public  function profileDetail(Request $request){
