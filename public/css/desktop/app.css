@@ -2207,10 +2207,6 @@ md-dialog-actions .md-confirm-button {
   background-image: url("/images/avatar_placeholder.png");
 }
 
-.dealer_user_avatar {
-  background-image: url("/images/avatar_placeholder.png");
-}
-
 .login_page {
   /*login form*/
   /*login form end*/
@@ -2956,11 +2952,9 @@ md-toast.md-right {
   border-radius: 4px;
   overflow: hidden;
   margin-right: 10px;
-}
-
-.modal_sale__user_info__pic img {
-  width: 100%;
-  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .modal_sale__user_info__profile {

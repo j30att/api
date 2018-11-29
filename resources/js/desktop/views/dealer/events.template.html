@@ -13,9 +13,15 @@
                 </thead>
                 <tbody class="events_admin__table_body">
                 <tr ng-repeat="event in dEventsCtrl.events">
-                    <td class="events_admin__table_event"><a ui-sref="dealer-events-detail({id:event.id})">{%event.title%}</a></td>
-                    <td class="events_admin__table_dates" ng-bind="event.period"> 25th Nov - 5th Dec</td>
-                    <td class="events_admin__table_payout">0/3</td>
+                    <td class="events_admin__table_event">
+                        <a ui-sref="dealer-events-detail({id:event.id})">{%event.title%}</a>
+                    </td>
+                    <td class="events_admin__table_dates"
+                        ng-bind="event.period">
+                    </td>
+                    <td class="events_admin__table_payout"
+                        ng-bind="event.sales.length ? '0/' + event.sales.length : '–'">
+                    </td>
                 </tr>
                 </tbody>
             </table>

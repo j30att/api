@@ -24,6 +24,9 @@ class SaleResource extends JsonResource
             'sub_event_id'  => $this->sub_event_id,
             'status'        => $this->status,
             'creator'       => $this->creator,
+            'subevent'      => $this->subevent,
+            'buy_in'        => $this->buy_in,
+            'fund'          => $this->fund,
         ];
     }
 }

@@ -32,6 +32,7 @@ class SaleDetails {
         this.$scope.$on('sidenav-saleDetails-open', (event, data) => {
             if (data){
                 this.sale = data;
+                console.log(this.sale);
             }
 
             this.buildToggler('right_sale_details');
@@ -121,10 +122,7 @@ class SaleDetails {
 
     }
 
-
-
-
-};
+}
 
 SaleDetails.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http',
     'SalesService', '$timeout', '$state', '$mdDialog', 'DealerResourceService'];

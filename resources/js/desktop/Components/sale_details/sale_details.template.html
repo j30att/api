@@ -6,16 +6,17 @@
                 <div class="your_profile_close" ng-click="$ctrl.close('right_sale_details')"></div>
             </div>
             <div class="modal_sale__user_info">
-                <div class="modal_sale__user_info__pic">
-                    <img src="/images/desk/players_img/profile_img_8.png" alt="pic">
+                <div class="modal_sale__user_info__pic"
+                    ng-style="{'background-image': 'url(' + $ctrl.sale.creator.avatar + ')'}">
                 </div>
                 <div class="modal_sale__user_info__profile">
                     <span class="name" ng-bind="$ctrl.sale.creator.name">Louise Romero</span>
                     <span class="link" ng-click="$ctrl.toggleUserDetails($ctrl.sale)">Open profile</span>
                 </div>
                 <div class="profile_status__gte_and_by">
-                    <div class="profile_status__buyin">£ <span>1,000</span></div>
-                    <div class="profile_status__gte">£<span>500,000</span> GTE</div>
+
+                    <div class="profile_status__buyin">{% $ctrl.sale.buy_in | currency:'$': 0 %}</div>
+                    <div class="profile_status__gte">{% $ctrl.sale.fund | currency:'$': 0 %} GTE</div>
                 </div>
             </div>
             <div class="modal_sale__user_details_info">
