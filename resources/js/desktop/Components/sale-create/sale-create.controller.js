@@ -35,7 +35,6 @@ class SaleCreate {
     }
     $onInit(){
         this.$scope.$on('sidenav-open-create_sale', (event, data) => {
-
             if (this.user == null){
                 return false
             }
@@ -43,6 +42,10 @@ class SaleCreate {
                 this.sale.event_id = data;
             }
 
+
+            this.sale.sub_event_id = null;
+            this.static.buy_in = '';
+            this.static.closing_time = '';
             this.buildToggler('right_create_sale');
         });
 

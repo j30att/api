@@ -15,15 +15,14 @@
                      style="width: 99%;"
                      ng-style="{'border':($ctrl.validateEvent == false) ? '1px solid red':'1px solid rgba(0, 0, 0, 0.08);'}">
                     <md-select class="md-no-underline"
-
                                ng-change="$ctrl.getSubevents()"
                                ng-model="$ctrl.sale.event_id" placeholder="Choose an event">
                         <md-option value="{%item.id%}" ng-repeat="item in $ctrl.events">{%item.title%}</md-option>
                     </md-select>
                 </div>
 
-                <label class="modal_content__sale_title modal_content__sale_title_select" ng-if="$ctrl._opts.showFlight">Subevents</label>
-                <div class="modal_content__sale_select" ng-if="$ctrl._opts.showFlight"
+                <label class="modal_content__sale_title modal_content__sale_title_select" ng-if="$ctrl._opts.showSub">Subevents</label>
+                <div class="modal_content__sale_select" ng-if="$ctrl._opts.showSub"
                      style="width: 99%;"
                      ng-style="{'border':($ctrl.validateSubEvent == false) ? '1px solid red':'1px solid rgba(0, 0, 0, 0.08);'}">
                     <md-select class="md-no-underline form-Select-theme"
