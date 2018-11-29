@@ -10,6 +10,15 @@ return [
 
     'useProxy' => env('PP_USE_PROXY', ''),
 
-    'proxyIP' => env('PP_PROXY_IP', '')
+    'proxyIP' => env('PP_PROXY_IP', ''),
+
+
+
+    'linkHost' =>  env('LINK_PP_HOST', ''),
+
+    'linkLang' => env('LINK_PP_LANG', ''),
+
+    'linkRedirect'=> env('LINK_PP_REDIRECT_URI', '')
+
 
 ];
