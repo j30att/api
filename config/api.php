@@ -14,7 +14,7 @@ return [
 
 
 
-    'linkHost' =>  env('LINK_PP_HOST', ''),
+    'linkHost' =>  env('PP_API_HOST', ''),
 
     'linkLang' => env('LINK_PP_LANG', ''),
 
