@@ -1,7 +1,8 @@
 <div class="deskwr">
     <main-menu></main-menu>
     <div class="main_content"
-         style="display: flex; flex-direction: column;">
+         style="display: flex; flex-direction: column;"
+         ng-if="InvestCtrl._opts.dataLoad">
         <div class="event_content-wr">
             <div class="event_content__title">
                 Events
@@ -75,5 +76,6 @@
               class="stub">
         </stub>
     </div>
+    <loader ng-if="!InvestCtrl._opts.dataLoad"></loader>
 </div>
-<bid-place sale ="InvestCtrl.sale"></bid-place>
+<bid-place sale="InvestCtrl.sale"></bid-place>

@@ -67,7 +67,7 @@ class InvestController {
         this.SalesResourceService.getClosingSoonSales(filter)
             .then(response => {
                 this.sales = response.data.data;
-                this._opts.dataLoad = true;
+                //this._opts.dataLoad = true;
             });
     }
 
