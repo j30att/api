@@ -29,8 +29,9 @@ class PPValidate
     }
 
     public static function getPPSession(User $user):array {
-        $url = 'http://'.config('api.authToken').'api?partner='.config('api.pp_partner').'&partnerAccountId='.config('api.pp_accountId');
+        $url = 'http://'.config('api.pp_validate').'/api?partner='.config('api.pp_partner').'&partnerAccountId='.config('api.pp_accountId');
         $ch = curl_init();
+
 
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -43,6 +44,7 @@ class PPValidate
 
         $result = curl_exec($ch);
         $result = json_decode($result, 1);
+
         return $result;
     }
 
