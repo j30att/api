@@ -101,7 +101,7 @@ class PPValidate
             return $guzzleClient->request('post', $uri, [
                 'headers' => $header,
                 'json' => $body,
-                'proxy' => config('api.proxyIP')
+                'proxy' => config('api.proxy')
             ]);
         }
 
