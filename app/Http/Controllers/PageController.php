@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
     public function app(Request $request){
-        $linkUrl =config('api.linkHost').'/'.config('api.linkLang').'/VC/login-staking.html?redirect_URI='.config('api.linkRedirect');
+        $linkUrl ='https://'.config('api.linkHost').'/'.config('api.linkLang').'/VC/login-staking.html?redirect_URI='.config('api.linkRedirect');
         return view('layouts.main', ['linkUrl' => $linkUrl]);
     }
 
