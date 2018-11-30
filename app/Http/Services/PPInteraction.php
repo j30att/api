@@ -116,8 +116,6 @@ class PPInteraction
 
         $uri = config('api.host') . '/api/rest/staking/wallet/bidamendedinfo/';
 
-        $guzzleClient = new Client();
-
         $header = [
             'Content-Type' => 'application/json',
             'player-session' => $ppUser->session,
@@ -148,10 +146,7 @@ class PPInteraction
             $ppRequest->body = json_encode($body);
             $ppRequest->save();
 
-            $response = $guzzleClient->request('post', $uri, [
-                'headers' => $header,
-                'json' => $body
-            ]);
+            $response = self::request($uri, $header, $body);
 
             $json = $response->getBody()->getContents();
             $responseContent = json_decode($json, 1);
