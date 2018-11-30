@@ -42,8 +42,8 @@ class FakeSubEvents extends Command
         $events = Event::query()->with('subEvents')->get();
         foreach ($events as $event){
             if (count($event->subEvents) == 0){
-                $subevent = rand(1000000, 1100000);
-                $subevent->id = $event->id;
+                $subevent = new SubEvent();
+                $subevent->id = rand(1000000, 1100000);
                 $subevent->event_id = $event->id;
                 $subevent->title = $event->title;
                 $subevent->fund = $event->fund;
