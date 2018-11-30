@@ -95,7 +95,8 @@ class PPInteraction
             }
 
         } catch (\Exception $e) {
-            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine());
+            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine() . "\n"
+                . $uri);
             Log::info(serialize($body));
         }
 
@@ -114,8 +115,6 @@ class PPInteraction
         $newAmount = $PPBid->amount + $bid->amount;
 
         $uri = config('api.host') . '/api/rest/staking/wallet/bidamendedinfo/';
-
-        $guzzleClient = new Client();
 
         $header = [
             'Content-Type' => 'application/json',
@@ -147,10 +146,7 @@ class PPInteraction
             $ppRequest->body = json_encode($body);
             $ppRequest->save();
 
-            $response = $guzzleClient->request('post', $uri, [
-                'headers' => $header,
-                'json' => $body
-            ]);
+            $response = self::request($uri, $header, $body);
 
             $json = $response->getBody()->getContents();
             $responseContent = json_decode($json, 1);
@@ -173,7 +169,8 @@ class PPInteraction
             }
 
         } catch (\Exception $e) {
-            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine());
+            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine() . "\n"
+                . $uri);
             Log::info(serialize($body));
         }
 
@@ -244,7 +241,8 @@ class PPInteraction
                 return true;
             }
         } catch (\Exception $e) {
-            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine());
+            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine() . "\n"
+                . $uri);
             Log::info(serialize($body));
         }
 
@@ -300,7 +298,8 @@ class PPInteraction
             }
 
         } catch (\Exception $e) {
-            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine());
+            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine() . "\n"
+                . $uri);
             Log::info(serialize($body));
         }
 
@@ -371,7 +370,8 @@ class PPInteraction
             }
 
         } catch (\Exception $e) {
-            Log::error($e->getMessage() . ' : ' . $e->getFile() . ' : ' . $e->getLine());
+            Log::error($e->getMessage() . ' : ' . $e->getFile() . ' : ' . $e->getLine() . "\n"
+                . $uri);
             Log::info(serialize($body));
         }
         return false;
@@ -410,12 +410,12 @@ class PPInteraction
     {
         $guzzleClient = new Client();
 
-        if (config('api.useProxy') && config('api.proxyIP')) {
+        if (config('api.useProxy') && config('api.proxy')) {
 
             return $guzzleClient->request('post', $uri, [
                 'headers' => $header,
                 'json' => $body,
-                'proxy' => config('api.proxyIP')
+                'proxy' => config('api.proxy')
             ]);
         }
 
