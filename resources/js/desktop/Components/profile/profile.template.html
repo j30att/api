@@ -35,7 +35,10 @@
             </div>
 
             <div class="link_party_pk" ng-if="$ctrl.user.pp_user != null">
-                    <div class="link_party_btn" ng-bind="$ctrl.user.pp_user.screen_name"></div>
+                <div class="link_party_inf" ng-bind="$ctrl.user.pp_user.screen_name"></div>
+                <a href="{%$ctrl.linkUrl%}">
+                    <div class="link_party_btn">Link Party Poker account</div>
+                </a>
             </div>
             <div class="your_profile_nav">
                 <ul class="pr_nav_list">
