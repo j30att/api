@@ -24,6 +24,7 @@ class SaleResource extends JsonResource
             'markup'        => $this->markup,
             'share'         => $this->share,
             'amount'        => $this->amount,
+            'subevent_id'   => $this->sub_event_id,
             'event'         => new EventResource($this->event),
             'subevent'      => new SubEventResource($this->subevent),
             'bids'          => $this->bids,
@@ -33,7 +34,5 @@ class SaleResource extends JsonResource
             'creator'       => new UserInvestResource($this->creator),
         ];
 
-
-        //return parent::toArray($request);
     }
 }

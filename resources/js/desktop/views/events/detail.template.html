@@ -68,7 +68,8 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr ng-repeat="sale in EventsDetailCtrl.activeEvent.sales">
+
+                        <tr ng-repeat="sale in EventsDetailCtrl.activeEvent.sales | filter:{subevent_id:EventsDetailCtrl.activeEvent.id}" >
                             <td>
                                 <!--<img src="/images/desk/players_img/profile_img_1.png" alt="" style="vertical-align: middle">-->
                                 <div class="event_detail_table_avatar" style="background: url({%sale.creator.avatar%})"></div>

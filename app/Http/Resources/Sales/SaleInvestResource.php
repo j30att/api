@@ -25,6 +25,7 @@ class SaleInvestResource extends JsonResource
             'markup'    => $this->markup,
             'share'     => $this->share,
             'amount'    => $this->amount,
+            'subevent_id'  => $this->sub_event_id,
             'event'     => new EventsInvestResource($this->event),
             'creator'   => new UserInvestResource($this->creator),
             'bids'      => new BidsGroupResource($this),
