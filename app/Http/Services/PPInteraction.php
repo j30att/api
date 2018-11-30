@@ -36,11 +36,8 @@ class PPInteraction
         $header = [
             'Content-Type' => 'application/json',
             'player-session' => $ppUser->session,
-            'auth-token' => 'staking:pg:Test:ReleaseB',
-            'partner-name' => 'stackingapp',
-
-            //'auth-token' => config('api.authToken'),
-            //'partner-name' => config('api.partnerName')
+            'auth-token' => config('api.authToken'),
+            'partner-name' => config('api.partnerName')
         ];
 
         $body = [
