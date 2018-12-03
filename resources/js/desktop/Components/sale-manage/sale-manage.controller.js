@@ -16,14 +16,16 @@ class SaleManage {
         this.isSidenavOpen = false;
 
         this.sale = {};
+        this.disabled = true;
 
     }
+
+
 
     $onInit() {
         this.$scope.$on('sidenavManage-open', (event, data) => {
             if (data) {
                 this.sale = data;
-                console.log(data, 'data');
                 this.calcPayRemaining();
                 this.buildToggler('right_manage');
             }
@@ -31,8 +33,25 @@ class SaleManage {
         this.$scope.$watch('isSidenavOpen', (fixed) => {
             this.$state.modalOpened = fixed
         });
+    }
+
+    enableEdti(e){
+        this.disabled = false;
+
+        this.$timeout().then(()=>{
+            setTimeout(100);
+            this.enableFocus();
+        });
+
 
     }
+
+    enableFocus(){
+        angular.element(document.querySelector('[id="focused"]')).focus();
+    }
+
+
+
 
     buildToggler(componentId) {
         this.$mdSidenav(componentId).toggle();
@@ -46,6 +65,7 @@ class SaleManage {
     close(componentId) {
         this.$mdSidenav(componentId).close();
     }
+
 
     showBidsConfirm(bid) {
         console.log(bid);
@@ -75,6 +95,11 @@ class SaleManage {
         }, () => {});
     }
 
+    acceptChangeSale(event, sale){
+        if (event.keyCode === 13) {
+            this.showSaleConfirm(sale);
+        }
+    }
     showSaleConfirm(sale) {
         let confirm = this.$mdDialog.confirm()
             .parent(angular.element(document.querySelector('[md-component-id="right_manage"]')))
@@ -90,7 +115,7 @@ class SaleManage {
 
         this.$mdDialog.show(confirm).then(
             () => {
-
+                this.SalesResourceService.updateMySale(this.sale);
             },
             () => {});
     }
