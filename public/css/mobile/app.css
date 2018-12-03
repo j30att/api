@@ -12110,7 +12110,7 @@ a.text-dark:focus {
 }
 
 .profile_block_title {
-  margin-top: 30px;
+  margin-top: 20px;
   font-size: 13px;
   text-transform: uppercase;
   color: #949494;
@@ -12139,6 +12139,11 @@ a.text-dark:focus {
 .profile_menu_item__text {
   font-size: 16px;
   margin-left: 16px;
+}
+
+.profile_menu_item__text_no_margin {
+  font-size: 16px;
+  margin-left: 0px;
 }
 
 .profile_menu_item__more {

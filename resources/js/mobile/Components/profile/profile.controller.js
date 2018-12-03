@@ -8,6 +8,8 @@ class Profile {
         this.isSidenavOpen = false;
         this.Upload = Upload;
         this._opts = {};
+        this.state = 'index';
+
     }
 
     $onInit() {

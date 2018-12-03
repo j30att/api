@@ -1,6 +1,6 @@
 <md-sidenav class="md-sidenav-right full_height full_height__sidnav" style="position: fixed !important;"
             md-is-open="isSidenavOpen" md-component-id="profile_mobile">
-    <md-content class="place_wrapper col-md-12">
+    <md-content class="place_wrapper col-md-12" ng-if="$ctrl.state == 'index'">
         <div class="header">
             <div class="header_close" ng-click="$ctrl.close('profile_mobile')"></div>
             <div class="header_title">Yor profile</div>
@@ -63,7 +63,7 @@
                 </div>
                 <div class="profile_menu_item__more"></div>
             </div>
-            <div class="profile_menu_item">
+            <div class="profile_menu_item" ng-click="$ctrl.state = 'setting'">
                 <div>
                     <div class="icon icon_setting"></div>
                     <div class="profile_menu_item__text">Settings</div>
@@ -75,4 +75,96 @@
 
 
     </md-content>
+
+    <md-content class="col-md-12" ng-if="$ctrl.state == 'setting'">
+        <div class="header">
+            <div role="button" tabindex="0" ng-click="$ctrl.state = 'index'">
+                <div class="goback goback_unset"></div>
+            </div>
+            <div class="header_title">settings</div>
+            <div class="header_empty"></div>
+        </div>
+        <div class="header_empty_height"></div>
+
+        <div class="profile_block_title">Account</div>
+        <div class="profile_menu">
+            <div class="profile_menu_item" ng-click="$ctrl.state = 'edit_profile'">
+                <div>
+                    <div class="profile_menu_item__text_no_margin">Edit profile</div>
+                </div>
+                <div class="profile_menu_item__more"></div>
+            </div>
+            <div class="profile_menu_item">
+                <div>
+                    <div class="profile_menu_item__text_no_margin">Blocked users</div>
+                </div>
+                <div class="profile_menu_item__more"></div>
+            </div>
+            <div class="profile_menu_item">
+                <div>
+                    <div class="profile_menu_item__text_no_margin">Change password</div>
+                </div>
+                <div class="profile_menu_item__more"></div>
+            </div>
+        </div>
+
+        <div class="profile_block_title">Support</div>
+        <div class="profile_menu">
+            <div class="profile_menu_item">
+                <div>
+                    <div class="profile_menu_item__text_no_margin">Help centre</div>
+                </div>
+                <div class="profile_menu_item__more"></div>
+            </div>
+        </div>
+
+        <div class="profile_block_title">about</div>
+        <div class="profile_menu">
+            <div class="profile_menu_item">
+                <div>
+                    <div class="profile_menu_item__text_no_margin">Privacy Policy</div>
+                </div>
+                <div class="profile_menu_item__more"></div>
+            </div>
+            <div class="profile_menu_item">
+                <div>
+                    <div class="profile_menu_item__text_no_margin">Rules</div>
+                </div>
+                <div class="profile_menu_item__more"></div>
+            </div>
+        </div>
+
+        <div class="profile_block_title" style="text-align: center">Log out</div>
+
+
+    </md-content>
+
+    <md-content class="place_wrapper col-md-12" ng-if="$ctrl.state == 'edit_profile'">
+        <div class="header">
+            <div role="button" tabindex="0" ng-click="$ctrl.state = 'setting'">
+                <div class="goback goback_unset"></div>
+            </div>
+            <div class="header_title">Edit profile</div>
+            <div class="header_empty" style="width: 35px; height: 44px; line-height: 44px; color: rgb(0,127, 237)">Save</div>
+        </div>
+        <div class="header_empty_height"></div>
+        <div class="profile_info">
+            <div class="profile_img">
+                <img src="{%$ctrl.user.avatar%}">
+            </div>
+            <div class="profile_hint"
+                 ngf-select
+                 ng-model="$ctrl.uploadedAvatar"
+                 ngf-change="$ctrl.uploadAvatar()"
+                 ngf-multiple="false"
+                 ngf-pattern="'image/*'"
+                 ngf-accept="'image/*'"
+                 ngf-keep="false"
+                 ngf-allow-dir="true"
+            >
+                Tap to update
+            </div>
+        </div>
+    </md-content>
+
 </md-sidenav>
