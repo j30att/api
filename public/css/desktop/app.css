@@ -1853,6 +1853,7 @@ md-dialog-actions .md-confirm-button {
 }
 
 .wallet_navigation__tabs_item {
+  cursor: pointer;
   height: 38px;
   line-height: 38px;
   background-color: rgba(0, 0, 0, 0.04);
@@ -1939,8 +1940,15 @@ md-dialog-actions .md-confirm-button {
 }
 
 .wallet_table__content_row_transaction > div {
-  height: 53px;
-  line-height: 53px;
+  min-height: 53px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 30px;
+  /*line-height: 53px;*/
 }
 
 .wallet_table__content_row_transaction__name {
@@ -1954,7 +1962,8 @@ md-dialog-actions .md-confirm-button {
   height: 22px;
   position: absolute;
   left: 0;
-  top: 6px;
+  top: 50%;
+  margin-top: -11px;
 }
 
 .wallet_table__content_row_transaction__name .transaction_img img {
@@ -1992,13 +2001,13 @@ md-dialog-actions .md-confirm-button {
 }
 
 .wallet_table .cell_name {
-  width: 24.6%;
+  width: 34.4%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 .wallet_table .cell_event {
-  width: 34.4%;
+  width: 29.6%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -2016,7 +2025,7 @@ md-dialog-actions .md-confirm-button {
 }
 
 .wallet_table .cell_balance {
-  width: 17.7%;
+  width: 12.7%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: right;
@@ -2024,6 +2033,10 @@ md-dialog-actions .md-confirm-button {
 
 .wallet_table .status_color__yellow {
   color: rgba(255, 190, 0, 0.6);
+}
+
+.wallet_table .status_color__red {
+  color: rgba(255, 0, 0, 0.6);
 }
 
 .wallet_table .status_color__green {
