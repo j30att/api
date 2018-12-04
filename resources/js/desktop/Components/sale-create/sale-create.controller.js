@@ -82,6 +82,7 @@ class SaleCreate {
             });
     }
     getSubevents() {
+        this.clearStatic();
         this.$http.post(SUB_EVENT_FILTER, {event_id: this.sale.event_id})
             .then(response => {
 
@@ -91,8 +92,14 @@ class SaleCreate {
                     this._opts.showSub = false;
                 }
                 this.subevents = response.data.data;
-                this.sale.sub_event_id =this.data.sub_event_id;
+                this.sale.sub_event_id = this.data.sub_event_id;
             });
+    }
+
+    clearStatic(){
+        this.sale.sub_event_id = null;
+        this.static.buy_in = '';
+        this.static.closing_time ='';
     }
 
     fillStatic() {
@@ -101,7 +108,7 @@ class SaleCreate {
         this.subevents.forEach(function (value, key) {
             if (value.id == self.sale.sub_event_id) {
                 self.static.buy_in = value.buy_in;
-                self.static.closing_time = value.date;
+                self.static.closing_time = value.period;
             }
         });
     }
