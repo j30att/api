@@ -82,7 +82,6 @@ class SaleCreate {
             });
     }
     getSubevents() {
-        this.fillStatic();
         this.$http.post(SUB_EVENT_FILTER, {event_id: this.sale.event_id})
             .then(response => {
 
@@ -99,13 +98,14 @@ class SaleCreate {
     fillStatic() {
         let self;
         self = this;
-        this.events.forEach(function (value, key) {
-            if (value.id == self.sale.event_id) {
+        this.subevents.forEach(function (value, key) {
+            if (value.id == self.sale.sub_event_id) {
                 self.static.buy_in = value.buy_in;
                 self.static.closing_time = value.date;
             }
         });
     }
+
     calcAmount() {
         this.sale.amount = this.SalesService.calcAmount(this.sale.share, this.sale.markup, this.static.buy_in);
     }
